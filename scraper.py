@@ -12,9 +12,9 @@ def detect_broadcaster(match_date_utc, league_code):
         return "Sky Sport Bundesliga"
     
     weekday = match_date_utc.weekday()
-    if weekday in [4, 6]:  # Cuma (4) veya Pazar (6)
+    if weekday in [4, 6]:
         return "DAZN 1 / DAZN 2"
-    else:                  # Cumartesi (5) ve Hafta İçi
+    else:
         return "Sky Sport Bundesliga"
 
 def fetch_current_group(league_code):
@@ -22,14 +22,12 @@ def fetch_current_group(league_code):
     try:
         resp = requests.get(url, headers=HEADERS, timeout=10)
         if resp.status_code == 200:
-            data = resp.json()
-            return data.get("groupOrderID", 1)
-    except Exception as e:
-        print(f"Mevcut hafta çekilemedi ({league_code}): {e}")
+            return resp.json().get("groupOrderID", 1)
+    except Exception:
+        pass
     return 1
 
 def fetch_season_matches(league_code):
-    # En güncel sezon verisi (2026/2027 Sezonu için)
     url = f"https://api.openligadb.de/getmatchdata/{league_code}/2026"
     resp = requests.get(url, headers=HEADERS, timeout=15)
     
@@ -38,7 +36,6 @@ def fetch_season_matches(league_code):
         resp = requests.get(url, headers=HEADERS, timeout=15)
 
     data = resp.json() if resp.status_code == 200 else []
-    
     matchdays = {}
 
     for m in data:
@@ -53,11 +50,12 @@ def fetch_season_matches(league_code):
             date_tr = dt_tr.strftime("%d.%m.%Y")
         else:
             dt_utc = datetime.now(timezone.utc)
-            time_tr = "Belli Değil"
-            date_tr = "Tarih Netleşmedi"
+            time_tr = "TBD"
+            date_tr = "TBD"
 
         team1 = m.get("team1", {}).get("teamName", "")
         team2 = m.get("team2", {}).get("teamName", "")
+        match_id = m.get("matchID")
 
         is_finished = m.get("matchIsFinished", False)
         results = m.get("matchResults", [])
@@ -66,11 +64,11 @@ def fetch_season_matches(league_code):
             final_res = results[-1]
             score = f"{final_res.get('pointsTeam1')} - {final_res.get('pointsTeam2')}"
 
-        # Modal içi gömülebilir detay linkleri
-        ticker_embed_url = f"https://www.google.de/search?q=site:kicker.de+{team1}+{team2}+live+ticker&igu=1"
+        # Arama motoru linki YERİNE direkt canlı veri simülatörü & widget bağlantısı
+        direct_data_url = f"https://www.openligadb.de/daten/match-detail/{match_id}"
 
         match_obj = {
-            "match_id": m.get("matchID"),
+            "match_id": match_id,
             "team1": team1,
             "team2": team2,
             "time_tr": time_tr,
@@ -78,7 +76,7 @@ def fetch_season_matches(league_code):
             "score": score,
             "is_finished": is_finished,
             "broadcaster": detect_broadcaster(dt_utc, league_code),
-            "ticker_url": ticker_embed_url
+            "data_url": direct_data_url
         }
 
         if group_id not in matchdays:
@@ -91,8 +89,6 @@ def fetch_season_matches(league_code):
     return matchdays
 
 def main():
-    print("Bundesliga tüm haftaların fikstür verileri çekiliyor...")
-    
     curr_b1 = fetch_current_group("bl1")
     curr_b2 = fetch_current_group("bl2")
 
@@ -100,7 +96,6 @@ def main():
     b2_data = fetch_season_matches("bl2")
 
     output = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
         "date_str": datetime.now().strftime("%d.%m.%Y - %H:%M"),
         "current_b1_week": curr_b1,
         "current_b2_week": curr_b2,
@@ -110,8 +105,6 @@ def main():
 
     with open("epg.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
-
-    print("epg.json başarıyla güncellendi.")
 
 if __name__ == "__main__":
     main()
