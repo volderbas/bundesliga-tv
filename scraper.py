@@ -4,129 +4,100 @@ import requests
 from datetime import datetime, timezone
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0.0.0 Safari/537.36"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "application/json"
 }
 
-# 1. KANAL LISTESI VE AÇIK RESMI AKIŞLAR
+# Takip Edeceğimiz Kanallar ve TV Spielfilm Kanal Kodları
 CHANNELS_CONFIG = [
-    {"name": "ARD", "search": ["ard", "das erste"], "stream": "https://marlin.ard-m3u8.de/live/ard.m3u8"},
-    {"name": "ZDF", "search": ["zdf"], "stream": "https://zdf-hls-15.akamaized.net/hls/live/2016498/de/veryhigh/master.m3u8"},
-    {"name": "RTL", "search": ["rtl"], "stream": ""},
-    {"name": "RTL2", "search": ["rtl2", "rtl 2"], "stream": ""},
-    {"name": "SAT.1", "search": ["sat.1", "sat1"], "stream": ""},
-    {"name": "ProSieben", "search": ["prosieben", "pro7"], "stream": ""},
-    {"name": "3sat", "search": ["3sat"], "stream": "https://zdf-hls-16.akamaized.net/hls/live/2016499/de/veryhigh/master.m3u8"},
-    {"name": "ONE", "search": ["one"], "stream": "https://marlin.ard-m3u8.de/live/one.m3u8"},
-    {"name": "Sky Sport Bundesliga 1", "search": ["sky sport bundesliga 1", "sky buli 1"], "stream": ""},
-    {"name": "Sky Sport Bundesliga 2", "search": ["sky sport bundesliga 2", "sky buli 2"], "stream": ""},
-    {"name": "Sky Sport Bundesliga 3", "search": ["sky sport bundesliga 3", "sky buli 3"], "stream": ""},
-    {"name": "Sky Sport Bundesliga 4", "search": ["sky sport bundesliga 4", "sky buli 4"], "stream": ""},
-    {"name": "Sky Sport Bundesliga 5", "search": ["sky sport bundesliga 5", "sky buli 5"], "stream": ""},
-    {"name": "DAZN 1", "search": ["dazn 1", "dazn1"], "stream": ""},
-    {"name": "DAZN 2", "search": ["dazn 2", "dazn2"], "stream": ""}
+    {"name": "ARD", "search": ["ard", "das erste"]},
+    {"name": "ZDF", "search": ["zdf"]},
+    {"name": "RTL", "search": ["rtl"]},
+    {"name": "RTL2", "search": ["rtl2", "rtl 2"]},
+    {"name": "SAT.1", "search": ["sat.1", "sat1"]},
+    {"name": "ProSieben", "search": ["prosieben", "pro7"]},
+    {"name": "3sat", "search": ["3sat"]},
+    {"name": "ONE", "search": ["one"]},
+    {"name": "Sky Sport Bundesliga 1", "search": ["sky sport bundesliga 1", "sky buli 1", "bundesliga 1"]},
+    {"name": "Sky Sport Bundesliga 2", "search": ["sky sport bundesliga 2", "sky buli 2", "bundesliga 2"]},
+    {"name": "Sky Sport Bundesliga 3", "search": ["sky sport bundesliga 3", "sky buli 3", "bundesliga 3"]},
+    {"name": "Sky Sport Bundesliga 4", "search": ["sky sport bundesliga 4", "sky buli 4", "bundesliga 4"]},
+    {"name": "Sky Sport Bundesliga 5", "search": ["sky sport bundesliga 5", "sky buli 5", "bundesliga 5"]},
+    {"name": "DAZN 1", "search": ["dazn 1", "dazn1"]},
+    {"name": "DAZN 2", "search": ["dazn 2", "dazn2"]}
 ]
 
-# 2. DİNAMİK CANLI AKIŞ LİNKLERİNİ TOPLAMA
-def get_streams():
-    streams = {}
+def fetch_epg():
+    epg_result = {cfg["name"]: [] for cfg in CHANNELS_CONFIG}
     
-    # 1. Öncelik: Tanımlı açık resmi linkler (ARD, ZDF, 3sat, ONE)
-    for cfg in CHANNELS_CONFIG:
-        if cfg["stream"]:
-            streams[cfg["name"]] = cfg["stream"]
-
-    # 2. Öncelik: Vavoo/IPTV Açık Yayın Havuzu (Sky, DAZN, RTL, SAT1 vb. için)
+    # TV Spielfilm Canlı Yayın Akış Uç Noktası
+    url = "https://live.tvspielfilm.de/static/broadcast/list/aktuell"
+    
     try:
-        # GitHub engeline takılmayan güncel IPTV/Vavoo M3U JSON havuzu
-        resp = requests.get("https://raw.githubusercontent.com/iptv-org/iptv/master/streams/de.json", timeout=10)
-        if resp.status_code == 200:
-            iptv_data = resp.json()
-            for item in iptv_data:
-                channel_id = item.get("channel", "").lower()
-                url = item.get("url", "")
-                
+        response = requests.get(url, headers=HEADERS, timeout=15)
+        if response.status_code == 200:
+            broadcasts = response.json()
+            
+            for item in broadcasts:
+                channel_name = item.get("channel", {}).get("title", "").lower()
+                title = item.get("title", "").strip()
+                start_ts = item.get("timeStart")
+                end_ts = item.get("timeEnd")
+                broadcast_id = item.get("id", "")
+
+                if not title:
+                    continue
+
+                # Zaman Dönüştürme
+                start_time = datetime.fromtimestamp(start_ts).strftime("%H:%M") if start_ts else "--:--"
+                end_time = datetime.fromtimestamp(end_ts).strftime("%H:%M") if end_ts else "--:--"
+
+                # TV Spielfilm Detay Sayfası Linki
+                detail_url = f"https://www.tvspielfilm.de/tv-programm/sendung/{broadcast_id}.html" if broadcast_id else "https://www.tvspielfilm.de/"
+
+                # Kanal Eşleştirme
                 for cfg in CHANNELS_CONFIG:
                     ch_key = cfg["name"]
-                    if ch_key in streams:
-                        continue
-                    if any(s in channel_id for s in cfg["search"]):
-                        streams[ch_key] = url
+                    if any(term in channel_name for term in cfg["search"]):
+                        epg_result[ch_key].append({
+                            "time": start_time,
+                            "endTime": end_time,
+                            "title": title,
+                            "url": detail_url
+                        })
                         break
     except Exception as e:
-        print(f"IPTV havuzu çekilemedi: {e}")
+        print(f"EPG çekilirken hata oluştu: {e}")
 
-    return streams
-
-# 3. TV SPIELFILM KAZIMA (HTML PARSER) - TAM PROGRAM AKIŞI
-def get_epg():
-    channels_data = {cfg["name"]: [] for cfg in CHANNELS_CONFIG}
-    
-    # TV Spielfilm ana yayın akışı sayfası
-    url = "https://www.tvspielfilm.de/tv-programm/sendezeiten/"
-    try:
-        resp = requests.get(url, headers=HEADERS, timeout=12)
-        if resp.status_code == 200:
-            # HTML içeriğini basit re ile tarayarak program saatlerini ve adlarını çek
-            from bs4 import BeautifulSoup
-            soup = BeautifulSoup(resp.text, "html.parser")
-            
-            # Kanal satırlarını bul
-            rows = soup.find_all("tr")
-            for row in rows:
-                text = row.get_text(" ", strip=True)
-                text_lower = text.lower()
-                
-                for cfg in CHANNELS_CONFIG:
-                    ch_key = cfg["name"]
-                    if any(s in text_lower for s in cfg["search"]):
-                        # Başlık ve saat bilgisini ayıkla
-                        cols = row.find_all("td")
-                        if len(cols) >= 2:
-                            time_str = cols[0].get_text(strip=True)
-                            title_str = cols[1].get_text(strip=True)
-                            
-                            if ":" in time_str:
-                                channels_data[ch_key].append({
-                                    "time": time_str[:5],
-                                    "endTime": "--:--",
-                                    "title": title_str[:80],
-                                    "url": "https://www.tvspielfilm.de/tv-programm/"
-                                })
-    except Exception as e:
-        print(f"EPG çekme hatası: {e}")
-
-    # Eksik kalan kanallara güncel saat ile varsayılan bilgi ver
+    # Yayın akışı bulunamayan kanallara varsayılan yönlendirme linki atama
     now_str = datetime.now().strftime("%H:%M")
     for cfg in CHANNELS_CONFIG:
         ch_name = cfg["name"]
-        if not channels_data[ch_name]:
-            channels_data[ch_name].append({
+        if not epg_result[ch_name]:
+            epg_result[ch_name].append({
                 "time": now_str,
                 "endTime": "--:--",
-                "title": f"{ch_name} Canlı Yayın Akışı",
+                "title": f"{ch_name} Program Detayı İçin Tıklayın",
                 "url": "https://www.tvspielfilm.de/tv-programm/"
             })
 
-    return channels_data
+    return epg_result
 
 def main():
-    print("Akış linkleri toplanıyor...")
-    streams = get_streams()
-
-    print("EPG verisi güncelleniyor...")
-    epg = get_epg()
+    print("Yayın akışları güncelleniyor...")
+    epg_data = fetch_epg()
 
     output = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "date": datetime.now().strftime("%d.%m.%Y - %H:%M"),
-        "streams": streams,
-        "channels": epg
+        "streams": {},  # Canlı yayınlar devreden çıkarıldı
+        "channels": epg_data
     }
 
     with open("epg.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print("epg.json başarıyla kaydedildi!")
+    print("epg.json başarıyla güncellendi.")
 
 if __name__ == "__main__":
     main()
