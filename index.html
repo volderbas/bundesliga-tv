@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bundesliga Canlı Maç & Yayın Rehberi</title>
+  <title>Bundesliga Fikstür & Canlı Maç Rehberi</title>
   <style>
     :root {
       --bg: #0f0f12;
@@ -32,9 +32,28 @@
       margin: 0 0 5px 0;
     }
 
-    .refresh-info {
-      font-size: 0.85rem;
-      color: var(--subtext);
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    select {
+      background: var(--card-bg);
+      color: #fff;
+      border: 1px solid var(--border);
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 1rem;
+      outline: none;
+      cursor: pointer;
+    }
+
+    select:focus {
+      border-color: var(--accent);
     }
 
     .league-title {
@@ -42,7 +61,7 @@
       color: #00adb5;
       border-bottom: 2px solid var(--border);
       padding-bottom: 5px;
-      margin: 30px auto 15px auto;
+      margin: 20px auto 15px auto;
       max-width: 1100px;
     }
 
@@ -91,7 +110,7 @@
       border: 1px solid var(--border);
       padding: 6px 12px;
       border-radius: 6px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: bold;
       color: #00adb5;
       text-align: center;
@@ -133,9 +152,17 @@
 <body>
 
   <header>
-    <h1>⚽ Bundesliga Canlı Maç & Yayın Rehberi</h1>
-    <div class="refresh-info" id="last-update">Veriler yükleniyor...</div>
+    <h1>⚽ Bundesliga Haftalık Fikstür & Canlı Maçlar</h1>
+    <p id="last-update" style="color:#aaa; font-size:0.85rem;">Yükleniyor...</p>
   </header>
+
+  <!-- Lig Haftası Seçim Paneli -->
+  <div class="controls">
+    <label for="week-select"><strong>Maç Haftası Seçin:</strong></label>
+    <select id="week-select">
+      <!-- JavaScript ile 1-34 haftalar doldurulacak -->
+    </select>
+  </div>
 
   <div class="league-title">🇩🇪 1. Bundesliga</div>
   <div class="grid" id="b1-grid"></div>
@@ -144,29 +171,62 @@
   <div class="grid" id="b2-grid"></div>
 
   <script>
-    async function fetchMatches() {
+    let globalData = null;
+
+    async function init() {
       try {
         const response = await fetch(`epg.json?t=${new Date().getTime()}`);
         if (!response.ok) return;
 
-        const data = await response.json();
+        globalData = await response.json();
         
         document.getElementById("last-update").textContent = 
-          `Son Güncelleme: ${data.date_str || ''} (30 saniyede bir anlık yenilenir)`;
+          `Son Veri Güncellemesi: ${globalData.date_str || ''}`;
 
-        renderLeague("b1-grid", data.bundesliga_1 || []);
-        renderLeague("b2-grid", data.bundesliga_2 || []);
+        // Hafta seçim kutusunu doldur (1-34. Haftalar)
+        populateWeekSelect(globalData.current_b1_week || 1);
+
+        // Varsayılan olarak mevcut haftanın maçlarını yükle
+        renderWeek(globalData.current_b1_week || 1);
+
       } catch (err) {
-        console.error("Veri güncelleme hatası:", err);
+        console.error("Fikstür verisi yüklenemedi:", err);
       }
     }
 
-    function renderLeague(containerId, matches) {
+    function populateWeekSelect(currentWeek) {
+      const select = document.getElementById("week-select");
+      select.innerHTML = "";
+
+      for (let i = 1; i <= 34; i++) {
+        const opt = document.createElement("option");
+        opt.value = i;
+        opt.textContent = `${i}. Hafta ${i === currentWeek ? '(Mevcut Hafta)' : ''}`;
+        if (i === currentWeek) opt.selected = true;
+        select.appendChild(opt);
+      }
+
+      select.addEventListener("change", (e) => {
+        renderWeek(parseInt(e.target.value));
+      });
+    }
+
+    function renderWeek(weekNum) {
+      if (!globalData) return;
+
+      const b1WeekData = globalData.bundesliga_1[weekNum] || { matches: [] };
+      const b2WeekData = globalData.bundesliga_2[weekNum] || { matches: [] };
+
+      renderMatches("b1-grid", b1WeekData.matches);
+      renderMatches("b2-grid", b2WeekData.matches);
+    }
+
+    function renderMatches(containerId, matches) {
       const container = document.getElementById(containerId);
       container.innerHTML = "";
 
-      if (matches.length === 0) {
-        container.innerHTML = `<div style="color:#aaa;">Maç verisi bulunamadı.</div>`;
+      if (!matches || matches.length === 0) {
+        container.innerHTML = `<div style="color:#aaa; padding:15px;">Bu hafta için maç verisi bulunamadı.</div>`;
         return;
       }
 
@@ -206,11 +266,7 @@
       });
     }
 
-    // İlk çalıştırma
-    fetchMatches();
-
-    // 30 saniyede bir otomatik taze veri çek
-    setInterval(fetchMatches, 30000);
+    document.addEventListener("DOMContentLoaded", init);
   </script>
 </body>
 </html>
