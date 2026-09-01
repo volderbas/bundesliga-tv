@@ -137,7 +137,7 @@
       border: 1px solid var(--card-border);
     }
 
-    /* Yerel Modal Pencere Tasarımı */
+    /* Modal */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -161,7 +161,7 @@
       border: 1px solid var(--card-border);
       border-radius: 12px;
       width: 90%;
-      max-width: 600px;
+      max-width: 550px;
       max-height: 80vh;
       display: flex;
       flex-direction: column;
@@ -201,6 +201,7 @@
     .goal-item {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       background: #181b23;
       padding: 10px 14px;
       border-radius: 6px;
@@ -215,9 +216,30 @@
 
     .goal-scorer {
       color: #fff;
+      font-weight: 500;
     }
 
-    .no-goals {
+    .external-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: #2b3040;
+      color: #38ef7d;
+      border: 1px solid #38ef7d;
+      padding: 10px 0;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 15px;
+      transition: background 0.2s;
+    }
+
+    .external-btn:hover {
+      background: #38ef7d;
+      color: #181b23;
+    }
+
+    .loading-text {
       text-align: center;
       color: var(--subtext);
       padding: 20px 0;
@@ -242,16 +264,14 @@
   <div class="league-title">🇩🇪 2. Bundesliga</div>
   <div class="grid" id="b2-grid"></div>
 
-  <!-- Yerel Canlı Maç Detay Modalı -->
+  <!-- Modal -->
   <div class="modal-overlay" id="match-modal">
     <div class="modal-content">
       <div class="modal-header">
         <div class="modal-title" id="modal-title">Live Matchdetails</div>
         <button class="close-btn" onclick="closeModal()">Schließen ✕</button>
       </div>
-      <div class="modal-body" id="modal-body-content">
-        <!-- Goller ve maç akışı buraya dinamik dolacak -->
-      </div>
+      <div class="modal-body" id="modal-body-content"></div>
     </div>
   </div>
 
@@ -269,7 +289,8 @@
       "Borussia Mönchengladbach": { bg: "rgba(52, 211, 153, 0.15)", color: "#a7f3d0" },
       "FSV Mainz 05": { bg: "rgba(248, 113, 113, 0.2)", color: "#fca5a5" },
       "FC Augsburg": { bg: "rgba(16, 185, 129, 0.15)", color: "#6ee7b7" },
-      "TSG 1899 Hoffenheim": { bg: "rgba(59, 130, 246, 0.2)", color: "#93c5fd" }
+      "TSG 1899 Hoffenheim": { bg: "rgba(59, 130, 246, 0.2)", color: "#93c5fd" },
+      "Hamburger SV": { bg: "rgba(59, 130, 246, 0.2)", color: "#93c5fd" }
     };
 
     function getTeamStyle(teamName) {
@@ -331,7 +352,7 @@
 
         const card = document.createElement("div");
         card.className = "match-card";
-        card.onclick = () => openMatchDetails(m);
+        card.onclick = () => fetchAndShowDetails(m);
 
         card.innerHTML = `
           <div class="match-meta">
@@ -353,29 +374,51 @@
       });
     }
 
-    function openMatchDetails(m) {
+    async function fetchAndShowDetails(m) {
       document.getElementById("modal-title").textContent = `${m.team1} ${m.score} ${m.team2}`;
-      
       const body = document.getElementById("modal-body-content");
-      body.innerHTML = "";
+      body.innerHTML = `<div class="loading-text">Spieldetails werden geladen... / Detaylar yükleniyor...</div>`;
+      document.getElementById("match-modal").classList.add("active");
 
-      if (!m.goals || m.goals.length === 0) {
-        body.innerHTML = `<div class="no-goals">Noch keine Tordetails verfügbar / Maçta henüz gol veya detay kaydı yok.</div>`;
-      } else {
-        let html = `<h3 style="color:#f39c12; margin-top:0;">⚽ Tore / Goller</h3>`;
-        m.goals.forEach(g => {
+      let goals = [];
+      try {
+        // Tıklanınca ilgili maçın OpenLigaDB API'sine direkt canlı istek atıyoruz
+        const res = await fetch(`https://api.openligadb.de/getmatchdata/${m.match_id}`);
+        if (res.ok) {
+          const matchData = await res.json();
+          goals = matchData.goals || [];
+        }
+      } catch (e) {
+        console.error("API hatası:", e);
+      }
+
+      let kickerQuery = encodeURIComponent(`${m.team1} ${m.team2} kicker live ticker`);
+      let kickerUrl = `https://www.kicker.de/search?query=${kickerQuery}`;
+
+      let html = "";
+      if (goals.length > 0) {
+        html += `<h3 style="color:#f39c12; margin-top:0;">⚽ Tore / Goller</h3>`;
+        goals.forEach(g => {
           html += `
             <div class="goal-item">
-              <span class="goal-minute">⏱️ ${g.minute || '?'}'</span>
-              <span class="goal-scorer">⚽ ${g.scorer || 'Unbekannt'}</span>
-              <span style="color:#38ef7d; font-weight:bold;">(${g.score1} - ${g.score2})</span>
+              <span class="goal-minute">⏱️ ${g.matchMinute || '?'}'</span>
+              <span class="goal-scorer">⚽ ${g.goalGetterName || 'Unbekannt'}</span>
+              <span style="color:#38ef7d; font-weight:bold;">(${g.scoreTeam1} - ${g.scoreTeam2})</span>
             </div>
           `;
         });
-        body.innerHTML = html;
+      } else {
+        html += `<div class="loading-text">Bu maç için detaylı gol kaydı bulunamadı.</div>`;
       }
 
-      document.getElementById("match-modal").classList.add("active");
+      // Kicker için doğrudan yönlendirme butonu
+      html += `
+        <a href="${kickerUrl}" target="_blank" rel="noopener noreferrer" class="external-btn">
+          🔗 Kicker Center'da Aç ↗
+        </a>
+      `;
+
+      body.innerHTML = html;
     }
 
     function closeModal() {
