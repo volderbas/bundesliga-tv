@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bundesliga Fikstür & Canlı Maç Rehberi</title>
+  <title>Bundesliga Canlı Maç Rehberi</title>
   <style>
     :root {
       --bg: #0f0f12;
@@ -73,6 +73,7 @@
       margin: 0 auto;
     }
 
+    /* Maç Kartı Stili & Tıklanabilirlik */
     .match-card {
       background: var(--card-bg);
       border: 1px solid var(--border);
@@ -81,6 +82,14 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .match-card:hover {
+      transform: translateY(-3px);
+      border-color: #00adb5;
+      box-shadow: 0 4px 15px rgba(0, 173, 181, 0.2);
     }
 
     .match-meta {
@@ -122,30 +131,76 @@
       border-radius: 6px;
       text-align: center;
       font-size: 0.85rem;
-      margin-bottom: 10px;
       border: 1px solid #333;
     }
 
-    .btn-group {
+    /* Site İçi Canlı Maç Modalı (Pop-up Pencere) */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-overlay.active {
       display: flex;
-      gap: 8px;
     }
 
-    .btn-ticker {
-      flex: 1;
-      text-align: center;
-      background: #333;
-      color: #fff;
-      text-decoration: none;
-      padding: 8px;
-      border-radius: 5px;
-      font-size: 0.8rem;
-      font-weight: 500;
-      transition: background 0.2s;
+    .modal-content {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      width: 90%;
+      max-width: 900px;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
     }
 
-    .btn-ticker:hover {
+    .modal-header {
+      padding: 15px 20px;
+      background: #22222a;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-title {
+      font-weight: bold;
+      color: #00adb5;
+      font-size: 1.1rem;
+    }
+
+    .close-btn {
       background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 6px 15px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .modal-body {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+    }
+
+    .modal-body iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
@@ -156,12 +211,9 @@
     <p id="last-update" style="color:#aaa; font-size:0.85rem;">Yükleniyor...</p>
   </header>
 
-  <!-- Lig Haftası Seçim Paneli -->
   <div class="controls">
     <label for="week-select"><strong>Maç Haftası Seçin:</strong></label>
-    <select id="week-select">
-      <!-- JavaScript ile 1-34 haftalar doldurulacak -->
-    </select>
+    <select id="week-select"></select>
   </div>
 
   <div class="league-title">🇩🇪 1. Bundesliga</div>
@@ -169,6 +221,19 @@
 
   <div class="league-title">🇩🇪 2. Bundesliga</div>
   <div class="grid" id="b2-grid"></div>
+
+  <!-- Site İçi Açılır Canlı Ticker Penceresi -->
+  <div class="modal-overlay" id="ticker-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="modal-match-title">Canlı Maç Ticker</div>
+        <button class="close-btn" onclick="closeModal()">Kapat ✕</button>
+      </div>
+      <div class="modal-body">
+        <iframe id="ticker-frame" src=""></iframe>
+      </div>
+    </div>
+  </div>
 
   <script>
     let globalData = null;
@@ -183,10 +248,7 @@
         document.getElementById("last-update").textContent = 
           `Son Veri Güncellemesi: ${globalData.date_str || ''}`;
 
-        // Hafta seçim kutusunu doldur (1-34. Haftalar)
         populateWeekSelect(globalData.current_b1_week || 1);
-
-        // Varsayılan olarak mevcut haftanın maçlarını yükle
         renderWeek(globalData.current_b1_week || 1);
 
       } catch (err) {
@@ -233,6 +295,9 @@
       matches.forEach(m => {
         const card = document.createElement("div");
         card.className = "match-card";
+        
+        // Bütün kart tıklanabilir hale getirildi
+        card.onclick = () => openModal(`${m.team1} vs ${m.team2}`, m.ticker_url);
 
         card.innerHTML = `
           <div>
@@ -251,19 +316,21 @@
               📺 Yayıncı: <strong>${m.broadcaster}</strong>
             </div>
           </div>
-
-          <div class="btn-group">
-            <a href="${m.sofascore_url}" target="_blank" rel="noopener" class="btn-ticker">
-              SofaScore ↗
-            </a>
-            <a href="${m.kicker_url}" target="_blank" rel="noopener" class="btn-ticker">
-              Kicker Ticker ↗
-            </a>
-          </div>
         `;
 
         container.appendChild(card);
       });
+    }
+
+    function openModal(title, url) {
+      document.getElementById("modal-match-title").textContent = title + " - Canlı Maç Verileri";
+      document.getElementById("ticker-frame").src = url;
+      document.getElementById("ticker-modal").classList.add("active");
+    }
+
+    function closeModal() {
+      document.getElementById("ticker-modal").classList.remove("active");
+      document.getElementById("ticker-frame").src = "";
     }
 
     document.addEventListener("DOMContentLoaded", init);
