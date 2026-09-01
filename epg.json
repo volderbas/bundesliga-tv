@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-01T14:15:52.919041+00:00",
-  "date": "01.09.2026 - 14:15",
+  "generated_at": "2026-09-01T14:48:00.313716+00:00",
+  "date": "01.09.2026 - 14:48",
   "streams": {},
   "channels": {
     "ARD": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "ARD Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=ARD+tv+programm+heute"
@@ -13,7 +13,7 @@
     ],
     "ZDF": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "ZDF Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=ZDF+tv+programm+heute"
@@ -21,7 +21,7 @@
     ],
     "RTL": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "RTL Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=RTL+tv+programm+heute"
@@ -29,7 +29,7 @@
     ],
     "RTL2": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "RTL2 Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=RTL2+tv+programm+heute"
@@ -37,7 +37,7 @@
     ],
     "SAT.1": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "SAT.1 Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=SAT.1+tv+programm+heute"
@@ -45,7 +45,7 @@
     ],
     "ProSieben": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "ProSieben Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=ProSieben+tv+programm+heute"
@@ -53,7 +53,7 @@
     ],
     "3sat": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "3sat Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=3sat+tv+programm+heute"
@@ -61,7 +61,7 @@
     ],
     "ONE": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "ONE Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=ONE+tv+programm+heute"
@@ -69,7 +69,7 @@
     ],
     "Sky Sport Bundesliga 1": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "Sky Sport Bundesliga 1 Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=Sky Sport Bundesliga 1+tv+programm+heute"
@@ -77,7 +77,7 @@
     ],
     "Sky Sport Bundesliga 2": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "Sky Sport Bundesliga 2 Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=Sky Sport Bundesliga 2+tv+programm+heute"
@@ -85,7 +85,7 @@
     ],
     "Sky Sport Bundesliga 3": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "Sky Sport Bundesliga 3 Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=Sky Sport Bundesliga 3+tv+programm+heute"
@@ -93,7 +93,7 @@
     ],
     "Sky Sport Bundesliga 4": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "Sky Sport Bundesliga 4 Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=Sky Sport Bundesliga 4+tv+programm+heute"
@@ -101,7 +101,7 @@
     ],
     "Sky Sport Bundesliga 5": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "Sky Sport Bundesliga 5 Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=Sky Sport Bundesliga 5+tv+programm+heute"
@@ -109,7 +109,7 @@
     ],
     "DAZN 1": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "DAZN 1 Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=DAZN 1+tv+programm+heute"
@@ -117,7 +117,7 @@
     ],
     "DAZN 2": [
       {
-        "time": "14:15",
+        "time": "14:48",
         "endTime": "--:--",
         "title": "DAZN 2 Güncel Yayın Akışı",
         "url": "https://www.google.de/search?q=DAZN 2+tv+programm+heute"
