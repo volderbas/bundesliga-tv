@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Almanya TV Yayın Akışı (EPG)</title>
+  <title>Dünya Canlı TV Rehberi & Oynatıcı</title>
+  <!-- HLS.js: m3u8 Yayınlarını Oynatmak İçin -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <style>
     :root {
-      --bg-color: #121214;
-      --card-bg: #1e1e24;
-      --accent-color: #00adb5;
-      --accent-hover: #008c93;
-      --text-color: #eeeeee;
+      --bg-color: #0f0f12;
+      --card-bg: #18181c;
+      --accent-color: #e50914;
+      --text-color: #ffffff;
       --subtext-color: #aaaaaa;
-      --border-color: #2a2a32;
+      --border-color: #282830;
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--bg-color);
       color: var(--text-color);
       margin: 0;
@@ -25,174 +26,249 @@
 
     header {
       text-align: center;
-      margin-bottom: 30px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border-color);
+      margin-bottom: 25px;
     }
 
     header h1 {
-      margin: 0 0 10px 0;
-      font-size: 1.8rem;
+      margin: 0;
       color: var(--accent-color);
+      font-size: 2rem;
     }
 
-    #last-updated {
-      font-size: 0.85rem;
-      color: var(--subtext-color);
+    /* Video Player Alanı */
+    .player-container {
+      max-width: 900px;
+      margin: 0 auto 30px auto;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
-    .channel-grid {
+    video {
+      width: 100%;
+      max-height: 500px;
+      display: block;
+    }
+
+    .player-info {
+      padding: 12px 20px;
+      background: var(--card-bg);
+      font-weight: bold;
+      color: #00adb5;
+    }
+
+    /* Filtreleme ve Kontrol Paneli */
+    .controls {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 0 auto 25px auto;
+    }
+
+    select, input {
+      background: var(--card-bg);
+      color: #fff;
+      border: 1px solid var(--border-color);
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    select:focus, input:focus {
+      border-color: var(--accent-color);
+    }
+
+    /* Kanal Kartları */
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .channel-card {
-      background-color: var(--card-bg);
+    .card {
+      background: var(--card-bg);
       border: 1px solid var(--border-color);
       border-radius: 8px;
-      padding: 16px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      padding: 15px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
     }
 
-    .channel-card:hover {
-      transform: translateY(-2px);
+    .card:hover {
+      transform: translateY(-3px);
       border-color: var(--accent-color);
     }
 
-    .channel-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: var(--accent-color);
-      margin: 0 0 10px 0;
-    }
-
-    .program-time {
-      font-size: 0.9rem;
-      color: #ffb703;
-      font-weight: bold;
-      margin-bottom: 6px;
-    }
-
-    .program-title {
+    .card-title {
       font-size: 1rem;
-      line-height: 1.4;
-      margin: 0 0 15px 0;
-      flex-grow: 1;
+      font-weight: bold;
+      margin-bottom: 5px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .btn-detail {
-      display: inline-block;
-      text-align: center;
-      background-color: var(--accent-color);
-      color: #ffffff;
-      text-decoration: none;
-      padding: 10px 14px;
-      border-radius: 6px;
-      font-weight: 500;
-      font-size: 0.9rem;
-      transition: background-color 0.2s ease;
-    }
-
-    .btn-detail:hover {
-      background-color: var(--accent-hover);
+    .card-meta {
+      font-size: 0.8rem;
+      color: var(--subtext-color);
     }
 
     .loading {
       text-align: center;
       grid-column: 1 / -1;
+      padding: 50px;
       font-size: 1.2rem;
       color: var(--subtext-color);
-      padding: 40px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>📺 Almanya TV Yayın Akışı</h1>
-    <div id="last-updated">Yayın bilgileri yükleniyor...</div>
+    <h1>🌐 Tüm Dünya Canlı TV Kanalları</h1>
   </header>
 
-  <main>
-    <div class="channel-grid" id="channel-container">
-      <div class="loading">Güncel program verileri getiriliyor...</div>
-    </div>
-  </main>
+  <!-- Oynatıcı -->
+  <div class="player-container">
+    <video id="video-player" controls poster="https://via.placeholder.com/900x500/000000/FFFFFF?text=Bir+Kanal+Secin"></video>
+    <div class="player-info" id="player-title">Oynatıcı Hazır - Lütfen Listeden Bir Kanal Seçin</div>
+  </div>
+
+  <!-- Arama ve Filtreler -->
+  <div class="controls">
+    <input type="text" id="search-input" placeholder="Kanal Ara (Örn: TRT, BBC)...">
+    
+    <select id="category-filter">
+      <option value="all">Tüm Kategoriler</option>
+      <option value="news">Haber (News)</option>
+      <option value="sports">Spor (Sports)</option>
+      <option value="music">Müzik (Music)</option>
+      <option value="movies">Sinema/Dizi (Movies)</option>
+      <option value="documentary">Belgesel (Documentary)</option>
+      <option value="animation">Çocuk/Animasyon</option>
+    </select>
+
+    <select id="country-filter">
+      <option value="all">Tüm Ülkeler</option>
+      <option value="tr">Türkiye 🇹🇷</option>
+      <option value="de">Almanya 🇩🇪</option>
+      <option value="us">ABD 🇺🇸</option>
+      <option value="uk">İngiltere 🇬🇧</option>
+      <option value="fr">Fransa 🇫🇷</option>
+      <option value="it">İtalya 🇮🇹</option>
+    </select>
+  </div>
+
+  <!-- Kanal Listesi Grid -->
+  <div class="grid" id="channel-grid">
+    <div class="loading">Dünya TV Kanalları Yükleniyor...</div>
+  </div>
 
   <script>
-    async function fetchEPG() {
-      const container = document.getElementById("channel-container");
-      const updatedText = document.getElementById("last-updated");
+    let allChannels = [];
+    const video = document.getElementById('video-player');
+    const playerTitle = document.getElementById('player-title');
+    let hls = new Hls();
 
+    // 1. Açık IPTV Veri Tabanından Kanalları Çek
+    async function loadChannels() {
       try {
-        // epg.json dosyasını tarayıcı önbelleğine takılmadan taze çek
-        const response = await fetch(`epg.json?t=${new Date().getTime()}`);
+        const res = await fetch('https://iptv-org.github.io/api/channels.json');
+        const data = await res.json();
         
-        if (!response.ok) {
-          throw new Error("epg.json dosyası okunamadı.");
-        }
-
-        const data = await response.json();
+        // Sadece canlı yayını olan ve kapalı olmayan kanalları al
+        allChannels = data.filter(c => !c.is_closed && c.website);
         
-        // Son güncelleme zamanını göster
-        if (data.date) {
-          updatedText.textContent = `Son Güncelleme: ${data.date}`;
-        }
+        // Ekstra: Yayın akış linklerini (streams) çek
+        const streamsRes = await fetch('https://iptv-org.github.io/api/streams.json');
+        const streams = await streamsRes.json();
 
-        container.innerHTML = "";
+        // Yayın linklerini kanallarla eşleştir
+        const streamMap = {};
+        streams.forEach(s => { streamMap[s.channel] = s.url; });
 
-        const channels = data.channels || {};
-        
-        if (Object.keys(channels).length === 0) {
-          container.innerHTML = `<div class="loading">Henüz yayın akış bilgisi bulunamadı.</div>`;
-          return;
-        }
+        allChannels = allChannels.map(c => ({
+          ...c,
+          streamUrl: streamMap[c.id] || null
+        })).filter(c => c.streamUrl); // Sadece canlı linki çalışanları tut
 
-        // Kanal Kartlarını Oluştur
-        for (const [channelName, programs] of Object.entries(channels)) {
-          const currentProgram = programs[0] || {
-            time: "--:--",
-            endTime: "--:--",
-            title: "Yayın bilgisi bulunamadı",
-            url: "https://www.tvspielfilm.de/tv-programm/"
-          };
-
-          const card = document.createElement("div");
-          card.className = "channel-card";
-
-          card.innerHTML = `
-            <div>
-              <div class="channel-title">${channelName}</div>
-              <div class="program-time">⏰ ${currentProgram.time} - ${currentProgram.endTime}</div>
-              <div class="program-title">${currentProgram.title}</div>
-            </div>
-            <a href="${currentProgram.url}" target="_blank" rel="noopener noreferrer" class="btn-detail">
-              Program Detayı ↗
-            </a>
-          `;
-
-          container.appendChild(card);
-        }
-
-      } catch (error) {
-        console.error("Hata:", error);
-        container.innerHTML = `
-          <div class="loading" style="color: #ef233c;">
-            Yayın bilgileri yüklenirken bir sorun oluştu.<br>
-            <small>Lütfen GitHub Actions işleminin başarıyla tamamlandığından emin olun.</small>
-          </div>
-        `;
+        renderGrid(allChannels.slice(0, 100)); // İlk 100 kanalı göster
+      } catch (err) {
+        console.error("Veri yükleme hatası:", err);
+        document.getElementById('channel-grid').innerHTML = `<div class="loading">Kanallar yüklenirken bir sorun oluştu.</div>`;
       }
     }
 
-    // Sayfa yüklendiğinde EPG verisini çek
-    document.addEventListener("DOMContentLoaded", fetchEPG);
+    // 2. Kanalları Ekrana Bas
+    function renderGrid(channels) {
+      const grid = document.getElementById('channel-grid');
+      grid.innerHTML = "";
+
+      if (channels.length === 0) {
+        grid.innerHTML = `<div class="loading">Aranan kriterlere uygun kanal bulunamadı.</div>`;
+        return;
+      }
+
+      channels.forEach(ch => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <div class="card-title">${ch.name}</div>
+          <div class="card-meta">${(ch.categories[0] || 'Genel').toUpperCase()} • ${ch.country.toUpperCase()}</div>
+        `;
+        card.onclick = () => playStream(ch.streamUrl, ch.name);
+        grid.appendChild(card);
+      });
+    }
+
+    // 3. Oynatıcı Fonksiyonu (HLS.js)
+    function playStream(url, name) {
+      playerTitle.textContent = `Şu An Yayınlanıyor: ${name}`;
+      
+      if (Hls.isSupported()) {
+        hls.destroy();
+        hls = new Hls();
+        hls.loadSource(url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+          video.play();
+        });
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
+        video.play();
+      }
+    }
+
+    // 4. Arama ve Filtreleme Mantığı
+    function filterChannels() {
+      const searchValue = document.getElementById('search-input').value.toLowerCase();
+      const selectedCategory = document.getElementById('category-filter').value;
+      const selectedCountry = document.getElementById('country-filter').value;
+
+      const filtered = allChannels.filter(ch => {
+        const matchesSearch = ch.name.toLowerCase().includes(searchValue);
+        const matchesCategory = selectedCategory === 'all' || ch.categories.includes(selectedCategory);
+        const matchesCountry = selectedCountry === 'all' || ch.country.toLowerCase() === selectedCountry;
+
+        return matchesSearch && matchesCategory && matchesCountry;
+      });
+
+      renderGrid(filtered.slice(0, 100)); // Performans için sınırla
+    }
+
+    document.getElementById('search-input').addEventListener('input', filterChannels);
+    document.getElementById('category-filter').addEventListener('change', filterChannels);
+    document.getElementById('country-filter').addEventListener('change', filterChannels);
+
+    document.addEventListener('DOMContentLoaded', loadChannels);
   </script>
 </body>
 </html>
