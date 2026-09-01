@@ -10,13 +10,17 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# TV Movie ana akış sayfasındaki kanal isimleri
-TARGET_CHANNELS = ["ARD", "ZDF", "RTL", "RTL2", "SAT.1", "PRO 7", "3SAT", "ONE"]
+# Ana akım ve Premium Spor Kanalları
+TARGET_CHANNELS = [
+    "ARD", "ZDF", "RTL", "RTL2", "SAT.1", "PRO 7", "3SAT", "ONE",
+    "Sky Sport Bundesliga 1", "Sky Sport Bundesliga 2", "Sky Sport Bundesliga 3",
+    "Sky Sport Bundesliga 4", "Sky Sport Bundesliga 5",
+    "DAZN 1", "DAZN 2"
+]
 
 TIME_RANGE_RE = re.compile(r"(\d{2}:\d{2})\s*-\s*(\d{2}:\d{2})")
 
 def fetch_tvmovie_now():
-    # Doğrudan anlık yayınların listelendiği ana sayfa
     url = "https://www.tvmovie.de/tv-programm-jetzt"
     resp = requests.get(url, headers=HEADERS, timeout=12)
     resp.raise_for_status()
@@ -24,7 +28,6 @@ def fetch_tvmovie_now():
 
     channels_data = {ch: [] for ch in TARGET_CHANNELS}
     
-    # Sayfadaki tüm tv-epg linklerini / yayın bloklarını yakala
     for a in soup.select('a[href*="-epg-"]'):
         text = " ".join(a.get_text(strip=True).split())
         m = TIME_RANGE_RE.search(text)
@@ -36,21 +39,17 @@ def fetch_tvmovie_now():
         href = a.get("href", "")
         detail_url = href if href.startswith("http") else f"https://www.tvmovie.de{href}"
 
-        # Yayın kartının bağlı olduğu kanal ismini kapsayıcı elemanlardan bul
         parent = a.find_parent(class_=re.compile(r'channel|sender|broadcast|tv-list', re.I)) or a.parent
         parent_text = parent.get_text() if parent else ""
 
-        # Hangi kanala ait olduğunu belirle
         matched_channel = None
         for ch in TARGET_CHANNELS:
-            # PRO 7 -> ProSieben eşleşmesi için kontrol
             check_name = "PRO7" if ch == "PRO 7" else ch
             if check_name.lower() in parent_text.lower():
                 matched_channel = ch
                 break
 
         if matched_channel:
-            # Çift kaydı önle
             exists = any(item['title'] == title and item['time'] == start for item in channels_data[matched_channel])
             if not exists:
                 channels_data[matched_channel].append({
@@ -61,7 +60,6 @@ def fetch_tvmovie_now():
                     "url": detail_url
                 })
 
-    # PRO 7 ismini arayüzle uyumlu olması için ProSieben yap
     if "PRO 7" in channels_data:
         channels_data["ProSieben"] = channels_data.pop("PRO 7")
 
