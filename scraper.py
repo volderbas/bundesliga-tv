@@ -45,11 +45,15 @@ def fetch_tvmovie(slug):
         start, end = m.group(1), m.group(2)
         title = text[:m.start()].strip() or "Program"
         
+        # Tam detay linki oluşturuluyor
+        detail_url = href if href.startswith("http") else f"https://www.tvmovie.de{href}"
+        
         entries.append({
             "time": start,
             "endTime": end,
             "title": title[:100],
-            "genre": "TV"
+            "genre": "TV",
+            "url": detail_url
         })
     return entries
 
@@ -70,9 +74,8 @@ def main():
             print(f"[HATA] {name} çekilemedi: {e}")
             result["channels"][name] = []
 
-    # Eğer hiçbir program çekilemediyse mevcudu bozma
     if total_programs == 0:
-        print("Hiç veri çekilemedi, iptal ediliyor.")
+        print("Hiç veri çekilemedi, işlem iptal.")
         sys.exit(1)
 
     with open("epg.json", "w", encoding="utf-8") as f:
