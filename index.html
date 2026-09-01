@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bundesliga Matchcenter</title>
+  <title>Bundesliga Live Matchcenter</title>
   <style>
     :root {
-      --bg: #0f172a;
-      --card-bg: #1e293b;
-      --card-border: #334155;
-      --accent: #ef4444;
-      --accent-green: #10b981;
-      --text-main: #f8fafc;
-      --text-sub: #94a3b8;
+      --bg: #121318;
+      --card-bg: #1c1e24;
+      --card-border: #2d313b;
+      --de-red: #d92b2b;
+      --de-gold: #ffcc00;
+      --text-main: #f3f4f6;
+      --text-sub: #9ca3af;
     }
 
     body {
@@ -23,32 +23,40 @@
       padding: 24px;
     }
 
-    header { text-align: center; margin-bottom: 24px; }
-    header h1 { font-size: 2rem; margin: 0 0 6px 0; font-weight: 800; letter-spacing: -0.5px; }
-    .subtitle { color: var(--text-sub); font-size: 0.875rem; }
+    header { text-align: center; margin-bottom: 28px; }
+    header h1 {
+      font-size: 2.2rem;
+      margin: 0 0 6px 0;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ffffff 0%, var(--de-gold) 50%, var(--de-red) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: var(--text-sub); font-size: 0.9rem; }
 
     .controls { display: flex; justify-content: center; align-items: center; gap: 12px; margin: 24px 0; }
     select {
       background: var(--card-bg);
-      color: var(--text-main);
-      border: 1px solid var(--card-border);
+      color: var(--de-gold);
+      border: 1px solid var(--de-gold);
       padding: 10px 18px;
       border-radius: 10px;
-      font-weight: 600;
+      font-weight: 700;
       outline: none;
+      cursor: pointer;
     }
 
     .league-title {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 700;
       color: var(--text-main);
-      border-left: 4px solid var(--accent-green);
-      padding-left: 10px;
-      margin: 32px auto 16px auto;
+      border-left: 5px solid var(--de-red);
+      padding-left: 12px;
+      margin: 36px auto 18px auto;
       max-width: 1100px;
     }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; max-width: 1100px; margin: 0 auto; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 18px; max-width: 1100px; margin: 0 auto; }
 
     .match-card {
       background: var(--card-bg);
@@ -56,49 +64,68 @@
       border-radius: 14px;
       padding: 16px;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: transform 0.2s, border-color 0.2s;
     }
-    .match-card:hover { transform: translateY(-4px); border-color: #475569; }
+    .match-card:hover { transform: translateY(-3px); border-color: var(--de-gold); }
 
-    .match-meta { display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-sub); margin-bottom: 14px; }
-    .teams-container { display: flex; align-items: center; justify-content: space-between; margin: 10px 0; }
+    .match-meta { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-sub); margin-bottom: 14px; }
+    
+    /* YAN YANA SKOR DÜZENİ */
+    .teams-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin: 12px 0;
+    }
     
     .team-badge {
-      font-size: 0.95rem; font-weight: 600; width: 40%; text-align: center;
-      padding: 8px 10px; border-radius: 8px; background: rgba(255,255,255,0.05);
+      font-size: 0.9rem; font-weight: 600; flex: 1; text-align: center;
+      padding: 10px 8px; border-radius: 8px; background: rgba(255,255,255,0.04);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
     
     .score-box {
-      background: #020617; border: 1px solid var(--card-border); padding: 8px 14px;
-      border-radius: 8px; font-size: 1.25rem; font-weight: 800; color: var(--accent-green);
+      background: #000000;
+      border: 1px solid var(--de-gold);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--de-gold);
+      white-space: nowrap;
+      min-width: 60px;
+      text-align: center;
     }
 
     .broadcaster-box {
-      background: rgba(0,0,0,0.2); padding: 8px; border-radius: 8px;
+      background: rgba(0,0,0,0.25); padding: 8px; border-radius: 8px;
       text-align: center; font-size: 0.8rem; color: var(--text-sub); margin-top: 12px;
+      border: 1px solid rgba(255,255,255,0.05);
     }
 
-    /* Modal Styling */
-    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(8px); z-index: 1000; justify-content: center; align-items: center; }
+    /* Modal */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(6px); z-index: 1000; justify-content: center; align-items: center; }
     .modal-overlay.active { display: flex; }
     
     .modal-content {
       background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px;
-      width: 90%; max-width: 580px; max-height: 85vh; display: flex; flex-direction: column; overflow: hidden;
+      width: 92%; max-width: 600px; max-height: 85vh; display: flex; flex-direction: column; overflow: hidden;
     }
 
-    .modal-header { padding: 18px 24px; background: #0f172a; border-bottom: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center; }
-    .close-btn { background: var(--accent); color: white; border: none; padding: 6px 14px; border-radius: 8px; cursor: pointer; font-weight: 600; }
+    .modal-header { padding: 18px 24px; background: #121318; border-bottom: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center; }
+    .close-btn { background: var(--de-red); color: white; border: none; padding: 6px 14px; border-radius: 8px; cursor: pointer; font-weight: 700; }
 
-    .modal-tabs { display: flex; background: #0f172a; border-bottom: 1px solid var(--card-border); }
-    .tab-btn { flex: 1; padding: 12px; background: none; border: none; color: var(--text-sub); font-weight: 600; cursor: pointer; border-bottom: 2px solid transparent; }
-    .tab-btn.active { color: var(--accent-green); border-bottom-color: var(--accent-green); }
+    .modal-tabs { display: flex; background: #121318; border-bottom: 1px solid var(--card-border); }
+    .tab-btn { flex: 1; padding: 12px; background: none; border: none; color: var(--text-sub); font-weight: 700; cursor: pointer; border-bottom: 3px solid transparent; }
+    .tab-btn.active { color: var(--de-gold); border-bottom-color: var(--de-gold); }
 
     .modal-body { padding: 20px; overflow-y: auto; }
     
     .event-item {
       display: flex; justify-content: space-between; align-items: center;
-      background: #0f172a; padding: 12px 16px; border-radius: 10px; margin-bottom: 8px; font-size: 0.9rem;
+      background: #121318; padding: 12px 16px; border-radius: 10px; margin-bottom: 8px; font-size: 0.9rem;
+      border: 1px solid var(--card-border);
     }
   </style>
 </head>
@@ -124,7 +151,7 @@
   <div class="modal-overlay" id="match-modal">
     <div class="modal-content">
       <div class="modal-header">
-        <div id="modal-title" style="font-weight:700; font-size:1.1rem;"></div>
+        <div id="modal-title" style="font-weight:800; font-size:1.1rem; color:var(--de-gold);"></div>
         <button class="close-btn" onclick="closeModal()">✕</button>
       </div>
       
@@ -140,7 +167,6 @@
 
   <script>
     let globalData = null;
-    let activeMatch = null;
 
     async function init() {
       try {
@@ -188,9 +214,9 @@
         card.innerHTML = `
           <div class="match-meta"><span>📅 ${m.date_tr}</span><span>⏰ ${m.time_tr} (TSİ)</span></div>
           <div class="teams-container">
-            <div class="team-badge">${m.team1}</div>
+            <div class="team-badge" title="${m.team1}">${m.team1}</div>
             <div class="score-box">${m.score}</div>
-            <div class="team-badge">${m.team2}</div>
+            <div class="team-badge" title="${m.team2}">${m.team2}</div>
           </div>
           <div class="broadcaster-box">📺 ${m.broadcaster}</div>
         `;
@@ -199,10 +225,8 @@
     }
 
     function openDetails(m) {
-      activeMatch = m;
-      document.getElementById("modal-title").textContent = `${m.team1} ${m.score} ${m.team2}`;
+      document.getElementById("modal-title").textContent = `${m.team1}  ${m.score}  ${m.team2}`;
       
-      // Events Render
       const eventsBody = document.getElementById("tab-events");
       let htmlEvents = "";
       if (m.events && m.events.length > 0) {
@@ -214,27 +238,26 @@
 
           htmlEvents += `
             <div class="event-item">
-              <span style="color:#f59e0b; font-weight:bold;">⏱️ ${e.minute}'</span>
-              <span>${icon} ${e.scorer || e.player}</span>
-              <span style="color:var(--accent-green); font-weight:bold;">(${e.score1 || ''} ${e.score2 ? '-' : ''} ${e.score2 || ''})</span>
+              <span style="color:var(--de-gold); font-weight:bold;">⏱️ ${e.minute}'</span>
+              <span>${icon} ${e.player}</span>
+              <span style="color:var(--text-main); font-weight:bold;">${e.score || ''}</span>
             </div>`;
         });
       } else {
-        htmlEvents = "<div style='text-align:center; color:var(--text-sub); padding:20px;'>Keine Events verzeichnet.</div>";
+        htmlEvents = "<div style='text-align:center; color:var(--text-sub); padding:20px;'>Ereignisse werden geladen / Veri bekleniyor.</div>";
       }
       eventsBody.innerHTML = htmlEvents;
 
-      // Lineups Render
       const lineupsBody = document.getElementById("tab-lineups");
       lineupsBody.innerHTML = `
         <div style="display:flex; justify-content:space-between; gap:20px;">
           <div style="flex:1;">
-            <h4 style="color:var(--accent-green); margin-top:0;">${m.team1}</h4>
-            <div style="font-size:0.85rem; color:var(--text-sub);">Kadro yükleniyor / Eklenmedi</div>
+            <h4 style="color:var(--de-gold); margin-top:0;">${m.team1}</h4>
+            <div style="font-size:0.85rem; color:var(--text-sub);">Kadro Verisi Bekleniyor</div>
           </div>
           <div style="flex:1;">
-            <h4 style="color:var(--accent-green); margin-top:0;">${m.team2}</h4>
-            <div style="font-size:0.85rem; color:var(--text-sub);">Kadro yükleniyor / Eklenmedi</div>
+            <h4 style="color:var(--de-gold); margin-top:0;">${m.team2}</h4>
+            <div style="font-size:0.85rem; color:var(--text-sub);">Kadro Verisi Bekleniyor</div>
           </div>
         </div>`;
 
