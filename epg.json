@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-09-01T13:04:48.357818+00:00",
-  "date": "01.09.2026 - 13:04",
+  "generated_at": "2026-09-01T13:15:43.617927+00:00",
+  "date": "01.09.2026 - 13:15",
   "streams": {},
   "channels": {
     "ARD": [
       {
-        "time": "20:15",
+        "time": "13:15",
         "endTime": "--:--",
-        "title": "",
-        "url": "https://www.tvspielfilm.de/tv-programm/sendungen/das-erste,ARD.html"
+        "title": "ARD Canlı Yayın",
+        "url": "#"
       }
     ],
     "ZDF": [
       {
-        "time": "--:--",
+        "time": "13:15",
         "endTime": "--:--",
         "title": "ZDF Canlı Yayın",
         "url": "#"
@@ -21,15 +21,15 @@
     ],
     "RTL": [
       {
-        "time": "05:00",
-        "endTime": "05:20",
-        "title": "",
-        "url": "https://www.tvspielfilm.de/tv-programm/sendungen/nicktoons,NICKT.html"
+        "time": "13:15",
+        "endTime": "--:--",
+        "title": "RTL Canlı Yayın",
+        "url": "#"
       }
     ],
     "RTL2": [
       {
-        "time": "--:--",
+        "time": "13:15",
         "endTime": "--:--",
         "title": "RTL2 Canlı Yayın",
         "url": "#"
@@ -37,7 +37,7 @@
     ],
     "SAT.1": [
       {
-        "time": "--:--",
+        "time": "13:15",
         "endTime": "--:--",
         "title": "SAT.1 Canlı Yayın",
         "url": "#"
@@ -45,7 +45,7 @@
     ],
     "ProSieben": [
       {
-        "time": "--:--",
+        "time": "13:15",
         "endTime": "--:--",
         "title": "ProSieben Canlı Yayın",
         "url": "#"
@@ -53,7 +53,7 @@
     ],
     "3sat": [
       {
-        "time": "--:--",
+        "time": "13:15",
         "endTime": "--:--",
         "title": "3sat Canlı Yayın",
         "url": "#"
@@ -61,15 +61,15 @@
     ],
     "ONE": [
       {
-        "time": "05:00",
-        "endTime": "05:25",
-        "title": "",
-        "url": "https://www.tvspielfilm.de/tv-programm/sendungen/prosieben-maxx,PRO7M.html"
+        "time": "13:15",
+        "endTime": "--:--",
+        "title": "ONE Canlı Yayın",
+        "url": "#"
       }
     ],
     "Sky Sport Bundesliga 1": [
       {
-        "time": "--:--",
+        "time": "13:15",
         "endTime": "--:--",
         "title": "Sky Sport Bundesliga 1 Canlı Yayın",
         "url": "#"
@@ -77,7 +77,7 @@
     ],
     "Sky Sport Bundesliga 2": [
       {
-        "time": "--:--",
+        "time": "13:15",
         "endTime": "--:--",
         "title": "Sky Sport Bundesliga 2 Canlı Yayın",
         "url": "#"
@@ -85,7 +85,7 @@
     ],
     "Sky Sport Bundesliga 3": [
       {
-        "time": "--:--",
+        "time": "13:15",
         "endTime": "--:--",
         "title": "Sky Sport Bundesliga 3 Canlı Yayın",
         "url": "#"
@@ -93,7 +93,7 @@
     ],
     "Sky Sport Bundesliga 4": [
       {
-        "time": "--:--",
+        "time": "13:15",
         "endTime": "--:--",
         "title": "Sky Sport Bundesliga 4 Canlı Yayın",
         "url": "#"
@@ -101,7 +101,7 @@
     ],
     "Sky Sport Bundesliga 5": [
       {
-        "time": "--:--",
+        "time": "13:15",
         "endTime": "--:--",
         "title": "Sky Sport Bundesliga 5 Canlı Yayın",
         "url": "#"
@@ -109,7 +109,7 @@
     ],
     "DAZN 1": [
       {
-        "time": "--:--",
+        "time": "13:15",
         "endTime": "--:--",
         "title": "DAZN 1 Canlı Yayın",
         "url": "#"
@@ -117,7 +117,7 @@
     ],
     "DAZN 2": [
       {
-        "time": "--:--",
+        "time": "13:15",
         "endTime": "--:--",
         "title": "DAZN 2 Canlı Yayın",
         "url": "#"
