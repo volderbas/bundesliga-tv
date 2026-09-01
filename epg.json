@@ -1,0 +1,916 @@
+{
+  "generated_at": "2026-09-01T09:36:00.976040+00:00",
+  "date": "01.09.2026 - 09:36",
+  "channels": {
+    "ARD": [
+      {
+        "time": "05:00",
+        "endTime": "05:30",
+        "title": "Doku-Reihe ARD Crime Time",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "05:30",
+        "endTime": "09:00",
+        "title": "Frühmagazin ZDF-Morgenmagazin",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "09:00",
+        "endTime": "09:05",
+        "title": "Nachrichten Tagesschau",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "09:05",
+        "endTime": "09:55",
+        "title": "Krimiserie Hubert ohne Staller",
+        "genre": "Dizi"
+      },
+      {
+        "time": "09:55",
+        "endTime": "10:40",
+        "title": "Krimiserie Morden im Norden",
+        "genre": "Dizi"
+      },
+      {
+        "time": "10:40",
+        "endTime": "10:45",
+        "title": "Nachrichten Tagesschau",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "10:45",
+        "endTime": "11:15",
+        "title": "Quiz Meister des Alltags",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "11:15",
+        "endTime": "12:00",
+        "title": "Quiz Gefragt - Gejagt",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "12:00",
+        "endTime": "14:00",
+        "title": "Mittagsmagazin Mittagsmagazin",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "14:00",
+        "endTime": "14:10",
+        "title": "Nachrichten Tagesschau",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "21:00",
+        "endTime": "21:45",
+        "title": "In aller Freundschaft Arztserie | Serie",
+        "genre": "Dizi"
+      },
+      {
+        "time": "23:05",
+        "endTime": "23:50",
+        "title": "Sportschau Doku-Reihe | Sport",
+        "genre": "Spor"
+      },
+      {
+        "time": "20:15",
+        "endTime": "21:45",
+        "title": "Nord bei Nordwest: Bei Einbruch Mord Krimireihe | Serie",
+        "genre": "Dizi"
+      },
+      {
+        "time": "20:15",
+        "endTime": "23:30",
+        "title": "Goldene Henne 2026 - Deutschlands größter Publikumspreis Preisverleihung | Unterhaltung",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "23:50",
+        "endTime": "00:30",
+        "title": "Sportschau Sportmagazin | Sport",
+        "genre": "Spor"
+      },
+      {
+        "time": "20:15",
+        "endTime": "21:45",
+        "title": "Harter Brocken Krimireihe | Serie",
+        "genre": "Dizi"
+      },
+      {
+        "time": "20:20",
+        "endTime": "21:50",
+        "title": "Tatort: Das Ende der Nacht Krimireihe | Film",
+        "genre": "Film"
+      }
+    ],
+    "ZDF": [
+      {
+        "time": "04:50",
+        "endTime": "05:30",
+        "title": "Boulevardmagazin hallo deutschland",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "05:30",
+        "endTime": "09:00",
+        "title": "Frühmagazin ZDF-Morgenmagazin",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "09:00",
+        "endTime": "09:05",
+        "title": "Nachrichten heute Xpress",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "09:05",
+        "endTime": "10:30",
+        "title": "Frühmagazin Volle Kanne - Service täglich",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "10:30",
+        "endTime": "11:15",
+        "title": "Polizeiserie Notruf Hafenkante",
+        "genre": "Dizi"
+      },
+      {
+        "time": "11:15",
+        "endTime": "12:00",
+        "title": "Krimiserie SOKO Stuttgart",
+        "genre": "Dizi"
+      },
+      {
+        "time": "12:00",
+        "endTime": "14:00",
+        "title": "Mittagsmagazin Mittagsmagazin",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "14:00",
+        "endTime": "14:15",
+        "title": "Nachrichtenmagazin heute - in Deutschland",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "14:15",
+        "endTime": "15:00",
+        "title": "Kochshow Die Küchenschlacht",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "15:00",
+        "endTime": "15:05",
+        "title": "Nachrichten heute Xpress",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "15:05",
+        "endTime": "16:00",
+        "title": "Doku-Soap Bares für Rares",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "16:00",
+        "endTime": "16:10",
+        "title": "Auslandsmagazin heute - in Europa",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "16:10",
+        "endTime": "17:00",
+        "title": "Krimiserie Die Rosenheim-Cops",
+        "genre": "Dizi"
+      },
+      {
+        "time": "17:00",
+        "endTime": "17:10",
+        "title": "Nachrichten heute",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "17:10",
+        "endTime": "18:00",
+        "title": "Boulevardmagazin hallo deutschland",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "22:15",
+        "endTime": "22:45",
+        "title": "37° Dokumentation | Reportage",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "18:00",
+        "endTime": "18:54",
+        "title": "SOKO Wismar Krimiserie | Serie",
+        "genre": "Dizi"
+      },
+      {
+        "time": "20:15",
+        "endTime": "21:45",
+        "title": "Friesland: Sturmmöwen Krimireihe | Serie",
+        "genre": "Dizi"
+      },
+      {
+        "time": "20:15",
+        "endTime": "21:45",
+        "title": "Die Bergretter Abenteuerserie | Serie",
+        "genre": "Dizi"
+      },
+      {
+        "time": "01:30",
+        "endTime": "03:00",
+        "title": "Für immer Freibad Komödie | Film",
+        "genre": "Film"
+      },
+      {
+        "time": "18:00",
+        "endTime": "19:00",
+        "title": "SOKO Linz Krimiserie | Serie",
+        "genre": "Dizi"
+      },
+      {
+        "time": "21:15",
+        "endTime": "22:00",
+        "title": "SOKO Leipzig Krimiserie | Serie",
+        "genre": "Dizi"
+      }
+    ],
+    "RTL": [
+      {
+        "time": "04:35",
+        "endTime": "05:20",
+        "title": "Krimiserie CSI: Den Tätern auf der Spur",
+        "genre": "Dizi"
+      },
+      {
+        "time": "05:20",
+        "endTime": "06:00",
+        "title": "Krimiserie CSI: Den Tätern auf der Spur",
+        "genre": "Dizi"
+      },
+      {
+        "time": "06:00",
+        "endTime": "09:00",
+        "title": "Frühmagazin Deutschland am Morgen",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "09:00",
+        "endTime": "09:30",
+        "title": "Daily Soap Gute Zeiten, schlechte Zeiten",
+        "genre": "Dizi"
+      },
+      {
+        "time": "09:30",
+        "endTime": "10:00",
+        "title": "Daily Soap Unter uns",
+        "genre": "Dizi"
+      },
+      {
+        "time": "10:00",
+        "endTime": "11:00",
+        "title": "Gerichtsshow Ulrich Wetzel - Das Strafgericht",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "11:00",
+        "endTime": "12:00",
+        "title": "Gerichtsshow Barbara Salesch - Das Strafgericht",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "12:00",
+        "endTime": "15:00",
+        "title": "Mittagsmagazin Punkt 12 - Das RTL-Mittagsjournal",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "15:00",
+        "endTime": "15:55",
+        "title": "Gerichtsshow Barbara Salesch - Das Strafgericht",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "15:55",
+        "endTime": "17:00",
+        "title": "Gerichtsshow Ulrich Wetzel - Das Strafgericht",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "17:00",
+        "endTime": "17:30",
+        "title": "Doku-Soap Ulrich Wetzel - Das Jugendgericht",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "17:30",
+        "endTime": "18:00",
+        "title": "Daily Soap Unter uns",
+        "genre": "Dizi"
+      },
+      {
+        "time": "18:00",
+        "endTime": "18:30",
+        "title": "Magazin Explosiv - Das Magazin",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "18:30",
+        "endTime": "18:45",
+        "title": "Boulevardmagazin Exclusiv - Das Star-Magazin",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "18:45",
+        "endTime": "19:05",
+        "title": "Nachrichten RTL Aktuell",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "20:15",
+        "endTime": "23:15",
+        "title": "Gladiators - Die Show der Giganten Show | Unterhaltung",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "23:15",
+        "endTime": "01:05",
+        "title": "Bastian Bielendorfer live! Mr. BoomBasti - Ein Superheld in seiner Welt Show | Unterhaltung",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "20:15",
+        "endTime": "22:35",
+        "title": "The King's Man - The Beginning Actionabenteuer | Film",
+        "genre": "Film"
+      },
+      {
+        "time": "20:30",
+        "endTime": "23:30",
+        "title": "Wer wird Millionär? Quiz | Unterhaltung",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "00:50",
+        "endTime": "01:30",
+        "title": "Alltagskämpfer - So tickt Deutschland! Doku-Reihe | Reportage",
+        "genre": "Belgesel"
+      }
+    ],
+    "RTL2": [
+      {
+        "time": "03:40",
+        "endTime": "05:10",
+        "title": "Doku-Soap Der Trödeltrupp - Das Geld liegt im Keller",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "09:00",
+        "endTime": "10:00",
+        "title": "Doku-Soap Der Trödeltrupp - Das Geld liegt im Keller",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "16:05",
+        "endTime": "17:05",
+        "title": "Doku-Soap Hartz und herzlich - Tag für Tag Benz-Baracken",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "18:05",
+        "endTime": "19:05",
+        "title": "Doku-Soap Hartz und herzlich - Tag für Tag Benz-Baracken",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "19:05",
+        "endTime": "20:15",
+        "title": "Daily Soap Berlin - Tag & Nacht",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "20:15",
+        "endTime": "21:15",
+        "title": "Doku-Soap Hartz und herzlich - Tag für Tag Rostock",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "21:15",
+        "endTime": "22:15",
+        "title": "Kochshow Die Imbisshelden - Voll lecker!",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "22:15",
+        "endTime": "00:15",
+        "title": "Doku-Reihe Mensch Retter",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "00:15",
+        "endTime": "01:15",
+        "title": "Doku-Soap Hartz und herzlich - Tag für Tag Rostock",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "01:15",
+        "endTime": "02:55",
+        "title": "Doku-Reihe Hartz und herzlich",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "02:55",
+        "endTime": "05:10",
+        "title": "Doku-Reihe Armes Deutschland - Stempeln oder abrackern?",
+        "genre": "Belgesel"
+      }
+    ],
+    "SAT.1": [
+      {
+        "time": "04:45",
+        "endTime": "05:30",
+        "title": "Doku-Soap Auf Streife",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "05:30",
+        "endTime": "10:00",
+        "title": "Frühmagazin SAT.1-Frühstücksfernsehen",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "10:00",
+        "endTime": "11:00",
+        "title": "Gerichtsshow Richter Alexander Hold",
+        "genre": "Dizi"
+      },
+      {
+        "time": "11:00",
+        "endTime": "12:00",
+        "title": "Gerichtsshow Richter Alexander Hold",
+        "genre": "Dizi"
+      },
+      {
+        "time": "12:00",
+        "endTime": "13:00",
+        "title": "Gerichtsshow Richter Alexander Hold",
+        "genre": "Dizi"
+      },
+      {
+        "time": "13:00",
+        "endTime": "14:00",
+        "title": "Gerichtsshow Richter Alexander Hold",
+        "genre": "Dizi"
+      },
+      {
+        "time": "14:00",
+        "endTime": "15:00",
+        "title": "Gerichtsshow Richter Alexander Hold",
+        "genre": "Dizi"
+      },
+      {
+        "time": "15:00",
+        "endTime": "16:00",
+        "title": "Doku-Soap Auf Streife",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "16:00",
+        "endTime": "17:00",
+        "title": "Doku-Soap Auf Streife",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "17:00",
+        "endTime": "17:30",
+        "title": "Notruf",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "17:30",
+        "endTime": "18:00",
+        "title": "Notruf",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "18:00",
+        "endTime": "18:30",
+        "title": "Doku-Soap Lenßen übernimmt",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "18:30",
+        "endTime": "19:00",
+        "title": "Doku-Soap Lenßen übernimmt",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "19:00",
+        "endTime": "19:45",
+        "title": "Daily Soap Die Landarztpraxis - Team Sonnenhof",
+        "genre": "Dizi"
+      },
+      {
+        "time": "19:45",
+        "endTime": "20:15",
+        "title": "Gespräch :newstime Sommerinterview",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "20:15",
+        "endTime": "21:15",
+        "title": "Navy CIS Krimiserie | Serie",
+        "genre": "Dizi"
+      },
+      {
+        "time": "21:15",
+        "endTime": "22:10",
+        "title": "Navy CIS: Origins Krimiserie | Serie",
+        "genre": "Dizi"
+      },
+      {
+        "time": "20:15",
+        "endTime": "22:55",
+        "title": "Wer ist Deutschlands Superhirn? Quizshow | Unterhaltung",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "22:55",
+        "endTime": "01:00",
+        "title": "Deutschlands größte Geheimnisse Ranking-Show | Unterhaltung",
+        "genre": "Eğlence"
+      }
+    ],
+    "ProSieben": [
+      {
+        "time": "04:50",
+        "endTime": "05:10",
+        "title": "Sitcom B Positive",
+        "genre": "Dizi"
+      },
+      {
+        "time": "05:10",
+        "endTime": "05:30",
+        "title": "Sitcom B Positive",
+        "genre": "Dizi"
+      },
+      {
+        "time": "05:30",
+        "endTime": "05:45",
+        "title": "Sitcom Call Me Kat",
+        "genre": "Dizi"
+      },
+      {
+        "time": "05:45",
+        "endTime": "06:10",
+        "title": "Sitcom Call Me Kat",
+        "genre": "Dizi"
+      },
+      {
+        "time": "06:10",
+        "endTime": "07:00",
+        "title": "Boulevardmagazin taff",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "07:00",
+        "endTime": "08:05",
+        "title": "Wissenschaftsmagazin Galileo",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "08:05",
+        "endTime": "08:30",
+        "title": "Sitcom How I Met Your Mother",
+        "genre": "Dizi"
+      },
+      {
+        "time": "08:30",
+        "endTime": "09:00",
+        "title": "Sitcom How I Met Your Mother",
+        "genre": "Dizi"
+      },
+      {
+        "time": "09:00",
+        "endTime": "09:25",
+        "title": "Comedyserie The Middle",
+        "genre": "Dizi"
+      },
+      {
+        "time": "09:25",
+        "endTime": "09:55",
+        "title": "Comedyserie The Middle",
+        "genre": "Dizi"
+      }
+    ],
+    "3sat": [
+      {
+        "time": "04:26",
+        "endTime": "05:26",
+        "title": "Konzert Nürnberg Pop Festival 2025",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "05:26",
+        "endTime": "06:20",
+        "title": "Konzert Nürnberg Pop Festival 2025",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "06:21",
+        "endTime": "06:59",
+        "title": "Kulturmagazin Kulturzeit",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "06:59",
+        "endTime": "07:30",
+        "title": "Wissenschaftsmagazin nano",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "07:30",
+        "endTime": "08:00",
+        "title": "Wetter Alpenpanorama",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "08:00",
+        "endTime": "08:08",
+        "title": "Nachrichten ZIB",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "08:08",
+        "endTime": "08:30",
+        "title": "Wetter Alpenpanorama",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "08:30",
+        "endTime": "08:33",
+        "title": "Nachrichten ZIB",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "08:33",
+        "endTime": "09:00",
+        "title": "Wetter Alpenpanorama",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "09:00",
+        "endTime": "09:09",
+        "title": "Nachrichten ZIB",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "09:09",
+        "endTime": "09:46",
+        "title": "Kulturmagazin Kulturzeit",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "09:46",
+        "endTime": "10:22",
+        "title": "Wissenschaftsmagazin nano",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "10:22",
+        "endTime": "11:52",
+        "title": "Reisedokumentation Gärten in den Alpen - Von Überlebenskünstlern, Exoten und Pionieren",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "11:52",
+        "endTime": "12:21",
+        "title": "Doku-Reihe Am Pass - Geschichten aus der Spitzenküche",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "12:21",
+        "endTime": "12:51",
+        "title": "Magazin Servicezeit",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "12:51",
+        "endTime": "13:21",
+        "title": "Reisereportage Reisezeit",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "13:21",
+        "endTime": "14:05",
+        "title": "Doku-Reihe An den Ufern des Nil",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "14:05",
+        "endTime": "14:49",
+        "title": "Doku-Reihe An den Ufern des Nil",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "14:49",
+        "endTime": "15:32",
+        "title": "Doku-Reihe An den Ufern des Nil",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "15:32",
+        "endTime": "16:17",
+        "title": "Reisedokumentation Ewiges Ägypten",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "16:17",
+        "endTime": "17:01",
+        "title": "Reisedokumentation Ewiges Ägypten",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "17:01",
+        "endTime": "17:45",
+        "title": "Reisedokumentation Ewiges Ägypten",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "17:45",
+        "endTime": "18:30",
+        "title": "Reisedokumentation Ewiges Ägypten",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "18:30",
+        "endTime": "19:00",
+        "title": "Wissenschaftsmagazin nano",
+        "genre": "Belgesel"
+      },
+      {
+        "time": "19:00",
+        "endTime": "19:21",
+        "title": "Nachrichten heute",
+        "genre": "Belgesel"
+      }
+    ],
+    "ONE": [
+      {
+        "time": "04:30",
+        "endTime": "05:15",
+        "title": "Krimiserie Adam Dalgliesh, Scotland Yard",
+        "genre": "Dizi"
+      },
+      {
+        "time": "05:15",
+        "endTime": "05:40",
+        "title": "Comedy Kurzstrecke mit Pierre M. Krause",
+        "genre": "Eğlence"
+      },
+      {
+        "time": "05:40",
+        "endTime": "06:25",
+        "title": "Dramaserie Walking on Sunshine",
+        "genre": "Dizi"
+      },
+      {
+        "time": "06:25",
+        "endTime": "07:15",
+        "title": "Telenovela Sturm der Liebe",
+        "genre": "Dizi"
+      },
+      {
+        "time": "07:15",
+        "endTime": "08:00",
+        "title": "Telenovela Sturm der Liebe",
+        "genre": "Dizi"
+      },
+      {
+        "time": "08:00",
+        "endTime": "08:50",
+        "title": "Telenovela Sturm der Liebe",
+        "genre": "Dizi"
+      },
+      {
+        "time": "08:50",
+        "endTime": "09:40",
+        "title": "Telenovela Sturm der Liebe",
+        "genre": "Dizi"
+      },
+      {
+        "time": "09:40",
+        "endTime": "10:20",
+        "title": "Dramaserie Velvet",
+        "genre": "Dizi"
+      },
+      {
+        "time": "10:20",
+        "endTime": "11:05",
+        "title": "Dramaserie Velvet",
+        "genre": "Dizi"
+      },
+      {
+        "time": "11:05",
+        "endTime": "11:50",
+        "title": "Telenovela Rote Rosen",
+        "genre": "Dizi"
+      },
+      {
+        "time": "11:50",
+        "endTime": "12:40",
+        "title": "Telenovela Rote Rosen",
+        "genre": "Dizi"
+      },
+      {
+        "time": "12:40",
+        "endTime": "13:25",
+        "title": "Arztserie In aller Freundschaft",
+        "genre": "Dizi"
+      },
+      {
+        "time": "13:25",
+        "endTime": "14:10",
+        "title": "Arztserie In aller Freundschaft",
+        "genre": "Dizi"
+      },
+      {
+        "time": "14:10",
+        "endTime": "15:40",
+        "title": "Die Kanzlei",
+        "genre": "Dizi"
+      },
+      {
+        "time": "15:40",
+        "endTime": "16:20",
+        "title": "Dramaserie Velvet",
+        "genre": "Dizi"
+      },
+      {
+        "time": "16:20",
+        "endTime": "17:05",
+        "title": "Dramaserie Velvet",
+        "genre": "Dizi"
+      },
+      {
+        "time": "17:05",
+        "endTime": "17:50",
+        "title": "Telenovela Rote Rosen",
+        "genre": "Dizi"
+      },
+      {
+        "time": "17:50",
+        "endTime": "18:40",
+        "title": "Telenovela Rote Rosen",
+        "genre": "Dizi"
+      },
+      {
+        "time": "18:40",
+        "endTime": "19:25",
+        "title": "Telenovela Sturm der Liebe",
+        "genre": "Dizi"
+      },
+      {
+        "time": "19:25",
+        "endTime": "20:15",
+        "title": "Telenovela Sturm der Liebe",
+        "genre": "Dizi"
+      },
+      {
+        "time": "20:15",
+        "endTime": "21:40",
+        "title": "Biografie Miss Austen Regrets",
+        "genre": "Film"
+      },
+      {
+        "time": "21:40",
+        "endTime": "22:40",
+        "title": "Dramaserie Little Women",
+        "genre": "Çocuk"
+      },
+      {
+        "time": "22:40",
+        "endTime": "23:35",
+        "title": "Drama Little Women",
+        "genre": "Çocuk"
+      },
+      {
+        "time": "23:35",
+        "endTime": "00:40",
+        "title": "Dramaserie Little Women",
+        "genre": "Çocuk"
+      },
+      {
+        "time": "00:40",
+        "endTime": "02:05",
+        "title": "Biografie Miss Austen Regrets",
+        "genre": "Film"
+      }
+    ]
+  }
+}
