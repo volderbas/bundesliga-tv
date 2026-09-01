@@ -221,31 +221,14 @@
   </div>
 
   <script>
-    // Kanallara ait doğrudan canlı yayın (.m3u8) adresleri
-    // Kendi m3u8 adreslerinizi veya Vavoo m3u8 linklerini buraya ekleyebilirsiniz.
-    const STREAM_MAP = {
-      "ARD": "https://marlin.ard-m3u8.de/live/ard.m3u8",
-      "ZDF": "https://zdf-hls-15.akamaized.net/hls/live/2016498/de/veryhigh/master.m3u8",
-      "3sat": "https://zdf-hls-16.akamaized.net/hls/live/2016499/de/veryhigh/master.m3u8",
-      "ONE": "https://marlin.ard-m3u8.de/live/one.m3u8",
-      "RTL": "",
-      "RTL2": "",
-      "SAT.1": "",
-      "ProSieben": "",
-      "Sky Sport Bundesliga 1": "",
-      "Sky Sport Bundesliga 2": "",
-      "Sky Sport Bundesliga 3": "",
-      "Sky Sport Bundesliga 4": "",
-      "Sky Sport Bundesliga 5": "",
-      "DAZN 1": "",
-      "DAZN 2": ""
-    };
+    // Otomatik çekilen Vavoo yayın linklerini tutacak obje
+    let currentStreams = {};
 
     function playStream(channelName) {
-      const streamUrl = STREAM_MAP[channelName];
+      const streamUrl = currentStreams[channelName];
       
       if (!streamUrl || streamUrl.trim() === "") {
-        alert(`${channelName} kanalı için gömülü yayın adresi (.m3u8) henüz STREAM_MAP listesine eklenmemiş.`);
+        alert(`${channelName} kanalı için canlı akış adresi henüz güncellenmedi.`);
         return;
       }
 
@@ -286,6 +269,9 @@
       try {
         const response = await fetch('epg.json?t=' + new Date().getTime());
         const data = await response.json();
+        
+        // Python botunun otomatik ürettiği canlı Vavoo m3u8 adreslerini al
+        currentStreams = data.streams || {};
         
         document.getElementById('update-time').innerText = `Son: ${data.date}`;
         const container = document.getElementById('channels-container');
