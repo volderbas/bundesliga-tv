@@ -1,344 +1,103 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="theme-color" content="#121316">
-  <title>Live TV Germany EPG</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  <!-- Gömülü Canlı Yayın Oynatıcı Kütüphanesi (HLS.js) -->
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+#!/usr/bin/env python3
+import json
+import requests
+from datetime import datetime, timezone
 
-  <style>
-    :root {
-      --bg: #121316;
-      --card-bg: #1c1d22;
-      --text: #f4f4f5;
-      --text-muted: #a1a1aa;
-      --germany-red: #e11d48;
-      --germany-gold: #fbbf24;
-      --live-green: #10b981;
-    }
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "application/json"
+}
 
-    body {
-      margin: 0;
-      padding: 16px;
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', -apple-system, sans-serif;
-    }
+# Takip Edeceğimiz Kanallar ve TV Spielfilm Kanal Kodları
+CHANNELS_CONFIG = [
+    {"name": "ARD", "search": ["ard", "das erste"]},
+    {"name": "ZDF", "search": ["zdf"]},
+    {"name": "RTL", "search": ["rtl"]},
+    {"name": "RTL2", "search": ["rtl2", "rtl 2"]},
+    {"name": "SAT.1", "search": ["sat.1", "sat1"]},
+    {"name": "ProSieben", "search": ["prosieben", "pro7"]},
+    {"name": "3sat", "search": ["3sat"]},
+    {"name": "ONE", "search": ["one"]},
+    {"name": "Sky Sport Bundesliga 1", "search": ["sky sport bundesliga 1", "sky buli 1", "bundesliga 1"]},
+    {"name": "Sky Sport Bundesliga 2", "search": ["sky sport bundesliga 2", "sky buli 2", "bundesliga 2"]},
+    {"name": "Sky Sport Bundesliga 3", "search": ["sky sport bundesliga 3", "sky buli 3", "bundesliga 3"]},
+    {"name": "Sky Sport Bundesliga 4", "search": ["sky sport bundesliga 4", "sky buli 4", "bundesliga 4"]},
+    {"name": "Sky Sport Bundesliga 5", "search": ["sky sport bundesliga 5", "sky buli 5", "bundesliga 5"]},
+    {"name": "DAZN 1", "search": ["dazn 1", "dazn1"]},
+    {"name": "DAZN 2", "search": ["dazn 2", "dazn2"]}
+]
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid #27272a;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--germany-gold);
-    }
-
-    .updated-at {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    .channel-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .channel-card {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 16px;
-      border: 1px solid #27272a;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .channel-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .channel-name {
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-
-    .channel-ARD { color: #60a5fa; }
-    .channel-ZDF { color: #fb923c; }
-    .channel-RTL { color: #f43f5e; }
-    .channel-RTL2 { color: #fb7185; }
-    .channel-SAT1 { color: #38bdf8; }
-    .channel-ProSieben { color: #a78bfa; }
-    .channel-3sat { color: #4ade80; }
-    .channel-ONE { color: #c084fc; }
-    .channel-Sky { color: #0284c7; }
-    .channel-DAZN { color: #facc15; }
-
-    .badge {
-      background: var(--germany-red);
-      color: white;
-      font-size: 0.65rem;
-      font-weight: 700;
-      padding: 3px 8px;
-      border-radius: 6px;
-      text-transform: uppercase;
-    }
-
-    .program-info {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .program-title {
-      font-size: 1.05rem;
-      font-weight: 600;
-      margin-bottom: 4px;
-      color: #fafafa;
-    }
-
-    .program-time {
-      font-size: 0.85rem;
-      color: var(--germany-gold);
-      font-weight: 500;
-    }
-
-    .card-actions {
-      display: flex;
-      gap: 8px;
-      margin-top: 4px;
-    }
-
-    .btn {
-      flex: 1;
-      text-align: center;
-      padding: 10px 0;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn-detail {
-      background: #27272a;
-      color: var(--text-muted);
-      border: 1px solid #3f3f46;
-    }
-
-    .btn-live {
-      background: var(--live-green);
-      color: #064e3b;
-      font-weight: 700;
-    }
-
-    /* Gömülü Video Player Modal Tasarımı */
-    .player-modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.9);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 16px;
-    }
-
-    .player-container {
-      width: 100%;
-      max-width: 850px;
-      background: #000;
-      border-radius: 12px;
-      overflow: hidden;
-      position: relative;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-      border: 1px solid #27272a;
-    }
-
-    video {
-      width: 100%;
-      height: auto;
-      max-height: 75vh;
-      display: block;
-    }
-
-    .close-btn {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(225, 29, 72, 0.85);
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      z-index: 10;
-      font-size: 0.85rem;
-    }
-
-    .close-btn:hover {
-      background: rgba(225, 29, 72, 1);
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>📺 Live TV Germany</h1>
-    <div id="update-time" class="updated-at">Yükleniyor...</div>
-  </header>
-
-  <div id="channels-container" class="channel-grid"></div>
-
-  <!-- Sitede Açılan Gömülü Oynatıcı -->
-  <div id="playerModal" class="player-modal">
-    <div class="player-container">
-      <button class="close-btn" onclick="closePlayer()">✕ Kapat</button>
-      <video id="videoPlayer" controls autoplay preload="auto"></video>
-    </div>
-  </div>
-
-  <script>
-    // Otomatik çekilen Vavoo yayın linklerini tutacak obje
-    let currentStreams = {};
-
-    function playStream(channelName) {
-      const streamUrl = currentStreams[channelName];
-      
-      if (!streamUrl || streamUrl.trim() === "") {
-        alert(`${channelName} kanalı için canlı akış adresi henüz güncellenmedi.`);
-        return;
-      }
-
-      const modal = document.getElementById('playerModal');
-      const video = document.getElementById('videoPlayer');
-      modal.style.display = 'flex';
-
-      if (Hls.isSupported()) {
-        const hls = new Hls();
-        hls.loadSource(streamUrl);
-        hls.attachMedia(video);
-        hls.on(Hls.Events.MANIFEST_PARSED, function() {
-          video.play();
-        });
-        window.currentHls = hls;
-      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-        // Safari / iOS cihazlar için native HLS desteği
-        video.src = streamUrl;
-        video.play();
-      }
-    }
-
-    function closePlayer() {
-      const modal = document.getElementById('playerModal');
-      const video = document.getElementById('videoPlayer');
-      video.pause();
-      video.removeAttribute('src');
-      video.load();
-      
-      if (window.currentHls) {
-        window.currentHls.destroy();
-        window.currentHls = null;
-      }
-      modal.style.display = 'none';
-    }
-
-    async function loadEPG() {
-      try {
-        const response = await fetch('epg.json?t=' + new Date().getTime());
-        const data = await response.json();
-        
-        // Python botunun otomatik ürettiği canlı Vavoo m3u8 adreslerini al
-        currentStreams = data.streams || {};
-        
-        document.getElementById('update-time').innerText = `Son: ${data.date}`;
-        const container = document.getElementById('channels-container');
-        container.innerHTML = '';
-
-        const now = new Date();
-        const germanTimeStr = now.toLocaleTimeString("de-DE", { timeZone: "Europe/Berlin", hour: '2-digit', minute: '2-digit' });
-        const [gHour, gMin] = germanTimeStr.split(':').map(Number);
-        const currentMinutes = gHour * 60 + gMin;
-
-        for (const [channel, programs] of Object.entries(data.channels)) {
-          let currentProgram = null;
-
-          for (const prog of programs) {
-            if (!prog.time || prog.time === "--:--") continue;
-            const [sh, sm] = prog.time.split(':').map(Number);
+def fetch_epg():
+    epg_result = {cfg["name"]: [] for cfg in CHANNELS_CONFIG}
+    
+    # TV Spielfilm Canlı Yayın Akış Uç Noktası
+    url = "https://live.tvspielfilm.de/static/broadcast/list/aktuell"
+    
+    try:
+        response = requests.get(url, headers=HEADERS, timeout=15)
+        if response.status_code == 200:
+            broadcasts = response.json()
             
-            let endMin = currentMinutes + 60; 
-            if (prog.endTime && prog.endTime !== "--:--") {
-              const [eh, em] = prog.endTime.split(':').map(Number);
-              endMin = eh * 60 + em;
-            }
+            for item in broadcasts:
+                channel_name = item.get("channel", {}).get("title", "").lower()
+                title = item.get("title", "").strip()
+                start_ts = item.get("timeStart")
+                end_ts = item.get("timeEnd")
+                broadcast_id = item.get("id", "")
 
-            const startMin = sh * 60 + sm;
-            if (endMin < startMin) endMin += 24 * 60;
+                if not title:
+                    continue
 
-            if (currentMinutes >= startMin && currentMinutes < endMin) {
-              currentProgram = prog;
-              break;
-            }
-          }
+                # Zaman Dönüştürme
+                start_time = datetime.fromtimestamp(start_ts).strftime("%H:%M") if start_ts else "--:--"
+                end_time = datetime.fromtimestamp(end_ts).strftime("%H:%M") if end_ts else "--:--"
 
-          const displayProg = currentProgram || (programs.length > 0 ? programs[0] : { title: "Yayın bilgisi yükleniyor...", time: "--:--", endTime: "--:--", url: "#" });
-          
-          let safeChannelClass = channel.replace('.', '').replace(/\s+/g, '');
-          if (channel.startsWith("Sky")) safeChannelClass = "Sky";
-          if (channel.startsWith("DAZN")) safeChannelClass = "DAZN";
+                # TV Spielfilm Detay Sayfası Linki
+                detail_url = f"https://www.tvspielfilm.de/tv-programm/sendung/{broadcast_id}.html" if broadcast_id else "https://www.tvspielfilm.de/"
 
-          const card = document.createElement('div');
-          card.className = 'channel-card';
-          
-          card.innerHTML = `
-            <div class="channel-header">
-              <span class="channel-name channel-${safeChannelClass}">${channel}</span>
-              <span class="badge">CANLI</span>
-            </div>
-            
-            <a href="${displayProg.url || '#'}" target="_blank" class="program-info">
-              <div class="program-title">${displayProg.title}</div>
-              <div class="program-time">⏰ ${displayProg.time} - ${displayProg.endTime}</div>
-            </a>
+                # Kanal Eşleştirme
+                for cfg in CHANNELS_CONFIG:
+                    ch_key = cfg["name"]
+                    if any(term in channel_name for term in cfg["search"]):
+                        epg_result[ch_key].append({
+                            "time": start_time,
+                            "endTime": end_time,
+                            "title": title,
+                            "url": detail_url
+                        })
+                        break
+    except Exception as e:
+        print(f"EPG çekilirken hata oluştu: {e}")
 
-            <div class="card-actions">
-              <a href="${displayProg.url || '#'}" target="_blank" class="btn btn-detail">📖 Program Detayı</a>
-              <button onclick="playStream('${channel}')" class="btn btn-live">▶ Canlı İzle</button>
-            </div>
-          `;
-          container.appendChild(card);
-        }
-      } catch (err) {
-        document.getElementById('channels-container').innerHTML = 
-          '<p style="color:#ef4444; text-align:center;">Veriler yüklenirken bir sorun oluştu.</p>';
-      }
+    # Yayın akışı bulunamayan kanallara varsayılan yönlendirme linki atama
+    now_str = datetime.now().strftime("%H:%M")
+    for cfg in CHANNELS_CONFIG:
+        ch_name = cfg["name"]
+        if not epg_result[ch_name]:
+            epg_result[ch_name].append({
+                "time": now_str,
+                "endTime": "--:--",
+                "title": f"{ch_name} Program Detayı İçin Tıklayın",
+                "url": "https://www.tvspielfilm.de/tv-programm/"
+            })
+
+    return epg_result
+
+def main():
+    print("Yayın akışları güncelleniyor...")
+    epg_data = fetch_epg()
+
+    output = {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "date": datetime.now().strftime("%d.%m.%Y - %H:%M"),
+        "streams": {},  # Canlı yayınlar devreden çıkarıldı
+        "channels": epg_data
     }
 
-    loadEPG();
-    setInterval(loadEPG, 60000);
-  </script>
-</body>
-</html>
+    with open("epg.json", "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+
+    print("epg.json başarıyla güncellendi.")
+
+if __name__ == "__main__":
+    main()
