@@ -3,80 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#18181b">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Bundesliga TV">
+  <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/732/732200.png">
+  
   <title>Bundesliga TV EPG</title>
-  <!-- Android & PWA Özellikleri -->
-<meta name="theme-color" content="#0f172a">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="application-name" content="Bundesliga TV">
-<link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/732/732200.png">
+  
+  <!-- Google Inter Fontu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #0f172a;
-      --card-bg: #1e293b;
-      --accent: #38bdf8;
-      --text: #f8fafc;
-      --text-muted: #94a3b8;
-      --live-badge: #ef4444;
+      --bg: #121316;
+      --card-bg: #1c1d22;
+      --card-hover: #262830;
+      --text: #f4f4f5;
+      --text-muted: #a1a1aa;
+      
+      /* Pastel Almanya Teması */
+      --germany-red: #e11d48;
+      --germany-gold: #fbbf24;
+      --germany-dark: #27272a;
     }
+
     body {
       margin: 0;
       padding: 16px;
       background-color: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 20px;
       padding-bottom: 12px;
-      border-bottom: 1px solid #334155;
+      border-bottom: 1px solid #27272a;
     }
-    h1 { margin: 0; font-size: 1.4rem; color: var(--accent); }
-    .updated-at { font-size: 0.8rem; color: var(--text-muted); }
-    .channel-grid { display: flex; flex-direction: column; gap: 12px; }
+
+    h1 {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--germany-gold);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .updated-at {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .channel-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
     .channel-card {
       background: var(--card-bg);
       border-radius: 12px;
-      padding: 14px;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-      border: 1px solid #334155;
+      padding: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      border: 1px solid #27272a;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      cursor: pointer;
     }
+
+    .channel-card:active {
+      transform: scale(0.98);
+      background: var(--card-hover);
+    }
+
     .channel-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 8px;
     }
-    .channel-name { font-weight: bold; font-size: 1.1rem; color: #fff; }
+
+    .channel-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    /* Kanal Başlık Renkleri */
+    .channel-ARD { color: #60a5fa; }
+    .channel-ZDF { color: #fb923c; }
+    .channel-RTL { color: #f43f5e; }
+    .channel-RTL2 { color: #fb7185; }
+    .channel-SAT1 { color: #38bdf8; }
+    .channel-ProSieben { color: #a78bfa; }
+    .channel-3sat { color: #4ade80; }
+    .channel-ONE { color: #c084fc; }
+
     .badge {
-      background: var(--live-badge);
+      background: var(--germany-red);
       color: white;
-      font-size: 0.7rem;
-      font-weight: bold;
-      padding: 2px 8px;
-      border-radius: 12px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       animation: pulse 2s infinite;
     }
+
     .badge-offline {
-      background: #475569;
-      color: #cbd5e1;
-      font-size: 0.7rem;
-      font-weight: bold;
-      padding: 2px 8px;
-      border-radius: 12px;
+      background: #3f3f46;
+      color: #a1a1aa;
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
     }
-    .program-title { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
-    .program-time { font-size: 0.85rem; color: var(--accent); }
-    .program-genre { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
-    
+
+    .program-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      line-height: 1.3;
+      color: #fafafa;
+    }
+
+    .program-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .program-time {
+      font-size: 0.85rem;
+      color: var(--germany-gold);
+      font-weight: 500;
+    }
+
+    .click-hint {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
     @keyframes pulse {
       0% { opacity: 1; }
-      50% { opacity: 0.5; }
+      50% { opacity: 0.6; }
       100% { opacity: 1; }
     }
   </style>
@@ -96,11 +182,10 @@
         const response = await fetch('epg.json?t=' + new Date().getTime());
         const data = await response.json();
         
-        document.getElementById('update-time').innerText = `Son Güncelleme: ${data.date}`;
+        document.getElementById('update-time').innerText = `Son: ${data.date}`;
         const container = document.getElementById('channels-container');
         container.innerHTML = '';
 
-        // Almanya Saatine (CET/CEST) göre dakikayı hesapla
         const now = new Date();
         const germanTimeStr = now.toLocaleTimeString("de-DE", { timeZone: "Europe/Berlin", hour: '2-digit', minute: '2-digit' });
         const [gHour, gMin] = germanTimeStr.split(':').map(Number);
@@ -114,7 +199,7 @@
             const [eh, em] = prog.endTime.split(':').map(Number);
             const startMin = sh * 60 + sm;
             let endMin = eh * 60 + em;
-            if (endMin < startMin) endMin += 24 * 60; // Gece yarısı geçişi
+            if (endMin < startMin) endMin += 24 * 60;
 
             if (currentMinutes >= startMin && currentMinutes < endMin) {
               currentProgram = prog;
@@ -122,42 +207,52 @@
             }
           }
 
-          const card = document.createElement('div');
+          const card = document.createElement('a');
           card.className = 'channel-card';
           
+          // Kanal adındaki noktayı CSS class için temizle
+          const safeChannelClass = channel.replace('.', '');
+          
           if (currentProgram) {
+            card.href = currentProgram.url || '#';
+            card.target = '_blank';
             card.innerHTML = `
               <div class="channel-header">
-                <span class="channel-name">${channel}</span>
+                <span class="channel-name channel-${safeChannelClass}">${channel}</span>
                 <span class="badge">CANLI</span>
               </div>
               <div class="program-title">${currentProgram.title}</div>
-              <div class="program-time">⏰ ${currentProgram.time} - ${currentProgram.endTime}</div>
-              <div class="program-genre">🏷️ ${currentProgram.genre}</div>
+              <div class="program-footer">
+                <span class="program-time">⏰ ${currentProgram.time} - ${currentProgram.endTime}</span>
+                <span class="click-hint">Detay ➔</span>
+              </div>
             `;
           } else {
-            // Canlı yayın saati tutmuyorsa günün ilk akış bilgisini göster
             const fallback = programs.length > 0 ? programs[0] : null;
+            card.href = fallback && fallback.url ? fallback.url : '#';
+            card.target = '_blank';
             card.innerHTML = `
               <div class="channel-header">
-                <span class="channel-name">${channel}</span>
+                <span class="channel-name channel-${safeChannelClass}">${channel}</span>
                 <span class="badge-offline">AKIŞ DIŞI</span>
               </div>
               <div class="program-title">${fallback ? fallback.title : 'Yayın bilgisi yok'}</div>
-              <div class="program-time">⏰ ${fallback ? fallback.time + ' - ' + fallback.endTime : '--:--'}</div>
-              <div class="program-genre">🏷️ Akış saat aralığı dışında</div>
+              <div class="program-footer">
+                <span class="program-time">⏰ ${fallback ? fallback.time + ' - ' + fallback.endTime : '--:--'}</span>
+                <span class="click-hint">Detay ➔</span>
+              </div>
             `;
           }
           container.appendChild(card);
         }
       } catch (err) {
         document.getElementById('channels-container').innerHTML = 
-          '<p style="color:red; text-align:center;">epg.json okunurken bir sorun oluştu.</p>';
+          '<p style="color:#ef4444; text-align:center;">Veriler yüklenirken bir sorun oluştu.</p>';
       }
     }
 
     loadEPG();
-    setInterval(loadEPG, 60000); // 1 dakikada bir arayüzü yeniler
+    setInterval(loadEPG, 60000);
   </script>
 </body>
 </html>
