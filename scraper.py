@@ -10,56 +10,47 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0.0.0 Safari/537.36"
 }
 
-# 1. KISIM: TVMovie Yapılandırması
-TVMOVIE_CHANNELS = {
-    "ARD": "ard", "ZDF": "zdf", "RTL": "rtl", 
-    "SAT.1": "sat1", "ProSieben": "pro-7", "3sat": "3sat"
-}
-
-# 2. KISIM: TVSpielfilm Yedek Kaynak Yapılandırması
-TVSPIELFILM_CHANNELS = {
-    "ARD": "ARD", "ZDF": "ZDF", "RTL": "RTL", 
-    "SAT.1": "SAT1", "ProSieben": "PRO7", "3sat": "3SAT"
+CHANNELS = {
+    "ARD": "ard",
+    "ZDF": "zdf",
+    "RTL": "rtl",
+    "RTL2": "rtl-ii",
+    "SAT.1": "sat1",
+    "ProSieben": "pro-7",
+    "3sat": "3sat",
+    "ONE": "one"
 }
 
 TIME_RANGE_RE = re.compile(r"(\d{2}:\d{2})\s*-\s*(\d{2}:\d{2})")
 
-def fetch_tvmovie(channel_name, slug):
+def fetch_tvmovie(slug):
     url = f"https://www.tvmovie.de/tv/sender-{slug}"
-    resp = requests.get(url, headers=HEADERS, timeout=10)
+    resp = requests.get(url, headers=HEADERS, timeout=12)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
+    
     entries = []
+    seen = set()
     for a in soup.select('a[href*="-epg-"]'):
+        href = a.get("href", "")
+        if href in seen:
+            continue
+        seen.add(href)
+        
         text = " ".join(a.get_text(strip=True).split())
         m = TIME_RANGE_RE.search(text)
-        if m:
-            entries.append({
-                "time": m.group(1),
-                "endTime": m.group(2),
-                "title": text[:m.start()].strip() or "Program",
-                "genre": "TV"
-            })
-    return entries
-
-def fetch_tvspielfilm(channel_name, slug):
-    url = f"https://www.tvspielfilm.de/tv-programm/sendezeiten/{slug},sendungen.html"
-    resp = requests.get(url, headers=HEADERS, timeout=10)
-    resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
-    entries = []
-    # TVSpielfilm tablosundan yayın akışı ayıklama
-    for row in soup.select("tr.broadcast-element"):
-        time_elem = row.select_one(".time")
-        title_elem = row.select_one(".title")
-        if time_elem and title_elem:
-            time_text = time_elem.get_text(strip=True)
-            entries.append({
-                "time": time_text,
-                "endTime": "--:--", # TVSpielfilm liste görünümünde bitiş saati ayrı hesaplanır
-                "title": title_elem.get_text(strip=True),
-                "genre": "TV"
-            })
+        if not m:
+            continue
+            
+        start, end = m.group(1), m.group(2)
+        title = text[:m.start()].strip() or "Program"
+        
+        entries.append({
+            "time": start,
+            "endTime": end,
+            "title": title[:100],
+            "genre": "TV"
+        })
     return entries
 
 def main():
@@ -69,26 +60,25 @@ def main():
         "channels": {}
     }
 
-    for name in TVMOVIE_CHANNELS:
-        data = []
-        # Birinci Kaynak Denemesi: TVMovie
+    total_programs = 0
+    for name, slug in CHANNELS.items():
         try:
-            data = fetch_tvmovie(name, TVMOVIE_CHANNELS[name])
+            items = fetch_tvmovie(slug)
+            result["channels"][name] = items
+            total_programs += len(items)
         except Exception as e:
-            print(f"[UYARI] {name} için TVMovie başarısız: {e}")
+            print(f"[HATA] {name} çekilemedi: {e}")
+            result["channels"][name] = []
 
-        # İkinci Kaynak Denemesi (Fallback): TVSpielfilm
-        if not data and name in TVSPIELFILM_CHANNELS:
-            try:
-                print(f"[YEDEK KAYNAK] {name} için TVSpielfilm çekiliyor...")
-                data = fetch_tvspielfilm(name, TVSPIELFILM_CHANNELS[name])
-            except Exception as e:
-                print(f"[HATA] {name} için TVSpielfilm de başarısız: {e}")
-
-        result["channels"][name] = data
+    # Eğer hiçbir program çekilemediyse mevcudu bozma
+    if total_programs == 0:
+        print("Hiç veri çekilemedi, iptal ediliyor.")
+        sys.exit(1)
 
     with open("epg.json", "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
+    
+    print(f"Başarıyla güncellendi. Toplam {total_programs} yayın bulundu.")
 
 if __name__ == "__main__":
     main()
