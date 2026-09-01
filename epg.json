@@ -1,127 +1,242 @@
 {
-  "generated_at": "2026-09-01T18:44:02.083474+00:00",
-  "date": "01.09.2026 - 18:44",
-  "streams": {},
-  "channels": {
-    "ARD": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "ARD Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=ARD+tv+programm+heute"
-      }
-    ],
-    "ZDF": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "ZDF Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=ZDF+tv+programm+heute"
-      }
-    ],
-    "RTL": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "RTL Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=RTL+tv+programm+heute"
-      }
-    ],
-    "RTL2": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "RTL2 Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=RTL2+tv+programm+heute"
-      }
-    ],
-    "SAT.1": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "SAT.1 Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=SAT.1+tv+programm+heute"
-      }
-    ],
-    "ProSieben": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "ProSieben Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=ProSieben+tv+programm+heute"
-      }
-    ],
-    "3sat": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "3sat Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=3sat+tv+programm+heute"
-      }
-    ],
-    "ONE": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "ONE Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=ONE+tv+programm+heute"
-      }
-    ],
-    "Sky Sport Bundesliga 1": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "Sky Sport Bundesliga 1 Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=Sky Sport Bundesliga 1+tv+programm+heute"
-      }
-    ],
-    "Sky Sport Bundesliga 2": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "Sky Sport Bundesliga 2 Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=Sky Sport Bundesliga 2+tv+programm+heute"
-      }
-    ],
-    "Sky Sport Bundesliga 3": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "Sky Sport Bundesliga 3 Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=Sky Sport Bundesliga 3+tv+programm+heute"
-      }
-    ],
-    "Sky Sport Bundesliga 4": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "Sky Sport Bundesliga 4 Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=Sky Sport Bundesliga 4+tv+programm+heute"
-      }
-    ],
-    "Sky Sport Bundesliga 5": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "Sky Sport Bundesliga 5 Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=Sky Sport Bundesliga 5+tv+programm+heute"
-      }
-    ],
-    "DAZN 1": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "DAZN 1 Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=DAZN 1+tv+programm+heute"
-      }
-    ],
-    "DAZN 2": [
-      {
-        "time": "18:44",
-        "endTime": "--:--",
-        "title": "DAZN 2 Güncel Yayın Akışı",
-        "url": "https://www.google.de/search?q=DAZN 2+tv+programm+heute"
-      }
-    ]
-  }
+  "generated_at": "2026-09-01T19:12:46.507267+00:00",
+  "date_str": "01.09.2026 - 19:12",
+  "bundesliga_1": [
+    {
+      "team1": "FC Bayern München",
+      "team2": "VfB Stuttgart",
+      "icon1": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg",
+      "icon2": "https://i.imgur.com/v0tkpNx.png",
+      "time_tr": "21:30",
+      "date_tr": "28.08.2026",
+      "score": "5 - 1",
+      "is_finished": true,
+      "broadcaster": "DAZN 1 / DAZN 2",
+      "sofascore_url": "https://www.sofascore.com/search?q=FC Bayern München+VfB Stuttgart",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+FC Bayern München+VfB Stuttgart+live+ticker"
+    },
+    {
+      "team1": "RB Leipzig",
+      "team2": "Borussia Mönchengladbach",
+      "icon1": "https://i.imgur.com/Rpwsjz1.png",
+      "icon2": "https://i.imgur.com/KSIk0Eu.png",
+      "time_tr": "16:30",
+      "date_tr": "29.08.2026",
+      "score": "3 - 0",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=RB Leipzig+Borussia Mönchengladbach",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+RB Leipzig+Borussia Mönchengladbach+live+ticker"
+    },
+    {
+      "team1": "1. FSV Mainz 05",
+      "team2": "SC Paderborn 07",
+      "icon1": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Logo_Mainz_05.svg",
+      "icon2": "https://upload.wikimedia.org/wikipedia/commons/e/e3/SC_Paderborn_07_Logo.svg",
+      "time_tr": "16:30",
+      "date_tr": "29.08.2026",
+      "score": "0 - 0",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=1. FSV Mainz 05+SC Paderborn 07",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+1. FSV Mainz 05+SC Paderborn 07+live+ticker"
+    },
+    {
+      "team1": "1. FC Union Berlin",
+      "team2": "Eintracht Frankfurt",
+      "icon1": "https://assets.dfb.de/uploads/000/018/232/small_union-Berlin.jpg",
+      "icon2": "https://i.imgur.com/X8NFkOb.png",
+      "time_tr": "16:30",
+      "date_tr": "29.08.2026",
+      "score": "3 - 3",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=1. FC Union Berlin+Eintracht Frankfurt",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+1. FC Union Berlin+Eintracht Frankfurt+live+ticker"
+    },
+    {
+      "team1": "1. FC Köln",
+      "team2": "TSG Hoffenheim",
+      "icon1": "https://upload.wikimedia.org/wikipedia/commons/0/01/1._FC_Koeln_Logo_2014%E2%80%93.svg",
+      "icon2": "https://i.imgur.com/gF0PfEl.png",
+      "time_tr": "16:30",
+      "date_tr": "29.08.2026",
+      "score": "3 - 2",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=1. FC Köln+TSG Hoffenheim",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+1. FC Köln+TSG Hoffenheim+live+ticker"
+    },
+    {
+      "team1": "SV 07 Elversberg",
+      "team2": "Bayer 04 Leverkusen",
+      "icon1": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/SV_Elversberg_Logo.svg/500px-SV_Elversberg_Logo.svg.png",
+      "icon2": "https://www.bundesliga-reisefuehrer.de/sites/default/files/B04_Standard_Logo_RGB.png",
+      "time_tr": "16:30",
+      "date_tr": "29.08.2026",
+      "score": "3 - 2",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=SV 07 Elversberg+Bayer 04 Leverkusen",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+SV 07 Elversberg+Bayer 04 Leverkusen+live+ticker"
+    },
+    {
+      "team1": "Borussia Dortmund",
+      "team2": "Hamburger SV",
+      "icon1": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/960px-Borussia_Dortmund_logo.svg.png",
+      "icon2": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Hamburger_SV_logo.svg",
+      "time_tr": "19:30",
+      "date_tr": "29.08.2026",
+      "score": "2 - 0",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=Borussia Dortmund+Hamburger SV",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+Borussia Dortmund+Hamburger SV+live+ticker"
+    },
+    {
+      "team1": "SC Freiburg",
+      "team2": "SV Werder Bremen",
+      "icon1": "https://i.imgur.com/r3mvi0h.png",
+      "icon2": "https://upload.wikimedia.org/wikipedia/commons/b/be/SV-Werder-Bremen-Logo.svg",
+      "time_tr": "16:30",
+      "date_tr": "30.08.2026",
+      "score": "4 - 1",
+      "is_finished": true,
+      "broadcaster": "DAZN 1 / DAZN 2",
+      "sofascore_url": "https://www.sofascore.com/search?q=SC Freiburg+SV Werder Bremen",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+SC Freiburg+SV Werder Bremen+live+ticker"
+    },
+    {
+      "team1": "FC Augsburg",
+      "team2": "FC Schalke 04",
+      "icon1": "https://i.imgur.com/sdE62e2.png",
+      "icon2": "https://upload.wikimedia.org/wikipedia/commons/9/97/FC_Schalke_04_Logo.png",
+      "time_tr": "18:30",
+      "date_tr": "30.08.2026",
+      "score": "3 - 0",
+      "is_finished": true,
+      "broadcaster": "DAZN 1 / DAZN 2",
+      "sofascore_url": "https://www.sofascore.com/search?q=FC Augsburg+FC Schalke 04",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+FC Augsburg+FC Schalke 04+live+ticker"
+    }
+  ],
+  "bundesliga_2": [
+    {
+      "team1": "SV Darmstadt 98",
+      "team2": "Hannover 96",
+      "icon1": "https://upload.wikimedia.org/wikipedia/commons/e/e5/SV_Darmstadt_98_Logo.svg",
+      "icon2": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Hannover_96_Logo.svg",
+      "time_tr": "14:30",
+      "date_tr": "30.08.2026",
+      "score": "0 - 1",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=SV Darmstadt 98+Hannover 96",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+SV Darmstadt 98+Hannover 96+live+ticker"
+    },
+    {
+      "team1": "VfL Bochum",
+      "team2": "VfL Osnabrück",
+      "icon1": "https://i.imgur.com/5jy3Gfr.png",
+      "icon2": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/VfL_Osnabrueck_Logo_2021%E2%80%93.svg/960px-VfL_Osnabrueck_Logo_2021%E2%80%93.svg.png",
+      "time_tr": "19:30",
+      "date_tr": "28.08.2026",
+      "score": "0 - 1",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=VfL Bochum+VfL Osnabrück",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+VfL Bochum+VfL Osnabrück+live+ticker"
+    },
+    {
+      "team1": "Eintracht Braunschweig",
+      "team2": "Hertha BSC",
+      "icon1": "https://upload.wikimedia.org/wikipedia/de/4/45/Logo_Eintracht_Braunschweig.svg",
+      "icon2": "https://i.imgur.com/apFwbYZ.png",
+      "time_tr": "19:30",
+      "date_tr": "28.08.2026",
+      "score": "3 - 5",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=Eintracht Braunschweig+Hertha BSC",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+Eintracht Braunschweig+Hertha BSC+live+ticker"
+    },
+    {
+      "team1": "1. FC Heidenheim 1846",
+      "team2": "Dynamo Dresden",
+      "icon1": "https://upload.wikimedia.org/wikipedia/commons/9/9d/1._FC_Heidenheim_1846.svg",
+      "icon2": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_SG_Dynamo_Dresden_neu.svg/960px-Logo_SG_Dynamo_Dresden_neu.svg.png",
+      "time_tr": "14:00",
+      "date_tr": "29.08.2026",
+      "score": "5 - 3",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=1. FC Heidenheim 1846+Dynamo Dresden",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+1. FC Heidenheim 1846+Dynamo Dresden+live+ticker"
+    },
+    {
+      "team1": "Karlsruher SC",
+      "team2": "VfL Wolfsburg",
+      "icon1": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Karlsruher_SC_Logo_2.svg",
+      "icon2": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/VfL_Wolfsburg_logo_2026.svg/960px-VfL_Wolfsburg_logo_2026.svg.png",
+      "time_tr": "14:00",
+      "date_tr": "29.08.2026",
+      "score": "2 - 5",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=Karlsruher SC+VfL Wolfsburg",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+Karlsruher SC+VfL Wolfsburg+live+ticker"
+    },
+    {
+      "team1": "Energie Cottbus",
+      "team2": "SpVgg Greuther Fürth",
+      "icon1": "https://upload.wikimedia.org/wikipedia/commons/5/55/Logo_Energie_Cottbus.svg",
+      "icon2": "https://i.imgur.com/pwuVbKr.png",
+      "time_tr": "14:00",
+      "date_tr": "29.08.2026",
+      "score": "3 - 4",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=Energie Cottbus+SpVgg Greuther Fürth",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+Energie Cottbus+SpVgg Greuther Fürth+live+ticker"
+    },
+    {
+      "team1": "1. FC Nürnberg",
+      "team2": "DSC Arminia Bielefeld",
+      "icon1": "https://upload.wikimedia.org/wikipedia/commons/f/fa/1._FC_Nürnberg_logo.svg",
+      "icon2": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Arminia_Bielefeld_Logo_2021%E2%80%93.svg",
+      "time_tr": "21:30",
+      "date_tr": "29.08.2026",
+      "score": "4 - 1",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=1. FC Nürnberg+DSC Arminia Bielefeld",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+1. FC Nürnberg+DSC Arminia Bielefeld+live+ticker"
+    },
+    {
+      "team1": "FC St. Pauli",
+      "team2": "1. FC Kaiserslautern",
+      "icon1": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Fc_st_pauli_logo.svg",
+      "icon2": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_1_FC_Kaiserslautern.svg",
+      "time_tr": "14:30",
+      "date_tr": "30.08.2026",
+      "score": "1 - 2",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=FC St. Pauli+1. FC Kaiserslautern",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+FC St. Pauli+1. FC Kaiserslautern+live+ticker"
+    },
+    {
+      "team1": "1. FC Magdeburg",
+      "team2": "Holstein Kiel",
+      "icon1": "https://upload.wikimedia.org/wikipedia/commons/8/84/1._FC_Magdeburg.svg",
+      "icon2": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Holstein_Kiel_Logo.svg/330px-Holstein_Kiel_Logo.svg.png",
+      "time_tr": "14:30",
+      "date_tr": "30.08.2026",
+      "score": "2 - 0",
+      "is_finished": true,
+      "broadcaster": "Sky Sport Bundesliga",
+      "sofascore_url": "https://www.sofascore.com/search?q=1. FC Magdeburg+Holstein Kiel",
+      "kicker_url": "https://www.google.de/search?q=site:kicker.de+1. FC Magdeburg+Holstein Kiel+live+ticker"
+    }
+  ]
 }
