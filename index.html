@@ -101,6 +101,8 @@
     .channel-ProSieben { color: #a78bfa; }
     .channel-3sat { color: #4ade80; }
     .channel-ONE { color: #c084fc; }
+    .channel-Sky { color: #0284c7; }
+    .channel-DAZN { color: #facc15; }
 
     .badge {
       background: var(--germany-red);
@@ -188,16 +190,28 @@
   <div id="channels-container" class="channel-grid"></div>
 
   <script>
-    // Her kanal için resmi ve güvenli canlı yayın (Mediathek / Stream) linkleri
+    // Her kanal için canlı yayın yönlendirmeleri
     const LIVE_URLS = {
+      // Ana Akım Kanallar (Resmi Mediathek)
       "ARD": "https://www.ardmediathek.de/live",
       "ZDF": "https://www.zdf.de/live-tv",
-      "RTL": "https://www.tvnow.de/live", // RTL+ / Joyn altyapısı
+      "RTL": "https://www.tvnow.de/live",
       "RTL2": "https://www.joyn.de/live/rtl2",
       "SAT.1": "https://www.joyn.de/live/sat-1",
       "ProSieben": "https://www.joyn.de/live/prosieben",
       "3sat": "https://www.3sat.de/live",
-      "ONE": "https://www.ardmediathek.de/live/Y3JpZDovL2Rhc2Vyc3RlLmRlLmxpdmVzdHJlYW0tb25l"
+      "ONE": "https://www.ardmediathek.de/live/Y3JpZDovL2Rhc2Vyc3RlLmRlLmxpdmVzdHJlYW0tb25l",
+      
+      // Sky Bundesliga Kanalları (Vavoo Yönlendirmesi)
+      "Sky Sport Bundesliga 1": "https://vavoo.to",
+      "Sky Sport Bundesliga 2": "https://vavoo.to",
+      "Sky Sport Bundesliga 3": "https://vavoo.to",
+      "Sky Sport Bundesliga 4": "https://vavoo.to",
+      "Sky Sport Bundesliga 5": "https://vavoo.to",
+
+      // DAZN Kanalları (Vavoo Yönlendirmesi)
+      "DAZN 1": "https://vavoo.to",
+      "DAZN 2": "https://vavoo.to"
     };
 
     async function loadEPG() {
@@ -230,11 +244,13 @@
             }
           }
 
-          // Eğer anlık program bulunamazsa listedeki ilk programı baz al
-          const displayProg = currentProgram || (programs.length > 0 ? programs[0] : { title: "Bilgi yok", time: "--:--", endTime: "--:--", url: "#" });
+          const displayProg = currentProgram || (programs.length > 0 ? programs[0] : { title: "Yayın bilgisi yok", time: "--:--", endTime: "--:--", url: "#" });
           
-          const safeChannelClass = channel.replace('.', '');
-          const liveLink = LIVE_URLS[channel] || "https://www.google.com";
+          let safeChannelClass = channel.replace('.', '').replace(/\s+/g, '');
+          if (channel.startsWith("Sky")) safeChannelClass = "Sky";
+          if (channel.startsWith("DAZN")) safeChannelClass = "DAZN";
+
+          const liveLink = LIVE_URLS[channel] || "https://vavoo.to";
 
           const card = document.createElement('div');
           card.className = 'channel-card';
