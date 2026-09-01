@@ -6,7 +6,6 @@
   <title>Bundesliga - Spieltag & Live-Ticker</title>
   <style>
     :root {
-      /* Siyah yerine göz yormayan soft koyu tema */
       --bg: #1e222d;
       --card-bg: #252936;
       --card-border: #333848;
@@ -77,7 +76,6 @@
       margin: 0 auto;
     }
 
-    /* Maç Kartı */
     .match-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -108,7 +106,6 @@
       margin: 12px 0;
     }
 
-    /* Takım isimleri için pastel renk etiketleri */
     .team-badge {
       font-size: 0.9rem;
       font-weight: 600;
@@ -140,7 +137,7 @@
       border: 1px solid var(--card-border);
     }
 
-    /* Modal / Pop-up Canlı Maç Ekranı */
+    /* Yerel Modal Pencere Tasarımı */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -164,8 +161,8 @@
       border: 1px solid var(--card-border);
       border-radius: 12px;
       width: 90%;
-      max-width: 950px;
-      height: 85vh;
+      max-width: 600px;
+      max-height: 80vh;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -183,7 +180,7 @@
     .modal-title {
       font-weight: 600;
       color: #38ef7d;
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
 
     .close-btn {
@@ -197,15 +194,33 @@
     }
 
     .modal-body {
-      flex: 1;
-      width: 100%;
-      height: 100%;
+      padding: 20px;
+      overflow-y: auto;
     }
 
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+    .goal-item {
+      display: flex;
+      justify-content: space-between;
+      background: #181b23;
+      padding: 10px 14px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      border: 1px solid var(--card-border);
+    }
+
+    .goal-minute {
+      color: #f39c12;
+      font-weight: bold;
+    }
+
+    .goal-scorer {
+      color: #fff;
+    }
+
+    .no-goals {
+      text-align: center;
+      color: var(--subtext);
+      padding: 20px 0;
     }
   </style>
 </head>
@@ -227,21 +242,20 @@
   <div class="league-title">🇩🇪 2. Bundesliga</div>
   <div class="grid" id="b2-grid"></div>
 
-  <!-- Canlı İstatistik Modal Penceresi -->
+  <!-- Yerel Canlı Maç Detay Modalı -->
   <div class="modal-overlay" id="match-modal">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title" id="modal-title">Live Matchcenter</div>
+        <div class="modal-title" id="modal-title">Live Matchdetails</div>
         <button class="close-btn" onclick="closeModal()">Schließen ✕</button>
       </div>
-      <div class="modal-body">
-        <iframe id="match-frame" src=""></iframe>
+      <div class="modal-body" id="modal-body-content">
+        <!-- Goller ve maç akışı buraya dinamik dolacak -->
       </div>
     </div>
   </div>
 
   <script>
-    // Bundesliga Takımlarının Pastel Forma Renk Kodları
     const teamColors = {
       "FC Bayern München": { bg: "rgba(220, 53, 69, 0.2)", color: "#ff8080" },
       "Borussia Dortmund": { bg: "rgba(255, 193, 7, 0.2)", color: "#ffe066" },
@@ -252,13 +266,10 @@
       "VfL Wolfsburg": { bg: "rgba(34, 197, 94, 0.2)", color: "#4ade80" },
       "SV Werder Bremen": { bg: "rgba(16, 185, 129, 0.2)", color: "#34d399" },
       "1. FC Union Berlin": { bg: "rgba(239, 68, 68, 0.2)", color: "#fca5a5" },
-      "BFV Borussia Mönchengladbach": { bg: "rgba(52, 211, 153, 0.15)", color: "#a7f3d0" },
+      "Borussia Mönchengladbach": { bg: "rgba(52, 211, 153, 0.15)", color: "#a7f3d0" },
       "FSV Mainz 05": { bg: "rgba(248, 113, 113, 0.2)", color: "#fca5a5" },
       "FC Augsburg": { bg: "rgba(16, 185, 129, 0.15)", color: "#6ee7b7" },
-      "TSG 1899 Hoffenheim": { bg: "rgba(59, 130, 246, 0.2)", color: "#93c5fd" },
-      "1. FC Heidenheim 1846": { bg: "rgba(239, 68, 68, 0.15)", color: "#fca5a5" },
-      "FC St. Pauli": { bg: "rgba(180, 83, 9, 0.2)", color: "#fcd34d" },
-      "Holstein Kiel": { bg: "rgba(96, 165, 250, 0.2)", color: "#bfdbfe" }
+      "TSG 1899 Hoffenheim": { bg: "rgba(59, 130, 246, 0.2)", color: "#93c5fd" }
     };
 
     function getTeamStyle(teamName) {
@@ -320,7 +331,7 @@
 
         const card = document.createElement("div");
         card.className = "match-card";
-        card.onclick = () => openModal(`${m.team1} vs ${m.team2}`, m.data_url);
+        card.onclick = () => openMatchDetails(m);
 
         card.innerHTML = `
           <div class="match-meta">
@@ -342,15 +353,33 @@
       });
     }
 
-    function openModal(title, url) {
-      document.getElementById("modal-title").textContent = title + " - Live Matchcenter";
-      document.getElementById("match-frame").src = url;
+    function openMatchDetails(m) {
+      document.getElementById("modal-title").textContent = `${m.team1} ${m.score} ${m.team2}`;
+      
+      const body = document.getElementById("modal-body-content");
+      body.innerHTML = "";
+
+      if (!m.goals || m.goals.length === 0) {
+        body.innerHTML = `<div class="no-goals">Noch keine Tordetails verfügbar / Maçta henüz gol veya detay kaydı yok.</div>`;
+      } else {
+        let html = `<h3 style="color:#f39c12; margin-top:0;">⚽ Tore / Goller</h3>`;
+        m.goals.forEach(g => {
+          html += `
+            <div class="goal-item">
+              <span class="goal-minute">⏱️ ${g.minute || '?'}'</span>
+              <span class="goal-scorer">⚽ ${g.scorer || 'Unbekannt'}</span>
+              <span style="color:#38ef7d; font-weight:bold;">(${g.score1} - ${g.score2})</span>
+            </div>
+          `;
+        });
+        body.innerHTML = html;
+      }
+
       document.getElementById("match-modal").classList.add("active");
     }
 
     function closeModal() {
       document.getElementById("match-modal").classList.remove("active");
-      document.getElementById("match-frame").src = "";
     }
 
     document.addEventListener("DOMContentLoaded", init);
