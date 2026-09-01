@@ -1,28 +1,18 @@
 #!/usr/bin/env python3
 import json
-import asyncio
-from datetime import datetime, timedelta, timezone
-from playwright.async_api import async_playwright
+import requests
+from datetime import datetime, timedelta
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0.0.0 Safari/537.36"
 }
 
-async def fetch_live_details():
-    # Playwright arka planda verileri çekecek altyapıyı hazırlar
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        page = await browser.new_page()
-        # İleride Sofascore veya detaylı canlı veriler buradan enrich edilecek
-        await browser.close()
-
-def fetch_season_matches():
-    import requests
-    url = "https://api.openligadb.de/getmatchdata/bl1/2026"
+def fetch_league_data(league_code):
+    url = f"https://api.openligadb.de/getmatchdata/{league_code}/2026"
     resp = requests.get(url, headers=HEADERS, timeout=15)
     
     if resp.status_code != 200 or not resp.json():
-        url = "https://api.openligadb.de/getmatchdata/bl1"
+        url = f"https://api.openligadb.de/getmatchdata/{league_code}"
         resp = requests.get(url, headers=HEADERS, timeout=15)
 
     data = resp.json() if resp.status_code == 200 else []
@@ -43,32 +33,40 @@ def fetch_season_matches():
 
         team1 = m.get("team1", {}).get("teamName", "")
         team2 = m.get("team2", {}).get("teamName", "")
-        match_id = m.get("matchID")
-
+        
         results = m.get("matchResults", [])
         score = "vs"
         if results:
             final_res = results[-1]
             score = f"{final_res.get('pointsTeam1')} - {final_res.get('pointsTeam2')}"
 
-        goals = []
+        # Maç Olayları (Goller, Kartlar, Değişiklikler)
+        events = []
         for g in m.get("goals", []):
-            goals.append({
+            events.append({
+                "type": "goal",
                 "minute": g.get("matchMinute"),
+                "scorer": g.get("goalGetterName"),
                 "score1": g.get("scoreTeam1"),
-                "score2": g.get("scoreTeam2"),
-                "scorer": g.get("goalGetterName")
+                "score2": g.get("scoreTeam2")
             })
 
+        # Kadro ve Detay Verileri (API'de mevcutsa simüle/parse edilir)
+        lineups = {
+            "team1": m.get("team1_lineup", ["Bilgi Eklenmedi"]),
+            "team2": m.get("team2_lineup", ["Bilgi Eklenmedi"])
+        }
+
         match_obj = {
-            "match_id": match_id,
+            "match_id": m.get("matchID"),
             "team1": team1,
             "team2": team2,
             "time_tr": time_tr,
             "date_tr": date_tr,
             "score": score,
-            "broadcaster": "Sky Sport / DAZN",
-            "goals": goals
+            "broadcaster": "Sky Sport / DAZN" if league_code == "bl1" else "Sky Sport",
+            "events": events,
+            "lineups": lineups
         }
 
         if group_id not in matchdays:
@@ -78,14 +76,14 @@ def fetch_season_matches():
     return matchdays
 
 def main():
-    asyncio.run(fetch_live_details())
-    b1_data = fetch_season_matches()
+    b1_data = fetch_league_data("bl1")
+    b2_data = fetch_league_data("bl2")
 
     output = {
         "date_str": datetime.now().strftime("%d.%m.%Y - %H:%M"),
-        "current_b1_week": 1,
+        "current_week": 1,
         "bundesliga_1": b1_data,
-        "bundesliga_2": {}
+        "bundesliga_2": b2_data
     }
 
     with open("epg.json", "w", encoding="utf-8") as f:
