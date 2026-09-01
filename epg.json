@@ -1,16 +1,8 @@
 {
-  "generated_at": "2026-09-01T11:42:15.206326+00:00",
-  "date": "01.09.2026 - 11:42",
+  "generated_at": "2026-09-01T12:20:27.184743+00:00",
+  "date": "01.09.2026 - 12:20",
   "channels": {
-    "ARD": [
-      {
-        "time": "12:00",
-        "endTime": "14:00",
-        "title": "",
-        "genre": "TV",
-        "url": "https://www.tvspielfilm.de/tv-programm/sendungen/das-erste,ARD.html"
-      }
-    ],
+    "ARD": [],
     "ZDF": [],
     "RTL": [
       {
