@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 import json
 import requests
+import asyncio
 from datetime import datetime, timedelta
+from playwright.async_api import async_playwright
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0.0.0 Safari/537.36"
 }
 
-def fetch_league_data(league_code):
+def fetch_basic_matches(league_code):
     url = f"https://api.openligadb.de/getmatchdata/{league_code}/2026"
     resp = requests.get(url, headers=HEADERS, timeout=15)
-    
     if resp.status_code != 200 or not resp.json():
         url = f"https://api.openligadb.de/getmatchdata/{league_code}"
         resp = requests.get(url, headers=HEADERS, timeout=15)
@@ -40,21 +41,19 @@ def fetch_league_data(league_code):
             final_res = results[-1]
             score = f"{final_res.get('pointsTeam1')} - {final_res.get('pointsTeam2')}"
 
-        # Maç Olayları (Goller, Kartlar, Değişiklikler)
         events = []
         for g in m.get("goals", []):
             events.append({
                 "type": "goal",
                 "minute": g.get("matchMinute"),
-                "scorer": g.get("goalGetterName"),
-                "score1": g.get("scoreTeam1"),
-                "score2": g.get("scoreTeam2")
+                "player": g.get("goalGetterName"),
+                "score": f"{g.get('scoreTeam1')}-{g.get('scoreTeam2')}"
             })
 
-        # Kadro ve Detay Verileri (API'de mevcutsa simüle/parse edilir)
+        # Varsayılan kadro yapısı (Canlı çekim olmadığında gösterilecek örnek yapı)
         lineups = {
-            "team1": m.get("team1_lineup", ["Bilgi Eklenmedi"]),
-            "team2": m.get("team2_lineup", ["Bilgi Eklenmedi"])
+            "team1": ["İlk 11 Açıklanmadı"],
+            "team2": ["İlk 11 Açıklanmadı"]
         }
 
         match_obj = {
@@ -76,8 +75,8 @@ def fetch_league_data(league_code):
     return matchdays
 
 def main():
-    b1_data = fetch_league_data("bl1")
-    b2_data = fetch_league_data("bl2")
+    b1_data = fetch_basic_matches("bl1")
+    b2_data = fetch_basic_matches("bl2")
 
     output = {
         "date_str": datetime.now().strftime("%d.%m.%Y - %H:%M"),
