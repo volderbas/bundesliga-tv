@@ -1,0 +1,32 @@
+name: EPG Scraper Cron
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repoyu Çek
+        uses: actions/checkout@v3
+
+      - name: Python Kur
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Kütüphaneleri Kur
+        run: pip install requests beautifulsoup4
+
+      - name: Scraper'ı Çalıştır
+        run: python scraper.py
+
+      - name: Güncellenmiş epg.json'ı Kaydet
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add epg.json
+          git commit -m "epg.json otomatik güncellendi" || exit 0
+          git push
