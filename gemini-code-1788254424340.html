@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Bundesliga TV EPG</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --live-badge: #ef4444;
+    }
+    body {
+      margin: 0;
+      padding: 16px;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #334155;
+    }
+    h1 { margin: 0; font-size: 1.4rem; color: var(--accent); }
+    .updated-at { font-size: 0.8rem; color: var(--text-muted); }
+    .channel-grid { display: flex; flex-direction: column; gap: 12px; }
+    .channel-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+      border: 1px solid #334155;
+    }
+    .channel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .channel-name { font-weight: bold; font-size: 1.1rem; color: #fff; }
+    .badge {
+      background: var(--live-badge);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      animation: pulse 2s infinite;
+    }
+    .program-title { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+    .program-time { font-size: 0.85rem; color: var(--accent); }
+    .program-genre { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+    
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📺 Live TV Germany</h1>
+    <div id="update-time" class="updated-at">Yükleniyor...</div>
+  </header>
+
+  <div id="channels-container" class="channel-grid"></div>
+
+  <script>
+    async function loadEPG() {
+      try {
+        const response = await fetch('epg.json?t=' + new Date().getTime());
+        const data = await response.json();
+        
+        document.getElementById('update-time').innerText = `Son Güncelleme: ${data.date}`;
+        const container = document.getElementById('channels-container');
+        container.innerHTML = '';
+
+        const now = new Date();
+        const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+        for (const [channel, programs] of Object.entries(data.channels)) {
+          let currentProgram = null;
+
+          // O anki yayını bul
+          for (const prog of programs) {
+            const [sh, sm] = prog.time.split(':').map(Number);
+            const [eh, em] = prog.endTime.split(':').map(Number);
+            const startMin = sh * 60 + sm;
+            let endMin = eh * 60 + em;
+            if (endMin < startMin) endMin += 24 * 60; // Gece yarısı geçişi
+
+            if (currentMinutes >= startMin && currentMinutes < endMin) {
+              currentProgram = prog;
+              break;
+            }
+          }
+
+          // Eğer o anki yayın bulunamadıysa ilk yayını göster
+          const displayProg = currentProgram || (programs.length > 0 ? programs[0] : null);
+
+          const card = document.createElement('div');
+          card.className = 'channel-card';
+          
+          if (displayProg) {
+            card.innerHTML = `
+              <div class="channel-header">
+                <span class="channel-name">${channel}</span>
+                <span class="badge">CANLI</span>
+              </div>
+              <div class="program-title">${displayProg.title}</div>
+              <div class="program-time">⏰ ${displayProg.time} - ${displayProg.endTime}</div>
+              <div class="program-genre">🏷️ ${displayProg.genre}</div>
+            `;
+          } else {
+            card.innerHTML = `
+              <div class="channel-header"><span class="channel-name">${channel}</span></div>
+              <div class="program-title" style="color:var(--text-muted)">Yayın bilgisi yok</div>
+            `;
+          }
+          container.appendChild(card);
+        }
+      } catch (err) {
+        document.getElementById('channels-container').innerHTML = 
+          '<p style="color:red; text-align:center;">epg.json dosyası henüz oluşturulmadı. GitHub Actions ilk çalıştırmayı yaptıktan sonra veri görünecektir.</p>';
+      }
+    }
+
+    loadEPG();
+    // Her 1 dakikada bir otomatik yenile
+    setInterval(loadEPG, 60000);
+  </script>
+</body>
+</html>
