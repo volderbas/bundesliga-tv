@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bundesliga Canlı Maç Rehberi</title>
+  <title>Bundesliga - Spieltag & Live-Ticker</title>
   <style>
     :root {
-      --bg: #0f0f12;
-      --card-bg: #18181c;
-      --accent: #d1121d;
-      --border: #282830;
-      --text: #ffffff;
-      --subtext: #aaaaaa;
+      /* Siyah yerine göz yormayan soft koyu tema */
+      --bg: #1e222d;
+      --card-bg: #252936;
+      --card-border: #333848;
+      --accent: #e10600;
+      --text: #f0f2f5;
+      --subtext: #9aa0a6;
     }
 
     body {
@@ -28,8 +29,15 @@
     }
 
     header h1 {
-      color: var(--accent);
+      color: var(--text);
+      font-size: 1.8rem;
       margin: 0 0 5px 0;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: var(--subtext);
+      font-size: 0.9rem;
     }
 
     .controls {
@@ -37,104 +45,102 @@
       justify-content: center;
       align-items: center;
       gap: 15px;
-      margin-bottom: 25px;
-      flex-wrap: wrap;
+      margin: 20px 0;
     }
 
     select {
       background: var(--card-bg);
-      color: #fff;
-      border: 1px solid var(--border);
-      padding: 10px 15px;
-      border-radius: 6px;
+      color: var(--text);
+      border: 1px solid var(--card-border);
+      padding: 10px 16px;
+      border-radius: 8px;
       font-size: 1rem;
       outline: none;
       cursor: pointer;
     }
 
-    select:focus {
-      border-color: var(--accent);
-    }
-
     .league-title {
-      font-size: 1.3rem;
-      color: #00adb5;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 5px;
-      margin: 20px auto 15px auto;
+      font-size: 1.2rem;
+      color: #38ef7d;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 8px;
+      margin: 25px auto 15px auto;
       max-width: 1100px;
+      font-weight: 600;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 16px;
       max-width: 1100px;
       margin: 0 auto;
     }
 
-    /* Maç Kartı Stili & Tıklanabilirlik */
+    /* Maç Kartı */
     .match-card {
       background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 15px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 16px;
       cursor: pointer;
-      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .match-card:hover {
       transform: translateY(-3px);
-      border-color: #00adb5;
-      box-shadow: 0 4px 15px rgba(0, 173, 181, 0.2);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
 
     .match-meta {
       display: flex;
       justify-content: space-between;
       font-size: 0.85rem;
-      color: #ffb703;
-      font-weight: bold;
+      color: #f39c12;
+      font-weight: 600;
+      margin-bottom: 12px;
     }
 
     .teams-container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin: 15px 0;
+      margin: 12px 0;
     }
 
-    .team-name {
-      font-size: 0.95rem;
+    /* Takım isimleri için pastel renk etiketleri */
+    .team-badge {
+      font-size: 0.9rem;
       font-weight: 600;
-      width: 40%;
+      width: 42%;
       text-align: center;
+      padding: 6px 8px;
+      border-radius: 6px;
+      line-height: 1.2;
     }
 
     .score-box {
-      background: #22222a;
-      border: 1px solid var(--border);
+      background: #181b23;
+      border: 1px solid var(--card-border);
       padding: 6px 12px;
       border-radius: 6px;
       font-size: 1.1rem;
       font-weight: bold;
-      color: #00adb5;
+      color: #38ef7d;
       text-align: center;
     }
 
     .broadcaster-box {
-      background: #25252e;
+      background: #1d212c;
       padding: 8px;
       border-radius: 6px;
       text-align: center;
       font-size: 0.85rem;
-      border: 1px solid #333;
+      color: var(--subtext);
+      border: 1px solid var(--card-border);
     }
 
-    /* Site İçi Canlı Maç Modalı (Pop-up Pencere) */
+    /* Modal / Pop-up Canlı Maç Ekranı */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -142,7 +148,8 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(15, 17, 23, 0.85);
+      backdrop-filter: blur(4px);
       z-index: 1000;
       justify-content: center;
       align-items: center;
@@ -154,50 +161,48 @@
 
     .modal-content {
       background: var(--card-bg);
-      border: 1px solid var(--border);
+      border: 1px solid var(--card-border);
       border-radius: 12px;
       width: 90%;
-      max-width: 900px;
-      height: 80vh;
+      max-width: 950px;
+      height: 85vh;
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
     }
 
     .modal-header {
-      padding: 15px 20px;
-      background: #22222a;
-      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      background: #181b23;
+      border-bottom: 1px solid var(--card-border);
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .modal-title {
-      font-weight: bold;
-      color: #00adb5;
-      font-size: 1.1rem;
+      font-weight: 600;
+      color: #38ef7d;
+      font-size: 1rem;
     }
 
     .close-btn {
       background: var(--accent);
       color: #fff;
       border: none;
-      padding: 6px 15px;
+      padding: 6px 14px;
       border-radius: 6px;
-      font-weight: bold;
       cursor: pointer;
+      font-weight: bold;
     }
 
     .modal-body {
       flex: 1;
       width: 100%;
       height: 100%;
-      background: #fff;
     }
 
-    .modal-body iframe {
+    iframe {
       width: 100%;
       height: 100%;
       border: none;
@@ -207,12 +212,12 @@
 <body>
 
   <header>
-    <h1>⚽ Bundesliga Haftalık Fikstür & Canlı Maçlar</h1>
-    <p id="last-update" style="color:#aaa; font-size:0.85rem;">Yükleniyor...</p>
+    <h1>Bundesliga - Spieltag & Live-Ticker</h1>
+    <div class="subtitle" id="last-update">Daten werden geladen...</div>
   </header>
 
   <div class="controls">
-    <label for="week-select"><strong>Maç Haftası Seçin:</strong></label>
+    <label for="week-select"><strong>Spieltag wählen:</strong></label>
     <select id="week-select"></select>
   </div>
 
@@ -222,37 +227,60 @@
   <div class="league-title">🇩🇪 2. Bundesliga</div>
   <div class="grid" id="b2-grid"></div>
 
-  <!-- Site İçi Açılır Canlı Ticker Penceresi -->
-  <div class="modal-overlay" id="ticker-modal">
+  <!-- Canlı İstatistik Modal Penceresi -->
+  <div class="modal-overlay" id="match-modal">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title" id="modal-match-title">Canlı Maç Ticker</div>
-        <button class="close-btn" onclick="closeModal()">Kapat ✕</button>
+        <div class="modal-title" id="modal-title">Live Matchcenter</div>
+        <button class="close-btn" onclick="closeModal()">Schließen ✕</button>
       </div>
       <div class="modal-body">
-        <iframe id="ticker-frame" src=""></iframe>
+        <iframe id="match-frame" src=""></iframe>
       </div>
     </div>
   </div>
 
   <script>
+    // Bundesliga Takımlarının Pastel Forma Renk Kodları
+    const teamColors = {
+      "FC Bayern München": { bg: "rgba(220, 53, 69, 0.2)", color: "#ff8080" },
+      "Borussia Dortmund": { bg: "rgba(255, 193, 7, 0.2)", color: "#ffe066" },
+      "RB Leipzig": { bg: "rgba(235, 64, 52, 0.2)", color: "#ff9999" },
+      "Bayer 04 Leverkusen": { bg: "rgba(220, 38, 38, 0.2)", color: "#f87171" },
+      "VfB Stuttgart": { bg: "rgba(255, 255, 255, 0.15)", color: "#ffffff" },
+      "Eintracht Frankfurt": { bg: "rgba(107, 114, 128, 0.25)", color: "#e5e7eb" },
+      "VfL Wolfsburg": { bg: "rgba(34, 197, 94, 0.2)", color: "#4ade80" },
+      "SV Werder Bremen": { bg: "rgba(16, 185, 129, 0.2)", color: "#34d399" },
+      "1. FC Union Berlin": { bg: "rgba(239, 68, 68, 0.2)", color: "#fca5a5" },
+      "BFV Borussia Mönchengladbach": { bg: "rgba(52, 211, 153, 0.15)", color: "#a7f3d0" },
+      "FSV Mainz 05": { bg: "rgba(248, 113, 113, 0.2)", color: "#fca5a5" },
+      "FC Augsburg": { bg: "rgba(16, 185, 129, 0.15)", color: "#6ee7b7" },
+      "TSG 1899 Hoffenheim": { bg: "rgba(59, 130, 246, 0.2)", color: "#93c5fd" },
+      "1. FC Heidenheim 1846": { bg: "rgba(239, 68, 68, 0.15)", color: "#fca5a5" },
+      "FC St. Pauli": { bg: "rgba(180, 83, 9, 0.2)", color: "#fcd34d" },
+      "Holstein Kiel": { bg: "rgba(96, 165, 250, 0.2)", color: "#bfdbfe" }
+    };
+
+    function getTeamStyle(teamName) {
+      const match = Object.keys(teamColors).find(k => teamName.includes(k) || k.includes(teamName));
+      if (match) return teamColors[match];
+      return { bg: "rgba(255, 255, 255, 0.08)", color: "#e2e8f0" };
+    }
+
     let globalData = null;
 
     async function init() {
       try {
-        const response = await fetch(`epg.json?t=${new Date().getTime()}`);
-        if (!response.ok) return;
+        const res = await fetch(`epg.json?t=${new Date().getTime()}`);
+        if (!res.ok) return;
 
-        globalData = await response.json();
-        
-        document.getElementById("last-update").textContent = 
-          `Son Veri Güncellemesi: ${globalData.date_str || ''}`;
+        globalData = await res.json();
+        document.getElementById("last-update").textContent = `Aktualisiert: ${globalData.date_str || ''}`;
 
         populateWeekSelect(globalData.current_b1_week || 1);
         renderWeek(globalData.current_b1_week || 1);
-
       } catch (err) {
-        console.error("Fikstür verisi yüklenemedi:", err);
+        console.error("Fehler beim Laden:", err);
       }
     }
 
@@ -263,74 +291,66 @@
       for (let i = 1; i <= 34; i++) {
         const opt = document.createElement("option");
         opt.value = i;
-        opt.textContent = `${i}. Hafta ${i === currentWeek ? '(Mevcut Hafta)' : ''}`;
+        opt.textContent = `${i}. Spieltag ${i === currentWeek ? '(Aktuell)' : ''}`;
         if (i === currentWeek) opt.selected = true;
         select.appendChild(opt);
       }
 
-      select.addEventListener("change", (e) => {
-        renderWeek(parseInt(e.target.value));
-      });
+      select.addEventListener("change", (e) => renderWeek(parseInt(e.target.value)));
     }
 
     function renderWeek(weekNum) {
       if (!globalData) return;
-
-      const b1WeekData = globalData.bundesliga_1[weekNum] || { matches: [] };
-      const b2WeekData = globalData.bundesliga_2[weekNum] || { matches: [] };
-
-      renderMatches("b1-grid", b1WeekData.matches);
-      renderMatches("b2-grid", b2WeekData.matches);
+      renderMatches("b1-grid", (globalData.bundesliga_1[weekNum] || {}).matches || []);
+      renderMatches("b2-grid", (globalData.bundesliga_2[weekNum] || {}).matches || []);
     }
 
     function renderMatches(containerId, matches) {
       const container = document.getElementById(containerId);
       container.innerHTML = "";
 
-      if (!matches || matches.length === 0) {
-        container.innerHTML = `<div style="color:#aaa; padding:15px;">Bu hafta için maç verisi bulunamadı.</div>`;
+      if (matches.length === 0) {
+        container.innerHTML = `<div style="color:var(--subtext); padding:10px;">Keine Spiele gefunden.</div>`;
         return;
       }
 
       matches.forEach(m => {
+        const t1Style = getTeamStyle(m.team1);
+        const t2Style = getTeamStyle(m.team2);
+
         const card = document.createElement("div");
         card.className = "match-card";
-        
-        // Bütün kart tıklanabilir hale getirildi
-        card.onclick = () => openModal(`${m.team1} vs ${m.team2}`, m.ticker_url);
+        card.onclick = () => openModal(`${m.team1} vs ${m.team2}`, m.data_url);
 
         card.innerHTML = `
-          <div>
-            <div class="match-meta">
-              <span>📅 ${m.date_tr}</span>
-              <span>⏰ ${m.time_tr} (TSİ)</span>
-            </div>
+          <div class="match-meta">
+            <span>📅 ${m.date_tr}</span>
+            <span>⏰ ${m.time_tr} (TSİ)</span>
+          </div>
 
-            <div class="teams-container">
-              <div class="team-name">${m.team1}</div>
-              <div class="score-box">${m.score}</div>
-              <div class="team-name">${m.team2}</div>
-            </div>
+          <div class="teams-container">
+            <div class="team-badge" style="background:${t1Style.bg}; color:${t1Style.color};">${m.team1}</div>
+            <div class="score-box">${m.score}</div>
+            <div class="team-badge" style="background:${t2Style.bg}; color:${t2Style.color};">${m.team2}</div>
+          </div>
 
-            <div class="broadcaster-box">
-              📺 Yayıncı: <strong>${m.broadcaster}</strong>
-            </div>
+          <div class="broadcaster-box">
+            📺 Sender: <strong>${m.broadcaster}</strong>
           </div>
         `;
-
         container.appendChild(card);
       });
     }
 
     function openModal(title, url) {
-      document.getElementById("modal-match-title").textContent = title + " - Canlı Maç Verileri";
-      document.getElementById("ticker-frame").src = url;
-      document.getElementById("ticker-modal").classList.add("active");
+      document.getElementById("modal-title").textContent = title + " - Live Matchcenter";
+      document.getElementById("match-frame").src = url;
+      document.getElementById("match-modal").classList.add("active");
     }
 
     function closeModal() {
-      document.getElementById("ticker-modal").classList.remove("active");
-      document.getElementById("ticker-frame").src = "";
+      document.getElementById("match-modal").classList.remove("active");
+      document.getElementById("match-frame").src = "";
     }
 
     document.addEventListener("DOMContentLoaded", init);
