@@ -1,193 +1,129 @@
 #!/usr/bin/env python3
 import json
-import re
-import sys
 import requests
 from datetime import datetime, timezone
-from bs4 import BeautifulSoup
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0.0.0 Safari/537.36",
-    "Accept": "*/*"
+    "Accept": "application/json"
 }
 
-# 1. TV SPIELFILM EPG HEDEF KANALLAR
+# Hedef Kanal Yapılandırmaları ve TV Spielfilm ID Eşleşmeleri
 CHANNELS_CONFIG = [
-    {"name": "ARD", "search": ["ard", "das erste"], "vavoo": "ARD"},
-    {"name": "ZDF", "search": ["zdf"], "vavoo": "ZDF"},
-    {"name": "RTL", "search": ["rtl"], "vavoo": "RTL"},
-    {"name": "RTL2", "search": ["rtl2", "rtl 2", "rtl ii"], "vavoo": "RTL 2"},
-    {"name": "SAT.1", "search": ["sat.1", "sat1"], "vavoo": "SAT.1"},
-    {"name": "ProSieben", "search": ["prosieben", "pro7"], "vavoo": "ProSieben"},
-    {"name": "3sat", "search": ["3sat"], "vavoo": "3sat"},
-    {"name": "ONE", "search": ["one"], "vavoo": "ONE"},
-    {"name": "Sky Sport Bundesliga 1", "search": ["sky sport bundesliga 1", "sky buli 1", "sky bundesliga 1"], "vavoo": "Sky Sport Bundesliga 1"},
-    {"name": "Sky Sport Bundesliga 2", "search": ["sky sport bundesliga 2", "sky buli 2", "sky bundesliga 2"], "vavoo": "Sky Sport Bundesliga 2"},
-    {"name": "Sky Sport Bundesliga 3", "search": ["sky sport bundesliga 3", "sky buli 3", "sky bundesliga 3"], "vavoo": "Sky Sport Bundesliga 3"},
-    {"name": "Sky Sport Bundesliga 4", "search": ["sky sport bundesliga 4", "sky buli 4", "sky bundesliga 4"], "vavoo": "Sky Sport Bundesliga 4"},
-    {"name": "Sky Sport Bundesliga 5", "search": ["sky sport bundesliga 5", "sky buli 5", "sky bundesliga 5"], "vavoo": "Sky Sport Bundesliga 5"},
-    {"name": "DAZN 1", "search": ["dazn 1", "dazn1"], "vavoo": "DAZN 1"},
-    {"name": "DAZN 2", "search": ["dazn 2", "dazn2"], "vavoo": "DAZN 2"}
+    {"name": "ARD", "search": ["ard", "das erste"], "id": "ARD"},
+    {"name": "ZDF", "search": ["zdf"], "id": "ZDF"},
+    {"name": "RTL", "search": ["rtl"], "id": "RTL"},
+    {"name": "RTL2", "search": ["rtl2", "rtl 2", "rtl ii"], "id": "RTL2"},
+    {"name": "SAT.1", "search": ["sat.1", "sat1"], "id": "SAT1"},
+    {"name": "ProSieben", "search": ["prosieben", "pro7"], "id": "PRO7"},
+    {"name": "3sat", "search": ["3sat"], "id": "3SAT"},
+    {"name": "ONE", "search": ["one"], "id": "ONE"},
+    {"name": "Sky Sport Bundesliga 1", "search": ["sky sport bundesliga 1", "sky buli 1"], "id": "SKY-B1"},
+    {"name": "Sky Sport Bundesliga 2", "search": ["sky sport bundesliga 2", "sky buli 2"], "id": "SKY-B2"},
+    {"name": "Sky Sport Bundesliga 3", "search": ["sky sport bundesliga 3", "sky buli 3"], "id": "SKY-B3"},
+    {"name": "Sky Sport Bundesliga 4", "search": ["sky sport bundesliga 4", "sky buli 4"], "id": "SKY-B4"},
+    {"name": "Sky Sport Bundesliga 5", "search": ["sky sport bundesliga 5", "sky buli 5"], "id": "SKY-B5"},
+    {"name": "DAZN 1", "search": ["dazn 1", "dazn1"], "id": "DAZN1"},
+    {"name": "DAZN 2", "search": ["dazn 2", "dazn2"], "id": "DAZN2"}
 ]
 
-TARGET_URLS = [
-    "https://www.tvspielfilm.de/tv-programm/sendungen/jetzt.html",
-    "https://www.tvspielfilm.de/tv-programm/sendungen/sport.html",
-    "https://www.tvspielfilm.de/tv-programm/sendungen/pay-tv.html"
-]
-
-# 2. VAVOO CANLI YAYIN LINKLERINI OTOMATIK ÇEKME FONKSIYONU
-def get_vavoo_streams():
-    stream_map = {}
+# 1. TV SPIELFILM ONAYLI JSON EPG API
+def fetch_epg_from_api():
+    channels_data = {cfg["name"]: [] for cfg in CHANNELS_CONFIG}
+    # TV Spielfilm'in doğrudan mobil/web API uç noktası
+    api_url = "https://live.tvspielfilm.de/static/broadcast/list/aktuell"
+    
     try:
-        # Vavoo Session Token
-        auth_resp = requests.post(
-            "https://vavoo.to/api/box/ping2",
-            json={"box": "12345"},
-            headers={"User-Agent": "VAVOO/2.6"},
-            timeout=10
-        )
-        token = auth_resp.json().get("token", "") if auth_resp.status_code == 200 else ""
-        
-        channels_url = f"https://vavoo.to/channels?token={token}" if token else "https://vavoo.to/channels"
-        resp = requests.get(channels_url, headers={"User-Agent": "VAVOO/2.6"}, timeout=15)
-        
+        resp = requests.get(api_url, headers=HEADERS, timeout=15)
         if resp.status_code == 200:
-            vavoo_list = resp.json()
-            for ch in vavoo_list:
-                country = ch.get("country", "").upper()
-                name = ch.get("name", "").strip().lower()
-                url = ch.get("url", "")
-                
-                # Almanya veya Genel listedeki kanalları tara
+            data = resp.json()
+            for item in data:
+                ch_title = item.get("channel", {}).get("title", "").lower()
+                prog_title = item.get("title", "Program")
+                start_ts = item.get("timeStart")
+                end_ts = item.get("timeEnd")
+
+                # Zaman formatlama
+                start_str = datetime.fromtimestamp(start_ts).strftime("%H:%M") if start_ts else "--:--"
+                end_str = datetime.fromtimestamp(end_ts).strftime("%H:%M") if end_ts else "--:--"
+
+                # Eşleşen kanala ekle
                 for cfg in CHANNELS_CONFIG:
-                    ch_key = cfg["name"]
-                    # Eğer kanal zaten bulunduysa tekrar ezme
-                    if ch_key in stream_map:
-                        continue
-
-                    # Esnek Arama: Konfigürasyondaki arama terimlerinden biri bile geçiyorsa eşleştir
-                    for search_term in cfg["search"]:
-                        if search_term.lower() in name:
-                            stream_map[ch_key] = f"{url}?token={token}" if token and "?token=" not in url else url
-                            break
-
-        print(f"Vavoo: Toplam {len(stream_map)} kanal akış linki başarıyla üretildi.")
-    except Exception as e:
-        print(f"Vavoo API akışları çekilirken uyarı: {e}")
-    
-    return stream_map
-        # Almanya Kanal Listesini Çekme
-        channels_url = f"https://vavoo.to/channels?token={token}" if token else "https://vavoo.to/channels"
-        resp = requests.get(channels_url, headers={"User-Agent": "VAVOO/2.6"}, timeout=15)
-        
-        if resp.status_code == 200:
-            vavoo_list = resp.json()
-            for ch in vavoo_list:
-                country = ch.get("country", "").upper()
-                name = ch.get("name", "").strip()
-                url = ch.get("url", "")
-                
-                # Sadece Almanya kanallarına odaklan
-                if country == "GERMANY" or country == "DE":
-                    for cfg in CHANNELS_CONFIG:
-                        target = cfg["name"].lower()
-                        # Kanal ismi eşleşmesi denetimi
-                        if name.lower() == target or cfg["vavoo"].lower() in name.lower():
-                            # Dinamik token eklenmiş m3u8 linkini kaydet
-                            stream_map[cfg["name"]] = f"{url}?token={token}" if token and "?token=" not in url else url
-                            break
-        print(f"Vavoo: Toplam {len(stream_map)} kanal akış linki başarıyla üretildi.")
-    except Exception as e:
-        print(f"Vavoo API akışları çekilirken bir uyarı oluştu: {e}")
-    
-    return stream_map
-
-# 3. EPG VERISINI TV SPIELFILM ÜZERİNDEN TOPLAMA
-def parse_epg(channels_data):
-    for url in TARGET_URLS:
-        try:
-            resp = requests.get(url, headers=HEADERS, timeout=15)
-            if resp.status_code != 200:
-                continue
-            soup = BeautifulSoup(resp.text, "html.parser")
-            rows = soup.select("tr, .broadcast-list-item, .tv-guide-channel, article, div[class*='broadcast']")
-
-            for row in rows:
-                row_text = row.get_text(" ", strip=True)
-                row_text_lower = row_text.lower()
-
-                matched_channel = None
-                for cfg in CHANNELS_CONFIG:
-                    for keyword in cfg["search"]:
-                        if keyword in row_text_lower:
-                            matched_channel = cfg["name"]
-                            break
-                    if matched_channel:
+                    if any(s in ch_title for s in cfg["search"]):
+                        channels_data[cfg["name"]].append({
+                            "time": start_str,
+                            "endTime": end_str,
+                            "title": prog_title[:90],
+                            "url": f"https://www.tvspielfilm.de/tv-programm/sendung/{item.get('id', '')}.html"
+                        })
                         break
+    except Exception as e:
+        print(f"EPG API Çekme Hatası: {e}")
 
-                if not matched_channel:
-                    continue
-
-                time_match = re.search(r"(\d{2}:\d{2})\s*[-–]?\s*(\d{2}:\d{2})?", row_text)
-                if not time_match:
-                    continue
-
-                start_time = time_match.group(1)
-                end_time = time_match.group(2) if time_match.group(2) else "--:--"
-
-                title_elem = row.select_one("a[title], .title, strong, h3, h4, .broadcast-title")
-                title = title_elem.get_text(strip=True) if title_elem else "Program Bilgisi"
-
-                genres = ["REPORTAGE", "SERIE", "UNTERHALTUNG", "KINDER", "SPORT", "DOKU-SOAP", "MAGAZIN", "NACHRICHTEN", "DOKU", "LIVE"]
-                for g in genres:
-                    if title.upper().startswith(g):
-                        title = title[len(g):].strip()
-
-                href = title_elem.get("href", "#") if title_elem else "#"
-                detail_url = href if href.startswith("http") else f"https://www.tvspielfilm.de{href}" if href != "#" else "#"
-
-                exists = any(item['title'] == title and item['time'] == start_time for item in channels_data[matched_channel])
-                if not exists:
-                    channels_data[matched_channel].append({
-                        "time": start_time,
-                        "endTime": end_time,
-                        "title": title[:90],
-                        "url": detail_url
-                    })
-        except Exception as e:
-            print(f"EPG çekilirken bir hata oluştu ({url}): {e}")
-
-def main():
-    print("Vavoo Canlı Akış Linkleri Alınıyor...")
-    vavoo_streams = get_vavoo_streams()
-
-    channels_data = {item["name"]: [] for item in CHANNELS_CONFIG}
-    print("TV Spielfilm EPG Verileri Çekiliyor...")
-    parse_epg(channels_data)
-
-    # Verisi eksik kanallar için varsayılan yapılandırma
+    # Boş kalan kanalları doldur
     for cfg in CHANNELS_CONFIG:
         ch_name = cfg["name"]
         if not channels_data[ch_name]:
             channels_data[ch_name].append({
-                "time": "--:--",
+                "time": datetime.now().strftime("%H:%M"),
                 "endTime": "--:--",
                 "title": f"{ch_name} Canlı Yayın",
                 "url": "#"
             })
+            
+    return channels_data
 
-    output = {
+# 2. VAVOO AKIŞ LINKLERI
+def fetch_vavoo_streams():
+    streams = {}
+    try:
+        # Vavoo Ana Kanal Listesi
+        session = requests.Session()
+        session.headers.update({"User-Agent": "VAVOO/2.6"})
+        
+        # Auth Token Al
+        auth = session.post("https://vavoo.to/api/box/ping2", json={"box": "12345"}, timeout=10)
+        token = auth.json().get("token", "") if auth.status_code == 200 else ""
+
+        url = f"https://vavoo.to/channels?token={token}" if token else "https://vavoo.to/channels"
+        resp = session.get(url, timeout=15)
+        
+        if resp.status_code == 200:
+            vavoo_data = resp.json()
+            for ch in vavoo_data:
+                name = ch.get("name", "").lower()
+                stream_url = ch.get("url", "")
+                
+                for cfg in CHANNELS_CONFIG:
+                    ch_key = cfg["name"]
+                    if ch_key in streams:
+                        continue
+                    if any(s in name for s in cfg["search"]):
+                        streams[ch_key] = f"{stream_url}?token={token}" if token and "?token=" not in stream_url else stream_url
+                        break
+    except Exception as e:
+        print(f"Vavoo Yayın Linki Hatası: {e}")
+
+    return streams
+
+def main():
+    print("EPG verisi çekiliyor...")
+    epg_data = fetch_epg_from_api()
+
+    print("Vavoo canlı yayın linkleri çekiliyor...")
+    stream_data = fetch_vavoo_streams()
+
+    result = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "date": datetime.now().strftime("%d.%m.%Y - %H:%M"),
-        "streams": vavoo_streams,  # Otomatik çekilen canlı m3u8 adresleri
-        "channels": channels_data
+        "streams": stream_data,
+        "channels": epg_data
     }
 
     with open("epg.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
+        json.dump(result, f, ensure_ascii=False, indent=2)
 
-    print("İşlem Başarıyla Tamamlandı! epg.json oluşturuldu.")
+    print("epg.json başarıyla güncellendi.")
 
 if __name__ == "__main__":
     main()
