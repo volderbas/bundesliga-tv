@@ -4,26 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="theme-color" content="#121316">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Live TV Germany">
-  <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/732/732200.png">
-  
   <title>Live TV Germany EPG</title>
   
-  <!-- Google Inter Fontu -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Gömülü Canlı Yayın Oynatıcı Kütüphanesi (HLS.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
   <style>
     :root {
       --bg: #121316;
       --card-bg: #1c1d22;
-      --card-hover: #262830;
       --text: #f4f4f5;
       --text-muted: #a1a1aa;
-      
-      /* Pastel Almanya Renkleri */
       --germany-red: #e11d48;
       --germany-gold: #fbbf24;
       --live-green: #10b981;
@@ -34,8 +29,7 @@
       padding: 16px;
       background-color: var(--bg);
       color: var(--text);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      -webkit-tap-highlight-color: transparent;
+      font-family: 'Inter', -apple-system, sans-serif;
     }
 
     header {
@@ -52,15 +46,11 @@
       font-size: 1.3rem;
       font-weight: 700;
       color: var(--germany-gold);
-      display: flex;
-      align-items: center;
-      gap: 8px;
     }
 
     .updated-at {
       font-size: 0.75rem;
       color: var(--text-muted);
-      font-weight: 500;
     }
 
     .channel-grid {
@@ -73,7 +63,6 @@
       background: var(--card-bg);
       border-radius: 12px;
       padding: 16px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
       border: 1px solid #27272a;
       display: flex;
       flex-direction: column;
@@ -89,10 +78,8 @@
     .channel-name {
       font-weight: 700;
       font-size: 1.1rem;
-      letter-spacing: -0.02em;
     }
 
-    /* Kanal Başlık Renkleri */
     .channel-ARD { color: #60a5fa; }
     .channel-ZDF { color: #fb923c; }
     .channel-RTL { color: #f43f5e; }
@@ -111,28 +98,18 @@
       font-weight: 700;
       padding: 3px 8px;
       border-radius: 6px;
-      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
     .program-info {
       text-decoration: none;
       color: inherit;
-      display: block;
-      padding: 4px 0;
-      border-radius: 6px;
-      transition: opacity 0.2s;
-    }
-
-    .program-info:active {
-      opacity: 0.7;
     }
 
     .program-title {
       font-size: 1.05rem;
       font-weight: 600;
       margin-bottom: 4px;
-      line-height: 1.3;
       color: #fafafa;
     }
 
@@ -159,12 +136,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
-      transition: transform 0.1s ease;
-    }
-
-    .btn:active {
-      transform: scale(0.97);
+      border: none;
+      cursor: pointer;
     }
 
     .btn-detail {
@@ -178,6 +151,56 @@
       color: #064e3b;
       font-weight: 700;
     }
+
+    /* Gömülü Video Player Modal Tasarımı */
+    .player-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 16px;
+    }
+
+    .player-container {
+      width: 100%;
+      max-width: 850px;
+      background: #000;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      border: 1px solid #27272a;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      max-height: 75vh;
+      display: block;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(225, 29, 72, 0.85);
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 10;
+      font-size: 0.85rem;
+    }
+
+    .close-btn:hover {
+      background: rgba(225, 29, 72, 1);
+    }
   </style>
 </head>
 <body>
@@ -189,30 +212,75 @@
 
   <div id="channels-container" class="channel-grid"></div>
 
-  <script>
-    // Her kanal için canlı yayın yönlendirmeleri
-    const LIVE_URLS = {
-      // Ana Akım Kanallar (Resmi Mediathek)
-      "ARD": "https://www.ardmediathek.de/live",
-      "ZDF": "https://www.zdf.de/live-tv",
-      "RTL": "https://www.tvnow.de/live",
-      "RTL2": "https://www.joyn.de/live/rtl2",
-      "SAT.1": "https://www.joyn.de/live/sat-1",
-      "ProSieben": "https://www.joyn.de/live/prosieben",
-      "3sat": "https://www.3sat.de/live",
-      "ONE": "https://www.ardmediathek.de/live/Y3JpZDovL2Rhc2Vyc3RlLmRlLmxpdmVzdHJlYW0tb25l",
-      
-      // Sky Bundesliga Kanalları (Vavoo Yönlendirmesi)
-      "Sky Sport Bundesliga 1": "https://vavoo.to",
-      "Sky Sport Bundesliga 2": "https://vavoo.to",
-      "Sky Sport Bundesliga 3": "https://vavoo.to",
-      "Sky Sport Bundesliga 4": "https://vavoo.to",
-      "Sky Sport Bundesliga 5": "https://vavoo.to",
+  <!-- Sitede Açılan Gömülü Oynatıcı -->
+  <div id="playerModal" class="player-modal">
+    <div class="player-container">
+      <button class="close-btn" onclick="closePlayer()">✕ Kapat</button>
+      <video id="videoPlayer" controls autoplay preload="auto"></video>
+    </div>
+  </div>
 
-      // DAZN Kanalları (Vavoo Yönlendirmesi)
-      "DAZN 1": "https://vavoo.to",
-      "DAZN 2": "https://vavoo.to"
+  <script>
+    // Kanallara ait doğrudan canlı yayın (.m3u8) adresleri
+    // Kendi m3u8 adreslerinizi veya Vavoo m3u8 linklerini buraya ekleyebilirsiniz.
+    const STREAM_MAP = {
+      "ARD": "https://marlin.ard-m3u8.de/live/ard.m3u8",
+      "ZDF": "https://zdf-hls-15.akamaized.net/hls/live/2016498/de/veryhigh/master.m3u8",
+      "3sat": "https://zdf-hls-16.akamaized.net/hls/live/2016499/de/veryhigh/master.m3u8",
+      "ONE": "https://marlin.ard-m3u8.de/live/one.m3u8",
+      "RTL": "",
+      "RTL2": "",
+      "SAT.1": "",
+      "ProSieben": "",
+      "Sky Sport Bundesliga 1": "",
+      "Sky Sport Bundesliga 2": "",
+      "Sky Sport Bundesliga 3": "",
+      "Sky Sport Bundesliga 4": "",
+      "Sky Sport Bundesliga 5": "",
+      "DAZN 1": "",
+      "DAZN 2": ""
     };
+
+    function playStream(channelName) {
+      const streamUrl = STREAM_MAP[channelName];
+      
+      if (!streamUrl || streamUrl.trim() === "") {
+        alert(`${channelName} kanalı için gömülü yayın adresi (.m3u8) henüz STREAM_MAP listesine eklenmemiş.`);
+        return;
+      }
+
+      const modal = document.getElementById('playerModal');
+      const video = document.getElementById('videoPlayer');
+      modal.style.display = 'flex';
+
+      if (Hls.isSupported()) {
+        const hls = new Hls();
+        hls.loadSource(streamUrl);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+          video.play();
+        });
+        window.currentHls = hls;
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        // Safari / iOS cihazlar için native HLS desteği
+        video.src = streamUrl;
+        video.play();
+      }
+    }
+
+    function closePlayer() {
+      const modal = document.getElementById('playerModal');
+      const video = document.getElementById('videoPlayer');
+      video.pause();
+      video.removeAttribute('src');
+      video.load();
+      
+      if (window.currentHls) {
+        window.currentHls.destroy();
+        window.currentHls = null;
+      }
+      modal.style.display = 'none';
+    }
 
     async function loadEPG() {
       try {
@@ -232,10 +300,16 @@
           let currentProgram = null;
 
           for (const prog of programs) {
+            if (!prog.time || prog.time === "--:--") continue;
             const [sh, sm] = prog.time.split(':').map(Number);
-            const [eh, em] = prog.endTime.split(':').map(Number);
+            
+            let endMin = currentMinutes + 60; 
+            if (prog.endTime && prog.endTime !== "--:--") {
+              const [eh, em] = prog.endTime.split(':').map(Number);
+              endMin = eh * 60 + em;
+            }
+
             const startMin = sh * 60 + sm;
-            let endMin = eh * 60 + em;
             if (endMin < startMin) endMin += 24 * 60;
 
             if (currentMinutes >= startMin && currentMinutes < endMin) {
@@ -244,13 +318,11 @@
             }
           }
 
-          const displayProg = currentProgram || (programs.length > 0 ? programs[0] : { title: "Yayın bilgisi yok", time: "--:--", endTime: "--:--", url: "#" });
+          const displayProg = currentProgram || (programs.length > 0 ? programs[0] : { title: "Yayın bilgisi yükleniyor...", time: "--:--", endTime: "--:--", url: "#" });
           
           let safeChannelClass = channel.replace('.', '').replace(/\s+/g, '');
           if (channel.startsWith("Sky")) safeChannelClass = "Sky";
           if (channel.startsWith("DAZN")) safeChannelClass = "DAZN";
-
-          const liveLink = LIVE_URLS[channel] || "https://vavoo.to";
 
           const card = document.createElement('div');
           card.className = 'channel-card';
@@ -268,7 +340,7 @@
 
             <div class="card-actions">
               <a href="${displayProg.url || '#'}" target="_blank" class="btn btn-detail">📖 Program Detayı</a>
-              <a href="${liveLink}" target="_blank" class="btn btn-live">▶ Canlı İzle</a>
+              <button onclick="playStream('${channel}')" class="btn btn-live">▶ Canlı İzle</button>
             </div>
           `;
           container.appendChild(card);
