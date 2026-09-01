@@ -64,8 +64,15 @@ def fetch_season_matches(league_code):
             final_res = results[-1]
             score = f"{final_res.get('pointsTeam1')} - {final_res.get('pointsTeam2')}"
 
-        # Arama motoru linki YERİNE direkt canlı veri simülatörü & widget bağlantısı
-        direct_data_url = f"https://www.openligadb.de/daten/match-detail/{match_id}"
+        # Gol detaylarını JSON içine çek
+        goals = []
+        for g in m.get("goals", []):
+            goals.append({
+                "minute": g.get("matchMinute"),
+                "score1": g.get("scoreTeam1"),
+                "score2": g.get("scoreTeam2"),
+                "scorer": g.get("goalGetterName")
+            })
 
         match_obj = {
             "match_id": match_id,
@@ -76,7 +83,7 @@ def fetch_season_matches(league_code):
             "score": score,
             "is_finished": is_finished,
             "broadcaster": detect_broadcaster(dt_utc, league_code),
-            "data_url": direct_data_url
+            "goals": goals
         }
 
         if group_id not in matchdays:
