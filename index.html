@@ -22,228 +22,32 @@
       padding: 20px;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+    header { text-align: center; margin-bottom: 20px; }
+    header h1 { color: var(--text); font-size: 1.8rem; margin: 0 0 5px 0; }
+    .subtitle { color: var(--subtext); font-size: 0.9rem; }
 
-    header h1 {
-      color: var(--text);
-      font-size: 1.8rem;
-      margin: 0 0 5px 0;
-      font-weight: 700;
-    }
+    .controls { display: flex; justify-content: center; align-items: center; gap: 15px; margin: 20px 0; }
+    select { background: var(--card-bg); color: var(--text); border: 1px solid var(--card-border); padding: 10px 16px; border-radius: 8px; font-size: 1rem; }
 
-    .subtitle {
-      color: var(--subtext);
-      font-size: 0.9rem;
-    }
+    .league-title { font-size: 1.2rem; color: #38ef7d; border-bottom: 1px solid var(--card-border); padding-bottom: 8px; margin: 25px auto 15px auto; max-width: 1100px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; max-width: 1100px; margin: 0 auto; }
 
-    .controls {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-      margin: 20px 0;
-    }
+    .match-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 10px; padding: 16px; cursor: pointer; }
+    .match-card:hover { transform: translateY(-3px); }
 
-    select {
-      background: var(--card-bg);
-      color: var(--text);
-      border: 1px solid var(--card-border);
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-size: 1rem;
-      outline: none;
-      cursor: pointer;
-    }
+    .match-meta { display: flex; justify-content: space-between; font-size: 0.85rem; color: #f39c12; margin-bottom: 12px; }
+    .teams-container { display: flex; align-items: center; justify-content: space-between; margin: 12px 0; }
+    .team-badge { font-size: 0.9rem; font-weight: 600; width: 42%; text-align: center; padding: 6px 8px; border-radius: 6px; }
+    .score-box { background: #181b23; border: 1px solid var(--card-border); padding: 6px 12px; border-radius: 6px; font-size: 1.1rem; font-weight: bold; color: #38ef7d; }
+    .broadcaster-box { background: #1d212c; padding: 8px; border-radius: 6px; text-align: center; font-size: 0.85rem; color: var(--subtext); border: 1px solid var(--card-border); }
 
-    .league-title {
-      font-size: 1.2rem;
-      color: #38ef7d;
-      border-bottom: 1px solid var(--card-border);
-      padding-bottom: 8px;
-      margin: 25px auto 15px auto;
-      max-width: 1100px;
-      font-weight: 600;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-      gap: 16px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .match-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 10px;
-      padding: 16px;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .match-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-
-    .match-meta {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      color: #f39c12;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .teams-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 12px 0;
-    }
-
-    .team-badge {
-      font-size: 0.9rem;
-      font-weight: 600;
-      width: 42%;
-      text-align: center;
-      padding: 6px 8px;
-      border-radius: 6px;
-      line-height: 1.2;
-    }
-
-    .score-box {
-      background: #181b23;
-      border: 1px solid var(--card-border);
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #38ef7d;
-      text-align: center;
-    }
-
-    .broadcaster-box {
-      background: #1d212c;
-      padding: 8px;
-      border-radius: 6px;
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--subtext);
-      border: 1px solid var(--card-border);
-    }
-
-    /* Modal */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(15, 17, 23, 0.85);
-      backdrop-filter: blur(4px);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-overlay.active {
-      display: flex;
-    }
-
-    .modal-content {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      width: 90%;
-      max-width: 550px;
-      max-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    .modal-header {
-      padding: 14px 20px;
-      background: #181b23;
-      border-bottom: 1px solid var(--card-border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .modal-title {
-      font-weight: 600;
-      color: #38ef7d;
-      font-size: 1.1rem;
-    }
-
-    .close-btn {
-      background: var(--accent);
-      color: #fff;
-      border: none;
-      padding: 6px 14px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .modal-body {
-      padding: 20px;
-      overflow-y: auto;
-    }
-
-    .goal-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #181b23;
-      padding: 10px 14px;
-      border-radius: 6px;
-      margin-bottom: 8px;
-      border: 1px solid var(--card-border);
-    }
-
-    .goal-minute {
-      color: #f39c12;
-      font-weight: bold;
-    }
-
-    .goal-scorer {
-      color: #fff;
-      font-weight: 500;
-    }
-
-    .external-btn {
-      display: block;
-      width: 100%;
-      text-align: center;
-      background: #2b3040;
-      color: #38ef7d;
-      border: 1px solid #38ef7d;
-      padding: 10px 0;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 15px;
-      transition: background 0.2s;
-    }
-
-    .external-btn:hover {
-      background: #38ef7d;
-      color: #181b23;
-    }
-
-    .loading-text {
-      text-align: center;
-      color: var(--subtext);
-      padding: 20px 0;
-    }
+    .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 17, 23, 0.85); z-index: 1000; justify-content: center; align-items: center; }
+    .modal-overlay.active { display: flex; }
+    .modal-content { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; width: 90%; max-width: 550px; max-height: 80vh; display: flex; flex-direction: column; }
+    .modal-header { padding: 14px 20px; background: #181b23; border-bottom: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center; }
+    .close-btn { background: var(--accent); color: #fff; border: none; padding: 6px 14px; border-radius: 6px; cursor: pointer; }
+    .modal-body { padding: 20px; overflow-y: auto; }
+    .goal-item { display: flex; justify-content: space-between; background: #181b23; padding: 10px 14px; border-radius: 6px; margin-bottom: 8px; }
   </style>
 </head>
 <body>
@@ -261,14 +65,10 @@
   <div class="league-title">🇩🇪 1. Bundesliga</div>
   <div class="grid" id="b1-grid"></div>
 
-  <div class="league-title">🇩🇪 2. Bundesliga</div>
-  <div class="grid" id="b2-grid"></div>
-
-  <!-- Modal -->
   <div class="modal-overlay" id="match-modal">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title" id="modal-title">Live Matchdetails</div>
+        <div class="modal-title" id="modal-title" style="color:#38ef7d; font-weight:bold;">Matchdetails</div>
         <button class="close-btn" onclick="closeModal()">Schließen ✕</button>
       </div>
       <div class="modal-body" id="modal-body-content"></div>
@@ -280,23 +80,12 @@
       "FC Bayern München": { bg: "rgba(220, 53, 69, 0.2)", color: "#ff8080" },
       "Borussia Dortmund": { bg: "rgba(255, 193, 7, 0.2)", color: "#ffe066" },
       "RB Leipzig": { bg: "rgba(235, 64, 52, 0.2)", color: "#ff9999" },
-      "Bayer 04 Leverkusen": { bg: "rgba(220, 38, 38, 0.2)", color: "#f87171" },
-      "VfB Stuttgart": { bg: "rgba(255, 255, 255, 0.15)", color: "#ffffff" },
-      "Eintracht Frankfurt": { bg: "rgba(107, 114, 128, 0.25)", color: "#e5e7eb" },
-      "VfL Wolfsburg": { bg: "rgba(34, 197, 94, 0.2)", color: "#4ade80" },
-      "SV Werder Bremen": { bg: "rgba(16, 185, 129, 0.2)", color: "#34d399" },
-      "1. FC Union Berlin": { bg: "rgba(239, 68, 68, 0.2)", color: "#fca5a5" },
-      "Borussia Mönchengladbach": { bg: "rgba(52, 211, 153, 0.15)", color: "#a7f3d0" },
-      "FSV Mainz 05": { bg: "rgba(248, 113, 113, 0.2)", color: "#fca5a5" },
-      "FC Augsburg": { bg: "rgba(16, 185, 129, 0.15)", color: "#6ee7b7" },
-      "TSG 1899 Hoffenheim": { bg: "rgba(59, 130, 246, 0.2)", color: "#93c5fd" },
-      "Hamburger SV": { bg: "rgba(59, 130, 246, 0.2)", color: "#93c5fd" }
+      "Bayer 04 Leverkusen": { bg: "rgba(220, 38, 38, 0.2)", color: "#f87171" }
     };
 
     function getTeamStyle(teamName) {
       const match = Object.keys(teamColors).find(k => teamName.includes(k) || k.includes(teamName));
-      if (match) return teamColors[match];
-      return { bg: "rgba(255, 255, 255, 0.08)", color: "#e2e8f0" };
+      return match ? teamColors[match] : { bg: "rgba(255, 255, 255, 0.08)", color: "#e2e8f0" };
     }
 
     let globalData = null;
@@ -305,126 +94,67 @@
       try {
         const res = await fetch(`epg.json?t=${new Date().getTime()}`);
         if (!res.ok) return;
-
         globalData = await res.json();
         document.getElementById("last-update").textContent = `Aktualisiert: ${globalData.date_str || ''}`;
-
-        populateWeekSelect(globalData.current_b1_week || 1);
-        renderWeek(globalData.current_b1_week || 1);
-      } catch (err) {
-        console.error("Fehler beim Laden:", err);
-      }
+        populateWeekSelect(1);
+        renderWeek(1);
+      } catch (err) { console.error(err); }
     }
 
     function populateWeekSelect(currentWeek) {
       const select = document.getElementById("week-select");
       select.innerHTML = "";
-
       for (let i = 1; i <= 34; i++) {
         const opt = document.createElement("option");
         opt.value = i;
-        opt.textContent = `${i}. Spieltag ${i === currentWeek ? '(Aktuell)' : ''}`;
+        opt.textContent = `${i}. Spieltag`;
         if (i === currentWeek) opt.selected = true;
         select.appendChild(opt);
       }
-
       select.addEventListener("change", (e) => renderWeek(parseInt(e.target.value)));
     }
 
     function renderWeek(weekNum) {
       if (!globalData) return;
-      renderMatches("b1-grid", (globalData.bundesliga_1[weekNum] || {}).matches || []);
-      renderMatches("b2-grid", (globalData.bundesliga_2[weekNum] || {}).matches || []);
-    }
-
-    function renderMatches(containerId, matches) {
-      const container = document.getElementById(containerId);
+      const matches = (globalData.bundesliga_1[weekNum] || {}).matches || [];
+      const container = document.getElementById("b1-grid");
       container.innerHTML = "";
 
-      if (matches.length === 0) {
-        container.innerHTML = `<div style="color:var(--subtext); padding:10px;">Keine Spiele gefunden.</div>`;
-        return;
-      }
-
       matches.forEach(m => {
-        const t1Style = getTeamStyle(m.team1);
-        const t2Style = getTeamStyle(m.team2);
-
+        const t1 = getTeamStyle(m.team1);
+        const t2 = getTeamStyle(m.team2);
         const card = document.createElement("div");
         card.className = "match-card";
-        card.onclick = () => fetchAndShowDetails(m);
-
+        card.onclick = () => openDetails(m);
         card.innerHTML = `
-          <div class="match-meta">
-            <span>📅 ${m.date_tr}</span>
-            <span>⏰ ${m.time_tr} (TSİ)</span>
-          </div>
-
+          <div class="match-meta"><span>📅 ${m.date_tr}</span><span>⏰ ${m.time_tr} (TSİ)</span></div>
           <div class="teams-container">
-            <div class="team-badge" style="background:${t1Style.bg}; color:${t1Style.color};">${m.team1}</div>
+            <div class="team-badge" style="background:${t1.bg}; color:${t1.color};">${m.team1}</div>
             <div class="score-box">${m.score}</div>
-            <div class="team-badge" style="background:${t2Style.bg}; color:${t2Style.color};">${m.team2}</div>
+            <div class="team-badge" style="background:${t2.bg}; color:${t2.color};">${m.team2}</div>
           </div>
-
-          <div class="broadcaster-box">
-            📺 Sender: <strong>${m.broadcaster}</strong>
-          </div>
+          <div class="broadcaster-box">📺 Sender: <strong>${m.broadcaster}</strong></div>
         `;
         container.appendChild(card);
       });
     }
 
-    async function fetchAndShowDetails(m) {
+    function openDetails(m) {
       document.getElementById("modal-title").textContent = `${m.team1} ${m.score} ${m.team2}`;
       const body = document.getElementById("modal-body-content");
-      body.innerHTML = `<div class="loading-text">Spieldetails werden geladen... / Detaylar yükleniyor...</div>`;
-      document.getElementById("match-modal").classList.add("active");
-
-      let goals = [];
-      try {
-        // Tıklanınca ilgili maçın OpenLigaDB API'sine direkt canlı istek atıyoruz
-        const res = await fetch(`https://api.openligadb.de/getmatchdata/${m.match_id}`);
-        if (res.ok) {
-          const matchData = await res.json();
-          goals = matchData.goals || [];
-        }
-      } catch (e) {
-        console.error("API hatası:", e);
-      }
-
-      let kickerQuery = encodeURIComponent(`${m.team1} ${m.team2} kicker live ticker`);
-      let kickerUrl = `https://www.kicker.de/search?query=${kickerQuery}`;
-
       let html = "";
-      if (goals.length > 0) {
-        html += `<h3 style="color:#f39c12; margin-top:0;">⚽ Tore / Goller</h3>`;
-        goals.forEach(g => {
-          html += `
-            <div class="goal-item">
-              <span class="goal-minute">⏱️ ${g.matchMinute || '?'}'</span>
-              <span class="goal-scorer">⚽ ${g.goalGetterName || 'Unbekannt'}</span>
-              <span style="color:#38ef7d; font-weight:bold;">(${g.scoreTeam1} - ${g.scoreTeam2})</span>
-            </div>
-          `;
+      if (m.goals && m.goals.length > 0) {
+        m.goals.forEach(g => {
+          html += `<div class="goal-item"><span>⏱️ ${g.minute}'</span><span>⚽ ${g.scorer}</span><span>(${g.score1}-${g.score2})</span></div>`;
         });
       } else {
-        html += `<div class="loading-text">Bu maç için detaylı gol kaydı bulunamadı.</div>`;
+        html = "<div style='text-align:center; color:#9aa0a6;'>Henüz detay/gol kaydı yok.</div>";
       }
-
-      // Kicker için doğrudan yönlendirme butonu
-      html += `
-        <a href="${kickerUrl}" target="_blank" rel="noopener noreferrer" class="external-btn">
-          🔗 Kicker Center'da Aç ↗
-        </a>
-      `;
-
       body.innerHTML = html;
+      document.getElementById("match-modal").classList.add("active");
     }
 
-    function closeModal() {
-      document.getElementById("match-modal").classList.remove("active");
-    }
-
+    function closeModal() { document.getElementById("match-modal").classList.remove("active"); }
     document.addEventListener("DOMContentLoaded", init);
   </script>
 </body>
