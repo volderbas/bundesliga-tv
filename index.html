@@ -57,6 +57,14 @@
       text-transform: uppercase;
       animation: pulse 2s infinite;
     }
+    .badge-offline {
+      background: #475569;
+      color: #cbd5e1;
+      font-size: 0.7rem;
+      font-weight: bold;
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
     .program-title { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
     .program-time { font-size: 0.85rem; color: var(--accent); }
     .program-genre { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
@@ -87,13 +95,15 @@
         const container = document.getElementById('channels-container');
         container.innerHTML = '';
 
+        // Almanya Saatine (CET/CEST) göre dakikayı hesapla
         const now = new Date();
-        const currentMinutes = now.getHours() * 60 + now.getMinutes();
+        const germanTimeStr = now.toLocaleTimeString("de-DE", { timeZone: "Europe/Berlin", hour: '2-digit', minute: '2-digit' });
+        const [gHour, gMin] = germanTimeStr.split(':').map(Number);
+        const currentMinutes = gHour * 60 + gMin;
 
         for (const [channel, programs] of Object.entries(data.channels)) {
           let currentProgram = null;
 
-          // O anki yayını bul
           for (const prog of programs) {
             const [sh, sm] = prog.time.split(':').map(Number);
             const [eh, em] = prog.endTime.split(':').map(Number);
@@ -107,39 +117,42 @@
             }
           }
 
-          // Eğer o anki yayın bulunamadıysa ilk yayını göster
-          const displayProg = currentProgram || (programs.length > 0 ? programs[0] : null);
-
           const card = document.createElement('div');
           card.className = 'channel-card';
           
-          if (displayProg) {
+          if (currentProgram) {
             card.innerHTML = `
               <div class="channel-header">
                 <span class="channel-name">${channel}</span>
                 <span class="badge">CANLI</span>
               </div>
-              <div class="program-title">${displayProg.title}</div>
-              <div class="program-time">⏰ ${displayProg.time} - ${displayProg.endTime}</div>
-              <div class="program-genre">🏷️ ${displayProg.genre}</div>
+              <div class="program-title">${currentProgram.title}</div>
+              <div class="program-time">⏰ ${currentProgram.time} - ${currentProgram.endTime}</div>
+              <div class="program-genre">🏷️ ${currentProgram.genre}</div>
             `;
           } else {
+            // Canlı yayın saati tutmuyorsa günün ilk akış bilgisini göster
+            const fallback = programs.length > 0 ? programs[0] : null;
             card.innerHTML = `
-              <div class="channel-header"><span class="channel-name">${channel}</span></div>
-              <div class="program-title" style="color:var(--text-muted)">Yayın bilgisi yok</div>
+              <div class="channel-header">
+                <span class="channel-name">${channel}</span>
+                <span class="badge-offline">AKIŞ DIŞI</span>
+              </div>
+              <div class="program-title">${fallback ? fallback.title : 'Yayın bilgisi yok'}</div>
+              <div class="program-time">⏰ ${fallback ? fallback.time + ' - ' + fallback.endTime : '--:--'}</div>
+              <div class="program-genre">🏷️ Akış saat aralığı dışında</div>
             `;
           }
           container.appendChild(card);
         }
       } catch (err) {
         document.getElementById('channels-container').innerHTML = 
-          '<p style="color:red; text-align:center;">epg.json dosyası henüz oluşturulmadı. GitHub Actions ilk çalıştırmayı yaptıktan sonra veri görünecektir.</p>';
+          '<p style="color:red; text-align:center;">epg.json okunurken bir sorun oluştu.</p>';
       }
     }
 
     loadEPG();
-    // Her 1 dakikada bir otomatik yenile
-    setInterval(loadEPG, 60000);
+    setInterval(loadEPG, 60000); // 1 dakikada bir arayüzü yeniler
   </script>
 </body>
 </html>
