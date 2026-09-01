@@ -1,103 +1,198 @@
-#!/usr/bin/env python3
-import json
-import requests
-from datetime import datetime, timezone
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0.0.0 Safari/537.36",
-    "Accept": "application/json"
-}
-
-# Takip Edeceğimiz Kanallar ve TV Spielfilm Kanal Kodları
-CHANNELS_CONFIG = [
-    {"name": "ARD", "search": ["ard", "das erste"]},
-    {"name": "ZDF", "search": ["zdf"]},
-    {"name": "RTL", "search": ["rtl"]},
-    {"name": "RTL2", "search": ["rtl2", "rtl 2"]},
-    {"name": "SAT.1", "search": ["sat.1", "sat1"]},
-    {"name": "ProSieben", "search": ["prosieben", "pro7"]},
-    {"name": "3sat", "search": ["3sat"]},
-    {"name": "ONE", "search": ["one"]},
-    {"name": "Sky Sport Bundesliga 1", "search": ["sky sport bundesliga 1", "sky buli 1", "bundesliga 1"]},
-    {"name": "Sky Sport Bundesliga 2", "search": ["sky sport bundesliga 2", "sky buli 2", "bundesliga 2"]},
-    {"name": "Sky Sport Bundesliga 3", "search": ["sky sport bundesliga 3", "sky buli 3", "bundesliga 3"]},
-    {"name": "Sky Sport Bundesliga 4", "search": ["sky sport bundesliga 4", "sky buli 4", "bundesliga 4"]},
-    {"name": "Sky Sport Bundesliga 5", "search": ["sky sport bundesliga 5", "sky buli 5", "bundesliga 5"]},
-    {"name": "DAZN 1", "search": ["dazn 1", "dazn1"]},
-    {"name": "DAZN 2", "search": ["dazn 2", "dazn2"]}
-]
-
-def fetch_epg():
-    epg_result = {cfg["name"]: [] for cfg in CHANNELS_CONFIG}
-    
-    # TV Spielfilm Canlı Yayın Akış Uç Noktası
-    url = "https://live.tvspielfilm.de/static/broadcast/list/aktuell"
-    
-    try:
-        response = requests.get(url, headers=HEADERS, timeout=15)
-        if response.status_code == 200:
-            broadcasts = response.json()
-            
-            for item in broadcasts:
-                channel_name = item.get("channel", {}).get("title", "").lower()
-                title = item.get("title", "").strip()
-                start_ts = item.get("timeStart")
-                end_ts = item.get("timeEnd")
-                broadcast_id = item.get("id", "")
-
-                if not title:
-                    continue
-
-                # Zaman Dönüştürme
-                start_time = datetime.fromtimestamp(start_ts).strftime("%H:%M") if start_ts else "--:--"
-                end_time = datetime.fromtimestamp(end_ts).strftime("%H:%M") if end_ts else "--:--"
-
-                # TV Spielfilm Detay Sayfası Linki
-                detail_url = f"https://www.tvspielfilm.de/tv-programm/sendung/{broadcast_id}.html" if broadcast_id else "https://www.tvspielfilm.de/"
-
-                # Kanal Eşleştirme
-                for cfg in CHANNELS_CONFIG:
-                    ch_key = cfg["name"]
-                    if any(term in channel_name for term in cfg["search"]):
-                        epg_result[ch_key].append({
-                            "time": start_time,
-                            "endTime": end_time,
-                            "title": title,
-                            "url": detail_url
-                        })
-                        break
-    except Exception as e:
-        print(f"EPG çekilirken hata oluştu: {e}")
-
-    # Yayın akışı bulunamayan kanallara varsayılan yönlendirme linki atama
-    now_str = datetime.now().strftime("%H:%M")
-    for cfg in CHANNELS_CONFIG:
-        ch_name = cfg["name"]
-        if not epg_result[ch_name]:
-            epg_result[ch_name].append({
-                "time": now_str,
-                "endTime": "--:--",
-                "title": f"{ch_name} Program Detayı İçin Tıklayın",
-                "url": "https://www.tvspielfilm.de/tv-programm/"
-            })
-
-    return epg_result
-
-def main():
-    print("Yayın akışları güncelleniyor...")
-    epg_data = fetch_epg()
-
-    output = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "date": datetime.now().strftime("%d.%m.%Y - %H:%M"),
-        "streams": {},  # Canlı yayınlar devreden çıkarıldı
-        "channels": epg_data
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almanya TV Yayın Akışı (EPG)</title>
+  <style>
+    :root {
+      --bg-color: #121214;
+      --card-bg: #1e1e24;
+      --accent-color: #00adb5;
+      --accent-hover: #008c93;
+      --text-color: #eeeeee;
+      --subtext-color: #aaaaaa;
+      --border-color: #2a2a32;
     }
 
-    with open("epg.json", "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 20px;
+    }
 
-    print("epg.json başarıyla güncellendi.")
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-color);
+    }
 
-if __name__ == "__main__":
-    main()
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 1.8rem;
+      color: var(--accent-color);
+    }
+
+    #last-updated {
+      font-size: 0.85rem;
+      color: var(--subtext-color);
+    }
+
+    .channel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .channel-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .channel-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent-color);
+    }
+
+    .channel-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--accent-color);
+      margin: 0 0 10px 0;
+    }
+
+    .program-time {
+      font-size: 0.9rem;
+      color: #ffb703;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .program-title {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin: 0 0 15px 0;
+      flex-grow: 1;
+    }
+
+    .btn-detail {
+      display: inline-block;
+      text-align: center;
+      background-color: var(--accent-color);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-detail:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .loading {
+      text-align: center;
+      grid-column: 1 / -1;
+      font-size: 1.2rem;
+      color: var(--subtext-color);
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📺 Almanya TV Yayın Akışı</h1>
+    <div id="last-updated">Yayın bilgileri yükleniyor...</div>
+  </header>
+
+  <main>
+    <div class="channel-grid" id="channel-container">
+      <div class="loading">Güncel program verileri getiriliyor...</div>
+    </div>
+  </main>
+
+  <script>
+    async function fetchEPG() {
+      const container = document.getElementById("channel-container");
+      const updatedText = document.getElementById("last-updated");
+
+      try {
+        // epg.json dosyasını tarayıcı önbelleğine takılmadan taze çek
+        const response = await fetch(`epg.json?t=${new Date().getTime()}`);
+        
+        if (!response.ok) {
+          throw new Error("epg.json dosyası okunamadı.");
+        }
+
+        const data = await response.json();
+        
+        // Son güncelleme zamanını göster
+        if (data.date) {
+          updatedText.textContent = `Son Güncelleme: ${data.date}`;
+        }
+
+        container.innerHTML = "";
+
+        const channels = data.channels || {};
+        
+        if (Object.keys(channels).length === 0) {
+          container.innerHTML = `<div class="loading">Henüz yayın akış bilgisi bulunamadı.</div>`;
+          return;
+        }
+
+        // Kanal Kartlarını Oluştur
+        for (const [channelName, programs] of Object.entries(channels)) {
+          const currentProgram = programs[0] || {
+            time: "--:--",
+            endTime: "--:--",
+            title: "Yayın bilgisi bulunamadı",
+            url: "https://www.tvspielfilm.de/tv-programm/"
+          };
+
+          const card = document.createElement("div");
+          card.className = "channel-card";
+
+          card.innerHTML = `
+            <div>
+              <div class="channel-title">${channelName}</div>
+              <div class="program-time">⏰ ${currentProgram.time} - ${currentProgram.endTime}</div>
+              <div class="program-title">${currentProgram.title}</div>
+            </div>
+            <a href="${currentProgram.url}" target="_blank" rel="noopener noreferrer" class="btn-detail">
+              Program Detayı ↗
+            </a>
+          `;
+
+          container.appendChild(card);
+        }
+
+      } catch (error) {
+        console.error("Hata:", error);
+        container.innerHTML = `
+          <div class="loading" style="color: #ef233c;">
+            Yayın bilgileri yüklenirken bir sorun oluştu.<br>
+            <small>Lütfen GitHub Actions işleminin başarıyla tamamlandığından emin olun.</small>
+          </div>
+        `;
+      }
+    }
+
+    // Sayfa yüklendiğinde EPG verisini çek
+    document.addEventListener("DOMContentLoaded", fetchEPG);
+  </script>
+</body>
+</html>
