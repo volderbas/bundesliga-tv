@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="theme-color" content="#18181b">
+  <meta name="theme-color" content="#121316">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Bundesliga TV">
+  <meta name="application-name" content="Live TV Germany">
   <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/732/732200.png">
   
-  <title>Bundesliga TV EPG</title>
+  <title>Live TV Germany EPG</title>
   
   <!-- Google Inter Fontu -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,10 +23,10 @@
       --text: #f4f4f5;
       --text-muted: #a1a1aa;
       
-      /* Pastel Almanya Teması */
+      /* Pastel Almanya Renkleri */
       --germany-red: #e11d48;
       --germany-gold: #fbbf24;
-      --germany-dark: #27272a;
+      --live-green: #10b981;
     }
 
     body {
@@ -75,23 +75,15 @@
       padding: 16px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
       border: 1px solid #27272a;
-      transition: all 0.2s ease;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-      cursor: pointer;
-    }
-
-    .channel-card:active {
-      transform: scale(0.98);
-      background: var(--card-hover);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
 
     .channel-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
     }
 
     .channel-name {
@@ -119,31 +111,27 @@
       border-radius: 6px;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      animation: pulse 2s infinite;
     }
 
-    .badge-offline {
-      background: #3f3f46;
-      color: #a1a1aa;
-      font-size: 0.65rem;
-      font-weight: 600;
-      padding: 3px 8px;
+    .program-info {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      padding: 4px 0;
       border-radius: 6px;
+      transition: opacity 0.2s;
+    }
+
+    .program-info:active {
+      opacity: 0.7;
     }
 
     .program-title {
       font-size: 1.05rem;
       font-weight: 600;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       line-height: 1.3;
       color: #fafafa;
-    }
-
-    .program-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 8px;
     }
 
     .program-time {
@@ -152,18 +140,41 @@
       font-weight: 500;
     }
 
-    .click-hint {
-      font-size: 0.75rem;
-      color: var(--text-muted);
+    .card-actions {
       display: flex;
-      align-items: center;
-      gap: 4px;
+      gap: 8px;
+      margin-top: 4px;
     }
 
-    @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.6; }
-      100% { opacity: 1; }
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 10px 0;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: transform 0.1s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-detail {
+      background: #27272a;
+      color: var(--text-muted);
+      border: 1px solid #3f3f46;
+    }
+
+    .btn-live {
+      background: var(--live-green);
+      color: #064e3b;
+      font-weight: 700;
     }
   </style>
 </head>
@@ -177,6 +188,18 @@
   <div id="channels-container" class="channel-grid"></div>
 
   <script>
+    // Her kanal için resmi ve güvenli canlı yayın (Mediathek / Stream) linkleri
+    const LIVE_URLS = {
+      "ARD": "https://www.ardmediathek.de/live",
+      "ZDF": "https://www.zdf.de/live-tv",
+      "RTL": "https://www.tvnow.de/live", // RTL+ / Joyn altyapısı
+      "RTL2": "https://www.joyn.de/live/rtl2",
+      "SAT.1": "https://www.joyn.de/live/sat-1",
+      "ProSieben": "https://www.joyn.de/live/prosieben",
+      "3sat": "https://www.3sat.de/live",
+      "ONE": "https://www.ardmediathek.de/live/Y3JpZDovL2Rhc2Vyc3RlLmRlLmxpdmVzdHJlYW0tb25l"
+    };
+
     async function loadEPG() {
       try {
         const response = await fetch('epg.json?t=' + new Date().getTime());
@@ -207,42 +230,31 @@
             }
           }
 
-          const card = document.createElement('a');
+          // Eğer anlık program bulunamazsa listedeki ilk programı baz al
+          const displayProg = currentProgram || (programs.length > 0 ? programs[0] : { title: "Bilgi yok", time: "--:--", endTime: "--:--", url: "#" });
+          
+          const safeChannelClass = channel.replace('.', '');
+          const liveLink = LIVE_URLS[channel] || "https://www.google.com";
+
+          const card = document.createElement('div');
           card.className = 'channel-card';
           
-          // Kanal adındaki noktayı CSS class için temizle
-          const safeChannelClass = channel.replace('.', '');
-          
-          if (currentProgram) {
-            card.href = currentProgram.url || '#';
-            card.target = '_blank';
-            card.innerHTML = `
-              <div class="channel-header">
-                <span class="channel-name channel-${safeChannelClass}">${channel}</span>
-                <span class="badge">CANLI</span>
-              </div>
-              <div class="program-title">${currentProgram.title}</div>
-              <div class="program-footer">
-                <span class="program-time">⏰ ${currentProgram.time} - ${currentProgram.endTime}</span>
-                <span class="click-hint">Detay ➔</span>
-              </div>
-            `;
-          } else {
-            const fallback = programs.length > 0 ? programs[0] : null;
-            card.href = fallback && fallback.url ? fallback.url : '#';
-            card.target = '_blank';
-            card.innerHTML = `
-              <div class="channel-header">
-                <span class="channel-name channel-${safeChannelClass}">${channel}</span>
-                <span class="badge-offline">AKIŞ DIŞI</span>
-              </div>
-              <div class="program-title">${fallback ? fallback.title : 'Yayın bilgisi yok'}</div>
-              <div class="program-footer">
-                <span class="program-time">⏰ ${fallback ? fallback.time + ' - ' + fallback.endTime : '--:--'}</span>
-                <span class="click-hint">Detay ➔</span>
-              </div>
-            `;
-          }
+          card.innerHTML = `
+            <div class="channel-header">
+              <span class="channel-name channel-${safeChannelClass}">${channel}</span>
+              <span class="badge">CANLI</span>
+            </div>
+            
+            <a href="${displayProg.url || '#'}" target="_blank" class="program-info">
+              <div class="program-title">${displayProg.title}</div>
+              <div class="program-time">⏰ ${displayProg.time} - ${displayProg.endTime}</div>
+            </a>
+
+            <div class="card-actions">
+              <a href="${displayProg.url || '#'}" target="_blank" class="btn btn-detail">📖 Program Detayı</a>
+              <a href="${liveLink}" target="_blank" class="btn btn-live">▶ Canlı İzle</a>
+            </div>
+          `;
           container.appendChild(card);
         }
       } catch (err) {
