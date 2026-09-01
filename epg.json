@@ -1,29 +1,127 @@
 {
-  "generated_at": "2026-09-01T12:46:56.767603+00:00",
-  "date": "01.09.2026 - 12:46",
+  "generated_at": "2026-09-01T13:04:48.357818+00:00",
+  "date": "01.09.2026 - 13:04",
+  "streams": {},
   "channels": {
-    "ARD": [],
-    "ZDF": [],
-    "RTL": [
+    "ARD": [
       {
-        "time": "12:00",
-        "endTime": "15:00",
+        "time": "20:15",
+        "endTime": "--:--",
         "title": "",
-        "genre": "TV",
-        "url": "https://www.tvspielfilm.de/tv-programm/sendungen/rtl,RTL.html"
+        "url": "https://www.tvspielfilm.de/tv-programm/sendungen/das-erste,ARD.html"
       }
     ],
-    "RTL2": [],
-    "SAT.1": [],
-    "ProSieben": [],
-    "3sat": [],
-    "ONE": [],
-    "Sky Sport Bundesliga 1": [],
-    "Sky Sport Bundesliga 2": [],
-    "Sky Sport Bundesliga 3": [],
-    "Sky Sport Bundesliga 4": [],
-    "Sky Sport Bundesliga 5": [],
-    "DAZN 1": [],
-    "DAZN 2": []
+    "ZDF": [
+      {
+        "time": "--:--",
+        "endTime": "--:--",
+        "title": "ZDF Canlı Yayın",
+        "url": "#"
+      }
+    ],
+    "RTL": [
+      {
+        "time": "05:00",
+        "endTime": "05:20",
+        "title": "",
+        "url": "https://www.tvspielfilm.de/tv-programm/sendungen/nicktoons,NICKT.html"
+      }
+    ],
+    "RTL2": [
+      {
+        "time": "--:--",
+        "endTime": "--:--",
+        "title": "RTL2 Canlı Yayın",
+        "url": "#"
+      }
+    ],
+    "SAT.1": [
+      {
+        "time": "--:--",
+        "endTime": "--:--",
+        "title": "SAT.1 Canlı Yayın",
+        "url": "#"
+      }
+    ],
+    "ProSieben": [
+      {
+        "time": "--:--",
+        "endTime": "--:--",
+        "title": "ProSieben Canlı Yayın",
+        "url": "#"
+      }
+    ],
+    "3sat": [
+      {
+        "time": "--:--",
+        "endTime": "--:--",
+        "title": "3sat Canlı Yayın",
+        "url": "#"
+      }
+    ],
+    "ONE": [
+      {
+        "time": "05:00",
+        "endTime": "05:25",
+        "title": "",
+        "url": "https://www.tvspielfilm.de/tv-programm/sendungen/prosieben-maxx,PRO7M.html"
+      }
+    ],
+    "Sky Sport Bundesliga 1": [
+      {
+        "time": "--:--",
+        "endTime": "--:--",
+        "title": "Sky Sport Bundesliga 1 Canlı Yayın",
+        "url": "#"
+      }
+    ],
+    "Sky Sport Bundesliga 2": [
+      {
+        "time": "--:--",
+        "endTime": "--:--",
+        "title": "Sky Sport Bundesliga 2 Canlı Yayın",
+        "url": "#"
+      }
+    ],
+    "Sky Sport Bundesliga 3": [
+      {
+        "time": "--:--",
+        "endTime": "--:--",
+        "title": "Sky Sport Bundesliga 3 Canlı Yayın",
+        "url": "#"
+      }
+    ],
+    "Sky Sport Bundesliga 4": [
+      {
+        "time": "--:--",
+        "endTime": "--:--",
+        "title": "Sky Sport Bundesliga 4 Canlı Yayın",
+        "url": "#"
+      }
+    ],
+    "Sky Sport Bundesliga 5": [
+      {
+        "time": "--:--",
+        "endTime": "--:--",
+        "title": "Sky Sport Bundesliga 5 Canlı Yayın",
+        "url": "#"
+      }
+    ],
+    "DAZN 1": [
+      {
+        "time": "--:--",
+        "endTime": "--:--",
+        "title": "DAZN 1 Canlı Yayın",
+        "url": "#"
+      }
+    ],
+    "DAZN 2": [
+      {
+        "time": "--:--",
+        "endTime": "--:--",
+        "title": "DAZN 2 Canlı Yayın",
+        "url": "#"
+      }
+    ]
   }
 }
