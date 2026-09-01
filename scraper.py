@@ -40,7 +40,7 @@ TARGET_URLS = [
 def get_vavoo_streams():
     stream_map = {}
     try:
-        # Vavoo Oturum (Session Token) Alma
+        # Vavoo Session Token
         auth_resp = requests.post(
             "https://vavoo.to/api/box/ping2",
             json={"box": "12345"},
@@ -49,6 +49,34 @@ def get_vavoo_streams():
         )
         token = auth_resp.json().get("token", "") if auth_resp.status_code == 200 else ""
         
+        channels_url = f"https://vavoo.to/channels?token={token}" if token else "https://vavoo.to/channels"
+        resp = requests.get(channels_url, headers={"User-Agent": "VAVOO/2.6"}, timeout=15)
+        
+        if resp.status_code == 200:
+            vavoo_list = resp.json()
+            for ch in vavoo_list:
+                country = ch.get("country", "").upper()
+                name = ch.get("name", "").strip().lower()
+                url = ch.get("url", "")
+                
+                # Almanya veya Genel listedeki kanalları tara
+                for cfg in CHANNELS_CONFIG:
+                    ch_key = cfg["name"]
+                    # Eğer kanal zaten bulunduysa tekrar ezme
+                    if ch_key in stream_map:
+                        continue
+
+                    # Esnek Arama: Konfigürasyondaki arama terimlerinden biri bile geçiyorsa eşleştir
+                    for search_term in cfg["search"]:
+                        if search_term.lower() in name:
+                            stream_map[ch_key] = f"{url}?token={token}" if token and "?token=" not in url else url
+                            break
+
+        print(f"Vavoo: Toplam {len(stream_map)} kanal akış linki başarıyla üretildi.")
+    except Exception as e:
+        print(f"Vavoo API akışları çekilirken uyarı: {e}")
+    
+    return stream_map
         # Almanya Kanal Listesini Çekme
         channels_url = f"https://vavoo.to/channels?token={token}" if token else "https://vavoo.to/channels"
         resp = requests.get(channels_url, headers={"User-Agent": "VAVOO/2.6"}, timeout=15)
