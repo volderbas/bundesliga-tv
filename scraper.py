@@ -11,7 +11,6 @@ def detect_broadcaster(match_date_utc, league_code):
     if league_code == "bl2":
         return "Sky Sport Bundesliga"
     
-    # 1. Bundesliga: Cuma & Pazar = DAZN, Cumartesi & Hafta İçi = Sky
     weekday = match_date_utc.weekday()
     if weekday in [4, 6]:  # Cuma (4) veya Pazar (6)
         return "DAZN 1 / DAZN 2"
@@ -19,7 +18,6 @@ def detect_broadcaster(match_date_utc, league_code):
         return "Sky Sport Bundesliga"
 
 def fetch_current_group(league_code):
-    """Mevcut bulunulan haftayı tespit eder."""
     url = f"https://api.openligadb.de/getcurrentgroup/{league_code}"
     try:
         resp = requests.get(url, headers=HEADERS, timeout=10)
@@ -31,13 +29,11 @@ def fetch_current_group(league_code):
     return 1
 
 def fetch_season_matches(league_code):
-    """34 haftalık tüm fikstürü çeker ve haftalara göre gruplar."""
-    # En güncel sezon verisi (2025/2026 Sezonu için)
-    url = f"https://api.openligadb.de/getmatchdata/{league_code}/2025"
+    # En güncel sezon verisi (2026/2027 Sezonu için)
+    url = f"https://api.openligadb.de/getmatchdata/{league_code}/2026"
     resp = requests.get(url, headers=HEADERS, timeout=15)
     
     if resp.status_code != 200 or not resp.json():
-        # Yedek sorgu: Sezon belirtmeden dene
         url = f"https://api.openligadb.de/getmatchdata/{league_code}"
         resp = requests.get(url, headers=HEADERS, timeout=15)
 
@@ -70,8 +66,8 @@ def fetch_season_matches(league_code):
             final_res = results[-1]
             score = f"{final_res.get('pointsTeam1')} - {final_res.get('pointsTeam2')}"
 
-        sofascore_search = f"https://www.sofascore.com/search?q={team1}+{team2}"
-        kicker_search = f"https://www.google.de/search?q=site:kicker.de+{team1}+{team2}+live+ticker"
+        # Modal içi gömülebilir detay linkleri
+        ticker_embed_url = f"https://www.google.de/search?q=site:kicker.de+{team1}+{team2}+live+ticker&igu=1"
 
         match_obj = {
             "match_id": m.get("matchID"),
@@ -82,8 +78,7 @@ def fetch_season_matches(league_code):
             "score": score,
             "is_finished": is_finished,
             "broadcaster": detect_broadcaster(dt_utc, league_code),
-            "sofascore_url": sofascore_search,
-            "kicker_url": kicker_search
+            "ticker_url": ticker_embed_url
         }
 
         if group_id not in matchdays:
