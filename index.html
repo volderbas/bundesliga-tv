@@ -1,281 +1,181 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bundesliga Live Matchcenter</title>
-  <style>
-    :root {
-      --bg: #121318;
-      --card-bg: #1c1e24;
-      --card-border: #2d313b;
-      --de-red: #d92b2b;
-      --de-gold: #ffcc00;
-      --text-main: #f3f4f6;
-      --text-sub: #9ca3af;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--bg);
-      color: var(--text-main);
-      margin: 0;
-      padding: 24px;
-    }
-
-    header { text-align: center; margin-bottom: 28px; }
-    header h1 {
-      font-size: 2.2rem;
-      margin: 0 0 6px 0;
-      font-weight: 800;
-      background: linear-gradient(90deg, #ffffff 0%, var(--de-gold) 50%, var(--de-red) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .subtitle { color: var(--text-sub); font-size: 0.9rem; }
-
-    .controls { display: flex; justify-content: center; align-items: center; gap: 12px; margin: 24px 0; }
-    select {
-      background: var(--card-bg);
-      color: var(--de-gold);
-      border: 1px solid var(--de-gold);
-      padding: 10px 18px;
-      border-radius: 10px;
-      font-weight: 700;
-      outline: none;
-      cursor: pointer;
-    }
-
-    .league-title {
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--text-main);
-      border-left: 5px solid var(--de-red);
-      padding-left: 12px;
-      margin: 36px auto 18px auto;
-      max-width: 1100px;
-    }
-
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 18px; max-width: 1100px; margin: 0 auto; }
-
-    .match-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 14px;
-      padding: 16px;
-      cursor: pointer;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-    .match-card:hover { transform: translateY(-3px); border-color: var(--de-gold); }
-
-    .match-meta { display: flex; justify-content: space-between; font-size: 0.85rem; color: var(--text-sub); margin-bottom: 14px; }
-    
-    /* YAN YANA SKOR DÜZENİ */
-    .teams-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 8px;
-      margin: 12px 0;
-    }
-    
-    .team-badge {
-      font-size: 0.9rem; font-weight: 600; flex: 1; text-align: center;
-      padding: 10px 8px; border-radius: 8px; background: rgba(255,255,255,0.04);
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    }
-    
-    .score-box {
-      background: #000000;
-      border: 1px solid var(--de-gold);
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--de-gold);
-      white-space: nowrap;
-      min-width: 60px;
-      text-align: center;
-    }
-
-    .broadcaster-box {
-      background: rgba(0,0,0,0.25); padding: 8px; border-radius: 8px;
-      text-align: center; font-size: 0.8rem; color: var(--text-sub); margin-top: 12px;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
-
-    /* Modal */
-    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(6px); z-index: 1000; justify-content: center; align-items: center; }
-    .modal-overlay.active { display: flex; }
-    
-    .modal-content {
-      background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px;
-      width: 92%; max-width: 600px; max-height: 85vh; display: flex; flex-direction: column; overflow: hidden;
-    }
-
-    .modal-header { padding: 18px 24px; background: #121318; border-bottom: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center; }
-    .close-btn { background: var(--de-red); color: white; border: none; padding: 6px 14px; border-radius: 8px; cursor: pointer; font-weight: 700; }
-
-    .modal-tabs { display: flex; background: #121318; border-bottom: 1px solid var(--card-border); }
-    .tab-btn { flex: 1; padding: 12px; background: none; border: none; color: var(--text-sub); font-weight: 700; cursor: pointer; border-bottom: 3px solid transparent; }
-    .tab-btn.active { color: var(--de-gold); border-bottom-color: var(--de-gold); }
-
-    .modal-body { padding: 20px; overflow-y: auto; }
-    
-    .event-item {
-      display: flex; justify-content: space-between; align-items: center;
-      background: #121318; padding: 12px 16px; border-radius: 10px; margin-bottom: 8px; font-size: 0.9rem;
-      border: 1px solid var(--card-border);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundesliga Dashboard</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f6; /* Siyah yok, ferah pastel gri/beyaz */
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --german-red: #DD0000;
+            --german-gold: #FFCE00;
+            --pastel-blue: #e8f0fe;
+            --pastel-green: #e6f4ea;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+        }
+        .header-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid var(--german-gold);
+            padding-bottom: 10px;
+        }
+        .tab-btn {
+            background-color: var(--card-bg);
+            border: 2px solid transparent;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px 8px 0 0;
+            transition: all 0.3s;
+        }
+        .tab-btn.active {
+            background-color: var(--pastel-blue);
+            border-top: 4px solid var(--german-red);
+            color: var(--text-main);
+        }
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--german-gold);
+        }
+        .card h2 {
+            margin-top: 0;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+        .table-row, .fixture-row, .player-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .table-row:nth-child(even) {
+            background-color: #fafafa;
+        }
+        .team-name { font-weight: 500; }
+        .rating-badge {
+            background-color: var(--pastel-green);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Bundesliga Matchcenter</h1>
-    <div class="subtitle" id="last-update">Daten werden geladen...</div>
-  </header>
-
-  <div class="controls">
-    <label for="week-select"><strong>Spieltag wählen:</strong></label>
-    <select id="week-select"></select>
-  </div>
-
-  <div class="league-title">🇩🇪 1. Bundesliga</div>
-  <div class="grid" id="b1-grid"></div>
-
-  <div class="league-title">🇩🇪 2. Bundesliga</div>
-  <div class="grid" id="b2-grid"></div>
-
-  <!-- Modal -->
-  <div class="modal-overlay" id="match-modal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div id="modal-title" style="font-weight:800; font-size:1.1rem; color:var(--de-gold);"></div>
-        <button class="close-btn" onclick="closeModal()">✕</button>
-      </div>
-      
-      <div class="modal-tabs">
-        <button class="tab-btn active" onclick="switchTab('events')">Match Events</button>
-        <button class="tab-btn" onclick="switchTab('lineups')">Aufstellung (İlk 11)</button>
-      </div>
-
-      <div class="modal-body" id="tab-events"></div>
-      <div class="modal-body" id="tab-lineups" style="display:none;"></div>
+    <div class="header-tabs">
+        <button class="tab-btn active" onclick="loadData('bl1')">1. Bundesliga</button>
+        <button class="tab-btn" onclick="loadData('bl2')">2. Bundesliga</button>
     </div>
-  </div>
 
-  <script>
-    let globalData = null;
+    <div class="dashboard-grid">
+        <!-- Sol Kolon: Fikstür -->
+        <div class="card">
+            <h2>Spieltag (Fikstür)</h2>
+            <div id="fixtures-container">Yükleniyor...</div>
+        </div>
 
-    async function init() {
-      try {
-        const res = await fetch(`epg.json?t=${new Date().getTime()}`);
-        if (!res.ok) return;
-        globalData = await res.json();
-        document.getElementById("last-update").textContent = `Aktualisiert: ${globalData.date_str || ''}`;
-        populateWeekSelect(1);
-        renderWeek(1);
-      } catch (err) { console.error(err); }
-    }
+        <!-- Sağ Kolon: Puan Durumu ve Oyuncular -->
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div class="card">
+                <h2>Tabelle (Puan Durumu)</h2>
+                <div id="tabelle-container">Yükleniyor...</div>
+            </div>
+            
+            <div class="card" style="border-left-color: var(--german-red);">
+                <h2>Top-Spieler (En İyi 10)</h2>
+                <div id="players-container">Yükleniyor...</div>
+            </div>
+        </div>
+    </div>
 
-    function populateWeekSelect(currentWeek) {
-      const select = document.getElementById("week-select");
-      select.innerHTML = "";
-      for (let i = 1; i <= 34; i++) {
-        const opt = document.createElement("option");
-        opt.value = i;
-        opt.textContent = `${i}. Spieltag`;
-        if (i === currentWeek) opt.selected = true;
-        select.appendChild(opt);
-      }
-      select.addEventListener("change", (e) => renderWeek(parseInt(e.target.value)));
-    }
-
-    function renderWeek(weekNum) {
-      if (!globalData) return;
-      renderGrid("b1-grid", (globalData.bundesliga_1[weekNum] || {}).matches || []);
-      renderGrid("b2-grid", (globalData.bundesliga_2[weekNum] || {}).matches || []);
-    }
-
-    function renderGrid(containerId, matches) {
-      const container = document.getElementById(containerId);
-      container.innerHTML = "";
-      
-      if(matches.length === 0) {
-        container.innerHTML = `<div style="color:var(--text-sub);">Keine Spiele vorhanden.</div>`;
-        return;
-      }
-
-      matches.forEach(m => {
-        const card = document.createElement("div");
-        card.className = "match-card";
-        card.onclick = () => openDetails(m);
-        card.innerHTML = `
-          <div class="match-meta"><span>📅 ${m.date_tr}</span><span>⏰ ${m.time_tr} (TSİ)</span></div>
-          <div class="teams-container">
-            <div class="team-badge" title="${m.team1}">${m.team1}</div>
-            <div class="score-box">${m.score}</div>
-            <div class="team-badge" title="${m.team2}">${m.team2}</div>
-          </div>
-          <div class="broadcaster-box">📺 ${m.broadcaster}</div>
-        `;
-        container.appendChild(card);
-      });
-    }
-
-    function openDetails(m) {
-      document.getElementById("modal-title").textContent = `${m.team1}  ${m.score}  ${m.team2}`;
-      
-      const eventsBody = document.getElementById("tab-events");
-      let htmlEvents = "";
-      if (m.events && m.events.length > 0) {
-        m.events.forEach(e => {
-          let icon = "⚽";
-          if(e.type === "yellow_card") icon = "🟨";
-          if(e.type === "red_card") icon = "🟥";
-          if(e.type === "sub") icon = "🔄";
-
-          htmlEvents += `
-            <div class="event-item">
-              <span style="color:var(--de-gold); font-weight:bold;">⏱️ ${e.minute}'</span>
-              <span>${icon} ${e.player}</span>
-              <span style="color:var(--text-main); font-weight:bold;">${e.score || ''}</span>
-            </div>`;
+    <script>
+        // Sayfa açıldığında 1. Bundesliga'yı yükle
+        document.addEventListener("DOMContentLoaded", () => {
+            loadData('bl1');
         });
-      } else {
-        htmlEvents = "<div style='text-align:center; color:var(--text-sub); padding:20px;'>Ereignisse werden geladen / Veri bekleniyor.</div>";
-      }
-      eventsBody.innerHTML = htmlEvents;
 
-      const lineupsBody = document.getElementById("tab-lineups");
-      lineupsBody.innerHTML = `
-        <div style="display:flex; justify-content:space-between; gap:20px;">
-          <div style="flex:1;">
-            <h4 style="color:var(--de-gold); margin-top:0;">${m.team1}</h4>
-            <div style="font-size:0.85rem; color:var(--text-sub);">Kadro Verisi Bekleniyor</div>
-          </div>
-          <div style="flex:1;">
-            <h4 style="color:var(--de-gold); margin-top:0;">${m.team2}</h4>
-            <div style="font-size:0.85rem; color:var(--text-sub);">Kadro Verisi Bekleniyor</div>
-          </div>
-        </div>`;
+        function loadData(league) {
+            // Sekme aktifliğini değiştir
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
 
-      switchTab('events');
-      document.getElementById("match-modal").classList.add("active");
-    }
+            // JSON dosyasını çek
+            fetch(`${league}_data.json`)
+                .then(response => response.json())
+                .then(data => {
+                    renderFixtures(data.fixtures);
+                    renderTabelle(data.tabelle);
+                    renderPlayers(data.top_players);
+                })
+                .catch(error => console.error("Veri yüklenemedi:", error));
+        }
 
-    function switchTab(tabName) {
-      document.getElementById("tab-events").style.display = tabName === 'events' ? 'block' : 'none';
-      document.getElementById("tab-lineups").style.display = tabName === 'lineups' ? 'block' : 'none';
-      
-      const btns = document.querySelectorAll('.tab-btn');
-      btns[0].classList.toggle('active', tabName === 'events');
-      btns[1].classList.toggle('active', tabName === 'lineups');
-    }
+        function renderFixtures(fixtures) {
+            const container = document.getElementById("fixtures-container");
+            container.innerHTML = "";
+            fixtures.forEach(match => {
+                container.innerHTML += `
+                    <div class="fixture-row">
+                        <span>${match.date} - ${match.time}</span>
+                        <span class="team-name">${match.home} vs ${match.away}</span>
+                    </div>
+                `;
+            });
+        }
 
-    function closeModal() { document.getElementById("match-modal").classList.remove("active"); }
-    document.addEventListener("DOMContentLoaded", init);
-  </script>
+        function renderTabelle(tabelle) {
+            const container = document.getElementById("tabelle-container");
+            container.innerHTML = `
+                <div class="table-row" style="font-weight:bold; background-color: var(--pastel-blue); padding: 5px;">
+                    <span style="width: 10%;">#</span>
+                    <span style="width: 50%;">Team</span>
+                    <span style="width: 20%;">Punkte</span>
+                    <span style="width: 20%;">Tordiff</span>
+                </div>
+            `;
+            tabelle.forEach((team, index) => {
+                container.innerHTML += `
+                    <div class="table-row">
+                        <span style="width: 10%;">${index + 1}</span>
+                        <span class="team-name" style="width: 50%;">${team.name}</span>
+                        <span style="width: 20%; font-weight:bold;">${team.points}</span>
+                        <span style="width: 20%;">${team.goalDiff}</span>
+                    </div>
+                `;
+            });
+        }
+
+        function renderPlayers(players) {
+            const container = document.getElementById("players-container");
+            container.innerHTML = "";
+            players.forEach((player, index) => {
+                container.innerHTML += `
+                    <div class="player-row">
+                        <span>${index + 1}. <span class="team-name">${player.name}</span> <small>(${player.team})</small></span>
+                        <span class="rating-badge">${player.rating}</span>
+                    </div>
+                `;
+            });
+        }
+    </script>
 </body>
 </html>
