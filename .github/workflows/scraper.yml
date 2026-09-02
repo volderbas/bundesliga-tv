@@ -1,36 +1,31 @@
 name: Bundesliga Data Scraper
-
 on:
   schedule:
     - cron: '0 */3 * * *' # Her 3 saatte bir çalışır
   workflow_dispatch: # Manuel tetikleme butonu
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Repository Checkout
         uses: actions/checkout@v4
-
       - name: Python Kurulumu
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-
       - name: Bağımlılıkları Yükle
         run: |
           python -m pip install --upgrade pip
-          pip install requests playwright
+          pip install requests playwright curl_cffi
           playwright install --with-deps chromium
-
-      - name: Scraper Scriptini Çalıştır
+      - name: TV / Fikstür Scraperini Çalıştır
         run: python scraper.py
-
+      - name: İlk 11 (Lineup) Scraperini Çalıştır
+        run: python lineups_scraper.py
       - name: Değişiklikleri GitHub Pages/Repo'ya Push Et
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add epg.json
-          git commit -m "Auto-update epg.json" || exit 0
+          git add epg.json lineups.json
+          git commit -m "Auto-update epg.json & lineups.json" || exit 0
           git push
