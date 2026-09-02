@@ -20,8 +20,6 @@ jobs:
           playwright install --with-deps chromium
       - name: TV / Fikstür Scraperini Çalıştır
         run: python scraper.py
-      - name: İlk 11 (Lineup) Scraperini Çalıştır
-        run: python lineups_scraper.py
       - name: Değişiklikleri GitHub Pages/Repo'ya Push Et
         run: |
           git config --global user.name "github-actions[bot]"
