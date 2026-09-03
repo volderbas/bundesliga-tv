@@ -48,6 +48,11 @@
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         .card {
             background: var(--card-bg);
             padding: 20px;
@@ -82,8 +87,8 @@
 <body>
 
     <div class="header-tabs">
-        <button class="tab-btn active" onclick="loadData('bl1')">1. Bundesliga</button>
-        <button class="tab-btn" onclick="loadData('bl2')">2. Bundesliga</button>
+        <button class="tab-btn active" id="btn-bl1" onclick="loadData('bl1', this)">1. Bundesliga</button>
+        <button class="tab-btn" id="btn-bl2" onclick="loadData('bl2', this)">2. Bundesliga</button>
     </div>
 
     <div class="dashboard-grid">
@@ -108,30 +113,44 @@
     </div>
 
     <script>
-        // Sayfa açıldığında 1. Bundesliga'yı yükle
         document.addEventListener("DOMContentLoaded", () => {
-            loadData('bl1');
+            const defaultBtn = document.getElementById('btn-bl1');
+            loadData('bl1', defaultBtn);
         });
 
-        function loadData(league) {
-            // Sekme aktifliğini değiştir
+        function loadData(league, btnElement) {
+            // Sekme butonlarının aktifliğini güvenli şekilde değiştir
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            event.currentTarget.classList.add('active');
+            if (btnElement) {
+                btnElement.classList.add('active');
+            }
 
-            // JSON dosyasını çek
-            fetch(`${league}_data.json`)
-                .then(response => response.json())
-                .then(data => {
-                    renderFixtures(data.fixtures);
-                    renderTabelle(data.tabelle);
-                    renderPlayers(data.top_players);
+            // Önbelleği (cache) kırmak için timestamp ekleyerek JSON verisini çek
+            fetch(`${league}_data.json?t=${new Date().getTime()}`, { cache: "no-store" })
+                .then(response => {
+                    if (!response.ok) throw new Error("JSON verisi alınamadı");
+                    return response.json();
                 })
-                .catch(error => console.error("Veri yüklenemedi:", error));
+                .then(data => {
+                    renderFixtures(data.fixtures || []);
+                    renderTabelle(data.tabelle || []);
+                    renderPlayers(data.top_players || []);
+                })
+                .catch(error => {
+                    console.error("Veri yüklenemedi:", error);
+                    document.getElementById("fixtures-container").innerHTML = "<p style='color:red;'>Veri yüklenemedi.</p>";
+                    document.getElementById("tabelle-container").innerHTML = "<p style='color:red;'>Veri yüklenemedi.</p>";
+                    document.getElementById("players-container").innerHTML = "<p style='color:red;'>Veri yüklenemedi.</p>";
+                });
         }
 
         function renderFixtures(fixtures) {
             const container = document.getElementById("fixtures-container");
             container.innerHTML = "";
+            if (fixtures.length === 0) {
+                container.innerHTML = "<p>Yaklaşan maç bulunamadı.</p>";
+                return;
+            }
             fixtures.forEach(match => {
                 container.innerHTML += `
                     <div class="fixture-row">
@@ -152,6 +171,10 @@
                     <span style="width: 20%;">Tordiff</span>
                 </div>
             `;
+            if (tabelle.length === 0) {
+                container.innerHTML += "<p style='padding:10px;'>Puan durumu yüklenemedi.</p>";
+                return;
+            }
             tabelle.forEach((team, index) => {
                 container.innerHTML += `
                     <div class="table-row">
@@ -167,6 +190,10 @@
         function renderPlayers(players) {
             const container = document.getElementById("players-container");
             container.innerHTML = "";
+            if (players.length === 0) {
+                container.innerHTML = "<p>Oyuncu verisi bulunamadı.</p>";
+                return;
+            }
             players.forEach((player, index) => {
                 container.innerHTML += `
                     <div class="player-row">
