@@ -29,25 +29,20 @@
         .card-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--bg-color); padding-bottom: 10px; margin-bottom: 15px; }
         .card-header h2 { margin: 0; font-size: 18px; }
 
-        /* Hafta Navigasyonu Style */
         .spieltag-nav { display: flex; align-items: center; gap: 6px; }
         .nav-btn { background: var(--bg-color); border: 1px solid #ccc; border-radius: 4px; padding: 4px 10px; font-weight: bold; cursor: pointer; }
         .nav-btn:hover { background: #e2e8f0; }
-        .spieltag-select { padding: 5px 8px; border-radius: 4px; border: 1px solid #ccc; font-weight: bold; }
+        .spieltag-select { padding: 5px 8px; border-radius: 4px; border: 1px solid #ccc; font-weight: bold; min-width: 110px; }
 
         .match-item { border-bottom: 1px solid var(--border-color); padding: 12px 0; }
         .match-main { display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 14px; user-select: none; }
         .match-main:hover { background-color: #fafafa; }
         .match-teams { font-weight: 600; }
-        .match-score { background: var(--pastel-blue); padding: 4px 10px; border-radius: 6px; font-weight: bold; min-width: 50px; text-align: center; }
+        .match-score { background: var(--pastel-blue); padding: 4px 10px; border-radius: 6px; font-weight: bold; min-width: 60px; text-align: center; }
         
         .match-details { display: none; margin-top: 10px; padding: 12px; background: #fafafa; border-radius: 8px; border-left: 3px solid var(--german-red); font-size: 13px; }
         .details-section { margin-bottom: 10px; }
         .details-title { font-weight: bold; color: var(--german-red); margin-bottom: 4px; display: block; border-bottom: 1px dashed #ccc; padding-bottom: 2px; }
-        
-        .lineup-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px; }
-        .lineup-col ul { list-style: none; padding-left: 0; margin: 0; }
-        .lineup-col li { padding: 2px 0; border-bottom: 1px solid #eee; }
 
         .table-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border-color); font-size: 13px; }
         .table-header { font-weight: bold; background: var(--pastel-blue); padding: 6px; border-radius: 4px; }
@@ -122,6 +117,7 @@
 
                 renderFixtures(data.spieltage[select.value] || []);
             } else {
+                select.innerHTML = "<option>Geine Daten</option>";
                 renderFixtures([]);
             }
         }
@@ -156,30 +152,6 @@
                 
                 const goalsHtml = (m.goals && m.goals.length) 
                     ? `<div class="details-section"><span class="details-title">⚽ Tore</span>${m.goals.join("<br>")}</div>` : "";
-                
-                const cardsHtml = (m.cards && m.cards.length) 
-                    ? `<div class="details-section"><span class="details-title">🟨 / 🟥 Karten</span>${m.cards.join("<br>")}</div>` : "";
-
-                let lineupsHtml = "";
-                if (m.lineups && (m.lineups.home?.length || m.lineups.away?.length)) {
-                    lineupsHtml = `
-                        <div class="details-section">
-                            <span class="details-title">📋 Startelf (İlk 11'ler)</span>
-                            <div class="lineup-grid">
-                                <div class="lineup-col">
-                                    <strong>${m.home}</strong>
-                                    <ul>${(m.lineups.home || []).map(p => `<li>${p}</li>`).join("")}</ul>
-                                </div>
-                                <div class="lineup-col">
-                                    <strong>${m.away}</strong>
-                                    <ul>${(m.lineups.away || []).map(p => `<li>${p}</li>`).join("")}</ul>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                } else if (!m.score) {
-                    lineupsHtml = `<div class="details-section"><em>Kadro bilgisi maç saatine 1 saat kala güncellenir.</em></div>`;
-                }
 
                 container.innerHTML += `
                     <div class="match-item">
@@ -188,9 +160,7 @@
                             <span class="match-score">${scoreOrTime}</span>
                         </div>
                         <div class="match-details" id="details-${idx}">
-                            ${goalsHtml}
-                            ${cardsHtml}
-                            ${lineupsHtml}
+                            ${goalsHtml || "<em>Detailinformationen nicht verfügbar.</em>"}
                         </div>
                     </div>
                 `;
