@@ -31,7 +31,6 @@
 
         .spieltag-select { padding: 6px 12px; border-radius: 6px; border: 1px solid #ccc; font-weight: bold; }
 
-        /* Maç Listesi ve Akordiyon Detayları */
         .match-item { border-bottom: 1px solid var(--border-color); padding: 12px 0; }
         .match-main { display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 14px; user-select: none; }
         .match-main:hover { background-color: #fafafa; }
@@ -46,7 +45,6 @@
         .lineup-col ul { list-style: none; padding-left: 0; margin: 0; }
         .lineup-col li { padding: 2px 0; border-bottom: 1px solid #eee; }
 
-        /* Puan Durumu Tablosu */
         .table-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border-color); font-size: 13px; }
         .table-header { font-weight: bold; background: var(--pastel-blue); padding: 6px; border-radius: 4px; }
     </style>
@@ -60,7 +58,6 @@
         </div>
 
         <div class="dashboard-grid">
-            <!-- Sol: Fikstür, Goller, Kartlar, İlk 11'ler -->
             <div class="card">
                 <div class="card-header">
                     <h2>Bundesliga Spieltag</h2>
@@ -70,7 +67,6 @@
                 <div id="fixtures-container">Wird geladen...</div>
             </div>
 
-            <!-- Sağ: Puan Durumu (Tabelle) -->
             <div class="card">
                 <div class="card-header"><h2>Tabelle</h2></div>
                 <div id="tabelle-container">Wird geladen...</div>
@@ -104,21 +100,34 @@
             const select = document.getElementById("spieltag-select");
             select.innerHTML = "";
             
-            const spieltage = data.spieltage ? Object.keys(data.spieltage) : [];
-            if (spieltage.length === 0) {
+            // 1. Yeni haftalık yapı (spieltage) varsa
+            if (data.spieltage && Object.keys(data.spieltage).length > 0) {
+                select.style.display = "inline-block";
+                const keys = Object.keys(data.spieltage);
+                
+                keys.forEach(st => {
+                    const opt = document.createElement("option");
+                    opt.value = st;
+                    opt.textContent = `${st}. Spieltag`;
+                    select.appendChild(opt);
+                });
+
+                const targetWeek = String(data.current_spieltag || keys[0]);
+                const selectedKey = data.spieltage[targetWeek] ? targetWeek : keys[0];
+                select.value = selectedKey;
+
+                renderFixtures(data.spieltage[selectedKey] || []);
+            } 
+            // 2. Düz liste (fixtures) varsa (Yedek mod)
+            else if (data.fixtures && Array.isArray(data.fixtures) && data.fixtures.length > 0) {
+                select.style.display = "none";
+                renderFixtures(data.fixtures);
+            } 
+            // 3. Veri yoksa
+            else {
+                select.style.display = "none";
                 renderFixtures([]);
-                return;
             }
-
-            spieltage.forEach(st => {
-                const opt = document.createElement("option");
-                opt.value = st;
-                opt.textContent = `${st}. Spieltag`;
-                if (parseInt(st) === (data.current_spieltag || 1)) opt.selected = true;
-                select.appendChild(opt);
-            });
-
-            renderFixtures(data.spieltage[select.value] || []);
         }
 
         function changeSpieltag(st) {
@@ -136,17 +145,14 @@
             }
 
             fixtures.forEach((m, idx) => {
-                const scoreOrTime = m.score ? m.score : `${m.date} - ${m.time}`;
+                const scoreOrTime = m.score ? m.score : `${m.date || ''} ${m.time ? '- ' + m.time : ''}`;
                 
-                // Goller
                 const goalsHtml = (m.goals && m.goals.length) 
                     ? `<div class="details-section"><span class="details-title">⚽ Tore</span>${m.goals.join("<br>")}</div>` : "";
                 
-                // Kartlar
                 const cardsHtml = (m.cards && m.cards.length) 
                     ? `<div class="details-section"><span class="details-title">🟨 / 🟥 Karten</span>${m.cards.join("<br>")}</div>` : "";
 
-                // Kadrolar
                 let lineupsHtml = "";
                 if (m.lineups && (m.lineups.home?.length || m.lineups.away?.length)) {
                     lineupsHtml = `
