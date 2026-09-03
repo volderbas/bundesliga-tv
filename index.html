@@ -29,7 +29,11 @@
         .card-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--bg-color); padding-bottom: 10px; margin-bottom: 15px; }
         .card-header h2 { margin: 0; font-size: 18px; }
 
-        .spieltag-select { padding: 6px 12px; border-radius: 6px; border: 1px solid #ccc; font-weight: bold; }
+        /* Hafta Navigasyonu Style */
+        .spieltag-nav { display: flex; align-items: center; gap: 6px; }
+        .nav-btn { background: var(--bg-color); border: 1px solid #ccc; border-radius: 4px; padding: 4px 10px; font-weight: bold; cursor: pointer; }
+        .nav-btn:hover { background: #e2e8f0; }
+        .spieltag-select { padding: 5px 8px; border-radius: 4px; border: 1px solid #ccc; font-weight: bold; }
 
         .match-item { border-bottom: 1px solid var(--border-color); padding: 12px 0; }
         .match-main { display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-size: 14px; user-select: none; }
@@ -61,8 +65,11 @@
             <div class="card">
                 <div class="card-header">
                     <h2>Bundesliga Spieltag</h2>
-                    <select id="spieltag-select" class="spieltag-select" onchange="changeSpieltag(this.value)">
-                    </select>
+                    <div class="spieltag-nav">
+                        <button class="nav-btn" onclick="stepSpieltag(-1)">&lt;</button>
+                        <select id="spieltag-select" class="spieltag-select" onchange="changeSpieltag(this.value)"></select>
+                        <button class="nav-btn" onclick="stepSpieltag(1)">&gt;</button>
+                    </div>
                 </div>
                 <div id="fixtures-container">Wird geladen...</div>
             </div>
@@ -100,10 +107,8 @@
             const select = document.getElementById("spieltag-select");
             select.innerHTML = "";
             
-            // 1. Yeni haftalık yapı (spieltage) varsa
             if (data.spieltage && Object.keys(data.spieltage).length > 0) {
-                select.style.display = "inline-block";
-                const keys = Object.keys(data.spieltage);
+                const keys = Object.keys(data.spieltage).sort((a,b) => parseInt(a) - parseInt(b));
                 
                 keys.forEach(st => {
                     const opt = document.createElement("option");
@@ -113,19 +118,10 @@
                 });
 
                 const targetWeek = String(data.current_spieltag || keys[0]);
-                const selectedKey = data.spieltage[targetWeek] ? targetWeek : keys[0];
-                select.value = selectedKey;
+                select.value = keys.includes(targetWeek) ? targetWeek : keys[0];
 
-                renderFixtures(data.spieltage[selectedKey] || []);
-            } 
-            // 2. Düz liste (fixtures) varsa (Yedek mod)
-            else if (data.fixtures && Array.isArray(data.fixtures) && data.fixtures.length > 0) {
-                select.style.display = "none";
-                renderFixtures(data.fixtures);
-            } 
-            // 3. Veri yoksa
-            else {
-                select.style.display = "none";
+                renderFixtures(data.spieltage[select.value] || []);
+            } else {
                 renderFixtures([]);
             }
         }
@@ -133,6 +129,17 @@
         function changeSpieltag(st) {
             if (currentLeagueData && currentLeagueData.spieltage) {
                 renderFixtures(currentLeagueData.spieltage[st] || []);
+            }
+        }
+
+        function stepSpieltag(direction) {
+            const select = document.getElementById("spieltag-select");
+            if (!select || !select.options.length) return;
+            
+            let newIndex = select.selectedIndex + direction;
+            if (newIndex >= 0 && newIndex < select.options.length) {
+                select.selectedIndex = newIndex;
+                changeSpieltag(select.value);
             }
         }
 
