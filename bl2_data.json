@@ -1,187 +1,234 @@
 {
-    "tabelle": [
-        {
-            "rank": 3,
-            "name": "1. FC Nürnberg",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/f/fa/1._FC_Nürnberg_logo.svg",
-            "played": 3,
-            "points": 9,
-            "goalDiff": 8
-        },
-        {
-            "rank": 3,
-            "name": "Hertha BSC",
-            "logo": "https://i.imgur.com/apFwbYZ.png",
-            "played": 3,
-            "points": 9,
-            "goalDiff": 6
-        },
-        {
-            "rank": 3,
-            "name": "VfL Wolfsburg",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/VfL_Wolfsburg_logo_2026.svg/960px-VfL_Wolfsburg_logo_2026.svg.png",
-            "played": 3,
-            "points": 7,
-            "goalDiff": 4
-        },
-        {
-            "rank": 3,
-            "name": "1. FC Heidenheim 1846",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9d/1._FC_Heidenheim_1846.svg",
-            "played": 3,
-            "points": 6,
-            "goalDiff": 0
-        },
-        {
-            "rank": 3,
-            "name": "1. FC Magdeburg",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/8/84/1._FC_Magdeburg.svg",
-            "played": 3,
-            "points": 6,
-            "goalDiff": 0
-        },
-        {
-            "rank": 3,
-            "name": "1. FC Kaiserslautern",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Logo_1_FC_Kaiserslautern.svg",
-            "played": 3,
-            "points": 5,
-            "goalDiff": 1
-        },
-        {
-            "rank": 3,
-            "name": "SpVgg Greuther Fürth",
-            "logo": "https://i.imgur.com/pwuVbKr.png",
-            "played": 3,
-            "points": 4,
-            "goalDiff": -1
-        },
-        {
-            "rank": 3,
-            "name": "Karlsruher SC",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Karlsruher_SC_Logo_2.svg",
-            "played": 3,
-            "points": 4,
-            "goalDiff": -2
-        },
-        {
-            "rank": 3,
-            "name": "Eintracht Braunschweig",
-            "logo": "https://upload.wikimedia.org/wikipedia/de/4/45/Logo_Eintracht_Braunschweig.svg",
-            "played": 3,
-            "points": 3,
-            "goalDiff": 2
-        },
-        {
-            "rank": 3,
-            "name": "DSC Arminia Bielefeld",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Arminia_Bielefeld_Logo_2021%E2%80%93.svg",
-            "played": 3,
-            "points": 3,
-            "goalDiff": -1
-        },
-        {
-            "rank": 3,
-            "name": "VfL Bochum",
-            "logo": "https://i.imgur.com/5jy3Gfr.png",
-            "played": 3,
-            "points": 3,
-            "goalDiff": -1
-        },
-        {
-            "rank": 3,
-            "name": "Energie Cottbus",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/5/55/Logo_Energie_Cottbus.svg",
-            "played": 3,
-            "points": 3,
-            "goalDiff": -2
-        },
-        {
-            "rank": 3,
-            "name": "Hannover 96",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Hannover_96_Logo.svg",
-            "played": 3,
-            "points": 3,
-            "goalDiff": -2
-        },
-        {
-            "rank": 3,
-            "name": "VfL Osnabrück",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/VfL_Osnabrueck_Logo_2021%E2%80%93.svg/960px-VfL_Osnabrueck_Logo_2021%E2%80%93.svg.png",
-            "played": 3,
-            "points": 3,
-            "goalDiff": -3
-        },
-        {
-            "rank": 3,
-            "name": "Dynamo Dresden",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_SG_Dynamo_Dresden_neu.svg/960px-Logo_SG_Dynamo_Dresden_neu.svg.png",
-            "played": 3,
-            "points": 3,
-            "goalDiff": -4
-        },
-        {
-            "rank": 3,
-            "name": "FC St. Pauli",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Fc_st_pauli_logo.svg",
-            "played": 3,
-            "points": 2,
-            "goalDiff": -1
-        },
-        {
-            "rank": 3,
-            "name": "Holstein Kiel",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Holstein_Kiel_Logo.svg/330px-Holstein_Kiel_Logo.svg.png",
-            "played": 3,
-            "points": 2,
-            "goalDiff": -2
-        },
-        {
-            "rank": 3,
-            "name": "SV Darmstadt 98",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e5/SV_Darmstadt_98_Logo.svg",
-            "played": 3,
-            "points": 1,
-            "goalDiff": -2
+  "current_spieltag": 4,
+  "spieltage": {
+    "4": [
+      {
+        "id": 83548,
+        "home": "VfL Wolfsburg",
+        "away": "Energie Cottbus",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "13:00",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
         }
-    ],
-    "fixtures": [
-        {
-            "home": "Hannover 96",
-            "away": "Karlsruher SC",
-            "date": "2026-09-04",
-            "time": "18:30"
-        },
-        {
-            "home": "DSC Arminia Bielefeld",
-            "away": "FC St. Pauli",
-            "date": "2026-09-04",
-            "time": "18:30"
-        },
-        {
-            "home": "VfL Wolfsburg",
-            "away": "Energie Cottbus",
-            "date": "2026-09-05",
-            "time": "13:00"
-        },
-        {
-            "home": "1. FC Kaiserslautern",
-            "away": "SV Darmstadt 98",
-            "date": "2026-09-05",
-            "time": "13:00"
-        },
-        {
-            "home": "Holstein Kiel",
-            "away": "1. FC Nürnberg",
-            "date": "2026-09-05",
-            "time": "13:00"
-        },
-        {
-            "home": "Dynamo Dresden",
-            "away": "VfL Bochum",
-            "date": "2026-09-05",
-            "time": "20:30"
+      },
+      {
+        "id": 83561,
+        "home": "VfL Osnabrück",
+        "away": "Eintracht Braunschweig",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-06",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
         }
-    ],
-    "top_players": []
+      },
+      {
+        "id": 83550,
+        "home": "Hannover 96",
+        "away": "Karlsruher SC",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-04",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83559,
+        "home": "DSC Arminia Bielefeld",
+        "away": "FC St. Pauli",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-04",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83554,
+        "home": "1. FC Kaiserslautern",
+        "away": "SV Darmstadt 98",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "13:00",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83558,
+        "home": "Holstein Kiel",
+        "away": "1. FC Nürnberg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "13:00",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83557,
+        "home": "Dynamo Dresden",
+        "away": "VfL Bochum",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "20:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83556,
+        "home": "Hertha BSC",
+        "away": "1. FC Magdeburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-06",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83560,
+        "home": "SpVgg Greuther Fürth",
+        "away": "1. FC Heidenheim 1846",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-06",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      }
+    ]
+  },
+  "tabelle": [
+    {
+      "name": "1. FC Nürnberg",
+      "points": 9,
+      "goalDiff": 8
+    },
+    {
+      "name": "Hertha BSC",
+      "points": 9,
+      "goalDiff": 6
+    },
+    {
+      "name": "VfL Wolfsburg",
+      "points": 7,
+      "goalDiff": 4
+    },
+    {
+      "name": "1. FC Heidenheim 1846",
+      "points": 6,
+      "goalDiff": 0
+    },
+    {
+      "name": "1. FC Magdeburg",
+      "points": 6,
+      "goalDiff": 0
+    },
+    {
+      "name": "1. FC Kaiserslautern",
+      "points": 5,
+      "goalDiff": 1
+    },
+    {
+      "name": "SpVgg Greuther Fürth",
+      "points": 4,
+      "goalDiff": -1
+    },
+    {
+      "name": "Karlsruher SC",
+      "points": 4,
+      "goalDiff": -2
+    },
+    {
+      "name": "Eintracht Braunschweig",
+      "points": 3,
+      "goalDiff": 2
+    },
+    {
+      "name": "DSC Arminia Bielefeld",
+      "points": 3,
+      "goalDiff": -1
+    },
+    {
+      "name": "VfL Bochum",
+      "points": 3,
+      "goalDiff": -1
+    },
+    {
+      "name": "Energie Cottbus",
+      "points": 3,
+      "goalDiff": -2
+    },
+    {
+      "name": "Hannover 96",
+      "points": 3,
+      "goalDiff": -2
+    },
+    {
+      "name": "VfL Osnabrück",
+      "points": 3,
+      "goalDiff": -3
+    },
+    {
+      "name": "Dynamo Dresden",
+      "points": 3,
+      "goalDiff": -4
+    },
+    {
+      "name": "FC St. Pauli",
+      "points": 2,
+      "goalDiff": -1
+    },
+    {
+      "name": "Holstein Kiel",
+      "points": 2,
+      "goalDiff": -2
+    },
+    {
+      "name": "SV Darmstadt 98",
+      "points": 1,
+      "goalDiff": -2
+    }
+  ]
 }

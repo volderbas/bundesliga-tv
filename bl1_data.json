@@ -1,187 +1,234 @@
 {
-    "tabelle": [
-        {
-            "rank": 1,
-            "name": "FC Bayern München",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Logo_FC_Bayern_M%C3%BCnchen_%282002%E2%80%932017%29.svg",
-            "played": 1,
-            "points": 3,
-            "goalDiff": 4
-        },
-        {
-            "rank": 1,
-            "name": "SC Freiburg",
-            "logo": "https://i.imgur.com/r3mvi0h.png",
-            "played": 1,
-            "points": 3,
-            "goalDiff": 3
-        },
-        {
-            "rank": 1,
-            "name": "FC Augsburg",
-            "logo": "https://i.imgur.com/sdE62e2.png",
-            "played": 1,
-            "points": 3,
-            "goalDiff": 3
-        },
-        {
-            "rank": 1,
-            "name": "RB Leipzig",
-            "logo": "https://i.imgur.com/Rpwsjz1.png",
-            "played": 1,
-            "points": 3,
-            "goalDiff": 3
-        },
-        {
-            "rank": 1,
-            "name": "Borussia Dortmund",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/960px-Borussia_Dortmund_logo.svg.png",
-            "played": 1,
-            "points": 3,
-            "goalDiff": 2
-        },
-        {
-            "rank": 1,
-            "name": "1. FC Köln",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/0/01/1._FC_Koeln_Logo_2014%E2%80%93.svg",
-            "played": 1,
-            "points": 3,
-            "goalDiff": 1
-        },
-        {
-            "rank": 1,
-            "name": "SV 07 Elversberg",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/SV_Elversberg_Logo.svg/500px-SV_Elversberg_Logo.svg.png",
-            "played": 1,
-            "points": 3,
-            "goalDiff": 1
-        },
-        {
-            "rank": 1,
-            "name": "1. FC Union Berlin",
-            "logo": "https://assets.dfb.de/uploads/000/018/232/small_union-Berlin.jpg",
-            "played": 1,
-            "points": 1,
-            "goalDiff": 0
-        },
-        {
-            "rank": 1,
-            "name": "Eintracht Frankfurt",
-            "logo": "https://i.imgur.com/X8NFkOb.png",
-            "played": 1,
-            "points": 1,
-            "goalDiff": 0
-        },
-        {
-            "rank": 1,
-            "name": "1. FSV Mainz 05",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Logo_Mainz_05.svg",
-            "played": 1,
-            "points": 1,
-            "goalDiff": 0
-        },
-        {
-            "rank": 1,
-            "name": "SC Paderborn 07",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e3/SC_Paderborn_07_Logo.svg",
-            "played": 1,
-            "points": 1,
-            "goalDiff": 0
-        },
-        {
-            "rank": 1,
-            "name": "Bayer 04 Leverkusen",
-            "logo": "https://www.bundesliga-reisefuehrer.de/sites/default/files/B04_Standard_Logo_RGB.png",
-            "played": 1,
-            "points": 0,
-            "goalDiff": -1
-        },
-        {
-            "rank": 1,
-            "name": "TSG Hoffenheim",
-            "logo": "https://i.imgur.com/gF0PfEl.png",
-            "played": 1,
-            "points": 0,
-            "goalDiff": -1
-        },
-        {
-            "rank": 1,
-            "name": "Hamburger SV",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Hamburger_SV_logo.svg",
-            "played": 1,
-            "points": 0,
-            "goalDiff": -2
-        },
-        {
-            "rank": 1,
-            "name": "SV Werder Bremen",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/b/be/SV-Werder-Bremen-Logo.svg",
-            "played": 1,
-            "points": 0,
-            "goalDiff": -3
-        },
-        {
-            "rank": 1,
-            "name": "Borussia Mönchengladbach",
-            "logo": "https://i.imgur.com/KSIk0Eu.png",
-            "played": 1,
-            "points": 0,
-            "goalDiff": -3
-        },
-        {
-            "rank": 1,
-            "name": "FC Schalke 04",
-            "logo": "https://upload.wikimedia.org/wikipedia/commons/9/97/FC_Schalke_04_Logo.png",
-            "played": 1,
-            "points": 0,
-            "goalDiff": -3
-        },
-        {
-            "rank": 1,
-            "name": "VfB Stuttgart",
-            "logo": "https://i.imgur.com/v0tkpNx.png",
-            "played": 1,
-            "points": 0,
-            "goalDiff": -4
+  "current_spieltag": 2,
+  "spieltage": {
+    "2": [
+      {
+        "id": 83165,
+        "home": "VfB Stuttgart",
+        "away": "1. FC Köln",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-04",
+        "time": "20:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
         }
-    ],
-    "fixtures": [
-        {
-            "home": "VfB Stuttgart",
-            "away": "1. FC Köln",
-            "date": "2026-09-04",
-            "time": "20:30"
-        },
-        {
-            "home": "TSG Hoffenheim",
-            "away": "Borussia Dortmund",
-            "date": "2026-09-05",
-            "time": "15:30"
-        },
-        {
-            "home": "Bayer 04 Leverkusen",
-            "away": "1. FC Union Berlin",
-            "date": "2026-09-05",
-            "time": "15:30"
-        },
-        {
-            "home": "Borussia Mönchengladbach",
-            "away": "SV 07 Elversberg",
-            "date": "2026-09-05",
-            "time": "15:30"
-        },
-        {
-            "home": "SV Werder Bremen",
-            "away": "RB Leipzig",
-            "date": "2026-09-05",
-            "time": "15:30"
-        },
-        {
-            "home": "SC Paderborn 07",
-            "away": "SC Freiburg",
-            "date": "2026-09-05",
-            "time": "15:30"
+      },
+      {
+        "id": 83166,
+        "home": "TSG Hoffenheim",
+        "away": "Borussia Dortmund",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
         }
-    ],
-    "top_players": []
+      },
+      {
+        "id": 83167,
+        "home": "Bayer 04 Leverkusen",
+        "away": "1. FC Union Berlin",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83169,
+        "home": "Borussia Mönchengladbach",
+        "away": "SV 07 Elversberg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83171,
+        "home": "SV Werder Bremen",
+        "away": "RB Leipzig",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83173,
+        "home": "SC Paderborn 07",
+        "away": "SC Freiburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83172,
+        "home": "FC Schalke 04",
+        "away": "FC Bayern München",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83170,
+        "home": "Hamburger SV",
+        "away": "1. FSV Mainz 05",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-06",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83168,
+        "home": "Eintracht Frankfurt",
+        "away": "FC Augsburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-06",
+        "time": "17:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      }
+    ]
+  },
+  "tabelle": [
+    {
+      "name": "FC Bayern München",
+      "points": 3,
+      "goalDiff": 4
+    },
+    {
+      "name": "SC Freiburg",
+      "points": 3,
+      "goalDiff": 3
+    },
+    {
+      "name": "FC Augsburg",
+      "points": 3,
+      "goalDiff": 3
+    },
+    {
+      "name": "RB Leipzig",
+      "points": 3,
+      "goalDiff": 3
+    },
+    {
+      "name": "Borussia Dortmund",
+      "points": 3,
+      "goalDiff": 2
+    },
+    {
+      "name": "1. FC Köln",
+      "points": 3,
+      "goalDiff": 1
+    },
+    {
+      "name": "SV 07 Elversberg",
+      "points": 3,
+      "goalDiff": 1
+    },
+    {
+      "name": "1. FC Union Berlin",
+      "points": 1,
+      "goalDiff": 0
+    },
+    {
+      "name": "Eintracht Frankfurt",
+      "points": 1,
+      "goalDiff": 0
+    },
+    {
+      "name": "1. FSV Mainz 05",
+      "points": 1,
+      "goalDiff": 0
+    },
+    {
+      "name": "SC Paderborn 07",
+      "points": 1,
+      "goalDiff": 0
+    },
+    {
+      "name": "Bayer 04 Leverkusen",
+      "points": 0,
+      "goalDiff": -1
+    },
+    {
+      "name": "TSG Hoffenheim",
+      "points": 0,
+      "goalDiff": -1
+    },
+    {
+      "name": "Hamburger SV",
+      "points": 0,
+      "goalDiff": -2
+    },
+    {
+      "name": "SV Werder Bremen",
+      "points": 0,
+      "goalDiff": -3
+    },
+    {
+      "name": "Borussia Mönchengladbach",
+      "points": 0,
+      "goalDiff": -3
+    },
+    {
+      "name": "FC Schalke 04",
+      "points": 0,
+      "goalDiff": -3
+    },
+    {
+      "name": "VfB Stuttgart",
+      "points": 0,
+      "goalDiff": -4
+    }
+  ]
 }
