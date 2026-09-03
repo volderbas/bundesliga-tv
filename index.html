@@ -6,126 +6,191 @@
     <title>Bundesliga Dashboard</title>
     <style>
         :root {
-            --bg-color: #f4f7f6; /* Siyah yok, ferah pastel gri/beyaz */
+            --bg-color: #f4f7f6;
             --card-bg: #ffffff;
-            --text-main: #333333;
-            --german-red: #DD0000;
-            --german-gold: #FFCE00;
+            --text-main: #2c3e50;
+            --german-red: #dd0000;
+            --german-gold: #ffce00;
             --pastel-blue: #e8f0fe;
             --pastel-green: #e6f4ea;
+            --border-color: #e2e8f0;
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
-            padding: 20px;
+            padding: 24px;
         }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .header-tabs {
             display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 24px;
             border-bottom: 3px solid var(--german-gold);
-            padding-bottom: 10px;
+            padding-bottom: 12px;
         }
+
         .tab-btn {
             background-color: var(--card-bg);
-            border: 2px solid transparent;
-            padding: 10px 20px;
-            font-size: 18px;
-            font-weight: bold;
+            border: 2px solid #e0e0e0;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #555;
             cursor: pointer;
             border-radius: 8px 8px 0 0;
-            transition: all 0.3s;
+            transition: all 0.2s ease-in-out;
         }
+
+        .tab-btn:hover {
+            background-color: #f8f9fa;
+        }
+
         .tab-btn.active {
-            background-color: var(--pastel-blue);
-            border-top: 4px solid var(--german-red);
-            color: var(--text-main);
+            background-color: var(--card-bg);
+            border-color: var(--german-red);
+            border-bottom-color: var(--card-bg);
+            color: var(--german-red);
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
         }
+
         .dashboard-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 24px;
         }
-        @media (max-width: 768px) {
+
+        @media (max-width: 850px) {
             .dashboard-grid {
                 grid-template-columns: 1fr;
             }
         }
+
         .card {
             background: var(--card-bg);
-            padding: 20px;
+            padding: 24px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-left: 5px solid var(--german-gold);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--german-gold);
         }
+
+        .card-red {
+            border-top-color: var(--german-red);
+        }
+
         .card h2 {
             margin-top: 0;
+            margin-bottom: 16px;
+            font-size: 20px;
+            color: #1a202c;
             border-bottom: 2px solid var(--bg-color);
             padding-bottom: 10px;
-            font-size: 20px;
         }
-        .table-row, .fixture-row, .player-row {
+
+        .fixture-row, .table-row, .player-row {
             display: flex;
             justify-content: space-between;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
+            align-items: center;
+            padding: 12px 8px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
         }
-        .table-row:nth-child(even) {
-            background-color: #fafafa;
+
+        .fixture-row:last-child, .table-row:last-child, .player-row:last-child {
+            border-bottom: none;
         }
-        .team-name { font-weight: 500; }
+
+        .table-row-header {
+            font-weight: bold;
+            background-color: var(--pastel-blue);
+            border-radius: 6px;
+            padding: 8px;
+            margin-bottom: 6px;
+        }
+
+        .team-name {
+            font-weight: 600;
+        }
+
         .rating-badge {
             background-color: var(--pastel-green);
+            color: #1e7e34;
             padding: 4px 10px;
             border-radius: 20px;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .loading-text, .error-text {
+            padding: 16px;
+            text-align: center;
+            font-size: 14px;
+            color: #718096;
+        }
+
+        .error-text {
+            color: var(--german-red);
         }
     </style>
 </head>
 <body>
 
-    <div class="header-tabs">
-        <button class="tab-btn active" id="btn-bl1" onclick="loadData('bl1', this)">1. Bundesliga</button>
-        <button class="tab-btn" id="btn-bl2" onclick="loadData('bl2', this)">2. Bundesliga</button>
-    </div>
-
-    <div class="dashboard-grid">
-        <!-- Sol Kolon: Fikstür -->
-        <div class="card">
-            <h2>Spieltag (Fikstür)</h2>
-            <div id="fixtures-container">Yükleniyor...</div>
+    <div class="container">
+        <!-- 1. DÜZELTME: Butonlarda ekstra parametre kaldırıldı -->
+        <div class="header-tabs">
+            <button class="tab-btn active" id="btn-bl1" onclick="loadData('bl1')">1. Bundesliga</button>
+            <button class="tab-btn" id="btn-bl2" onclick="loadData('bl2')">2. Bundesliga</button>
         </div>
 
-        <!-- Sağ Kolon: Puan Durumu ve Oyuncular -->
-        <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div class="dashboard-grid">
+            <!-- Sol Kolon: Fikstür -->
             <div class="card">
-                <h2>Tabelle (Puan Durumu)</h2>
-                <div id="tabelle-container">Yükleniyor...</div>
+                <h2>Bundesliga Spieltag</h2>
+                <div id="fixtures-container" class="loading-text">Wird geladen...</div>
             </div>
-            
-            <div class="card" style="border-left-color: var(--german-red);">
-                <h2>Top-Spieler (En İyi 10)</h2>
-                <div id="players-container">Yükleniyor...</div>
+
+            <!-- Sağ Kolon: Puan Durumu ve Oyuncular -->
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+                <div class="card">
+                    <h2>Tabelle</h2>
+                    <div id="tabelle-container" class="loading-text">Wird geladen...</div>
+                </div>
+                
+                <div class="card card-red">
+                    <h2>Top-Spieler</h2>
+                    <div id="players-container" class="loading-text">Wird geladen...</div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- 2. DÜZELTME: Hatasız ve Otomatik Buton Yakalayan JavaScript Kodu -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const defaultBtn = document.getElementById('btn-bl1');
-            loadData('bl1', defaultBtn);
+            loadData('bl1');
         });
 
-        function loadData(league, btnElement) {
-            // Sekme butonlarının aktifliğini güvenli şekilde değiştir
+        function loadData(league) {
+            // Tüm butonlardan 'active' sınıfını temizle
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            if (btnElement) {
-                btnElement.classList.add('active');
+            
+            // İlgili buton elementini id ile güvenli şekilde bulup 'active' yap
+            const activeBtn = document.getElementById(`btn-${league}`);
+            if (activeBtn) {
+                activeBtn.classList.add('active');
             }
 
-            // Önbelleği (cache) kırmak için timestamp ekleyerek JSON verisini çek
+            // Yükleniyor durumunu göster
+            setLoading();
+
+            // Önbellek (cache) engelleyici timestamp eklenerek JSON verisini çek
             fetch(`${league}_data.json?t=${new Date().getTime()}`, { cache: "no-store" })
                 .then(response => {
                     if (!response.ok) throw new Error("JSON verisi alınamadı");
@@ -137,25 +202,36 @@
                     renderPlayers(data.top_players || []);
                 })
                 .catch(error => {
-                    console.error("Veri yüklenemedi:", error);
-                    document.getElementById("fixtures-container").innerHTML = "<p style='color:red;'>Veri yüklenemedi.</p>";
-                    document.getElementById("tabelle-container").innerHTML = "<p style='color:red;'>Veri yüklenemedi.</p>";
-                    document.getElementById("players-container").innerHTML = "<p style='color:red;'>Veri yüklenemedi.</p>";
+                    console.error("Veri yükleme hatası:", error);
+                    showError();
                 });
+        }
+
+        function setLoading() {
+            document.getElementById("fixtures-container").innerHTML = '<div class="loading-text">Wird geladen...</div>';
+            document.getElementById("tabelle-container").innerHTML = '<div class="loading-text">Wird geladen...</div>';
+            document.getElementById("players-container").innerHTML = '<div class="loading-text">Wird geladen...</div>';
+        }
+
+        function showError() {
+            const errorMsg = '<div class="error-text">Daten konnten nicht geladen werden.</div>';
+            document.getElementById("fixtures-container").innerHTML = errorMsg;
+            document.getElementById("tabelle-container").innerHTML = errorMsg;
+            document.getElementById("players-container").innerHTML = errorMsg;
         }
 
         function renderFixtures(fixtures) {
             const container = document.getElementById("fixtures-container");
             container.innerHTML = "";
-            if (fixtures.length === 0) {
-                container.innerHTML = "<p>Yaklaşan maç bulunamadı.</p>";
+            if (!fixtures || fixtures.length === 0) {
+                container.innerHTML = '<div class="loading-text">Keine Spiele gefunden.</div>';
                 return;
             }
             fixtures.forEach(match => {
                 container.innerHTML += `
                     <div class="fixture-row">
-                        <span>${match.date} - ${match.time}</span>
-                        <span class="team-name">${match.home} vs ${match.away}</span>
+                        <span>${match.date || ''} ${match.time ? '- ' + match.time : ''}</span>
+                        <span class="team-name">${match.home || ''} vs ${match.away || ''}</span>
                     </div>
                 `;
             });
@@ -164,24 +240,24 @@
         function renderTabelle(tabelle) {
             const container = document.getElementById("tabelle-container");
             container.innerHTML = `
-                <div class="table-row" style="font-weight:bold; background-color: var(--pastel-blue); padding: 5px;">
+                <div class="table-row table-row-header">
                     <span style="width: 10%;">#</span>
                     <span style="width: 50%;">Team</span>
-                    <span style="width: 20%;">Punkte</span>
-                    <span style="width: 20%;">Tordiff</span>
+                    <span style="width: 20%;">Pkt</span>
+                    <span style="width: 20%;">Diff</span>
                 </div>
             `;
-            if (tabelle.length === 0) {
-                container.innerHTML += "<p style='padding:10px;'>Puan durumu yüklenemedi.</p>";
+            if (!tabelle || tabelle.length === 0) {
+                container.innerHTML += '<div class="loading-text">Keine Tabellendaten verfügbar.</div>';
                 return;
             }
             tabelle.forEach((team, index) => {
                 container.innerHTML += `
                     <div class="table-row">
                         <span style="width: 10%;">${index + 1}</span>
-                        <span class="team-name" style="width: 50%;">${team.name}</span>
-                        <span style="width: 20%; font-weight:bold;">${team.points}</span>
-                        <span style="width: 20%;">${team.goalDiff}</span>
+                        <span class="team-name" style="width: 50%;">${team.name || ''}</span>
+                        <span style="width: 20%; font-weight: bold;">${team.points ?? ''}</span>
+                        <span style="width: 20%;">${team.goalDiff ?? ''}</span>
                     </div>
                 `;
             });
@@ -190,15 +266,15 @@
         function renderPlayers(players) {
             const container = document.getElementById("players-container");
             container.innerHTML = "";
-            if (players.length === 0) {
-                container.innerHTML = "<p>Oyuncu verisi bulunamadı.</p>";
+            if (!players || players.length === 0) {
+                container.innerHTML = '<div class="loading-text">Keine Spielerdaten verfügbar.</div>';
                 return;
             }
             players.forEach((player, index) => {
                 container.innerHTML += `
                     <div class="player-row">
-                        <span>${index + 1}. <span class="team-name">${player.name}</span> <small>(${player.team})</small></span>
-                        <span class="rating-badge">${player.rating}</span>
+                        <span>${index + 1}. <span class="team-name">${player.name || ''}</span> <small style="color:#666;">(${player.team || ''})</small></span>
+                        <span class="rating-badge">${player.rating || ''}</span>
                     </div>
                 `;
             });
