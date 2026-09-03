@@ -2,7 +2,6 @@ import json
 import requests
 
 def get_match_details(league_code, event_id):
-    """Maçın gollerini, kartlarını ve ilk 11 / oyuncu değişikliklerini çeker."""
     url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league_code}/summary?event={event_id}"
     try:
         res = requests.get(url, timeout=10)
@@ -13,7 +12,6 @@ def get_match_details(league_code, event_id):
         goals = []
         cards = []
         
-        # Olaylar (Goller, Kartlar, Değişiklikler)
         for event in data.get('keyEvents', []):
             clock = event.get('clock', {}).get('displayValue', '')
             text = event.get('text', '')
@@ -25,7 +23,6 @@ def get_match_details(league_code, event_id):
                 card_type = "🟨" if "yellow" in event_type or "yellow" in text.lower() else "🟥"
                 cards.append(f"{clock}' {card_type} {text}")
 
-        # Kadrolar ve Oyuncu Değişiklikleri
         lineups = {"home": [], "away": []}
         rosters = data.get('rosters', [])
         
@@ -40,7 +37,6 @@ def get_match_details(league_code, event_id):
                     
                     if starter:
                         sub_info = ""
-                        # Oyuncu çıktıysa yerine gireni bul
                         if subbed_out:
                             sub_events = [e for e in data.get('keyEvents', []) if e.get('type', {}).get('text', '').lower() == 'substitution']
                             for sub in sub_events:
@@ -61,9 +57,8 @@ def run_scraper():
     }
 
     for league_key, league_code in leagues.items():
-        print(f"[{league_key.upper()}] Verileri çekiliyor...")
+        print(f"[{league_key.upper()}] Veriler çekiliyor...")
         
-        # 1. Fikstür ve Maçlar
         scoreboard_url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league_code}/scoreboard"
         res = requests.get(scoreboard_url)
         sb_data = res.json()
@@ -83,7 +78,7 @@ def run_scraper():
             away_team = competition['competitors'][1]['team']['displayName']
             
             score_str = ""
-            if status in ['post', 'in']: # Oynandı veya Oynanıyor
+            if status in ['post', 'in']:
                 home_score = competition['competitors'][0].get('score', '0')
                 away_score = competition['competitors'][1].get('score', '0')
                 score_str = f"{home_score} - {away_score}"
@@ -92,7 +87,6 @@ def run_scraper():
             date_val = date_time[0] if len(date_time) > 0 else ""
             time_val = date_time[1][:5] if len(date_time) > 1 else ""
 
-            # Detaylı veri çekme (Sadece oynanmış veya başlayan maçlar için)
             lineups, goals, cards = {}, [], []
             if status in ['post', 'in']:
                 lineups, goals, cards = get_match_details(league_code, event_id)
@@ -113,7 +107,7 @@ def run_scraper():
 
         matches_by_week[str(current_week)] = current_matches
 
-        # 2. Puan Durumu (Tabelle)
+        # Standings
         standings_url = f"https://site.api.espn.com/apis/v2/sports/soccer/{league_code}/standings"
         std_res = requests.get(standings_url).json()
         
@@ -131,9 +125,9 @@ def run_scraper():
         except Exception as e:
             print(f"Puan durumu okuma hatası: {e}")
 
-        # JSON Çıktısı Hazırlama
         output_data = {
             "current_spieltag": current_week,
+            "fixtures": current_matches,
             "spieltage": matches_by_week,
             "tabelle": tabelle
         }
