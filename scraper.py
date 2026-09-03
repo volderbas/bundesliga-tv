@@ -1,94 +1,147 @@
-import requests
 import json
-from datetime import datetime
+import requests
 
-# Headers: SofaScore gibi siteler bot olduğumuzu anlamasın diye tarayıcı taklidi yapıyoruz.
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "application/json",
-    "Referer": "https://www.sofascore.com/"
-}
-
-def get_tabelle(league_shortcut):
-    # OpenLigaDB üzerinden güncel puan durumu (bl1 veya bl2)
-    url = f"https://api.openligadb.de/getbltable/{league_shortcut}/2026"
+def get_match_details(league_code, event_id):
+    """Maçın gollerini, kartlarını ve ilk 11 / oyuncu değişikliklerini çeker."""
+    url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league_code}/summary?event={event_id}"
     try:
-        response = requests.get(url)
-        data = response.json()
-        table = []
-        for team in data:
-            table.append({
-                "rank": team.get("matches", 0), # OpenLigaDB rank'i bazen farklı verebiliyor, sıralı gelir
-                "name": team.get("teamName", "Bilinmiyor"),
-                "logo": team.get("teamIconUrl", ""),
-                "played": team.get("matches", 0),
-                "points": team.get("points", 0),
-                "goalDiff": team.get("goalDiff", 0)
-            })
-        return table
+        res = requests.get(url, timeout=10)
+        if res.status_code != 200:
+            return {}, [], []
+        data = res.json()
+        
+        goals = []
+        cards = []
+        
+        # Olaylar (Goller, Kartlar, Değişiklikler)
+        for event in data.get('keyEvents', []):
+            clock = event.get('clock', {}).get('displayValue', '')
+            text = event.get('text', '')
+            event_type = event.get('type', {}).get('text', '').lower()
+            
+            if 'goal' in event_type:
+                goals.append(f"{clock}' {text}")
+            elif 'card' in event_type:
+                card_type = "🟨" if "yellow" in event_type or "yellow" in text.lower() else "🟥"
+                cards.append(f"{clock}' {card_type} {text}")
+
+        # Kadrolar ve Oyuncu Değişiklikleri
+        lineups = {"home": [], "away": []}
+        rosters = data.get('rosters', [])
+        
+        for idx, team_key in enumerate(["home", "away"]):
+            if idx < len(rosters):
+                team_roster = rosters[idx]
+                for athlete_entry in team_roster.get('roster', []):
+                    athlete = athlete_entry.get('athlete', {})
+                    name = athlete.get('displayName', '')
+                    starter = athlete_entry.get('starter', False)
+                    subbed_out = athlete_entry.get('subbedOut', False)
+                    
+                    if starter:
+                        sub_info = ""
+                        # Oyuncu çıktıysa yerine gireni bul
+                        if subbed_out:
+                            sub_events = [e for e in data.get('keyEvents', []) if e.get('type', {}).get('text', '').lower() == 'substitution']
+                            for sub in sub_events:
+                                if athlete.get('id') in str(sub):
+                                    clock = sub.get('clock', {}).get('displayValue', '')
+                                    sub_info = f" (🔄 {clock}' Çıktı)"
+                        lineups[team_key].append(f"{name}{sub_info}")
+
+        return lineups, goals, cards
     except Exception as e:
-        print(f"{league_shortcut} Tablo çekilemedi: {e}")
-        return []
+        print(f"Maç detay hatası ({event_id}): {e}")
+        return {}, [], []
 
-def get_fixtures(league_shortcut):
-    # Gelecek maçları çekmek için OpenLigaDB (Sadece güncel haftayı çeker)
-    url = f"https://api.openligadb.de/getmatchdata/{league_shortcut}/2026"
-    try:
-        response = requests.get(url)
-        matches = response.json()
-        fixtures = []
-        for m in matches:
-            if not m["matchIsFinished"]: # Sadece oynanmamış maçlar
-                fixtures.append({
-                    "home": m["team1"]["teamName"],
-                    "away": m["team2"]["teamName"],
-                    "date": m["matchDateTime"].split("T")[0],
-                    "time": m["matchDateTime"].split("T")[1][:5]
+def run_scraper():
+    leagues = {
+        "bl1": "ger.1",
+        "bl2": "ger.2"
+    }
+
+    for league_key, league_code in leagues.items():
+        print(f"[{league_key.upper()}] Verileri çekiliyor...")
+        
+        # 1. Fikstür ve Maçlar
+        scoreboard_url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{league_code}/scoreboard"
+        res = requests.get(scoreboard_url)
+        sb_data = res.json()
+        
+        current_week = sb_data.get('week', {}).get('number', 1)
+        events = sb_data.get('events', [])
+        
+        matches_by_week = {}
+        current_matches = []
+
+        for event in events:
+            event_id = event.get('id')
+            competition = event.get('competitions', [{}])[0]
+            status = event.get('status', {}).get('type', {}).get('state', '')
+            
+            home_team = competition['competitors'][0]['team']['displayName']
+            away_team = competition['competitors'][1]['team']['displayName']
+            
+            score_str = ""
+            if status in ['post', 'in']: # Oynandı veya Oynanıyor
+                home_score = competition['competitors'][0].get('score', '0')
+                away_score = competition['competitors'][1].get('score', '0')
+                score_str = f"{home_score} - {away_score}"
+            
+            date_time = competition.get('date', '').split('T')
+            date_val = date_time[0] if len(date_time) > 0 else ""
+            time_val = date_time[1][:5] if len(date_time) > 1 else ""
+
+            # Detaylı veri çekme (Sadece oynanmış veya başlayan maçlar için)
+            lineups, goals, cards = {}, [], []
+            if status in ['post', 'in']:
+                lineups, goals, cards = get_match_details(league_code, event_id)
+
+            match_data = {
+                "id": event_id,
+                "home": home_team,
+                "away": away_team,
+                "score": score_str,
+                "status": status,
+                "date": date_val,
+                "time": time_val,
+                "goals": goals,
+                "cards": cards,
+                "lineups": lineups
+            }
+            current_matches.append(match_data)
+
+        matches_by_week[str(current_week)] = current_matches
+
+        # 2. Puan Durumu (Tabelle)
+        standings_url = f"https://site.api.espn.com/apis/v2/sports/soccer/{league_code}/standings"
+        std_res = requests.get(standings_url).json()
+        
+        tabelle = []
+        try:
+            entries = std_res['children'][0]['standings']['entries']
+            for entry in entries:
+                team_name = entry['team']['displayName']
+                stats = {s['name']: s['displayValue'] for s in entry['stats']}
+                tabelle.append({
+                    "name": team_name,
+                    "points": stats.get('points', '0'),
+                    "goalDiff": stats.get('pointDifferential', '0')
                 })
-        return fixtures[:6] # Ekrana sığması için ilk 6 maçı alıyoruz
-    except Exception as e:
-        return []
+        except Exception as e:
+            print(f"Puan durumu okuma hatası: {e}")
 
-def get_top_players(tournament_id, season_id):
-    # SofaScore Top Players JSON Endpoint'i (Örnek endpoint, ID'ler güncel sezona göre değişebilir)
-    # Bundesliga 1 ID: 35, Bundesliga 2 ID: 44
-    url = f"https://api.sofascore.com/api/v1/unique-tournament/{tournament_id}/season/{season_id}/statistics?limit=10"
-    try:
-        response = requests.get(url, headers=HEADERS)
-        data = response.json()
-        players = []
-        for p in data.get("results", [])[:10]:
-            players.append({
-                "name": p["player"]["name"],
-                "team": p["team"]["name"],
-                "rating": round(p["rating"], 2)
-            })
-        return players
-    except Exception as e:
-        print(f"Oyuncu verisi çekilemedi: {e}")
-        # Hata durumunda arayüz boş kalmasın diye mock data
-        return [{"name": "Florian Wirtz", "team": "Bayer Leverkusen", "rating": 8.12}]
+        # JSON Çıktısı Hazırlama
+        output_data = {
+            "current_spieltag": current_week,
+            "spieltage": matches_by_week,
+            "tabelle": tabelle
+        }
 
-def update_data():
-    # 1. Bundesliga Verileri (SofaScore Sezon ID'si temsili olarak 52000 kullanıldı)
-    bl1_data = {
-        "tabelle": get_tabelle("bl1"),
-        "fixtures": get_fixtures("bl1"),
-        "top_players": get_top_players(35, 52376) 
-    }
-    with open("bl1_data.json", "w", encoding="utf-8") as f:
-        json.dump(bl1_data, f, ensure_ascii=False, indent=4)
-
-    # 2. Bundesliga Verileri
-    bl2_data = {
-        "tabelle": get_tabelle("bl2"),
-        "fixtures": get_fixtures("bl2"),
-        "top_players": get_top_players(44, 52378)
-    }
-    with open("bl2_data.json", "w", encoding="utf-8") as f:
-        json.dump(bl2_data, f, ensure_ascii=False, indent=4)
-
-    print("Veriler başarıyla güncellendi.")
+        with open(f"{league_key}_data.json", "w", encoding="utf-8") as f:
+            json.dump(output_data, f, ensure_ascii=False, indent=2)
+            
+        print(f"[{league_key.upper()}] {league_key}_data.json başarıyla oluşturuldu.")
 
 if __name__ == "__main__":
-    update_data()
+    run_scraper()
