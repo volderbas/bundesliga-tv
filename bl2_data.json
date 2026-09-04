@@ -166,9 +166,19 @@
       "goalDiff": 0
     },
     {
+      "name": "Hannover 96",
+      "points": 6,
+      "goalDiff": -1
+    },
+    {
       "name": "1. FC Kaiserslautern",
       "points": 5,
       "goalDiff": 1
+    },
+    {
+      "name": "DSC Arminia Bielefeld",
+      "points": 4,
+      "goalDiff": -1
     },
     {
       "name": "SpVgg Greuther Fürth",
@@ -178,7 +188,7 @@
     {
       "name": "Karlsruher SC",
       "points": 4,
-      "goalDiff": -2
+      "goalDiff": -3
     },
     {
       "name": "Eintracht Braunschweig",
@@ -186,7 +196,7 @@
       "goalDiff": 2
     },
     {
-      "name": "DSC Arminia Bielefeld",
+      "name": "FC St. Pauli",
       "points": 3,
       "goalDiff": -1
     },
@@ -201,11 +211,6 @@
       "goalDiff": -2
     },
     {
-      "name": "Hannover 96",
-      "points": 3,
-      "goalDiff": -2
-    },
-    {
       "name": "VfL Osnabrück",
       "points": 3,
       "goalDiff": -3
@@ -214,11 +219,6 @@
       "name": "Dynamo Dresden",
       "points": 3,
       "goalDiff": -4
-    },
-    {
-      "name": "FC St. Pauli",
-      "points": 2,
-      "goalDiff": -1
     },
     {
       "name": "Holstein Kiel",
