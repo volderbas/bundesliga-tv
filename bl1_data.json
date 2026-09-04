@@ -10,7 +10,9 @@
         "status": "SCHEDULED",
         "date": "2026-09-04",
         "time": "20:30",
-        "goals": [],
+        "goals": [
+          "39' B. El Khannouss"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -166,14 +168,19 @@
       "goalDiff": 2
     },
     {
-      "name": "1. FC Köln",
+      "name": "SV 07 Elversberg",
       "points": 3,
       "goalDiff": 1
     },
     {
-      "name": "SV 07 Elversberg",
+      "name": "VfB Stuttgart",
       "points": 3,
-      "goalDiff": 1
+      "goalDiff": -1
+    },
+    {
+      "name": "1. FC Köln",
+      "points": 3,
+      "goalDiff": -2
     },
     {
       "name": "1. FC Union Berlin",
@@ -224,11 +231,6 @@
       "name": "FC Schalke 04",
       "points": 0,
       "goalDiff": -3
-    },
-    {
-      "name": "VfB Stuttgart",
-      "points": 0,
-      "goalDiff": -4
     }
   ]
 }
