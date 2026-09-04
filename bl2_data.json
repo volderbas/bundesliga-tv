@@ -3,21 +3,6 @@
   "spieltage": {
     "4": [
       {
-        "id": 83550,
-        "home": "Hannover 96",
-        "away": "Karlsruher SC",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-04",
-        "time": "18:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83559,
         "home": "DSC Arminia Bielefeld",
         "away": "FC St. Pauli",
@@ -25,21 +10,6 @@
         "status": "SCHEDULED",
         "date": "2026-09-04",
         "time": "18:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83548,
-        "home": "VfL Wolfsburg",
-        "away": "Energie Cottbus",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-05",
-        "time": "13:00",
         "goals": [],
         "cards": [],
         "lineups": {
@@ -93,21 +63,6 @@
         }
       },
       {
-        "id": 83556,
-        "home": "Hertha BSC",
-        "away": "1. FC Magdeburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-06",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83560,
         "home": "SpVgg Greuther Fürth",
         "away": "1. FC Heidenheim 1846",
@@ -126,6 +81,51 @@
         "id": 83561,
         "home": "VfL Osnabrück",
         "away": "Eintracht Braunschweig",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-06",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83550,
+        "home": "Hannover 96",
+        "away": "Karlsruher SC",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-04",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83548,
+        "home": "VfL Wolfsburg",
+        "away": "Energie Cottbus",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "13:00",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83556,
+        "home": "Hertha BSC",
+        "away": "1. FC Magdeburg",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-06",
