@@ -147,12 +147,27 @@
   },
   "tabelle": [
     {
+      "name": "SC Freiburg",
+      "points": 6,
+      "goalDiff": 4
+    },
+    {
+      "name": "Borussia Dortmund",
+      "points": 4,
+      "goalDiff": 2
+    },
+    {
+      "name": "SV 07 Elversberg",
+      "points": 4,
+      "goalDiff": 1
+    },
+    {
       "name": "FC Bayern München",
       "points": 3,
       "goalDiff": 4
     },
     {
-      "name": "SC Freiburg",
+      "name": "Bayer 04 Leverkusen",
       "points": 3,
       "goalDiff": 3
     },
@@ -164,16 +179,6 @@
     {
       "name": "RB Leipzig",
       "points": 3,
-      "goalDiff": 3
-    },
-    {
-      "name": "Borussia Dortmund",
-      "points": 3,
-      "goalDiff": 2
-    },
-    {
-      "name": "SV 07 Elversberg",
-      "points": 3,
       "goalDiff": 1
     },
     {
@@ -182,14 +187,14 @@
       "goalDiff": -1
     },
     {
+      "name": "SV Werder Bremen",
+      "points": 3,
+      "goalDiff": -1
+    },
+    {
       "name": "1. FC Köln",
       "points": 3,
       "goalDiff": -2
-    },
-    {
-      "name": "1. FC Union Berlin",
-      "points": 1,
-      "goalDiff": 0
     },
     {
       "name": "Eintracht Frankfurt",
@@ -202,34 +207,29 @@
       "goalDiff": 0
     },
     {
+      "name": "TSG Hoffenheim",
+      "points": 1,
+      "goalDiff": -1
+    },
+    {
       "name": "SC Paderborn 07",
       "points": 1,
-      "goalDiff": 0
-    },
-    {
-      "name": "Bayer 04 Leverkusen",
-      "points": 0,
       "goalDiff": -1
     },
     {
-      "name": "TSG Hoffenheim",
-      "points": 0,
-      "goalDiff": -1
+      "name": "Borussia Mönchengladbach",
+      "points": 1,
+      "goalDiff": -3
+    },
+    {
+      "name": "1. FC Union Berlin",
+      "points": 1,
+      "goalDiff": -4
     },
     {
       "name": "Hamburger SV",
       "points": 0,
       "goalDiff": -2
-    },
-    {
-      "name": "SV Werder Bremen",
-      "points": 0,
-      "goalDiff": -3
-    },
-    {
-      "name": "Borussia Mönchengladbach",
-      "points": 0,
-      "goalDiff": -3
     },
     {
       "name": "FC Schalke 04",

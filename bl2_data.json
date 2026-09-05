@@ -158,19 +158,19 @@
       "goalDiff": 8
     },
     {
-      "name": "VfL Wolfsburg",
-      "points": 10,
-      "goalDiff": 5
-    },
-    {
       "name": "Hertha BSC",
       "points": 9,
       "goalDiff": 6
     },
     {
+      "name": "VfL Wolfsburg",
+      "points": 8,
+      "goalDiff": 4
+    },
+    {
       "name": "1. FC Kaiserslautern",
       "points": 8,
-      "goalDiff": 2
+      "goalDiff": 4
     },
     {
       "name": "1. FC Heidenheim 1846",
@@ -198,6 +198,11 @@
       "goalDiff": -1
     },
     {
+      "name": "Energie Cottbus",
+      "points": 4,
+      "goalDiff": -2
+    },
+    {
       "name": "Hannover 96",
       "points": 4,
       "goalDiff": -2
@@ -223,11 +228,6 @@
       "goalDiff": -2
     },
     {
-      "name": "Energie Cottbus",
-      "points": 3,
-      "goalDiff": -3
-    },
-    {
       "name": "VfL Osnabrück",
       "points": 3,
       "goalDiff": -3
@@ -240,7 +240,7 @@
     {
       "name": "SV Darmstadt 98",
       "points": 1,
-      "goalDiff": -3
+      "goalDiff": -5
     }
   ]
 }
