@@ -3,21 +3,6 @@
   "spieltage": {
     "4": [
       {
-        "id": 83554,
-        "home": "1. FC Kaiserslautern",
-        "away": "SV Darmstadt 98",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-05",
-        "time": "13:00",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83550,
         "home": "Hannover 96",
         "away": "Karlsruher SC",
@@ -66,7 +51,33 @@
         "date": "2026-09-05",
         "time": "13:00",
         "goals": [
-          "4' R. Glatzel"
+          "4' R. Glatzel",
+          "25' Vinicius Souza",
+          "34' R. Glatzel",
+          "49' Luca Erlein",
+          "49' King Manu",
+          "67' Tolcay Cigerci",
+          "79' M. Svanberg",
+          "91' Dmytro Bogdanov"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83554,
+        "home": "1. FC Kaiserslautern",
+        "away": "SV Darmstadt 98",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "13:00",
+        "goals": [
+          "43' Mário Sauer",
+          "64' Thierry Tazemeta",
+          "95' M. Berisha"
         ],
         "cards": [],
         "lineups": {
@@ -82,7 +93,12 @@
         "status": "SCHEDULED",
         "date": "2026-09-05",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "41' Adam Markhiyev",
+          "46' Phil Harres",
+          "50' Adrián Kaprálik",
+          "56' P. Scobel"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
