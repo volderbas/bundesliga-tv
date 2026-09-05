@@ -199,6 +199,11 @@
       "goalDiff": 0
     },
     {
+      "name": "VfL Bochum",
+      "points": 6,
+      "goalDiff": 0
+    },
+    {
       "name": "Karlsruher SC",
       "points": 5,
       "goalDiff": -2
@@ -234,11 +239,6 @@
       "goalDiff": -1
     },
     {
-      "name": "VfL Bochum",
-      "points": 3,
-      "goalDiff": -1
-    },
-    {
       "name": "Holstein Kiel",
       "points": 3,
       "goalDiff": -2
@@ -251,7 +251,7 @@
     {
       "name": "Dynamo Dresden",
       "points": 3,
-      "goalDiff": -4
+      "goalDiff": -5
     },
     {
       "name": "SV Darmstadt 98",
