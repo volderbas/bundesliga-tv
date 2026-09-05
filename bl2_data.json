@@ -3,6 +3,21 @@
   "spieltage": {
     "4": [
       {
+        "id": 83554,
+        "home": "1. FC Kaiserslautern",
+        "away": "SV Darmstadt 98",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "13:00",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83550,
         "home": "Hannover 96",
         "away": "Karlsruher SC",
@@ -50,22 +65,9 @@
         "status": "SCHEDULED",
         "date": "2026-09-05",
         "time": "13:00",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83554,
-        "home": "1. FC Kaiserslautern",
-        "away": "SV Darmstadt 98",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-05",
-        "time": "13:00",
-        "goals": [],
+        "goals": [
+          "4' R. Glatzel"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -152,8 +154,13 @@
   "tabelle": [
     {
       "name": "1. FC Nürnberg",
-      "points": 9,
+      "points": 10,
       "goalDiff": 8
+    },
+    {
+      "name": "VfL Wolfsburg",
+      "points": 10,
+      "goalDiff": 5
     },
     {
       "name": "Hertha BSC",
@@ -161,9 +168,9 @@
       "goalDiff": 6
     },
     {
-      "name": "VfL Wolfsburg",
-      "points": 7,
-      "goalDiff": 4
+      "name": "1. FC Kaiserslautern",
+      "points": 8,
+      "goalDiff": 2
     },
     {
       "name": "1. FC Heidenheim 1846",
@@ -174,11 +181,6 @@
       "name": "1. FC Magdeburg",
       "points": 6,
       "goalDiff": 0
-    },
-    {
-      "name": "1. FC Kaiserslautern",
-      "points": 5,
-      "goalDiff": 1
     },
     {
       "name": "Karlsruher SC",
@@ -216,9 +218,14 @@
       "goalDiff": -1
     },
     {
-      "name": "Energie Cottbus",
+      "name": "Holstein Kiel",
       "points": 3,
       "goalDiff": -2
+    },
+    {
+      "name": "Energie Cottbus",
+      "points": 3,
+      "goalDiff": -3
     },
     {
       "name": "VfL Osnabrück",
@@ -231,14 +238,9 @@
       "goalDiff": -4
     },
     {
-      "name": "Holstein Kiel",
-      "points": 2,
-      "goalDiff": -2
-    },
-    {
       "name": "SV Darmstadt 98",
       "points": 1,
-      "goalDiff": -2
+      "goalDiff": -3
     }
   ]
 }
