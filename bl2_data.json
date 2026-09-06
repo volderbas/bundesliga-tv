@@ -173,14 +173,14 @@
   },
   "tabelle": [
     {
+      "name": "Hertha BSC",
+      "points": 12,
+      "goalDiff": 7
+    },
+    {
       "name": "1. FC Nürnberg",
       "points": 10,
       "goalDiff": 8
-    },
-    {
-      "name": "Hertha BSC",
-      "points": 10,
-      "goalDiff": 6
     },
     {
       "name": "1. FC Heidenheim 1846",
@@ -198,24 +198,24 @@
       "goalDiff": 4
     },
     {
-      "name": "1. FC Magdeburg",
-      "points": 7,
-      "goalDiff": 0
-    },
-    {
       "name": "VfL Bochum",
       "points": 6,
       "goalDiff": 0
     },
     {
+      "name": "1. FC Magdeburg",
+      "points": 6,
+      "goalDiff": -1
+    },
+    {
+      "name": "VfL Osnabrück",
+      "points": 6,
+      "goalDiff": -1
+    },
+    {
       "name": "Karlsruher SC",
       "points": 5,
       "goalDiff": -2
-    },
-    {
-      "name": "Eintracht Braunschweig",
-      "points": 4,
-      "goalDiff": 2
     },
     {
       "name": "DSC Arminia Bielefeld",
@@ -238,9 +238,9 @@
       "goalDiff": -2
     },
     {
-      "name": "VfL Osnabrück",
-      "points": 4,
-      "goalDiff": -3
+      "name": "Eintracht Braunschweig",
+      "points": 3,
+      "goalDiff": 0
     },
     {
       "name": "FC St. Pauli",
