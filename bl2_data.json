@@ -3,6 +3,21 @@
   "spieltage": {
     "4": [
       {
+        "id": 83556,
+        "home": "Hertha BSC",
+        "away": "1. FC Magdeburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-06",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83550,
         "home": "Hannover 96",
         "away": "Karlsruher SC",
@@ -113,22 +128,11 @@
         "status": "SCHEDULED",
         "date": "2026-09-05",
         "time": "20:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83556,
-        "home": "Hertha BSC",
-        "away": "1. FC Magdeburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-06",
-        "time": "13:30",
-        "goals": [],
+        "goals": [
+          "4' Koji Miyoshi",
+          "25' Koji Miyoshi",
+          "41' Ben Bobzien"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
