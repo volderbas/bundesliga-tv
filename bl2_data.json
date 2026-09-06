@@ -3,14 +3,18 @@
   "spieltage": {
     "4": [
       {
-        "id": 83556,
-        "home": "Hertha BSC",
-        "away": "1. FC Magdeburg",
+        "id": 83557,
+        "home": "Dynamo Dresden",
+        "away": "VfL Bochum",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-09-06",
-        "time": "13:30",
-        "goals": [],
+        "date": "2026-09-05",
+        "time": "20:30",
+        "goals": [
+          "4' Koji Miyoshi",
+          "25' Koji Miyoshi",
+          "41' Ben Bobzien"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -121,18 +125,14 @@
         }
       },
       {
-        "id": 83557,
-        "home": "Dynamo Dresden",
-        "away": "VfL Bochum",
+        "id": 83556,
+        "home": "Hertha BSC",
+        "away": "1. FC Magdeburg",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-09-05",
-        "time": "20:30",
-        "goals": [
-          "4' Koji Miyoshi",
-          "25' Koji Miyoshi",
-          "41' Ben Bobzien"
-        ],
+        "date": "2026-09-06",
+        "time": "13:30",
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],

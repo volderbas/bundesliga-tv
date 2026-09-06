@@ -3,26 +3,6 @@
   "spieltage": {
     "2": [
       {
-        "id": 83167,
-        "home": "Bayer 04 Leverkusen",
-        "away": "1. FC Union Berlin",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-05",
-        "time": "15:30",
-        "goals": [
-          "1' E. Fernández",
-          "28' Facundo Medina",
-          "48' P. Schick",
-          "66' Ibrahim Maza"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83165,
         "home": "VfB Stuttgart",
         "away": "1. FC Köln",
@@ -57,6 +37,26 @@
           "61' S. Guirassy",
           "66' Fabio Silva",
           "87' A. Hajdari"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83167,
+        "home": "Bayer 04 Leverkusen",
+        "away": "1. FC Union Berlin",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "15:30",
+        "goals": [
+          "1' E. Fernández",
+          "28' Facundo Medina",
+          "48' P. Schick",
+          "66' Ibrahim Maza"
         ],
         "cards": [],
         "lineups": {
