@@ -3,25 +3,6 @@
   "spieltage": {
     "4": [
       {
-        "id": 83557,
-        "home": "Dynamo Dresden",
-        "away": "VfL Bochum",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-05",
-        "time": "20:30",
-        "goals": [
-          "4' Koji Miyoshi",
-          "25' Koji Miyoshi",
-          "41' Ben Bobzien"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83550,
         "home": "Hannover 96",
         "away": "Karlsruher SC",
@@ -125,6 +106,25 @@
         }
       },
       {
+        "id": 83557,
+        "home": "Dynamo Dresden",
+        "away": "VfL Bochum",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "20:30",
+        "goals": [
+          "4' Koji Miyoshi",
+          "25' Koji Miyoshi",
+          "41' Ben Bobzien"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83556,
         "home": "Hertha BSC",
         "away": "1. FC Magdeburg",
@@ -132,7 +132,11 @@
         "status": "SCHEDULED",
         "date": "2026-09-06",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "10' J. Brekalo",
+          "31' F. Michel",
+          "47' Oluwaseun Victor Adewumi"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -147,7 +151,9 @@
         "status": "SCHEDULED",
         "date": "2026-09-06",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "12' B. Zivzivadze"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -162,7 +168,12 @@
         "status": "SCHEDULED",
         "date": "2026-09-06",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "52' D. Kyereh",
+          "76' B. Jacobsen",
+          "80' R. Meißner",
+          "88' Y. Sturm"
+        ],
         "cards": [],
         "lineups": {
           "home": [],

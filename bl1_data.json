@@ -147,7 +147,13 @@
         "status": "SCHEDULED",
         "date": "2026-09-06",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "20' S. Becker",
+          "41' P. Mwene",
+          "48' P. Tietz",
+          "83' P. Tietz",
+          "92' R. Königsdörffer"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -162,7 +168,9 @@
         "status": "SCHEDULED",
         "date": "2026-09-06",
         "time": "17:30",
-        "goals": [],
+        "goals": [
+          "6' J. Burkardt"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -172,6 +180,11 @@
     ]
   },
   "tabelle": [
+    {
+      "name": "FC Augsburg",
+      "points": 6,
+      "goalDiff": 6
+    },
     {
       "name": "SC Freiburg",
       "points": 6,
@@ -188,22 +201,17 @@
       "goalDiff": 2
     },
     {
+      "name": "1. FSV Mainz 05",
+      "points": 4,
+      "goalDiff": 5
+    },
+    {
       "name": "FC Bayern München",
       "points": 4,
       "goalDiff": 4
     },
     {
-      "name": "1. FSV Mainz 05",
-      "points": 4,
-      "goalDiff": 3
-    },
-    {
       "name": "Bayer 04 Leverkusen",
-      "points": 3,
-      "goalDiff": 3
-    },
-    {
-      "name": "FC Augsburg",
       "points": 3,
       "goalDiff": 3
     },
@@ -228,14 +236,14 @@
       "goalDiff": -2
     },
     {
-      "name": "Eintracht Frankfurt",
-      "points": 1,
-      "goalDiff": 0
-    },
-    {
       "name": "SC Paderborn 07",
       "points": 1,
       "goalDiff": -1
+    },
+    {
+      "name": "Eintracht Frankfurt",
+      "points": 1,
+      "goalDiff": -3
     },
     {
       "name": "FC Schalke 04",
@@ -260,7 +268,7 @@
     {
       "name": "Hamburger SV",
       "points": 0,
-      "goalDiff": -5
+      "goalDiff": -7
     }
   ]
 }
