@@ -3,48 +3,6 @@
   "spieltage": {
     "2": [
       {
-        "id": 83168,
-        "home": "Eintracht Frankfurt",
-        "away": "FC Augsburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-06",
-        "time": "17:30",
-        "goals": [
-          "6' J. Burkardt",
-          "46' Elias Baum",
-          "47' R. Fellhauer",
-          "65' Alexis Claude-Maurice",
-          "89' F. Rieder"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83165,
-        "home": "VfB Stuttgart",
-        "away": "1. FC Köln",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-04",
-        "time": "20:30",
-        "goals": [
-          "39' B. El Khannouss",
-          "60' G. Prömel",
-          "76' E. Demirovic",
-          "81' R. Hendriks",
-          "91' J. Vagnoman"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83166,
         "home": "TSG Hoffenheim",
         "away": "Borussia Dortmund",
@@ -58,26 +16,6 @@
           "61' S. Guirassy",
           "66' Fabio Silva",
           "87' A. Hajdari"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83167,
-        "home": "Bayer 04 Leverkusen",
-        "away": "1. FC Union Berlin",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-05",
-        "time": "15:30",
-        "goals": [
-          "1' E. Fernández",
-          "28' Facundo Medina",
-          "48' P. Schick",
-          "66' Ibrahim Maza"
         ],
         "cards": [],
         "lineups": {
@@ -129,23 +67,6 @@
         }
       },
       {
-        "id": 83173,
-        "home": "SC Paderborn 07",
-        "away": "SC Freiburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-05",
-        "time": "15:30",
-        "goals": [
-          "26' M. Eggestein"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83172,
         "home": "FC Schalke 04",
         "away": "FC Bayern München",
@@ -174,6 +95,85 @@
           "48' P. Tietz",
           "83' P. Tietz",
           "92' R. Königsdörffer"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83168,
+        "home": "Eintracht Frankfurt",
+        "away": "FC Augsburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-06",
+        "time": "17:30",
+        "goals": [
+          "6' J. Burkardt",
+          "46' Elias Baum",
+          "47' R. Fellhauer",
+          "65' Alexis Claude-Maurice",
+          "89' F. Rieder"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83165,
+        "home": "VfB Stuttgart",
+        "away": "1. FC Köln",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-04",
+        "time": "20:30",
+        "goals": [
+          "39' B. El Khannouss",
+          "60' G. Prömel",
+          "76' E. Demirovic",
+          "81' R. Hendriks",
+          "91' J. Vagnoman"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83167,
+        "home": "Bayer 04 Leverkusen",
+        "away": "1. FC Union Berlin",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "15:30",
+        "goals": [
+          "1' E. Fernández",
+          "28' Facundo Medina",
+          "48' P. Schick",
+          "66' Ibrahim Maza"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83173,
+        "home": "SC Paderborn 07",
+        "away": "SC Freiburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "15:30",
+        "goals": [
+          "26' M. Eggestein"
         ],
         "cards": [],
         "lineups": {
