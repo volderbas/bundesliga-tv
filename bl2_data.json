@@ -3,43 +3,6 @@
   "spieltage": {
     "4": [
       {
-        "id": 83559,
-        "home": "DSC Arminia Bielefeld",
-        "away": "FC St. Pauli",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-04",
-        "time": "18:30",
-        "goals": [
-          "13' Jannik Rochelt",
-          "20' Taichi Hara",
-          "51' Joel Grodowski",
-          "65' A. Ceesay"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83560,
-        "home": "SpVgg Greuther Fürth",
-        "away": "1. FC Heidenheim 1846",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-06",
-        "time": "13:30",
-        "goals": [
-          "12' B. Zivzivadze"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83550,
         "home": "Hannover 96",
         "away": "Karlsruher SC",
@@ -52,6 +15,26 @@
           "29' Shio Fukuda",
           "38' Marcel Hartel",
           "86' R. Pedrosa"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83559,
+        "home": "DSC Arminia Bielefeld",
+        "away": "FC St. Pauli",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-04",
+        "time": "18:30",
+        "goals": [
+          "13' Jannik Rochelt",
+          "20' Taichi Hara",
+          "51' Joel Grodowski",
+          "65' A. Ceesay"
         ],
         "cards": [],
         "lineups": {
@@ -153,6 +136,23 @@
           "10' J. Brekalo",
           "31' F. Michel",
           "47' Oluwaseun Victor Adewumi"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83560,
+        "home": "SpVgg Greuther Fürth",
+        "away": "1. FC Heidenheim 1846",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-06",
+        "time": "13:30",
+        "goals": [
+          "12' B. Zivzivadze"
         ],
         "cards": [],
         "lineups": {
