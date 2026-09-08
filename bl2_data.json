@@ -3,6 +3,26 @@
   "spieltage": {
     "4": [
       {
+        "id": 83558,
+        "home": "Holstein Kiel",
+        "away": "1. FC Nürnberg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-05",
+        "time": "13:00",
+        "goals": [
+          "41' Adam Markhiyev",
+          "46' Phil Harres",
+          "50' Adrián Kaprálik",
+          "56' P. Scobel"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83550,
         "home": "Hannover 96",
         "away": "Karlsruher SC",
@@ -78,26 +98,6 @@
           "43' Mário Sauer",
           "64' Thierry Tazemeta",
           "95' M. Berisha"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83558,
-        "home": "Holstein Kiel",
-        "away": "1. FC Nürnberg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-05",
-        "time": "13:00",
-        "goals": [
-          "41' Adam Markhiyev",
-          "46' Phil Harres",
-          "50' Adrián Kaprálik",
-          "56' P. Scobel"
         ],
         "cards": [],
         "lineups": {

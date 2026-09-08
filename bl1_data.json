@@ -24,14 +24,16 @@
         }
       },
       {
-        "id": 83172,
-        "home": "FC Schalke 04",
-        "away": "FC Bayern München",
+        "id": 83173,
+        "home": "SC Paderborn 07",
+        "away": "SC Freiburg",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-05",
-        "time": "18:30",
-        "goals": [],
+        "time": "15:30",
+        "goals": [
+          "26' M. Eggestein"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -52,6 +54,27 @@
           "47' R. Fellhauer",
           "65' Alexis Claude-Maurice",
           "89' F. Rieder"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83170,
+        "home": "Hamburger SV",
+        "away": "1. FSV Mainz 05",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-06",
+        "time": "15:30",
+        "goals": [
+          "20' S. Becker",
+          "41' P. Mwene",
+          "48' P. Tietz",
+          "83' P. Tietz",
+          "92' R. Königsdörffer"
         ],
         "cards": [],
         "lineups": {
@@ -144,37 +167,14 @@
         }
       },
       {
-        "id": 83173,
-        "home": "SC Paderborn 07",
-        "away": "SC Freiburg",
+        "id": 83172,
+        "home": "FC Schalke 04",
+        "away": "FC Bayern München",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-05",
-        "time": "15:30",
-        "goals": [
-          "26' M. Eggestein"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83170,
-        "home": "Hamburger SV",
-        "away": "1. FSV Mainz 05",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-06",
-        "time": "15:30",
-        "goals": [
-          "20' S. Becker",
-          "41' P. Mwene",
-          "48' P. Tietz",
-          "83' P. Tietz",
-          "92' R. Königsdörffer"
-        ],
+        "time": "18:30",
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
