@@ -1,21 +1,16 @@
 {
-  "current_spieltag": 4,
+  "current_spieltag": 5,
   "spieltage": {
-    "4": [
+    "5": [
       {
-        "id": 83558,
-        "home": "Holstein Kiel",
-        "away": "1. FC Nürnberg",
+        "id": 83588,
+        "home": "Eintracht Braunschweig",
+        "away": "Dynamo Dresden",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-09-05",
+        "date": "2026-09-12",
         "time": "13:00",
-        "goals": [
-          "41' Adam Markhiyev",
-          "46' Phil Harres",
-          "50' Adrián Kaprálik",
-          "56' P. Scobel"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -23,19 +18,14 @@
         }
       },
       {
-        "id": 83550,
-        "home": "Hannover 96",
-        "away": "Karlsruher SC",
+        "id": 83565,
+        "home": "FC St. Pauli",
+        "away": "VfL Wolfsburg",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-09-04",
-        "time": "18:30",
-        "goals": [
-          "26' L. Gindorf",
-          "29' Shio Fukuda",
-          "38' Marcel Hartel",
-          "86' R. Pedrosa"
-        ],
+        "date": "2026-09-12",
+        "time": "20:30",
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -43,19 +33,14 @@
         }
       },
       {
-        "id": 83559,
-        "home": "DSC Arminia Bielefeld",
-        "away": "FC St. Pauli",
+        "id": 83567,
+        "home": "1. FC Heidenheim 1846",
+        "away": "Holstein Kiel",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-09-04",
-        "time": "18:30",
-        "goals": [
-          "13' Jannik Rochelt",
-          "20' Taichi Hara",
-          "51' Joel Grodowski",
-          "65' A. Ceesay"
-        ],
+        "date": "2026-09-13",
+        "time": "13:30",
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -63,80 +48,14 @@
         }
       },
       {
-        "id": 83548,
-        "home": "VfL Wolfsburg",
+        "id": 83582,
+        "home": "Karlsruher SC",
         "away": "Energie Cottbus",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-09-05",
-        "time": "13:00",
-        "goals": [
-          "4' R. Glatzel",
-          "25' Vinicius Souza",
-          "34' R. Glatzel",
-          "49' Luca Erlein",
-          "49' King Manu",
-          "67' Tolcay Cigerci",
-          "79' M. Svanberg",
-          "91' Dmytro Bogdanov"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83554,
-        "home": "1. FC Kaiserslautern",
-        "away": "SV Darmstadt 98",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-05",
-        "time": "13:00",
-        "goals": [
-          "43' Mário Sauer",
-          "64' Thierry Tazemeta",
-          "95' M. Berisha"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83557,
-        "home": "Dynamo Dresden",
-        "away": "VfL Bochum",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-05",
-        "time": "20:30",
-        "goals": [
-          "4' Koji Miyoshi",
-          "25' Koji Miyoshi",
-          "41' Ben Bobzien"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83556,
-        "home": "Hertha BSC",
-        "away": "1. FC Magdeburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "time": "13:30",
-        "goals": [
-          "10' J. Brekalo",
-          "31' F. Michel",
-          "47' Oluwaseun Victor Adewumi"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -144,36 +63,74 @@
         }
       },
       {
-        "id": 83560,
-        "home": "SpVgg Greuther Fürth",
-        "away": "1. FC Heidenheim 1846",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-06",
-        "time": "13:30",
-        "goals": [
-          "12' B. Zivzivadze"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83561,
+        "id": 83589,
         "home": "VfL Osnabrück",
-        "away": "Eintracht Braunschweig",
+        "away": "Hertha BSC",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-09-06",
+        "date": "2026-09-13",
         "time": "13:30",
-        "goals": [
-          "52' D. Kyereh",
-          "76' B. Jacobsen",
-          "80' R. Meißner",
-          "88' Y. Sturm"
-        ],
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83569,
+        "home": "SV Darmstadt 98",
+        "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-11",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83570,
+        "home": "1. FC Nürnberg",
+        "away": "Hannover 96",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-11",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83573,
+        "home": "VfL Bochum",
+        "away": "SpVgg Greuther Fürth",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "13:00",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83587,
+        "home": "1. FC Magdeburg",
+        "away": "1. FC Kaiserslautern",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "13:00",
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
