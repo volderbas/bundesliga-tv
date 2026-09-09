@@ -3,6 +3,66 @@
   "spieltage": {
     "5": [
       {
+        "id": 83569,
+        "home": "SV Darmstadt 98",
+        "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-11",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83570,
+        "home": "1. FC Nürnberg",
+        "away": "Hannover 96",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-11",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83573,
+        "home": "VfL Bochum",
+        "away": "SpVgg Greuther Fürth",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "13:00",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83587,
+        "home": "1. FC Magdeburg",
+        "away": "1. FC Kaiserslautern",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "13:00",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83588,
         "home": "Eintracht Braunschweig",
         "away": "Dynamo Dresden",
@@ -70,66 +130,6 @@
         "status": "SCHEDULED",
         "date": "2026-09-13",
         "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83569,
-        "home": "SV Darmstadt 98",
-        "away": "DSC Arminia Bielefeld",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-11",
-        "time": "18:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83570,
-        "home": "1. FC Nürnberg",
-        "away": "Hannover 96",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-11",
-        "time": "18:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83573,
-        "home": "VfL Bochum",
-        "away": "SpVgg Greuther Fürth",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "13:00",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83587,
-        "home": "1. FC Magdeburg",
-        "away": "1. FC Kaiserslautern",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "13:00",
         "goals": [],
         "cards": [],
         "lineups": {
