@@ -3,6 +3,21 @@
   "spieltage": {
     "3": [
       {
+        "id": 83176,
+        "home": "TSG Hoffenheim",
+        "away": "VfB Stuttgart",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83180,
         "home": "1. FC Union Berlin",
         "away": "FC Schalke 04",
@@ -21,21 +36,6 @@
         "id": 83174,
         "home": "Borussia Dortmund",
         "away": "SC Paderborn 07",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83176,
-        "home": "TSG Hoffenheim",
-        "away": "VfB Stuttgart",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-12",
