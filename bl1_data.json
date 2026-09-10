@@ -3,6 +3,51 @@
   "spieltage": {
     "3": [
       {
+        "id": 83174,
+        "home": "Borussia Dortmund",
+        "away": "SC Paderborn 07",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83178,
+        "home": "FC Augsburg",
+        "away": "Bayer 04 Leverkusen",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83175,
+        "home": "RB Leipzig",
+        "away": "Hamburger SV",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-13",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83180,
         "home": "1. FC Union Berlin",
         "away": "FC Schalke 04",
@@ -85,51 +130,6 @@
         "status": "SCHEDULED",
         "date": "2026-09-13",
         "time": "17:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83178,
-        "home": "FC Augsburg",
-        "away": "Bayer 04 Leverkusen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83174,
-        "home": "Borussia Dortmund",
-        "away": "SC Paderborn 07",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83175,
-        "home": "RB Leipzig",
-        "away": "Hamburger SV",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-13",
-        "time": "15:30",
         "goals": [],
         "cards": [],
         "lineups": {

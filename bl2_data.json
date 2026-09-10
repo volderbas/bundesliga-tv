@@ -3,6 +3,21 @@
   "spieltage": {
     "5": [
       {
+        "id": 83589,
+        "home": "VfL Osnabrück",
+        "away": "Hertha BSC",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-13",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83569,
         "home": "SV Darmstadt 98",
         "away": "DSC Arminia Bielefeld",
@@ -111,21 +126,6 @@
         "id": 83582,
         "home": "Karlsruher SC",
         "away": "Energie Cottbus",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-13",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83589,
-        "home": "VfL Osnabrück",
-        "away": "Hertha BSC",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-13",
