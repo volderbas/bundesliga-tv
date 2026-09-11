@@ -10,7 +10,9 @@
         "status": "SCHEDULED",
         "date": "2026-09-11",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "3' Ho-jae Lee"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -25,7 +27,10 @@
         "status": "SCHEDULED",
         "date": "2026-09-11",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "5' J. Justvan",
+          "8' L. Gindorf"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -141,14 +146,14 @@
   },
   "tabelle": [
     {
+      "name": "1. FC Nürnberg",
+      "points": 13,
+      "goalDiff": 9
+    },
+    {
       "name": "Hertha BSC",
       "points": 12,
       "goalDiff": 7
-    },
-    {
-      "name": "1. FC Nürnberg",
-      "points": 10,
-      "goalDiff": 8
     },
     {
       "name": "1. FC Heidenheim 1846",
@@ -181,14 +186,14 @@
       "goalDiff": -1
     },
     {
+      "name": "DSC Arminia Bielefeld",
+      "points": 5,
+      "goalDiff": -1
+    },
+    {
       "name": "Karlsruher SC",
       "points": 5,
       "goalDiff": -2
-    },
-    {
-      "name": "DSC Arminia Bielefeld",
-      "points": 4,
-      "goalDiff": -1
     },
     {
       "name": "Energie Cottbus",
@@ -203,7 +208,7 @@
     {
       "name": "Hannover 96",
       "points": 4,
-      "goalDiff": -2
+      "goalDiff": -3
     },
     {
       "name": "Eintracht Braunschweig",
@@ -227,7 +232,7 @@
     },
     {
       "name": "SV Darmstadt 98",
-      "points": 1,
+      "points": 2,
       "goalDiff": -5
     }
   ]
