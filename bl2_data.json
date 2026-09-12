@@ -183,7 +183,7 @@
     {
       "name": "VfL Wolfsburg",
       "points": 8,
-      "goalDiff": 4
+      "goalDiff": 3
     },
     {
       "name": "1. FC Kaiserslautern",
@@ -193,6 +193,11 @@
     {
       "name": "VfL Bochum",
       "points": 7,
+      "goalDiff": 0
+    },
+    {
+      "name": "FC St. Pauli",
+      "points": 6,
       "goalDiff": 0
     },
     {
@@ -239,11 +244,6 @@
       "name": "Dynamo Dresden",
       "points": 4,
       "goalDiff": -5
-    },
-    {
-      "name": "FC St. Pauli",
-      "points": 3,
-      "goalDiff": -1
     },
     {
       "name": "Holstein Kiel",
