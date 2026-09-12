@@ -3,6 +3,23 @@
   "spieltage": {
     "3": [
       {
+        "id": 83181,
+        "home": "1. FC Köln",
+        "away": "SV Werder Bremen",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "18:30",
+        "goals": [
+          "11' L. Maina"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83180,
         "home": "1. FC Union Berlin",
         "away": "FC Schalke 04",
@@ -30,7 +47,11 @@
         "status": "SCHEDULED",
         "date": "2026-09-12",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "5' Fabio Silva",
+          "80' F. Nmecha",
+          "89' F. Nmecha"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -45,7 +66,11 @@
         "status": "SCHEDULED",
         "date": "2026-09-12",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "13' A. Hložek",
+          "48' M. Mittelstädt",
+          "67' A. Hložek"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -60,7 +85,13 @@
         "status": "SCHEDULED",
         "date": "2026-09-12",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "23' Y. Engelhardt",
+          "29' I. Matanovic",
+          "77' I. Matanovic",
+          "79' Y. Engelhardt",
+          "86' M. Eggestein"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -75,7 +106,12 @@
         "status": "SCHEDULED",
         "date": "2026-09-12",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "18' C. Kofane",
+          "50' M. Gregoritsch",
+          "55' M. Gregoritsch",
+          "89' P. Schick"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -90,22 +126,12 @@
         "status": "SCHEDULED",
         "date": "2026-09-12",
         "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83181,
-        "home": "1. FC Köln",
-        "away": "SV Werder Bremen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "18:30",
-        "goals": [],
+        "goals": [
+          "9' C. Uzun",
+          "46' J. Burkardt",
+          "60' C. Uzun",
+          "89' P. Tietz"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -148,17 +174,17 @@
     {
       "name": "SC Freiburg",
       "points": 9,
-      "goalDiff": 8
-    },
-    {
-      "name": "FC Augsburg",
-      "points": 9,
-      "goalDiff": 7
+      "goalDiff": 9
     },
     {
       "name": "Borussia Dortmund",
       "points": 9,
-      "goalDiff": 5
+      "goalDiff": 6
+    },
+    {
+      "name": "FC Augsburg",
+      "points": 7,
+      "goalDiff": 6
     },
     {
       "name": "SV 07 Elversberg",
@@ -171,14 +197,24 @@
       "goalDiff": 4
     },
     {
+      "name": "Bayer 04 Leverkusen",
+      "points": 4,
+      "goalDiff": 3
+    },
+    {
       "name": "1. FSV Mainz 05",
       "points": 4,
-      "goalDiff": 2
+      "goalDiff": 3
     },
     {
       "name": "Eintracht Frankfurt",
       "points": 4,
-      "goalDiff": 0
+      "goalDiff": -1
+    },
+    {
+      "name": "SV Werder Bremen",
+      "points": 4,
+      "goalDiff": -1
     },
     {
       "name": "FC Schalke 04",
@@ -186,9 +222,9 @@
       "goalDiff": -1
     },
     {
-      "name": "Bayer 04 Leverkusen",
-      "points": 3,
-      "goalDiff": 2
+      "name": "1. FC Köln",
+      "points": 4,
+      "goalDiff": -2
     },
     {
       "name": "RB Leipzig",
@@ -201,24 +237,14 @@
       "goalDiff": -1
     },
     {
-      "name": "SV Werder Bremen",
-      "points": 3,
-      "goalDiff": -1
-    },
-    {
       "name": "VfB Stuttgart",
-      "points": 3,
-      "goalDiff": -2
-    },
-    {
-      "name": "1. FC Köln",
       "points": 3,
       "goalDiff": -2
     },
     {
       "name": "SC Paderborn 07",
       "points": 1,
-      "goalDiff": -3
+      "goalDiff": -4
     },
     {
       "name": "1. FC Union Berlin",
@@ -233,7 +259,7 @@
     {
       "name": "Borussia Mönchengladbach",
       "points": 0,
-      "goalDiff": -8
+      "goalDiff": -9
     }
   ]
 }

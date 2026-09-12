@@ -48,7 +48,10 @@
         "status": "SCHEDULED",
         "date": "2026-09-12",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "17' P. Hofmann",
+          "71' Omar Sillah"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -63,7 +66,11 @@
         "status": "SCHEDULED",
         "date": "2026-09-12",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "12' E. Iyoha",
+          "16' Alexander Nollenberger",
+          "53' E. Iyoha"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -78,7 +85,12 @@
         "status": "SCHEDULED",
         "date": "2026-09-12",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "3' N. Rapp",
+          "5' Maximilian Entrup",
+          "68' Mehmet Can Aydin",
+          "72' Thomas Keller"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
