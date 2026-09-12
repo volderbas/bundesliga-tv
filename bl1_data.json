@@ -146,19 +146,19 @@
   },
   "tabelle": [
     {
-      "name": "FC Augsburg",
-      "points": 6,
-      "goalDiff": 6
+      "name": "SC Freiburg",
+      "points": 9,
+      "goalDiff": 8
     },
     {
-      "name": "SC Freiburg",
-      "points": 6,
-      "goalDiff": 4
+      "name": "FC Augsburg",
+      "points": 9,
+      "goalDiff": 7
     },
     {
       "name": "Borussia Dortmund",
-      "points": 6,
-      "goalDiff": 3
+      "points": 9,
+      "goalDiff": 5
     },
     {
       "name": "SV 07 Elversberg",
@@ -166,14 +166,19 @@
       "goalDiff": 2
     },
     {
-      "name": "1. FSV Mainz 05",
-      "points": 4,
-      "goalDiff": 5
-    },
-    {
       "name": "FC Bayern München",
       "points": 4,
       "goalDiff": 4
+    },
+    {
+      "name": "1. FSV Mainz 05",
+      "points": 4,
+      "goalDiff": 2
+    },
+    {
+      "name": "Eintracht Frankfurt",
+      "points": 4,
+      "goalDiff": 0
     },
     {
       "name": "FC Schalke 04",
@@ -183,7 +188,7 @@
     {
       "name": "Bayer 04 Leverkusen",
       "points": 3,
-      "goalDiff": 3
+      "goalDiff": 2
     },
     {
       "name": "RB Leipzig",
@@ -191,7 +196,7 @@
       "goalDiff": 1
     },
     {
-      "name": "VfB Stuttgart",
+      "name": "TSG Hoffenheim",
       "points": 3,
       "goalDiff": -1
     },
@@ -201,17 +206,17 @@
       "goalDiff": -1
     },
     {
+      "name": "VfB Stuttgart",
+      "points": 3,
+      "goalDiff": -2
+    },
+    {
       "name": "1. FC Köln",
       "points": 3,
       "goalDiff": -2
     },
     {
       "name": "SC Paderborn 07",
-      "points": 1,
-      "goalDiff": -1
-    },
-    {
-      "name": "Eintracht Frankfurt",
       "points": 1,
       "goalDiff": -3
     },
@@ -221,19 +226,14 @@
       "goalDiff": -6
     },
     {
-      "name": "TSG Hoffenheim",
+      "name": "Hamburger SV",
       "points": 0,
-      "goalDiff": -2
+      "goalDiff": -7
     },
     {
       "name": "Borussia Mönchengladbach",
       "points": 0,
-      "goalDiff": -4
-    },
-    {
-      "name": "Hamburger SV",
-      "points": 0,
-      "goalDiff": -7
+      "goalDiff": -8
     }
   ]
 }

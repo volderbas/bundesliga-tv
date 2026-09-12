@@ -169,11 +169,6 @@
       "goalDiff": 1
     },
     {
-      "name": "VfL Bochum",
-      "points": 9,
-      "goalDiff": 1
-    },
-    {
       "name": "VfL Wolfsburg",
       "points": 8,
       "goalDiff": 4
@@ -184,9 +179,19 @@
       "goalDiff": 1
     },
     {
+      "name": "VfL Bochum",
+      "points": 7,
+      "goalDiff": 0
+    },
+    {
       "name": "VfL Osnabrück",
       "points": 6,
       "goalDiff": -1
+    },
+    {
+      "name": "SpVgg Greuther Fürth",
+      "points": 5,
+      "goalDiff": -2
     },
     {
       "name": "Karlsruher SC",
@@ -207,11 +212,6 @@
       "name": "DSC Arminia Bielefeld",
       "points": 4,
       "goalDiff": -2
-    },
-    {
-      "name": "SpVgg Greuther Fürth",
-      "points": 4,
-      "goalDiff": -3
     },
     {
       "name": "Hannover 96",
