@@ -159,7 +159,17 @@
       "goalDiff": 7
     },
     {
+      "name": "1. FC Magdeburg",
+      "points": 9,
+      "goalDiff": 2
+    },
+    {
       "name": "1. FC Heidenheim 1846",
+      "points": 9,
+      "goalDiff": 1
+    },
+    {
+      "name": "VfL Bochum",
       "points": 9,
       "goalDiff": 1
     },
@@ -171,17 +181,7 @@
     {
       "name": "1. FC Kaiserslautern",
       "points": 8,
-      "goalDiff": 4
-    },
-    {
-      "name": "VfL Bochum",
-      "points": 6,
-      "goalDiff": 0
-    },
-    {
-      "name": "1. FC Magdeburg",
-      "points": 6,
-      "goalDiff": -1
+      "goalDiff": 1
     },
     {
       "name": "VfL Osnabrück",
@@ -192,6 +192,11 @@
       "name": "Karlsruher SC",
       "points": 5,
       "goalDiff": -2
+    },
+    {
+      "name": "Eintracht Braunschweig",
+      "points": 4,
+      "goalDiff": 0
     },
     {
       "name": "Energie Cottbus",
@@ -206,7 +211,7 @@
     {
       "name": "SpVgg Greuther Fürth",
       "points": 4,
-      "goalDiff": -2
+      "goalDiff": -3
     },
     {
       "name": "Hannover 96",
@@ -219,9 +224,9 @@
       "goalDiff": -4
     },
     {
-      "name": "Eintracht Braunschweig",
-      "points": 3,
-      "goalDiff": 0
+      "name": "Dynamo Dresden",
+      "points": 4,
+      "goalDiff": -5
     },
     {
       "name": "FC St. Pauli",
@@ -232,11 +237,6 @@
       "name": "Holstein Kiel",
       "points": 3,
       "goalDiff": -2
-    },
-    {
-      "name": "Dynamo Dresden",
-      "points": 3,
-      "goalDiff": -5
     }
   ]
 }
