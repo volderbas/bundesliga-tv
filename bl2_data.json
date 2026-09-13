@@ -3,48 +3,18 @@
   "spieltage": {
     "5": [
       {
-        "id": 83570,
-        "home": "1. FC Nürnberg",
-        "away": "Hannover 96",
+        "id": 83582,
+        "home": "Karlsruher SC",
+        "away": "Energie Cottbus",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-09-11",
-        "time": "18:30",
+        "date": "2026-09-13",
+        "time": "13:30",
         "goals": [
-          "5' J. Justvan",
-          "8' L. Gindorf",
-          "65' Mohamed Alì Zoma"
+          "47' Lukas Michelbrink",
+          "55' Dominik Pelivan",
+          "62' J. Butler"
         ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83567,
-        "home": "1. FC Heidenheim 1846",
-        "away": "Holstein Kiel",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-13",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83589,
-        "home": "VfL Osnabrück",
-        "away": "Hertha BSC",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-13",
-        "time": "13:30",
-        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -63,6 +33,25 @@
           "3' Ho-jae Lee",
           "59' M. Wörl",
           "86' Milan Smit"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83570,
+        "home": "1. FC Nürnberg",
+        "away": "Hannover 96",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-11",
+        "time": "18:30",
+        "goals": [
+          "5' J. Justvan",
+          "8' L. Gindorf",
+          "65' Mohamed Alì Zoma"
         ],
         "cards": [],
         "lineups": {
@@ -145,14 +134,36 @@
         }
       },
       {
-        "id": 83582,
-        "home": "Karlsruher SC",
-        "away": "Energie Cottbus",
+        "id": 83567,
+        "home": "1. FC Heidenheim 1846",
+        "away": "Holstein Kiel",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-13",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "84' J. Föhrenbach"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83589,
+        "home": "VfL Osnabrück",
+        "away": "Hertha BSC",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-13",
+        "time": "13:30",
+        "goals": [
+          "50' J. Brekalo",
+          "70' K. Sessa",
+          "82' J. Gómez",
+          "92' Ruprecht"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -163,19 +174,19 @@
   },
   "tabelle": [
     {
+      "name": "Hertha BSC",
+      "points": 15,
+      "goalDiff": 9
+    },
+    {
       "name": "1. FC Nürnberg",
       "points": 13,
       "goalDiff": 9
     },
     {
-      "name": "Hertha BSC",
-      "points": 13,
-      "goalDiff": 7
-    },
-    {
       "name": "1. FC Heidenheim 1846",
-      "points": 10,
-      "goalDiff": 1
+      "points": 12,
+      "goalDiff": 2
     },
     {
       "name": "1. FC Magdeburg",
@@ -193,14 +204,14 @@
       "goalDiff": 1
     },
     {
+      "name": "Energie Cottbus",
+      "points": 7,
+      "goalDiff": 1
+    },
+    {
       "name": "VfL Bochum",
       "points": 7,
       "goalDiff": 0
-    },
-    {
-      "name": "VfL Osnabrück",
-      "points": 7,
-      "goalDiff": -1
     },
     {
       "name": "FC St. Pauli",
@@ -208,19 +219,19 @@
       "goalDiff": 0
     },
     {
-      "name": "Karlsruher SC",
+      "name": "VfL Osnabrück",
       "points": 6,
-      "goalDiff": -2
-    },
-    {
-      "name": "Energie Cottbus",
-      "points": 5,
-      "goalDiff": -2
+      "goalDiff": -3
     },
     {
       "name": "SpVgg Greuther Fürth",
       "points": 5,
       "goalDiff": -2
+    },
+    {
+      "name": "Karlsruher SC",
+      "points": 5,
+      "goalDiff": -5
     },
     {
       "name": "Eintracht Braunschweig",
@@ -229,11 +240,6 @@
     },
     {
       "name": "DSC Arminia Bielefeld",
-      "points": 4,
-      "goalDiff": -2
-    },
-    {
-      "name": "Holstein Kiel",
       "points": 4,
       "goalDiff": -2
     },
@@ -251,6 +257,11 @@
       "name": "Dynamo Dresden",
       "points": 4,
       "goalDiff": -5
+    },
+    {
+      "name": "Holstein Kiel",
+      "points": 3,
+      "goalDiff": -3
     }
   ]
 }

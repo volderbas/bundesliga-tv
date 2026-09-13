@@ -3,19 +3,33 @@
   "spieltage": {
     "3": [
       {
-        "id": 83178,
-        "home": "FC Augsburg",
-        "away": "Bayer 04 Leverkusen",
+        "id": 83176,
+        "home": "TSG Hoffenheim",
+        "away": "VfB Stuttgart",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-12",
         "time": "15:30",
         "goals": [
-          "18' C. Kofane",
-          "50' M. Gregoritsch",
-          "55' M. Gregoritsch",
-          "89' P. Schick"
+          "13' A. Hložek",
+          "48' M. Mittelstädt",
+          "67' A. Hložek"
         ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83182,
+        "home": "SV 07 Elversberg",
+        "away": "FC Bayern München",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-13",
+        "time": "17:30",
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -62,25 +76,6 @@
         }
       },
       {
-        "id": 83176,
-        "home": "TSG Hoffenheim",
-        "away": "VfB Stuttgart",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "15:30",
-        "goals": [
-          "13' A. Hložek",
-          "48' M. Mittelstädt",
-          "67' A. Hložek"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83177,
         "home": "SC Freiburg",
         "away": "Borussia Mönchengladbach",
@@ -94,6 +89,26 @@
           "77' I. Matanovic",
           "79' Y. Engelhardt",
           "86' M. Eggestein"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83178,
+        "home": "FC Augsburg",
+        "away": "Bayer 04 Leverkusen",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "15:30",
+        "goals": [
+          "18' C. Kofane",
+          "50' M. Gregoritsch",
+          "55' M. Gregoritsch",
+          "89' P. Schick"
         ],
         "cards": [],
         "lineups": {
@@ -147,22 +162,10 @@
         "status": "SCHEDULED",
         "date": "2026-09-13",
         "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83182,
-        "home": "SV 07 Elversberg",
-        "away": "FC Bayern München",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-13",
-        "time": "17:30",
-        "goals": [],
+        "goals": [
+          "17' T. Gomis",
+          "28' A. Nusa"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -185,6 +188,11 @@
     {
       "name": "FC Augsburg",
       "points": 7,
+      "goalDiff": 6
+    },
+    {
+      "name": "RB Leipzig",
+      "points": 6,
       "goalDiff": 6
     },
     {
@@ -228,11 +236,6 @@
       "goalDiff": -2
     },
     {
-      "name": "RB Leipzig",
-      "points": 3,
-      "goalDiff": 1
-    },
-    {
       "name": "TSG Hoffenheim",
       "points": 3,
       "goalDiff": -1
@@ -253,14 +256,14 @@
       "goalDiff": -6
     },
     {
-      "name": "Hamburger SV",
-      "points": 0,
-      "goalDiff": -7
-    },
-    {
       "name": "Borussia Mönchengladbach",
       "points": 0,
       "goalDiff": -9
+    },
+    {
+      "name": "Hamburger SV",
+      "points": 0,
+      "goalDiff": -12
     }
   ]
 }
