@@ -3,25 +3,6 @@
   "spieltage": {
     "5": [
       {
-        "id": 83569,
-        "home": "SV Darmstadt 98",
-        "away": "DSC Arminia Bielefeld",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-11",
-        "time": "18:30",
-        "goals": [
-          "3' Ho-jae Lee",
-          "59' M. Wörl",
-          "86' Milan Smit"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83570,
         "home": "1. FC Nürnberg",
         "away": "Hannover 96",
@@ -33,6 +14,42 @@
           "5' J. Justvan",
           "8' L. Gindorf",
           "65' Mohamed Alì Zoma"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83587,
+        "home": "1. FC Magdeburg",
+        "away": "1. FC Kaiserslautern",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "13:00",
+        "goals": [
+          "12' E. Iyoha",
+          "16' Alexander Nollenberger",
+          "53' E. Iyoha"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83565,
+        "home": "FC St. Pauli",
+        "away": "VfL Wolfsburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "20:30",
+        "goals": [
+          "88' J. Chima Fujita"
         ],
         "cards": [],
         "lineups": {
@@ -59,17 +76,32 @@
         }
       },
       {
-        "id": 83587,
-        "home": "1. FC Magdeburg",
-        "away": "1. FC Kaiserslautern",
+        "id": 83582,
+        "home": "Karlsruher SC",
+        "away": "Energie Cottbus",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "13:00",
+        "date": "2026-09-13",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83569,
+        "home": "SV Darmstadt 98",
+        "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-11",
+        "time": "18:30",
         "goals": [
-          "12' E. Iyoha",
-          "16' Alexander Nollenberger",
-          "53' E. Iyoha"
+          "3' Ho-jae Lee",
+          "59' M. Wörl",
+          "86' Milan Smit"
         ],
         "cards": [],
         "lineups": {
@@ -98,39 +130,9 @@
         }
       },
       {
-        "id": 83565,
-        "home": "FC St. Pauli",
-        "away": "VfL Wolfsburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "20:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83567,
         "home": "1. FC Heidenheim 1846",
         "away": "Holstein Kiel",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-13",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83582,
-        "home": "Karlsruher SC",
-        "away": "Energie Cottbus",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-13",
