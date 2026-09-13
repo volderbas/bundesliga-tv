@@ -22,18 +22,14 @@
         }
       },
       {
-        "id": 83587,
-        "home": "1. FC Magdeburg",
-        "away": "1. FC Kaiserslautern",
+        "id": 83567,
+        "home": "1. FC Heidenheim 1846",
+        "away": "Holstein Kiel",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "13:00",
-        "goals": [
-          "12' E. Iyoha",
-          "16' Alexander Nollenberger",
-          "53' E. Iyoha"
-        ],
+        "date": "2026-09-13",
+        "time": "13:30",
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -41,44 +37,9 @@
         }
       },
       {
-        "id": 83565,
-        "home": "FC St. Pauli",
-        "away": "VfL Wolfsburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "20:30",
-        "goals": [
-          "88' J. Chima Fujita"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83573,
-        "home": "VfL Bochum",
-        "away": "SpVgg Greuther Fürth",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "13:00",
-        "goals": [
-          "17' P. Hofmann",
-          "71' Omar Sillah"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83582,
-        "home": "Karlsruher SC",
-        "away": "Energie Cottbus",
+        "id": 83589,
+        "home": "VfL Osnabrück",
+        "away": "Hertha BSC",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-13",
@@ -110,6 +71,43 @@
         }
       },
       {
+        "id": 83573,
+        "home": "VfL Bochum",
+        "away": "SpVgg Greuther Fürth",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "13:00",
+        "goals": [
+          "17' P. Hofmann",
+          "71' Omar Sillah"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83587,
+        "home": "1. FC Magdeburg",
+        "away": "1. FC Kaiserslautern",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "13:00",
+        "goals": [
+          "12' E. Iyoha",
+          "16' Alexander Nollenberger",
+          "53' E. Iyoha"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83588,
         "home": "Eintracht Braunschweig",
         "away": "Dynamo Dresden",
@@ -130,14 +128,16 @@
         }
       },
       {
-        "id": 83567,
-        "home": "1. FC Heidenheim 1846",
-        "away": "Holstein Kiel",
+        "id": 83565,
+        "home": "FC St. Pauli",
+        "away": "VfL Wolfsburg",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-09-13",
-        "time": "13:30",
-        "goals": [],
+        "date": "2026-09-12",
+        "time": "20:30",
+        "goals": [
+          "88' J. Chima Fujita"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -145,9 +145,9 @@
         }
       },
       {
-        "id": 83589,
-        "home": "VfL Osnabrück",
-        "away": "Hertha BSC",
+        "id": 83582,
+        "home": "Karlsruher SC",
+        "away": "Energie Cottbus",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-13",

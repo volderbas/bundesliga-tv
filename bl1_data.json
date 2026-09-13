@@ -3,6 +3,46 @@
   "spieltage": {
     "3": [
       {
+        "id": 83178,
+        "home": "FC Augsburg",
+        "away": "Bayer 04 Leverkusen",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "15:30",
+        "goals": [
+          "18' C. Kofane",
+          "50' M. Gregoritsch",
+          "55' M. Gregoritsch",
+          "89' P. Schick"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83180,
+        "home": "1. FC Union Berlin",
+        "away": "FC Schalke 04",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-11",
+        "time": "20:30",
+        "goals": [
+          "25' R. Gosens",
+          "46' A. Aouchiche",
+          "96' T. Skarke",
+          "103' M. Wöber"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83174,
         "home": "Borussia Dortmund",
         "away": "SC Paderborn 07",
@@ -14,6 +54,25 @@
           "5' Fabio Silva",
           "80' F. Nmecha",
           "89' F. Nmecha"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83176,
+        "home": "TSG Hoffenheim",
+        "away": "VfB Stuttgart",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "15:30",
+        "goals": [
+          "13' A. Hložek",
+          "48' M. Mittelstädt",
+          "67' A. Hložek"
         ],
         "cards": [],
         "lineups": {
@@ -43,83 +102,6 @@
         }
       },
       {
-        "id": 83181,
-        "home": "1. FC Köln",
-        "away": "SV Werder Bremen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "18:30",
-        "goals": [
-          "11' L. Maina",
-          "70' N. Füllkrug"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83180,
-        "home": "1. FC Union Berlin",
-        "away": "FC Schalke 04",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-11",
-        "time": "20:30",
-        "goals": [
-          "25' R. Gosens",
-          "46' A. Aouchiche",
-          "96' T. Skarke",
-          "103' M. Wöber"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83176,
-        "home": "TSG Hoffenheim",
-        "away": "VfB Stuttgart",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "15:30",
-        "goals": [
-          "13' A. Hložek",
-          "48' M. Mittelstädt",
-          "67' A. Hložek"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83178,
-        "home": "FC Augsburg",
-        "away": "Bayer 04 Leverkusen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "15:30",
-        "goals": [
-          "18' C. Kofane",
-          "50' M. Gregoritsch",
-          "55' M. Gregoritsch",
-          "89' P. Schick"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83179,
         "home": "1. FSV Mainz 05",
         "away": "Eintracht Frankfurt",
@@ -132,6 +114,24 @@
           "46' J. Burkardt",
           "60' C. Uzun",
           "89' P. Tietz"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83181,
+        "home": "1. FC Köln",
+        "away": "SV Werder Bremen",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "18:30",
+        "goals": [
+          "11' L. Maina",
+          "70' N. Füllkrug"
         ],
         "cards": [],
         "lineups": {
