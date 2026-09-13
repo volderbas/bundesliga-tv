@@ -191,6 +191,11 @@
       "goalDiff": 6
     },
     {
+      "name": "FC Bayern München",
+      "points": 7,
+      "goalDiff": 5
+    },
+    {
       "name": "RB Leipzig",
       "points": 6,
       "goalDiff": 6
@@ -198,12 +203,7 @@
     {
       "name": "SV 07 Elversberg",
       "points": 6,
-      "goalDiff": 2
-    },
-    {
-      "name": "FC Bayern München",
-      "points": 4,
-      "goalDiff": 4
+      "goalDiff": 1
     },
     {
       "name": "Bayer 04 Leverkusen",
