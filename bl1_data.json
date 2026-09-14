@@ -3,40 +3,6 @@
   "spieltage": {
     "3": [
       {
-        "id": 83176,
-        "home": "TSG Hoffenheim",
-        "away": "VfB Stuttgart",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "15:30",
-        "goals": [
-          "13' A. Hložek",
-          "48' M. Mittelstädt",
-          "67' A. Hložek"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83182,
-        "home": "SV 07 Elversberg",
-        "away": "FC Bayern München",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-13",
-        "time": "17:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83180,
         "home": "1. FC Union Berlin",
         "away": "FC Schalke 04",
@@ -68,6 +34,25 @@
           "5' Fabio Silva",
           "80' F. Nmecha",
           "89' F. Nmecha"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83176,
+        "home": "TSG Hoffenheim",
+        "away": "VfB Stuttgart",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "15:30",
+        "goals": [
+          "13' A. Hložek",
+          "48' M. Mittelstädt",
+          "67' A. Hložek"
         ],
         "cards": [],
         "lineups": {
@@ -164,7 +149,29 @@
         "time": "15:30",
         "goals": [
           "17' T. Gomis",
-          "28' A. Nusa"
+          "28' A. Nusa",
+          "72' W. Orbán",
+          "74' C. Nkunku",
+          "77' Romulo"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83182,
+        "home": "SV 07 Elversberg",
+        "away": "FC Bayern München",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-13",
+        "time": "17:30",
+        "goals": [
+          "26' Lennart Karl",
+          "61' M. Krattenmacher",
+          "72' H. Kane"
         ],
         "cards": [],
         "lineups": {

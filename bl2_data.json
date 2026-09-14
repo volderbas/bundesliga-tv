@@ -3,44 +3,6 @@
   "spieltage": {
     "5": [
       {
-        "id": 83582,
-        "home": "Karlsruher SC",
-        "away": "Energie Cottbus",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-13",
-        "time": "13:30",
-        "goals": [
-          "47' Lukas Michelbrink",
-          "55' Dominik Pelivan",
-          "62' J. Butler"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83569,
-        "home": "SV Darmstadt 98",
-        "away": "DSC Arminia Bielefeld",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-11",
-        "time": "18:30",
-        "goals": [
-          "3' Ho-jae Lee",
-          "59' M. Wörl",
-          "86' Milan Smit"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83570,
         "home": "1. FC Nürnberg",
         "away": "Hannover 96",
@@ -126,6 +88,44 @@
         "time": "20:30",
         "goals": [
           "88' J. Chima Fujita"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83582,
+        "home": "Karlsruher SC",
+        "away": "Energie Cottbus",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-13",
+        "time": "13:30",
+        "goals": [
+          "47' Lukas Michelbrink",
+          "55' Dominik Pelivan",
+          "62' J. Butler"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83569,
+        "home": "SV Darmstadt 98",
+        "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-11",
+        "time": "18:30",
+        "goals": [
+          "3' Ho-jae Lee",
+          "59' M. Wörl",
+          "86' Milan Smit"
         ],
         "cards": [],
         "lineups": {
