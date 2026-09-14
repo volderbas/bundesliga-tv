@@ -3,6 +3,27 @@
   "spieltage": {
     "3": [
       {
+        "id": 83177,
+        "home": "SC Freiburg",
+        "away": "Borussia Mönchengladbach",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "15:30",
+        "goals": [
+          "23' Y. Engelhardt",
+          "29' I. Matanovic",
+          "77' I. Matanovic",
+          "79' Y. Engelhardt",
+          "86' M. Eggestein"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83180,
         "home": "1. FC Union Berlin",
         "away": "FC Schalke 04",
@@ -53,27 +74,6 @@
           "13' A. Hložek",
           "48' M. Mittelstädt",
           "67' A. Hložek"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83177,
-        "home": "SC Freiburg",
-        "away": "Borussia Mönchengladbach",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "15:30",
-        "goals": [
-          "23' Y. Engelhardt",
-          "29' I. Matanovic",
-          "77' I. Matanovic",
-          "79' Y. Engelhardt",
-          "86' M. Eggestein"
         ],
         "cards": [],
         "lineups": {
