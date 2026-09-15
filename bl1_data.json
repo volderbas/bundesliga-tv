@@ -3,17 +3,16 @@
   "spieltage": {
     "3": [
       {
-        "id": 83176,
-        "home": "TSG Hoffenheim",
-        "away": "VfB Stuttgart",
+        "id": 83181,
+        "home": "1. FC Köln",
+        "away": "SV Werder Bremen",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-12",
-        "time": "15:30",
+        "time": "18:30",
         "goals": [
-          "13' A. Hložek",
-          "48' M. Mittelstädt",
-          "67' A. Hložek"
+          "11' L. Maina",
+          "70' N. Füllkrug"
         ],
         "cards": [],
         "lineups": {
@@ -53,6 +52,25 @@
           "5' Fabio Silva",
           "80' F. Nmecha",
           "89' F. Nmecha"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83176,
+        "home": "TSG Hoffenheim",
+        "away": "VfB Stuttgart",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-12",
+        "time": "15:30",
+        "goals": [
+          "13' A. Hložek",
+          "48' M. Mittelstädt",
+          "67' A. Hložek"
         ],
         "cards": [],
         "lineups": {
@@ -114,24 +132,6 @@
           "46' J. Burkardt",
           "60' C. Uzun",
           "89' P. Tietz"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83181,
-        "home": "1. FC Köln",
-        "away": "SV Werder Bremen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-12",
-        "time": "18:30",
-        "goals": [
-          "11' L. Maina",
-          "70' N. Füllkrug"
         ],
         "cards": [],
         "lineups": {
