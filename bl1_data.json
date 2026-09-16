@@ -3,25 +3,6 @@
   "spieltage": {
     "3": [
       {
-        "id": 83182,
-        "home": "SV 07 Elversberg",
-        "away": "FC Bayern München",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-13",
-        "time": "17:30",
-        "goals": [
-          "26' Lennart Karl",
-          "61' M. Krattenmacher",
-          "72' H. Kane"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83180,
         "home": "1. FC Union Berlin",
         "away": "FC Schalke 04",
@@ -172,6 +153,25 @@
           "72' W. Orbán",
           "74' C. Nkunku",
           "77' Romulo"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83182,
+        "home": "SV 07 Elversberg",
+        "away": "FC Bayern München",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-13",
+        "time": "17:30",
+        "goals": [
+          "26' Lennart Karl",
+          "61' M. Krattenmacher",
+          "72' H. Kane"
         ],
         "cards": [],
         "lineups": {
