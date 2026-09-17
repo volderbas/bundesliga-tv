@@ -3,21 +3,6 @@
   "spieltage": {
     "4": [
       {
-        "id": 83187,
-        "home": "Borussia Mönchengladbach",
-        "away": "1. FSV Mainz 05",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83183,
         "home": "FC Bayern München",
         "away": "1. FC Union Berlin",
@@ -36,6 +21,21 @@
         "id": 83186,
         "home": "Eintracht Frankfurt",
         "away": "SC Freiburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83187,
+        "home": "Borussia Mönchengladbach",
+        "away": "1. FSV Mainz 05",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-19",

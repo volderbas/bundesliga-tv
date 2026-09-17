@@ -3,9 +3,9 @@
   "spieltage": {
     "6": [
       {
-        "id": 83606,
-        "home": "SpVgg Greuther Fürth",
-        "away": "1. FC Magdeburg",
+        "id": 83591,
+        "home": "VfL Wolfsburg",
+        "away": "SV Darmstadt 98",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-18",
@@ -18,39 +18,9 @@
         }
       },
       {
-        "id": 83598,
-        "home": "Dynamo Dresden",
-        "away": "Hertha BSC",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "20:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83604,
-        "home": "DSC Arminia Bielefeld",
-        "away": "1. FC Heidenheim 1846",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83591,
-        "home": "VfL Wolfsburg",
-        "away": "SV Darmstadt 98",
+        "id": 83606,
+        "home": "SpVgg Greuther Fürth",
+        "away": "1. FC Magdeburg",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-18",
@@ -108,9 +78,39 @@
         }
       },
       {
+        "id": 83598,
+        "home": "Dynamo Dresden",
+        "away": "Hertha BSC",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "20:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83593,
         "home": "Hannover 96",
         "away": "VfL Bochum",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-20",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83604,
+        "home": "DSC Arminia Bielefeld",
+        "away": "1. FC Heidenheim 1846",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-20",
