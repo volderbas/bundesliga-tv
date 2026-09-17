@@ -3,21 +3,6 @@
   "spieltage": {
     "4": [
       {
-        "id": 83190,
-        "home": "FC Schalke 04",
-        "away": "SV 07 Elversberg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "17:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83183,
         "home": "FC Bayern München",
         "away": "1. FC Union Berlin",
@@ -115,6 +100,21 @@
         "status": "SCHEDULED",
         "date": "2026-09-20",
         "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83190,
+        "home": "FC Schalke 04",
+        "away": "SV 07 Elversberg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-20",
+        "time": "17:30",
         "goals": [],
         "cards": [],
         "lineups": {
