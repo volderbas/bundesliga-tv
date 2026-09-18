@@ -3,21 +3,6 @@
   "spieltage": {
     "6": [
       {
-        "id": 83604,
-        "home": "DSC Arminia Bielefeld",
-        "away": "1. FC Heidenheim 1846",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83591,
         "home": "VfL Wolfsburg",
         "away": "SV Darmstadt 98",
@@ -111,6 +96,21 @@
         "id": 83593,
         "home": "Hannover 96",
         "away": "VfL Bochum",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-20",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83604,
+        "home": "DSC Arminia Bielefeld",
+        "away": "1. FC Heidenheim 1846",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-20",
