@@ -10,7 +10,11 @@
         "status": "SCHEDULED",
         "date": "2026-09-18",
         "time": "20:30",
-        "goals": [],
+        "goals": [
+          "18' J. Musiala",
+          "39' H. Kane",
+          "43' M. Olise"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -141,6 +145,11 @@
   },
   "tabelle": [
     {
+      "name": "FC Bayern München",
+      "points": 10,
+      "goalDiff": 12
+    },
+    {
       "name": "SC Freiburg",
       "points": 9,
       "goalDiff": 9
@@ -154,11 +163,6 @@
       "name": "FC Augsburg",
       "points": 7,
       "goalDiff": 6
-    },
-    {
-      "name": "FC Bayern München",
-      "points": 7,
-      "goalDiff": 5
     },
     {
       "name": "RB Leipzig",
@@ -218,7 +222,7 @@
     {
       "name": "1. FC Union Berlin",
       "points": 1,
-      "goalDiff": -6
+      "goalDiff": -13
     },
     {
       "name": "Borussia Mönchengladbach",

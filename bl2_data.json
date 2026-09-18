@@ -3,21 +3,6 @@
   "spieltage": {
     "6": [
       {
-        "id": 83598,
-        "home": "Dynamo Dresden",
-        "away": "Hertha BSC",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "20:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83591,
         "home": "VfL Wolfsburg",
         "away": "SV Darmstadt 98",
@@ -25,7 +10,14 @@
         "status": "SCHEDULED",
         "date": "2026-09-18",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "14' A. Bernhardsson",
+          "29' Milan Smit",
+          "40' R. Glatzel",
+          "61' A. Bernhardsson",
+          "67' M. Damar",
+          "79' R. Glatzel"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -40,7 +32,10 @@
         "status": "SCHEDULED",
         "date": "2026-09-18",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "5' E. Iyoha",
+          "20' Omar Sillah"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -85,6 +80,21 @@
         "status": "SCHEDULED",
         "date": "2026-09-19",
         "time": "13:00",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83598,
+        "home": "Dynamo Dresden",
+        "away": "Hertha BSC",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "20:30",
         "goals": [],
         "cards": [],
         "lineups": {
