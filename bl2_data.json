@@ -156,14 +156,14 @@
       "goalDiff": 2
     },
     {
-      "name": "1. FC Magdeburg",
-      "points": 9,
-      "goalDiff": 2
+      "name": "VfL Wolfsburg",
+      "points": 11,
+      "goalDiff": 7
     },
     {
-      "name": "VfL Wolfsburg",
-      "points": 8,
-      "goalDiff": 3
+      "name": "1. FC Magdeburg",
+      "points": 10,
+      "goalDiff": 2
     },
     {
       "name": "1. FC Kaiserslautern",
@@ -186,14 +186,14 @@
       "goalDiff": 0
     },
     {
+      "name": "SpVgg Greuther Fürth",
+      "points": 6,
+      "goalDiff": -2
+    },
+    {
       "name": "VfL Osnabrück",
       "points": 6,
       "goalDiff": -3
-    },
-    {
-      "name": "SpVgg Greuther Fürth",
-      "points": 5,
-      "goalDiff": -2
     },
     {
       "name": "Karlsruher SC",
@@ -216,14 +216,14 @@
       "goalDiff": -3
     },
     {
-      "name": "SV Darmstadt 98",
-      "points": 4,
-      "goalDiff": -4
-    },
-    {
       "name": "Dynamo Dresden",
       "points": 4,
       "goalDiff": -5
+    },
+    {
+      "name": "SV Darmstadt 98",
+      "points": 4,
+      "goalDiff": -8
     },
     {
       "name": "Holstein Kiel",
