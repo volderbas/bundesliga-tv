@@ -173,14 +173,14 @@
       "goalDiff": 7
     },
     {
-      "name": "1. FC Magdeburg",
-      "points": 10,
+      "name": "1. FC Kaiserslautern",
+      "points": 11,
       "goalDiff": 2
     },
     {
-      "name": "1. FC Kaiserslautern",
-      "points": 9,
-      "goalDiff": 1
+      "name": "1. FC Magdeburg",
+      "points": 10,
+      "goalDiff": 2
     },
     {
       "name": "Energie Cottbus",
@@ -208,14 +208,14 @@
       "goalDiff": -2
     },
     {
-      "name": "Eintracht Braunschweig",
-      "points": 5,
-      "goalDiff": 0
-    },
-    {
       "name": "Karlsruher SC",
       "points": 5,
       "goalDiff": -6
+    },
+    {
+      "name": "Eintracht Braunschweig",
+      "points": 4,
+      "goalDiff": -1
     },
     {
       "name": "DSC Arminia Bielefeld",
