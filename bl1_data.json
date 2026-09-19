@@ -3,6 +3,36 @@
   "spieltage": {
     "4": [
       {
+        "id": 83186,
+        "home": "Eintracht Frankfurt",
+        "away": "SC Freiburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83185,
+        "home": "Bayer 04 Leverkusen",
+        "away": "RB Leipzig",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-20",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83183,
         "home": "FC Bayern München",
         "away": "1. FC Union Berlin",
@@ -13,23 +43,12 @@
         "goals": [
           "18' J. Musiala",
           "39' H. Kane",
-          "43' M. Olise"
+          "43' M. Olise",
+          "54' H. Kane",
+          "70' I. Saibari",
+          "73' M. Olise",
+          "76' M. Olise"
         ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83186,
-        "home": "Eintracht Frankfurt",
-        "away": "SC Freiburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "15:30",
-        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -89,21 +108,6 @@
         "status": "SCHEDULED",
         "date": "2026-09-19",
         "time": "18:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83185,
-        "home": "Bayer 04 Leverkusen",
-        "away": "RB Leipzig",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "15:30",
         "goals": [],
         "cards": [],
         "lineups": {
