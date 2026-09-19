@@ -158,14 +158,14 @@
   },
   "tabelle": [
     {
-      "name": "1. FC Nürnberg",
-      "points": 16,
+      "name": "Hertha BSC",
+      "points": 18,
       "goalDiff": 10
     },
     {
-      "name": "Hertha BSC",
-      "points": 15,
-      "goalDiff": 9
+      "name": "1. FC Nürnberg",
+      "points": 16,
+      "goalDiff": 10
     },
     {
       "name": "1. FC Heidenheim 1846",
@@ -240,7 +240,7 @@
     {
       "name": "Dynamo Dresden",
       "points": 4,
-      "goalDiff": -5
+      "goalDiff": -6
     },
     {
       "name": "SV Darmstadt 98",
