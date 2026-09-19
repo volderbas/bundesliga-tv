@@ -3,6 +3,75 @@
   "spieltage": {
     "4": [
       {
+        "id": 83186,
+        "home": "Eintracht Frankfurt",
+        "away": "SC Freiburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "15:30",
+        "goals": [
+          "10' Younes Ebnoutalib",
+          "34' D. Scherhant",
+          "36' J. Burkardt",
+          "48' Y. Suzuki"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83188,
+        "home": "Hamburger SV",
+        "away": "1. FC Köln",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "15:30",
+        "goals": [
+          "44' N. Capaldo",
+          "49'  Poulsen, Yussuf",
+          "90' R. Ache"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83184,
+        "home": "VfB Stuttgart",
+        "away": "Borussia Dortmund",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83191,
+        "home": "SC Paderborn 07",
+        "away": "TSG Hoffenheim",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-20",
+        "time": "19:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83183,
         "home": "FC Bayern München",
         "away": "1. FC Union Berlin",
@@ -26,21 +95,6 @@
         }
       },
       {
-        "id": 83186,
-        "home": "Eintracht Frankfurt",
-        "away": "SC Freiburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83187,
         "home": "Borussia Mönchengladbach",
         "away": "1. FSV Mainz 05",
@@ -48,22 +102,15 @@
         "status": "SCHEDULED",
         "date": "2026-09-19",
         "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83188,
-        "home": "Hamburger SV",
-        "away": "1. FC Köln",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "15:30",
-        "goals": [],
+        "goals": [
+          "11' F. Neuhaus",
+          "18' P. Tietz",
+          "46' S. Becker",
+          "59' Isac Lidberg",
+          "78' E. Martel",
+          "89' Danny da Costa",
+          "95' S. Machino"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -78,22 +125,13 @@
         "status": "SCHEDULED",
         "date": "2026-09-19",
         "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83184,
-        "home": "VfB Stuttgart",
-        "away": "Borussia Dortmund",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "18:30",
-        "goals": [],
+        "goals": [
+          "18' R. Fellhauer",
+          "58' Calvin Brackelmann",
+          "66' M. Grüll",
+          "86' N. Füllkrug",
+          "93' M. Weiser"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -129,25 +167,15 @@
           "home": [],
           "away": []
         }
-      },
-      {
-        "id": 83191,
-        "home": "SC Paderborn 07",
-        "away": "TSG Hoffenheim",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "19:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
       }
     ]
   },
   "tabelle": [
+    {
+      "name": "Borussia Dortmund",
+      "points": 12,
+      "goalDiff": 7
+    },
     {
       "name": "FC Bayern München",
       "points": 10,
@@ -160,18 +188,18 @@
     },
     {
       "name": "FC Augsburg",
-      "points": 10,
-      "goalDiff": 7
-    },
-    {
-      "name": "Borussia Dortmund",
-      "points": 9,
-      "goalDiff": 6
+      "points": 7,
+      "goalDiff": 5
     },
     {
       "name": "1. FSV Mainz 05",
       "points": 7,
       "goalDiff": 4
+    },
+    {
+      "name": "SV Werder Bremen",
+      "points": 7,
+      "goalDiff": 0
     },
     {
       "name": "RB Leipzig",
@@ -199,14 +227,9 @@
       "goalDiff": -1
     },
     {
-      "name": "SV Werder Bremen",
-      "points": 4,
-      "goalDiff": -2
-    },
-    {
       "name": "1. FC Köln",
       "points": 4,
-      "goalDiff": -4
+      "goalDiff": -3
     },
     {
       "name": "TSG Hoffenheim",
@@ -216,12 +239,12 @@
     {
       "name": "VfB Stuttgart",
       "points": 3,
-      "goalDiff": -2
+      "goalDiff": -3
     },
     {
       "name": "Hamburger SV",
       "points": 3,
-      "goalDiff": -10
+      "goalDiff": -11
     },
     {
       "name": "SC Paderborn 07",

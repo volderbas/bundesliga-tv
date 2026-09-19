@@ -50,7 +50,9 @@
         "status": "SCHEDULED",
         "date": "2026-09-19",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "73' Erencan Yardimci"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -82,7 +84,10 @@
         "status": "SCHEDULED",
         "date": "2026-09-19",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "45' Phil Harres",
+          "72' Hiroki Sekine"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
