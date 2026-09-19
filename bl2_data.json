@@ -3,66 +3,6 @@
   "spieltage": {
     "6": [
       {
-        "id": 83598,
-        "home": "Dynamo Dresden",
-        "away": "Hertha BSC",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "20:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83593,
-        "home": "Hannover 96",
-        "away": "VfL Bochum",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83604,
-        "home": "DSC Arminia Bielefeld",
-        "away": "1. FC Heidenheim 1846",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83607,
-        "home": "Energie Cottbus",
-        "away": "FC St. Pauli",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83591,
         "home": "VfL Wolfsburg",
         "away": "SV Darmstadt 98",
@@ -125,7 +65,9 @@
         "status": "SCHEDULED",
         "date": "2026-09-19",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "30' Mohamed Alì Zoma"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -146,18 +88,78 @@
           "home": [],
           "away": []
         }
+      },
+      {
+        "id": 83598,
+        "home": "Dynamo Dresden",
+        "away": "Hertha BSC",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "20:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83593,
+        "home": "Hannover 96",
+        "away": "VfL Bochum",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-20",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83604,
+        "home": "DSC Arminia Bielefeld",
+        "away": "1. FC Heidenheim 1846",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-20",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83607,
+        "home": "Energie Cottbus",
+        "away": "FC St. Pauli",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-20",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
       }
     ]
   },
   "tabelle": [
     {
-      "name": "Hertha BSC",
-      "points": 15,
-      "goalDiff": 9
+      "name": "1. FC Nürnberg",
+      "points": 16,
+      "goalDiff": 10
     },
     {
-      "name": "1. FC Nürnberg",
-      "points": 13,
+      "name": "Hertha BSC",
+      "points": 15,
       "goalDiff": 9
     },
     {
@@ -177,7 +179,7 @@
     },
     {
       "name": "1. FC Kaiserslautern",
-      "points": 8,
+      "points": 9,
       "goalDiff": 1
     },
     {
@@ -191,6 +193,11 @@
       "goalDiff": 0
     },
     {
+      "name": "VfL Osnabrück",
+      "points": 7,
+      "goalDiff": -3
+    },
+    {
       "name": "FC St. Pauli",
       "points": 6,
       "goalDiff": 0
@@ -201,24 +208,24 @@
       "goalDiff": -2
     },
     {
-      "name": "VfL Osnabrück",
-      "points": 6,
-      "goalDiff": -3
+      "name": "Eintracht Braunschweig",
+      "points": 5,
+      "goalDiff": 0
     },
     {
       "name": "Karlsruher SC",
       "points": 5,
-      "goalDiff": -5
-    },
-    {
-      "name": "Eintracht Braunschweig",
-      "points": 4,
-      "goalDiff": 0
+      "goalDiff": -6
     },
     {
       "name": "DSC Arminia Bielefeld",
       "points": 4,
       "goalDiff": -2
+    },
+    {
+      "name": "Holstein Kiel",
+      "points": 4,
+      "goalDiff": -3
     },
     {
       "name": "Hannover 96",
@@ -234,11 +241,6 @@
       "name": "SV Darmstadt 98",
       "points": 4,
       "goalDiff": -8
-    },
-    {
-      "name": "Holstein Kiel",
-      "points": 3,
-      "goalDiff": -3
     }
   ]
 }
