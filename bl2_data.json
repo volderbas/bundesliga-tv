@@ -187,22 +187,27 @@
       "goalDiff": 2
     },
     {
-      "name": "Energie Cottbus",
-      "points": 10,
-      "goalDiff": 2
-    },
-    {
       "name": "1. FC Magdeburg",
       "points": 10,
       "goalDiff": 2
     },
     {
-      "name": "Hannover 96",
+      "name": "Energie Cottbus",
+      "points": 8,
+      "goalDiff": 1
+    },
+    {
+      "name": "FC St. Pauli",
+      "points": 7,
+      "goalDiff": 0
+    },
+    {
+      "name": "VfL Bochum",
       "points": 7,
       "goalDiff": -1
     },
     {
-      "name": "VfL Bochum",
+      "name": "Hannover 96",
       "points": 7,
       "goalDiff": -2
     },
@@ -210,11 +215,6 @@
       "name": "VfL Osnabrück",
       "points": 7,
       "goalDiff": -3
-    },
-    {
-      "name": "FC St. Pauli",
-      "points": 6,
-      "goalDiff": -1
     },
     {
       "name": "SpVgg Greuther Fürth",

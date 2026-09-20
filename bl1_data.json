@@ -194,6 +194,11 @@
       "goalDiff": 5
     },
     {
+      "name": "Bayer 04 Leverkusen",
+      "points": 7,
+      "goalDiff": 5
+    },
+    {
       "name": "1. FSV Mainz 05",
       "points": 7,
       "goalDiff": 4
@@ -206,7 +211,7 @@
     {
       "name": "RB Leipzig",
       "points": 6,
-      "goalDiff": 6
+      "goalDiff": 4
     },
     {
       "name": "SV 07 Elversberg",
@@ -217,11 +222,6 @@
       "name": "Eintracht Frankfurt",
       "points": 5,
       "goalDiff": -1
-    },
-    {
-      "name": "Bayer 04 Leverkusen",
-      "points": 4,
-      "goalDiff": 3
     },
     {
       "name": "FC Schalke 04",
