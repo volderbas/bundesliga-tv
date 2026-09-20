@@ -121,7 +121,11 @@
         "status": "SCHEDULED",
         "date": "2026-09-20",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "24' S. Teitur Thórdarson",
+          "43' M. Hartel",
+          "77'   T. Meyer"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -136,7 +140,12 @@
         "status": "SCHEDULED",
         "date": "2026-09-20",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "13' Joel Grodowski",
+          "30' B. Zivzivadze",
+          "48' P. Hennrich",
+          "55' Felix Hagmann"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -151,7 +160,10 @@
         "status": "SCHEDULED",
         "date": "2026-09-20",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "37' J. Butler",
+          "80' M. Kaars"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
