@@ -102,7 +102,11 @@
         "status": "SCHEDULED",
         "date": "2026-09-19",
         "time": "20:30",
-        "goals": [],
+        "goals": [
+          "10' Patrice Covic",
+          "29' Jón Dagur Thorsteinsson",
+          "80' Jón Dagur Thorsteinsson"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
