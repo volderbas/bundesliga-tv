@@ -166,7 +166,12 @@
         "status": "SCHEDULED",
         "date": "2026-09-20",
         "time": "19:30",
-        "goals": [],
+        "goals": [
+          "29' Santiago Castaneda",
+          "42' S. Marino",
+          "50' A. Daghim",
+          "69' S. Tigges"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
