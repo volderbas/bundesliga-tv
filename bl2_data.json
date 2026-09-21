@@ -3,43 +3,6 @@
   "spieltage": {
     "6": [
       {
-        "id": 83597,
-        "home": "Karlsruher SC",
-        "away": "1. FC Nürnberg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "13:00",
-        "goals": [
-          "30' Mohamed Alì Zoma"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83604,
-        "home": "DSC Arminia Bielefeld",
-        "away": "1. FC Heidenheim 1846",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "13:30",
-        "goals": [
-          "13' Joel Grodowski",
-          "30' B. Zivzivadze",
-          "48' P. Hennrich",
-          "55' Felix Hagmann"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83591,
         "home": "VfL Wolfsburg",
         "away": "SV Darmstadt 98",
@@ -97,6 +60,23 @@
         }
       },
       {
+        "id": 83597,
+        "home": "Karlsruher SC",
+        "away": "1. FC Nürnberg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "13:00",
+        "goals": [
+          "30' Mohamed Alì Zoma"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83600,
         "home": "Holstein Kiel",
         "away": "VfL Osnabrück",
@@ -145,6 +125,26 @@
           "24' S. Teitur Thórdarson",
           "43' M. Hartel",
           "77'   T. Meyer"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83604,
+        "home": "DSC Arminia Bielefeld",
+        "away": "1. FC Heidenheim 1846",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-20",
+        "time": "13:30",
+        "goals": [
+          "13' Joel Grodowski",
+          "30' B. Zivzivadze",
+          "48' P. Hennrich",
+          "55' Felix Hagmann"
         ],
         "cards": [],
         "lineups": {
