@@ -3,17 +3,35 @@
   "spieltage": {
     "6": [
       {
-        "id": 83593,
-        "home": "Hannover 96",
-        "away": "VfL Bochum",
+        "id": 83595,
+        "home": "1. FC Kaiserslautern",
+        "away": "Eintracht Braunschweig",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "13:00",
+        "goals": [
+          "73' Erencan Yardimci"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83604,
+        "home": "DSC Arminia Bielefeld",
+        "away": "1. FC Heidenheim 1846",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-20",
         "time": "13:30",
         "goals": [
-          "24' S. Teitur Thórdarson",
-          "43' M. Hartel",
-          "77'   T. Meyer"
+          "13' Joel Grodowski",
+          "30' B. Zivzivadze",
+          "48' P. Hennrich",
+          "55' Felix Hagmann"
         ],
         "cards": [],
         "lineups": {
@@ -54,23 +72,6 @@
         "goals": [
           "5' E. Iyoha",
           "20' Omar Sillah"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83595,
-        "home": "1. FC Kaiserslautern",
-        "away": "Eintracht Braunschweig",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "13:00",
-        "goals": [
-          "73' Erencan Yardimci"
         ],
         "cards": [],
         "lineups": {
@@ -133,18 +134,17 @@
         }
       },
       {
-        "id": 83604,
-        "home": "DSC Arminia Bielefeld",
-        "away": "1. FC Heidenheim 1846",
+        "id": 83593,
+        "home": "Hannover 96",
+        "away": "VfL Bochum",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-20",
         "time": "13:30",
         "goals": [
-          "13' Joel Grodowski",
-          "30' B. Zivzivadze",
-          "48' P. Hennrich",
-          "55' Felix Hagmann"
+          "24' S. Teitur Thórdarson",
+          "43' M. Hartel",
+          "77'   T. Meyer"
         ],
         "cards": [],
         "lineups": {
