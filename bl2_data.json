@@ -3,35 +3,16 @@
   "spieltage": {
     "6": [
       {
-        "id": 83595,
-        "home": "1. FC Kaiserslautern",
-        "away": "Eintracht Braunschweig",
+        "id": 83600,
+        "home": "Holstein Kiel",
+        "away": "VfL Osnabrück",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-09-19",
         "time": "13:00",
         "goals": [
-          "73' Erencan Yardimci"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83604,
-        "home": "DSC Arminia Bielefeld",
-        "away": "1. FC Heidenheim 1846",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "13:30",
-        "goals": [
-          "13' Joel Grodowski",
-          "30' B. Zivzivadze",
-          "48' P. Hennrich",
-          "55' Felix Hagmann"
+          "45' Phil Harres",
+          "72' Hiroki Sekine"
         ],
         "cards": [],
         "lineups": {
@@ -80,6 +61,23 @@
         }
       },
       {
+        "id": 83595,
+        "home": "1. FC Kaiserslautern",
+        "away": "Eintracht Braunschweig",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "13:00",
+        "goals": [
+          "73' Erencan Yardimci"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83597,
         "home": "Karlsruher SC",
         "away": "1. FC Nürnberg",
@@ -89,24 +87,6 @@
         "time": "13:00",
         "goals": [
           "30' Mohamed Alì Zoma"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83600,
-        "home": "Holstein Kiel",
-        "away": "VfL Osnabrück",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "13:00",
-        "goals": [
-          "45' Phil Harres",
-          "72' Hiroki Sekine"
         ],
         "cards": [],
         "lineups": {
@@ -145,6 +125,26 @@
           "24' S. Teitur Thórdarson",
           "43' M. Hartel",
           "77'   T. Meyer"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83604,
+        "home": "DSC Arminia Bielefeld",
+        "away": "1. FC Heidenheim 1846",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-20",
+        "time": "13:30",
+        "goals": [
+          "13' Joel Grodowski",
+          "30' B. Zivzivadze",
+          "48' P. Hennrich",
+          "55' Felix Hagmann"
         ],
         "cards": [],
         "lineups": {
