@@ -3,16 +3,17 @@
   "spieltage": {
     "6": [
       {
-        "id": 83606,
-        "home": "SpVgg Greuther Fürth",
-        "away": "1. FC Magdeburg",
+        "id": 83593,
+        "home": "Hannover 96",
+        "away": "VfL Bochum",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-09-18",
-        "time": "18:30",
+        "date": "2026-09-20",
+        "time": "13:30",
         "goals": [
-          "5' E. Iyoha",
-          "20' Omar Sillah"
+          "24' S. Teitur Thórdarson",
+          "43' M. Hartel",
+          "77'   T. Meyer"
         ],
         "cards": [],
         "lineups": {
@@ -35,6 +36,24 @@
           "61' A. Bernhardsson",
           "67' M. Damar",
           "79' R. Glatzel"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83606,
+        "home": "SpVgg Greuther Fürth",
+        "away": "1. FC Magdeburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-18",
+        "time": "18:30",
+        "goals": [
+          "5' E. Iyoha",
+          "20' Omar Sillah"
         ],
         "cards": [],
         "lineups": {
@@ -106,25 +125,6 @@
           "10' Patrice Covic",
           "29' Jón Dagur Thorsteinsson",
           "80' Jón Dagur Thorsteinsson"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83593,
-        "home": "Hannover 96",
-        "away": "VfL Bochum",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "13:30",
-        "goals": [
-          "24' S. Teitur Thórdarson",
-          "43' M. Hartel",
-          "77'   T. Meyer"
         ],
         "cards": [],
         "lineups": {
