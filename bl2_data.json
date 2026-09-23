@@ -3,25 +3,6 @@
   "spieltage": {
     "6": [
       {
-        "id": 83598,
-        "home": "Dynamo Dresden",
-        "away": "Hertha BSC",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "20:30",
-        "goals": [
-          "10' Patrice Covic",
-          "29' Jón Dagur Thorsteinsson",
-          "80' Jón Dagur Thorsteinsson"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83591,
         "home": "VfL Wolfsburg",
         "away": "SV Darmstadt 98",
@@ -106,6 +87,25 @@
         "goals": [
           "45' Phil Harres",
           "72' Hiroki Sekine"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83598,
+        "home": "Dynamo Dresden",
+        "away": "Hertha BSC",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "20:30",
+        "goals": [
+          "10' Patrice Covic",
+          "29' Jón Dagur Thorsteinsson",
+          "80' Jón Dagur Thorsteinsson"
         ],
         "cards": [],
         "lineups": {
