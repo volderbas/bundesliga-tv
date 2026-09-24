@@ -3,6 +3,63 @@
   "spieltage": {
     "4": [
       {
+        "id": 83186,
+        "home": "Eintracht Frankfurt",
+        "away": "SC Freiburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "15:30",
+        "goals": [
+          "10' Younes Ebnoutalib",
+          "34' D. Scherhant",
+          "36' J. Burkardt",
+          "48' Y. Suzuki"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83184,
+        "home": "VfB Stuttgart",
+        "away": "Borussia Dortmund",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "18:30",
+        "goals": [
+          "70' M. Beier"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83191,
+        "home": "SC Paderborn 07",
+        "away": "TSG Hoffenheim",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-20",
+        "time": "19:30",
+        "goals": [
+          "29' Santiago Castaneda",
+          "42' S. Marino",
+          "50' A. Daghim",
+          "69' S. Tigges"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83183,
         "home": "FC Bayern München",
         "away": "1. FC Union Berlin",
@@ -18,26 +75,6 @@
           "70' I. Saibari",
           "73' M. Olise",
           "76' M. Olise"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83186,
-        "home": "Eintracht Frankfurt",
-        "away": "SC Freiburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "15:30",
-        "goals": [
-          "10' Younes Ebnoutalib",
-          "34' D. Scherhant",
-          "36' J. Burkardt",
-          "48' Y. Suzuki"
         ],
         "cards": [],
         "lineups": {
@@ -109,23 +146,6 @@
         }
       },
       {
-        "id": 83184,
-        "home": "VfB Stuttgart",
-        "away": "Borussia Dortmund",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "18:30",
-        "goals": [
-          "70' M. Beier"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83185,
         "home": "Bayer 04 Leverkusen",
         "away": "RB Leipzig",
@@ -152,26 +172,6 @@
         "date": "2026-09-20",
         "time": "17:30",
         "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83191,
-        "home": "SC Paderborn 07",
-        "away": "TSG Hoffenheim",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "19:30",
-        "goals": [
-          "29' Santiago Castaneda",
-          "42' S. Marino",
-          "50' A. Daghim",
-          "69' S. Tigges"
-        ],
         "cards": [],
         "lineups": {
           "home": [],
