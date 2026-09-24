@@ -3,23 +3,6 @@
   "spieltage": {
     "4": [
       {
-        "id": 83184,
-        "home": "VfB Stuttgart",
-        "away": "Borussia Dortmund",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "18:30",
-        "goals": [
-          "70' M. Beier"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83183,
         "home": "FC Bayern München",
         "away": "1. FC Union Berlin",
@@ -118,6 +101,23 @@
           "66' M. Grüll",
           "86' N. Füllkrug",
           "93' M. Weiser"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83184,
+        "home": "VfB Stuttgart",
+        "away": "Borussia Dortmund",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "18:30",
+        "goals": [
+          "70' M. Beier"
         ],
         "cards": [],
         "lineups": {

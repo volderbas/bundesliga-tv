@@ -3,25 +3,6 @@
   "spieltage": {
     "6": [
       {
-        "id": 83593,
-        "home": "Hannover 96",
-        "away": "VfL Bochum",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-20",
-        "time": "13:30",
-        "goals": [
-          "24' S. Teitur Thórdarson",
-          "43' M. Hartel",
-          "77'   T. Meyer"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83591,
         "home": "VfL Wolfsburg",
         "away": "SV Darmstadt 98",
@@ -125,6 +106,25 @@
           "10' Patrice Covic",
           "29' Jón Dagur Thorsteinsson",
           "80' Jón Dagur Thorsteinsson"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83593,
+        "home": "Hannover 96",
+        "away": "VfL Bochum",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-20",
+        "time": "13:30",
+        "goals": [
+          "24' S. Teitur Thórdarson",
+          "43' M. Hartel",
+          "77'   T. Meyer"
         ],
         "cards": [],
         "lineups": {
