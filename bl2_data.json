@@ -3,24 +3,6 @@
   "spieltage": {
     "6": [
       {
-        "id": 83600,
-        "home": "Holstein Kiel",
-        "away": "VfL Osnabrück",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-19",
-        "time": "13:00",
-        "goals": [
-          "45' Phil Harres",
-          "72' Hiroki Sekine"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83591,
         "home": "VfL Wolfsburg",
         "away": "SV Darmstadt 98",
@@ -87,6 +69,24 @@
         "time": "13:00",
         "goals": [
           "30' Mohamed Alì Zoma"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83600,
+        "home": "Holstein Kiel",
+        "away": "VfL Osnabrück",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-19",
+        "time": "13:00",
+        "goals": [
+          "45' Phil Harres",
+          "72' Hiroki Sekine"
         ],
         "cards": [],
         "lineups": {
