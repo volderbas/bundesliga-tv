@@ -3,6 +3,24 @@
   "spieltage": {
     "6": [
       {
+        "id": 83606,
+        "home": "SpVgg Greuther Fürth",
+        "away": "1. FC Magdeburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-09-18",
+        "time": "18:30",
+        "goals": [
+          "5' E. Iyoha",
+          "20' Omar Sillah"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83591,
         "home": "VfL Wolfsburg",
         "away": "SV Darmstadt 98",
@@ -17,24 +35,6 @@
           "61' A. Bernhardsson",
           "67' M. Damar",
           "79' R. Glatzel"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83606,
-        "home": "SpVgg Greuther Fürth",
-        "away": "1. FC Magdeburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-09-18",
-        "time": "18:30",
-        "goals": [
-          "5' E. Iyoha",
-          "20' Omar Sillah"
         ],
         "cards": [],
         "lineups": {
