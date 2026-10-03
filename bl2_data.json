@@ -3,6 +3,21 @@
   "spieltage": {
     "7": [
       {
+        "id": 83620,
+        "home": "Eintracht Braunschweig",
+        "away": "Holstein Kiel",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-09",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83622,
         "home": "VfL Osnabrück",
         "away": "Dynamo Dresden",
@@ -18,9 +33,9 @@
         }
       },
       {
-        "id": 83616,
-        "home": "VfL Bochum",
-        "away": "DSC Arminia Bielefeld",
+        "id": 83613,
+        "home": "Hertha BSC",
+        "away": "SpVgg Greuther Fürth",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-11",
@@ -36,21 +51,6 @@
         "id": 83609,
         "home": "1. FC Heidenheim 1846",
         "away": "1. FC Kaiserslautern",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-09",
-        "time": "18:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83620,
-        "home": "Eintracht Braunschweig",
-        "away": "Holstein Kiel",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-09",
@@ -123,9 +123,9 @@
         }
       },
       {
-        "id": 83613,
-        "home": "Hertha BSC",
-        "away": "SpVgg Greuther Fürth",
+        "id": 83616,
+        "home": "VfL Bochum",
+        "away": "DSC Arminia Bielefeld",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-11",
