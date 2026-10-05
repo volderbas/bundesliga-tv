@@ -3,21 +3,6 @@
   "spieltage": {
     "5": [
       {
-        "id": 83200,
-        "home": "SC Paderborn 07",
-        "away": "VfB Stuttgart",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-10",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83192,
         "home": "Borussia Dortmund",
         "away": "SV Werder Bremen",
@@ -81,6 +66,21 @@
         "id": 83198,
         "home": "1. FC Union Berlin",
         "away": "SV 07 Elversberg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-10",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83200,
+        "home": "SC Paderborn 07",
+        "away": "VfB Stuttgart",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-10",
