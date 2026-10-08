@@ -3,6 +3,21 @@
   "spieltage": {
     "5": [
       {
+        "id": 83199,
+        "home": "1. FC Köln",
+        "away": "Borussia Mönchengladbach",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-11",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83192,
         "home": "Borussia Dortmund",
         "away": "SV Werder Bremen",
@@ -100,21 +115,6 @@
         "status": "SCHEDULED",
         "date": "2026-10-10",
         "time": "18:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83199,
-        "home": "1. FC Köln",
-        "away": "Borussia Mönchengladbach",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-11",
-        "time": "15:30",
         "goals": [],
         "cards": [],
         "lineups": {
