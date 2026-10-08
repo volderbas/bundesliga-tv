@@ -3,9 +3,9 @@
   "spieltage": {
     "7": [
       {
-        "id": 83609,
-        "home": "1. FC Heidenheim 1846",
-        "away": "1. FC Kaiserslautern",
+        "id": 83620,
+        "home": "Eintracht Braunschweig",
+        "away": "Holstein Kiel",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-09",
@@ -18,9 +18,24 @@
         }
       },
       {
-        "id": 83620,
-        "home": "Eintracht Braunschweig",
-        "away": "Holstein Kiel",
+        "id": 83613,
+        "home": "Hertha BSC",
+        "away": "SpVgg Greuther Fürth",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-11",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83609,
+        "home": "1. FC Heidenheim 1846",
+        "away": "1. FC Kaiserslautern",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-09",
@@ -96,21 +111,6 @@
         "id": 83608,
         "home": "FC St. Pauli",
         "away": "Karlsruher SC",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-11",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83613,
-        "home": "Hertha BSC",
-        "away": "SpVgg Greuther Fürth",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-11",
