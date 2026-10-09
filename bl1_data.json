@@ -3,21 +3,6 @@
   "spieltage": {
     "5": [
       {
-        "id": 83195,
-        "home": "SC Freiburg",
-        "away": "FC Schalke 04",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-11",
-        "time": "17:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83192,
         "home": "Borussia Dortmund",
         "away": "SV Werder Bremen",
@@ -130,6 +115,21 @@
         "status": "SCHEDULED",
         "date": "2026-10-11",
         "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83195,
+        "home": "SC Freiburg",
+        "away": "FC Schalke 04",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-11",
+        "time": "17:30",
         "goals": [],
         "cards": [],
         "lineups": {
