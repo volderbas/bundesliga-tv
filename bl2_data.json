@@ -152,18 +152,18 @@
     },
     {
       "name": "1. FC Heidenheim 1846",
-      "points": 13,
+      "points": 14,
+      "goalDiff": 2
+    },
+    {
+      "name": "1. FC Kaiserslautern",
+      "points": 12,
       "goalDiff": 2
     },
     {
       "name": "VfL Wolfsburg",
       "points": 11,
       "goalDiff": 7
-    },
-    {
-      "name": "1. FC Kaiserslautern",
-      "points": 11,
-      "goalDiff": 2
     },
     {
       "name": "1. FC Magdeburg",
@@ -174,6 +174,11 @@
       "name": "Energie Cottbus",
       "points": 8,
       "goalDiff": 1
+    },
+    {
+      "name": "Eintracht Braunschweig",
+      "points": 7,
+      "goalDiff": 0
     },
     {
       "name": "FC St. Pauli",
@@ -211,14 +216,9 @@
       "goalDiff": -6
     },
     {
-      "name": "Eintracht Braunschweig",
-      "points": 4,
-      "goalDiff": -1
-    },
-    {
       "name": "Holstein Kiel",
       "points": 4,
-      "goalDiff": -3
+      "goalDiff": -4
     },
     {
       "name": "Dynamo Dresden",
