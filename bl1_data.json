@@ -142,7 +142,7 @@
   "tabelle": [
     {
       "name": "Borussia Dortmund",
-      "points": 12,
+      "points": 13,
       "goalDiff": 7
     },
     {
@@ -154,6 +154,11 @@
       "name": "SC Freiburg",
       "points": 10,
       "goalDiff": 9
+    },
+    {
+      "name": "SV Werder Bremen",
+      "points": 8,
+      "goalDiff": 0
     },
     {
       "name": "FC Augsburg",
@@ -174,11 +179,6 @@
       "name": "SV 07 Elversberg",
       "points": 7,
       "goalDiff": 1
-    },
-    {
-      "name": "SV Werder Bremen",
-      "points": 7,
-      "goalDiff": 0
     },
     {
       "name": "RB Leipzig",
