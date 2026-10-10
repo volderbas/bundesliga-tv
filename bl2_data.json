@@ -42,7 +42,12 @@
         "status": "SCHEDULED",
         "date": "2026-10-10",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "4' J. Butler",
+          "36' Noah Weißhaupt",
+          "77' A. Vukotic",
+          "88' Y. Lührs"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -57,7 +62,11 @@
         "status": "SCHEDULED",
         "date": "2026-10-10",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "3' M. Kwarteng",
+          "30' E. Iyoha",
+          "86' M. Zukowski"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -72,7 +81,10 @@
         "status": "SCHEDULED",
         "date": "2026-10-10",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "38' N. Hauptmann",
+          "87' R. Fabinski"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -158,6 +170,11 @@
       "goalDiff": 2
     },
     {
+      "name": "1. FC Magdeburg",
+      "points": 13,
+      "goalDiff": 5
+    },
+    {
       "name": "1. FC Kaiserslautern",
       "points": 12,
       "goalDiff": 2
@@ -168,14 +185,14 @@
       "goalDiff": 7
     },
     {
-      "name": "1. FC Magdeburg",
-      "points": 10,
-      "goalDiff": 2
-    },
-    {
       "name": "Energie Cottbus",
       "points": 8,
-      "goalDiff": 1
+      "goalDiff": -1
+    },
+    {
+      "name": "VfL Osnabrück",
+      "points": 8,
+      "goalDiff": -3
     },
     {
       "name": "Eintracht Braunschweig",
@@ -195,12 +212,12 @@
     {
       "name": "Hannover 96",
       "points": 7,
-      "goalDiff": -2
+      "goalDiff": -5
     },
     {
-      "name": "VfL Osnabrück",
+      "name": "SV Darmstadt 98",
       "points": 7,
-      "goalDiff": -3
+      "goalDiff": -6
     },
     {
       "name": "SpVgg Greuther Fürth",
@@ -213,6 +230,11 @@
       "goalDiff": -2
     },
     {
+      "name": "Dynamo Dresden",
+      "points": 5,
+      "goalDiff": -6
+    },
+    {
       "name": "Karlsruher SC",
       "points": 5,
       "goalDiff": -6
@@ -221,16 +243,6 @@
       "name": "Holstein Kiel",
       "points": 4,
       "goalDiff": -4
-    },
-    {
-      "name": "Dynamo Dresden",
-      "points": 4,
-      "goalDiff": -6
-    },
-    {
-      "name": "SV Darmstadt 98",
-      "points": 4,
-      "goalDiff": -8
     }
   ]
 }

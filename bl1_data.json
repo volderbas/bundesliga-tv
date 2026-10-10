@@ -45,7 +45,9 @@
         "status": "SCHEDULED",
         "date": "2026-10-10",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "1' R. Fellhauer"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -60,7 +62,9 @@
         "status": "SCHEDULED",
         "date": "2026-10-10",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "5' R. Andrich"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -152,7 +156,7 @@
     },
     {
       "name": "FC Bayern München",
-      "points": 10,
+      "points": 11,
       "goalDiff": 12
     },
     {
@@ -161,39 +165,44 @@
       "goalDiff": 9
     },
     {
+      "name": "Bayer 04 Leverkusen",
+      "points": 10,
+      "goalDiff": 6
+    },
+    {
+      "name": "RB Leipzig",
+      "points": 9,
+      "goalDiff": 6
+    },
+    {
+      "name": "FC Augsburg",
+      "points": 8,
+      "goalDiff": 5
+    },
+    {
       "name": "SV Werder Bremen",
       "points": 8,
       "goalDiff": 0
     },
     {
-      "name": "FC Augsburg",
-      "points": 7,
-      "goalDiff": 5
-    },
-    {
-      "name": "Bayer 04 Leverkusen",
-      "points": 7,
-      "goalDiff": 5
-    },
-    {
       "name": "1. FSV Mainz 05",
       "points": 7,
-      "goalDiff": 4
+      "goalDiff": 3
     },
     {
       "name": "SV 07 Elversberg",
       "points": 7,
-      "goalDiff": 1
+      "goalDiff": 0
     },
     {
-      "name": "RB Leipzig",
+      "name": "VfB Stuttgart",
       "points": 6,
-      "goalDiff": 4
+      "goalDiff": -1
     },
     {
-      "name": "Eintracht Frankfurt",
-      "points": 5,
-      "goalDiff": -1
+      "name": "Hamburger SV",
+      "points": 6,
+      "goalDiff": -10
     },
     {
       "name": "FC Schalke 04",
@@ -201,9 +210,9 @@
       "goalDiff": -1
     },
     {
-      "name": "SC Paderborn 07",
-      "points": 4,
-      "goalDiff": -2
+      "name": "Eintracht Frankfurt",
+      "points": 5,
+      "goalDiff": -3
     },
     {
       "name": "1. FC Köln",
@@ -211,24 +220,19 @@
       "goalDiff": -3
     },
     {
-      "name": "TSG Hoffenheim",
-      "points": 3,
-      "goalDiff": -3
-    },
-    {
-      "name": "VfB Stuttgart",
-      "points": 3,
-      "goalDiff": -3
-    },
-    {
-      "name": "Hamburger SV",
-      "points": 3,
-      "goalDiff": -11
+      "name": "SC Paderborn 07",
+      "points": 4,
+      "goalDiff": -4
     },
     {
       "name": "1. FC Union Berlin",
-      "points": 1,
-      "goalDiff": -13
+      "points": 4,
+      "goalDiff": -12
+    },
+    {
+      "name": "TSG Hoffenheim",
+      "points": 3,
+      "goalDiff": -4
     },
     {
       "name": "Borussia Mönchengladbach",
