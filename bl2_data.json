@@ -161,7 +161,7 @@
     },
     {
       "name": "1. FC Nürnberg",
-      "points": 16,
+      "points": 17,
       "goalDiff": 10
     },
     {
@@ -175,14 +175,14 @@
       "goalDiff": 5
     },
     {
+      "name": "VfL Wolfsburg",
+      "points": 12,
+      "goalDiff": 7
+    },
+    {
       "name": "1. FC Kaiserslautern",
       "points": 12,
       "goalDiff": 2
-    },
-    {
-      "name": "VfL Wolfsburg",
-      "points": 11,
-      "goalDiff": 7
     },
     {
       "name": "Energie Cottbus",
