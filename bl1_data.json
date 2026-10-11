@@ -3,39 +3,6 @@
   "spieltage": {
     "5": [
       {
-        "id": 83200,
-        "home": "SC Paderborn 07",
-        "away": "VfB Stuttgart",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-10",
-        "time": "15:30",
-        "goals": [
-          "25' J. Chabot",
-          "84' C. Führich"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83195,
-        "home": "SC Freiburg",
-        "away": "FC Schalke 04",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-11",
-        "time": "17:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83192,
         "home": "Borussia Dortmund",
         "away": "SV Werder Bremen",
@@ -137,6 +104,24 @@
         }
       },
       {
+        "id": 83200,
+        "home": "SC Paderborn 07",
+        "away": "VfB Stuttgart",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-10",
+        "time": "15:30",
+        "goals": [
+          "25' J. Chabot",
+          "84' C. Führich"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83193,
         "home": "RB Leipzig",
         "away": "Eintracht Frankfurt",
@@ -166,6 +151,21 @@
         "status": "SCHEDULED",
         "date": "2026-10-11",
         "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83195,
+        "home": "SC Freiburg",
+        "away": "FC Schalke 04",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-11",
+        "time": "17:30",
         "goals": [],
         "cards": [],
         "lineups": {

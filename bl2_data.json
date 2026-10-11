@@ -165,7 +165,7 @@
   "tabelle": [
     {
       "name": "Hertha BSC",
-      "points": 18,
+      "points": 19,
       "goalDiff": 10
     },
     {
@@ -194,7 +194,17 @@
       "goalDiff": 2
     },
     {
+      "name": "FC St. Pauli",
+      "points": 10,
+      "goalDiff": 1
+    },
+    {
       "name": "Energie Cottbus",
+      "points": 8,
+      "goalDiff": -1
+    },
+    {
+      "name": "VfL Bochum",
       "points": 8,
       "goalDiff": -1
     },
@@ -209,14 +219,9 @@
       "goalDiff": 0
     },
     {
-      "name": "FC St. Pauli",
+      "name": "SpVgg Greuther Fürth",
       "points": 7,
-      "goalDiff": 0
-    },
-    {
-      "name": "VfL Bochum",
-      "points": 7,
-      "goalDiff": -1
+      "goalDiff": -2
     },
     {
       "name": "Hannover 96",
@@ -229,13 +234,8 @@
       "goalDiff": -6
     },
     {
-      "name": "SpVgg Greuther Fürth",
-      "points": 6,
-      "goalDiff": -2
-    },
-    {
       "name": "DSC Arminia Bielefeld",
-      "points": 5,
+      "points": 6,
       "goalDiff": -2
     },
     {
@@ -246,7 +246,7 @@
     {
       "name": "Karlsruher SC",
       "points": 5,
-      "goalDiff": -6
+      "goalDiff": -7
     },
     {
       "name": "Holstein Kiel",
