@@ -151,7 +151,11 @@
         "status": "SCHEDULED",
         "date": "2026-10-11",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "26' Í. Jóhannesson",
+          "39' J. Scally",
+          "66' S. El Mala"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -166,7 +170,11 @@
         "status": "SCHEDULED",
         "date": "2026-10-11",
         "time": "17:30",
-        "goals": [],
+        "goals": [
+          "10' M. Eggestein",
+          "30' K. Karaman",
+          "85' K. Goto"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -177,6 +185,11 @@
   },
   "tabelle": [
     {
+      "name": "SC Freiburg",
+      "points": 13,
+      "goalDiff": 10
+    },
+    {
       "name": "Borussia Dortmund",
       "points": 13,
       "goalDiff": 7
@@ -185,11 +198,6 @@
       "name": "FC Bayern München",
       "points": 11,
       "goalDiff": 12
-    },
-    {
-      "name": "SC Freiburg",
-      "points": 10,
-      "goalDiff": 9
     },
     {
       "name": "Bayer 04 Leverkusen",
@@ -222,6 +230,11 @@
       "goalDiff": 0
     },
     {
+      "name": "1. FC Köln",
+      "points": 7,
+      "goalDiff": -2
+    },
+    {
       "name": "VfB Stuttgart",
       "points": 6,
       "goalDiff": -1
@@ -234,17 +247,12 @@
     {
       "name": "FC Schalke 04",
       "points": 5,
-      "goalDiff": -1
+      "goalDiff": -2
     },
     {
       "name": "Eintracht Frankfurt",
       "points": 5,
       "goalDiff": -7
-    },
-    {
-      "name": "1. FC Köln",
-      "points": 4,
-      "goalDiff": -3
     },
     {
       "name": "SC Paderborn 07",
@@ -264,7 +272,7 @@
     {
       "name": "Borussia Mönchengladbach",
       "points": 0,
-      "goalDiff": -10
+      "goalDiff": -11
     }
   ]
 }
