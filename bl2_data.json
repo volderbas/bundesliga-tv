@@ -99,7 +99,16 @@
         "status": "SCHEDULED",
         "date": "2026-10-10",
         "time": "20:30",
-        "goals": [],
+        "goals": [
+          "12' H. Wahl",
+          "29' M. Damar",
+          "52' P. Scobel",
+          "59' P. Scobel",
+          "63' Mohamed Alì Zoma",
+          "91' A. Besio",
+          "96' I. Masouras",
+          "99' A. Besio"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
