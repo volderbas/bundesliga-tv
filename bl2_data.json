@@ -3,16 +3,17 @@
   "spieltage": {
     "7": [
       {
-        "id": 83608,
-        "home": "FC St. Pauli",
-        "away": "Karlsruher SC",
+        "id": 83613,
+        "home": "Hertha BSC",
+        "away": "SpVgg Greuther Fürth",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-11",
         "time": "13:30",
         "goals": [
-          "32' A. Ceesay",
-          "51' L. Ritzka"
+          "65' Mads Pedersen",
+          "80' P. Seguin",
+          "90' J. Heuer"
         ],
         "cards": [],
         "lineups": {
@@ -134,17 +135,16 @@
         }
       },
       {
-        "id": 83613,
-        "home": "Hertha BSC",
-        "away": "SpVgg Greuther Fürth",
+        "id": 83608,
+        "home": "FC St. Pauli",
+        "away": "Karlsruher SC",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-11",
         "time": "13:30",
         "goals": [
-          "65' Mads Pedersen",
-          "80' P. Seguin",
-          "90' J. Heuer"
+          "32' A. Ceesay",
+          "51' L. Ritzka"
         ],
         "cards": [],
         "lineups": {
