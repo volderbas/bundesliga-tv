@@ -3,6 +3,24 @@
   "spieltage": {
     "7": [
       {
+        "id": 83608,
+        "home": "FC St. Pauli",
+        "away": "Karlsruher SC",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-11",
+        "time": "13:30",
+        "goals": [
+          "32' A. Ceesay",
+          "51' L. Ritzka"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83609,
         "home": "1. FC Heidenheim 1846",
         "away": "1. FC Kaiserslautern",
@@ -108,24 +126,6 @@
           "91' A. Besio",
           "96' I. Masouras",
           "99' A. Besio"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83608,
-        "home": "FC St. Pauli",
-        "away": "Karlsruher SC",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-11",
-        "time": "13:30",
-        "goals": [
-          "32' A. Ceesay",
-          "51' L. Ritzka"
         ],
         "cards": [],
         "lineups": {
