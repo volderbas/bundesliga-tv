@@ -3,15 +3,16 @@
   "spieltage": {
     "7": [
       {
-        "id": 83616,
-        "home": "VfL Bochum",
-        "away": "DSC Arminia Bielefeld",
+        "id": 83608,
+        "home": "FC St. Pauli",
+        "away": "Karlsruher SC",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-11",
         "time": "13:30",
         "goals": [
-          "78' Benjamin Boakye"
+          "32' A. Ceesay",
+          "51' L. Ritzka"
         ],
         "cards": [],
         "lineups": {
@@ -133,24 +134,6 @@
         }
       },
       {
-        "id": 83608,
-        "home": "FC St. Pauli",
-        "away": "Karlsruher SC",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-11",
-        "time": "13:30",
-        "goals": [
-          "32' A. Ceesay",
-          "51' L. Ritzka"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83613,
         "home": "Hertha BSC",
         "away": "SpVgg Greuther Fürth",
@@ -162,6 +145,23 @@
           "65' Mads Pedersen",
           "80' P. Seguin",
           "90' J. Heuer"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83616,
+        "home": "VfL Bochum",
+        "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-11",
+        "time": "13:30",
+        "goals": [
+          "78' Benjamin Boakye"
         ],
         "cards": [],
         "lineups": {
