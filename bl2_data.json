@@ -3,6 +3,23 @@
   "spieltage": {
     "7": [
       {
+        "id": 83616,
+        "home": "VfL Bochum",
+        "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-11",
+        "time": "13:30",
+        "goals": [
+          "78' Benjamin Boakye"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83609,
         "home": "1. FC Heidenheim 1846",
         "away": "1. FC Kaiserslautern",
@@ -145,23 +162,6 @@
           "65' Mads Pedersen",
           "80' P. Seguin",
           "90' J. Heuer"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83616,
-        "home": "VfL Bochum",
-        "away": "DSC Arminia Bielefeld",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-11",
-        "time": "13:30",
-        "goals": [
-          "78' Benjamin Boakye"
         ],
         "cards": [],
         "lineups": {
