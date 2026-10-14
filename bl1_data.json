@@ -3,26 +3,6 @@
   "spieltage": {
     "5": [
       {
-        "id": 83192,
-        "home": "Borussia Dortmund",
-        "away": "SV Werder Bremen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-09",
-        "time": "20:30",
-        "goals": [
-          "80' Daniel Svensson",
-          "85' N. Schlotterbeck",
-          "88' L. Reis",
-          "92' N. Füllkrug"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83194,
         "home": "TSG Hoffenheim",
         "away": "Hamburger SV",
@@ -36,6 +16,26 @@
           "53' B. Conté",
           "83' T. Moffi",
           "94' M. Muheim"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83192,
+        "home": "Borussia Dortmund",
+        "away": "SV Werder Bremen",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-09",
+        "time": "20:30",
+        "goals": [
+          "80' Daniel Svensson",
+          "85' N. Schlotterbeck",
+          "88' L. Reis",
+          "92' N. Füllkrug"
         ],
         "cards": [],
         "lineups": {
