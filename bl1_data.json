@@ -1,22 +1,16 @@
 {
-  "current_spieltag": 5,
+  "current_spieltag": 6,
   "spieltage": {
-    "5": [
+    "6": [
       {
-        "id": 83194,
-        "home": "TSG Hoffenheim",
-        "away": "Hamburger SV",
+        "id": 83209,
+        "home": "SV 07 Elversberg",
+        "away": "FC Augsburg",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-10",
+        "date": "2026-10-17",
         "time": "15:30",
-        "goals": [
-          "12'  Poulsen, Yussuf",
-          "51' S. Bornauw",
-          "53' B. Conté",
-          "83' T. Moffi",
-          "94' M. Muheim"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -24,19 +18,14 @@
         }
       },
       {
-        "id": 83192,
-        "home": "Borussia Dortmund",
-        "away": "SV Werder Bremen",
+        "id": 83203,
+        "home": "Eintracht Frankfurt",
+        "away": "1. FC Köln",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-09",
+        "date": "2026-10-16",
         "time": "20:30",
-        "goals": [
-          "80' Daniel Svensson",
-          "85' N. Schlotterbeck",
-          "88' L. Reis",
-          "92' N. Füllkrug"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -44,59 +33,14 @@
         }
       },
       {
-        "id": 83196,
-        "home": "FC Augsburg",
-        "away": "FC Bayern München",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-10",
-        "time": "15:30",
-        "goals": [
-          "1' R. Fellhauer",
-          "55' I. Saibari",
-          "64' Rodrigo Ribeiro",
-          "81' N. Brown"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83197,
-        "home": "1. FSV Mainz 05",
-        "away": "Bayer 04 Leverkusen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-10",
-        "time": "15:30",
-        "goals": [
-          "5' R. Andrich",
-          "9' P. Schick",
-          "33' A. Caci",
-          "42' A. Caci",
-          "55' J. Quansah",
-          "65' M. Diaby",
-          "92' B. Hollerbach"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83198,
+        "id": 83204,
         "home": "1. FC Union Berlin",
-        "away": "SV 07 Elversberg",
+        "away": "Borussia Dortmund",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-10",
+        "date": "2026-10-17",
         "time": "15:30",
-        "goals": [
-          "81' Livan Burcu"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -104,17 +48,14 @@
         }
       },
       {
-        "id": 83200,
-        "home": "SC Paderborn 07",
+        "id": 83206,
+        "home": "Hamburger SV",
         "away": "VfB Stuttgart",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-10",
+        "date": "2026-10-17",
         "time": "15:30",
-        "goals": [
-          "25' J. Chabot",
-          "84' C. Führich"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -122,21 +63,44 @@
         }
       },
       {
-        "id": 83193,
-        "home": "RB Leipzig",
-        "away": "Eintracht Frankfurt",
+        "id": 83207,
+        "home": "SV Werder Bremen",
+        "away": "SC Paderborn 07",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-10",
+        "date": "2026-10-17",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83208,
+        "home": "FC Schalke 04",
+        "away": "1. FSV Mainz 05",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83201,
+        "home": "FC Bayern München",
+        "away": "RB Leipzig",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
         "time": "18:30",
-        "goals": [
-          "1' E. Banzuzi",
-          "5' C. Nkunku",
-          "41' C. Nkunku",
-          "44' C. Nkunku",
-          "54' A. Nusa",
-          "89' T. Gomis"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -144,18 +108,14 @@
         }
       },
       {
-        "id": 83199,
-        "home": "1. FC Köln",
-        "away": "Borussia Mönchengladbach",
+        "id": 83202,
+        "home": "Bayer 04 Leverkusen",
+        "away": "SC Freiburg",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-11",
+        "date": "2026-10-18",
         "time": "15:30",
-        "goals": [
-          "26' Í. Jóhannesson",
-          "39' J. Scally",
-          "66' S. El Mala"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -163,18 +123,14 @@
         }
       },
       {
-        "id": 83195,
-        "home": "SC Freiburg",
-        "away": "FC Schalke 04",
+        "id": 83205,
+        "home": "Borussia Mönchengladbach",
+        "away": "TSG Hoffenheim",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-11",
+        "date": "2026-10-18",
         "time": "17:30",
-        "goals": [
-          "10' M. Eggestein",
-          "30' K. Karaman",
-          "85' K. Goto"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
