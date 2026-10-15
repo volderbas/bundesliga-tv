@@ -3,66 +3,6 @@
   "spieltage": {
     "8": [
       {
-        "id": 83628,
-        "home": "1. FC Kaiserslautern",
-        "away": "VfL Bochum",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-17",
-        "time": "13:00",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83629,
-        "home": "Karlsruher SC",
-        "away": "SV Darmstadt 98",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-18",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83630,
-        "home": "Dynamo Dresden",
-        "away": "1. FC Magdeburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-18",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83635,
-        "home": "DSC Arminia Bielefeld",
-        "away": "VfL Osnabrück",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-18",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83632,
         "home": "Holstein Kiel",
         "away": "Hertha BSC",
@@ -108,6 +48,21 @@
         }
       },
       {
+        "id": 83628,
+        "home": "1. FC Kaiserslautern",
+        "away": "VfL Bochum",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
+        "time": "13:00",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83639,
         "home": "SpVgg Greuther Fürth",
         "away": "Eintracht Braunschweig",
@@ -130,6 +85,51 @@
         "status": "SCHEDULED",
         "date": "2026-10-17",
         "time": "20:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83629,
+        "home": "Karlsruher SC",
+        "away": "SV Darmstadt 98",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-18",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83630,
+        "home": "Dynamo Dresden",
+        "away": "1. FC Magdeburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-18",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83635,
+        "home": "DSC Arminia Bielefeld",
+        "away": "VfL Osnabrück",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-18",
+        "time": "13:30",
         "goals": [],
         "cards": [],
         "lineups": {
