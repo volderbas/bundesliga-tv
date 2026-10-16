@@ -176,6 +176,11 @@
       "goalDiff": 0
     },
     {
+      "name": "Eintracht Frankfurt",
+      "points": 8,
+      "goalDiff": -6
+    },
+    {
       "name": "1. FSV Mainz 05",
       "points": 7,
       "goalDiff": 3
@@ -188,7 +193,7 @@
     {
       "name": "1. FC Köln",
       "points": 7,
-      "goalDiff": -2
+      "goalDiff": -3
     },
     {
       "name": "VfB Stuttgart",
@@ -204,11 +209,6 @@
       "name": "FC Schalke 04",
       "points": 5,
       "goalDiff": -2
-    },
-    {
-      "name": "Eintracht Frankfurt",
-      "points": 5,
-      "goalDiff": -7
     },
     {
       "name": "SC Paderborn 07",

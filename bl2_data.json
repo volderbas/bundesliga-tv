@@ -142,12 +142,12 @@
   "tabelle": [
     {
       "name": "Hertha BSC",
-      "points": 21,
+      "points": 22,
       "goalDiff": 11
     },
     {
       "name": "1. FC Nürnberg",
-      "points": 17,
+      "points": 18,
       "goalDiff": 10
     },
     {
@@ -177,7 +177,7 @@
     },
     {
       "name": "Energie Cottbus",
-      "points": 8,
+      "points": 9,
       "goalDiff": -1
     },
     {
@@ -216,6 +216,11 @@
       "goalDiff": -3
     },
     {
+      "name": "Holstein Kiel",
+      "points": 5,
+      "goalDiff": -4
+    },
+    {
       "name": "Dynamo Dresden",
       "points": 5,
       "goalDiff": -6
@@ -224,11 +229,6 @@
       "name": "Karlsruher SC",
       "points": 5,
       "goalDiff": -8
-    },
-    {
-      "name": "Holstein Kiel",
-      "points": 4,
-      "goalDiff": -4
     }
   ]
 }
