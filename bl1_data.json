@@ -3,6 +3,21 @@
   "spieltage": {
     "6": [
       {
+        "id": 83209,
+        "home": "SV 07 Elversberg",
+        "away": "FC Augsburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83203,
         "home": "Eintracht Frankfurt",
         "away": "1. FC Köln",
@@ -66,21 +81,6 @@
         "id": 83208,
         "home": "FC Schalke 04",
         "away": "1. FSV Mainz 05",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-17",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83209,
-        "home": "SV 07 Elversberg",
-        "away": "FC Augsburg",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-17",
