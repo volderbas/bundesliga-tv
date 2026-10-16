@@ -25,7 +25,10 @@
         "status": "SCHEDULED",
         "date": "2026-10-16",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "56' J. Butler",
+          "79' Styopa Mkrtchyan"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
