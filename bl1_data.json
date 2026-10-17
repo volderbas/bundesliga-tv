@@ -42,7 +42,9 @@
         "status": "SCHEDULED",
         "date": "2026-10-17",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "88' M. Muheim"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -57,7 +59,12 @@
         "status": "SCHEDULED",
         "date": "2026-10-17",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "18' S. Marino",
+          "30' S. Tigges",
+          "59' N. Füllkrug",
+          "65' N. Füllkrug"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -72,7 +79,9 @@
         "status": "SCHEDULED",
         "date": "2026-10-17",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "24' P. Tietz"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -87,7 +96,15 @@
         "status": "SCHEDULED",
         "date": "2026-10-17",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "4' L. Petkov",
+          "7' Lasse Günther",
+          "28' Maximilian Rohr",
+          "54' F. Rieder",
+          "76' M. Gregoritsch",
+          "89' Frederik Schmahl",
+          "90' Mert Kömür"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -102,7 +119,15 @@
         "status": "SCHEDULED",
         "date": "2026-10-17",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "12' Luis Díaz",
+          "26' Aleksandar Pavlovic",
+          "34' M. Olise",
+          "47' Luis Díaz",
+          "53' H. Kane",
+          "69' Luis Díaz",
+          "91' A. Maksimovic"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -143,6 +168,11 @@
   },
   "tabelle": [
     {
+      "name": "FC Bayern München",
+      "points": 14,
+      "goalDiff": 17
+    },
+    {
       "name": "Borussia Dortmund",
       "points": 14,
       "goalDiff": 7
@@ -151,11 +181,6 @@
       "name": "SC Freiburg",
       "points": 13,
       "goalDiff": 10
-    },
-    {
-      "name": "FC Bayern München",
-      "points": 11,
-      "goalDiff": 12
     },
     {
       "name": "Bayer 04 Leverkusen",
@@ -170,12 +195,12 @@
     {
       "name": "SV 07 Elversberg",
       "points": 10,
-      "goalDiff": 2
+      "goalDiff": 1
     },
     {
       "name": "RB Leipzig",
       "points": 9,
-      "goalDiff": 10
+      "goalDiff": 5
     },
     {
       "name": "SV Werder Bremen",
@@ -183,9 +208,14 @@
       "goalDiff": 0
     },
     {
+      "name": "Hamburger SV",
+      "points": 9,
+      "goalDiff": -9
+    },
+    {
       "name": "FC Augsburg",
       "points": 8,
-      "goalDiff": 3
+      "goalDiff": 4
     },
     {
       "name": "Eintracht Frankfurt",
@@ -193,19 +223,14 @@
       "goalDiff": -6
     },
     {
-      "name": "VfB Stuttgart",
-      "points": 7,
-      "goalDiff": -1
-    },
-    {
       "name": "1. FC Köln",
       "points": 7,
       "goalDiff": -3
     },
     {
-      "name": "Hamburger SV",
-      "points": 7,
-      "goalDiff": -10
+      "name": "VfB Stuttgart",
+      "points": 6,
+      "goalDiff": -2
     },
     {
       "name": "FC Schalke 04",
