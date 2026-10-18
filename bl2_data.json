@@ -3,6 +3,24 @@
   "spieltage": {
     "8": [
       {
+        "id": 83630,
+        "home": "Dynamo Dresden",
+        "away": "1. FC Magdeburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-18",
+        "time": "13:30",
+        "goals": [
+          "9' Niklas Hauptmann",
+          "50' S. Straudi"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83632,
         "home": "Holstein Kiel",
         "away": "Hertha BSC",
@@ -117,22 +135,12 @@
         "status": "SCHEDULED",
         "date": "2026-10-18",
         "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83630,
-        "home": "Dynamo Dresden",
-        "away": "1. FC Magdeburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-18",
-        "time": "13:30",
-        "goals": [],
+        "goals": [
+          "6' Shio Fukuda",
+          "13' M. Wanitzek",
+          "51' C. Kobald",
+          "65' Kevin Wiethaup"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -147,7 +155,11 @@
         "status": "SCHEDULED",
         "date": "2026-10-18",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "16' R. Meißner",
+          "26' M. Bauer",
+          "85' J. Rochelt"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
