@@ -180,12 +180,12 @@
     {
       "name": "SC Freiburg",
       "points": 13,
-      "goalDiff": 10
+      "goalDiff": 9
     },
     {
       "name": "Bayer 04 Leverkusen",
-      "points": 10,
-      "goalDiff": 6
+      "points": 13,
+      "goalDiff": 7
     },
     {
       "name": "1. FSV Mainz 05",
@@ -249,12 +249,12 @@
     },
     {
       "name": "TSG Hoffenheim",
-      "points": 3,
+      "points": 4,
       "goalDiff": -4
     },
     {
       "name": "Borussia Mönchengladbach",
-      "points": 0,
+      "points": 1,
       "goalDiff": -11
     }
   ]

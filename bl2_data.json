@@ -99,7 +99,10 @@
         "status": "SCHEDULED",
         "date": "2026-10-17",
         "time": "20:30",
-        "goals": [],
+        "goals": [
+          "46' A. Ceesay",
+          "48' Husseyn Chakroun"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -182,12 +185,17 @@
     {
       "name": "1. FC Magdeburg",
       "points": 13,
-      "goalDiff": 5
+      "goalDiff": 3
     },
     {
       "name": "FC St. Pauli",
       "points": 11,
       "goalDiff": 2
+    },
+    {
+      "name": "DSC Arminia Bielefeld",
+      "points": 11,
+      "goalDiff": 0
     },
     {
       "name": "Energie Cottbus",
@@ -200,14 +208,19 @@
       "goalDiff": -1
     },
     {
-      "name": "DSC Arminia Bielefeld",
+      "name": "Dynamo Dresden",
       "points": 8,
-      "goalDiff": -1
+      "goalDiff": -4
     },
     {
       "name": "VfL Osnabrück",
       "points": 8,
-      "goalDiff": -3
+      "goalDiff": -4
+    },
+    {
+      "name": "Karlsruher SC",
+      "points": 8,
+      "goalDiff": -4
     },
     {
       "name": "Hannover 96",
@@ -227,22 +240,12 @@
     {
       "name": "SV Darmstadt 98",
       "points": 7,
-      "goalDiff": -6
+      "goalDiff": -10
     },
     {
       "name": "Holstein Kiel",
       "points": 5,
       "goalDiff": -4
-    },
-    {
-      "name": "Dynamo Dresden",
-      "points": 5,
-      "goalDiff": -6
-    },
-    {
-      "name": "Karlsruher SC",
-      "points": 5,
-      "goalDiff": -8
     }
   ]
 }
