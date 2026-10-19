@@ -3,17 +3,44 @@
   "spieltage": {
     "6": [
       {
-        "id": 83205,
-        "home": "Borussia Mönchengladbach",
-        "away": "TSG Hoffenheim",
+        "id": 83201,
+        "home": "FC Bayern München",
+        "away": "RB Leipzig",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-18",
-        "time": "17:30",
+        "date": "2026-10-17",
+        "time": "18:30",
         "goals": [
-          "11' B. Conté",
-          "49' W. Mohya",
-          "54' A. Prass"
+          "12' Luis Díaz",
+          "26' Aleksandar Pavlovic",
+          "34' M. Olise",
+          "47' Luis Díaz",
+          "53' H. Kane",
+          "69' Luis Díaz",
+          "91' A. Maksimovic"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83209,
+        "home": "SV 07 Elversberg",
+        "away": "FC Augsburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
+        "time": "15:30",
+        "goals": [
+          "4' L. Petkov",
+          "7' Lasse Günther",
+          "28' Maximilian Rohr",
+          "54' F. Rieder",
+          "76' M. Gregoritsch",
+          "89' Frederik Schmahl",
+          "90' Mert Kömür"
         ],
         "cards": [],
         "lineups": {
@@ -108,52 +135,6 @@
         }
       },
       {
-        "id": 83209,
-        "home": "SV 07 Elversberg",
-        "away": "FC Augsburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-17",
-        "time": "15:30",
-        "goals": [
-          "4' L. Petkov",
-          "7' Lasse Günther",
-          "28' Maximilian Rohr",
-          "54' F. Rieder",
-          "76' M. Gregoritsch",
-          "89' Frederik Schmahl",
-          "90' Mert Kömür"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83201,
-        "home": "FC Bayern München",
-        "away": "RB Leipzig",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-17",
-        "time": "18:30",
-        "goals": [
-          "12' Luis Díaz",
-          "26' Aleksandar Pavlovic",
-          "34' M. Olise",
-          "47' Luis Díaz",
-          "53' H. Kane",
-          "69' Luis Díaz",
-          "91' A. Maksimovic"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83202,
         "home": "Bayer 04 Leverkusen",
         "away": "SC Freiburg",
@@ -165,6 +146,25 @@
           "14' D. Scherhant",
           "19' Ibrahim Maza",
           "76' P. Schick"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83205,
+        "home": "Borussia Mönchengladbach",
+        "away": "TSG Hoffenheim",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-18",
+        "time": "17:30",
+        "goals": [
+          "11' B. Conté",
+          "49' W. Mohya",
+          "54' A. Prass"
         ],
         "cards": [],
         "lineups": {
