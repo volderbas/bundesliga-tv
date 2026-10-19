@@ -3,52 +3,6 @@
   "spieltage": {
     "6": [
       {
-        "id": 83201,
-        "home": "FC Bayern München",
-        "away": "RB Leipzig",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-17",
-        "time": "18:30",
-        "goals": [
-          "12' Luis Díaz",
-          "26' Aleksandar Pavlovic",
-          "34' M. Olise",
-          "47' Luis Díaz",
-          "53' H. Kane",
-          "69' Luis Díaz",
-          "91' A. Maksimovic"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83209,
-        "home": "SV 07 Elversberg",
-        "away": "FC Augsburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-17",
-        "time": "15:30",
-        "goals": [
-          "4' L. Petkov",
-          "7' Lasse Günther",
-          "28' Maximilian Rohr",
-          "54' F. Rieder",
-          "76' M. Gregoritsch",
-          "89' Frederik Schmahl",
-          "90' Mert Kömür"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83203,
         "home": "Eintracht Frankfurt",
         "away": "1. FC Köln",
@@ -127,6 +81,52 @@
         "time": "15:30",
         "goals": [
           "24' P. Tietz"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83209,
+        "home": "SV 07 Elversberg",
+        "away": "FC Augsburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
+        "time": "15:30",
+        "goals": [
+          "4' L. Petkov",
+          "7' Lasse Günther",
+          "28' Maximilian Rohr",
+          "54' F. Rieder",
+          "76' M. Gregoritsch",
+          "89' Frederik Schmahl",
+          "90' Mert Kömür"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83201,
+        "home": "FC Bayern München",
+        "away": "RB Leipzig",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
+        "time": "18:30",
+        "goals": [
+          "12' Luis Díaz",
+          "26' Aleksandar Pavlovic",
+          "34' M. Olise",
+          "47' Luis Díaz",
+          "53' H. Kane",
+          "69' Luis Díaz",
+          "91' A. Maksimovic"
         ],
         "cards": [],
         "lineups": {
