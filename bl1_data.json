@@ -3,6 +3,25 @@
   "spieltage": {
     "6": [
       {
+        "id": 83205,
+        "home": "Borussia Mönchengladbach",
+        "away": "TSG Hoffenheim",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-18",
+        "time": "17:30",
+        "goals": [
+          "11' B. Conté",
+          "49' W. Mohya",
+          "54' A. Prass"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83203,
         "home": "Eintracht Frankfurt",
         "away": "1. FC Köln",
@@ -146,25 +165,6 @@
           "14' D. Scherhant",
           "19' Ibrahim Maza",
           "76' P. Schick"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83205,
-        "home": "Borussia Mönchengladbach",
-        "away": "TSG Hoffenheim",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-18",
-        "time": "17:30",
-        "goals": [
-          "11' B. Conté",
-          "49' W. Mohya",
-          "54' A. Prass"
         ],
         "cards": [],
         "lineups": {

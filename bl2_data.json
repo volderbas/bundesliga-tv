@@ -3,35 +3,16 @@
   "spieltage": {
     "8": [
       {
-        "id": 83639,
-        "home": "SpVgg Greuther Fürth",
-        "away": "Eintracht Braunschweig",
+        "id": 83628,
+        "home": "1. FC Kaiserslautern",
+        "away": "VfL Bochum",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-17",
         "time": "13:00",
         "goals": [
-          "32' F. Klaus",
-          "63' F. Klaus"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83635,
-        "home": "DSC Arminia Bielefeld",
-        "away": "VfL Osnabrück",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-18",
-        "time": "13:30",
-        "goals": [
-          "16' R. Meißner",
-          "26' M. Bauer",
-          "85' J. Rochelt"
+          "31' Miloš Lukovic",
+          "75' Semih Sahin"
         ],
         "cards": [],
         "lineups": {
@@ -93,16 +74,16 @@
         }
       },
       {
-        "id": 83628,
-        "home": "1. FC Kaiserslautern",
-        "away": "VfL Bochum",
+        "id": 83639,
+        "home": "SpVgg Greuther Fürth",
+        "away": "Eintracht Braunschweig",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-17",
         "time": "13:00",
         "goals": [
-          "31' Miloš Lukovic",
-          "75' Semih Sahin"
+          "32' F. Klaus",
+          "63' F. Klaus"
         ],
         "cards": [],
         "lineups": {
@@ -159,6 +140,25 @@
         "goals": [
           "9' Niklas Hauptmann",
           "50' S. Straudi"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83635,
+        "home": "DSC Arminia Bielefeld",
+        "away": "VfL Osnabrück",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-18",
+        "time": "13:30",
+        "goals": [
+          "16' R. Meißner",
+          "26' M. Bauer",
+          "85' J. Rochelt"
         ],
         "cards": [],
         "lineups": {
