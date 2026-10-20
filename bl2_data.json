@@ -3,24 +3,6 @@
   "spieltage": {
     "8": [
       {
-        "id": 83628,
-        "home": "1. FC Kaiserslautern",
-        "away": "VfL Bochum",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-17",
-        "time": "13:00",
-        "goals": [
-          "31' Miloš Lukovic",
-          "75' Semih Sahin"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83632,
         "home": "Holstein Kiel",
         "away": "Hertha BSC",
@@ -66,6 +48,24 @@
           "22' P. Mainka",
           "46' R. Glatzel",
           "65' M. Damar"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83628,
+        "home": "1. FC Kaiserslautern",
+        "away": "VfL Bochum",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
+        "time": "13:00",
+        "goals": [
+          "31' Miloš Lukovic",
+          "75' Semih Sahin"
         ],
         "cards": [],
         "lineups": {
