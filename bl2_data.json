@@ -3,6 +3,26 @@
   "spieltage": {
     "8": [
       {
+        "id": 83629,
+        "home": "Karlsruher SC",
+        "away": "SV Darmstadt 98",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-18",
+        "time": "13:30",
+        "goals": [
+          "6' Shio Fukuda",
+          "13' M. Wanitzek",
+          "51' C. Kobald",
+          "65' Kevin Wiethaup"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83632,
         "home": "Holstein Kiel",
         "away": "Hertha BSC",
@@ -102,26 +122,6 @@
         "goals": [
           "46' A. Ceesay",
           "48' Husseyn Chakroun"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83629,
-        "home": "Karlsruher SC",
-        "away": "SV Darmstadt 98",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-18",
-        "time": "13:30",
-        "goals": [
-          "6' Shio Fukuda",
-          "13' M. Wanitzek",
-          "51' C. Kobald",
-          "65' Kevin Wiethaup"
         ],
         "cards": [],
         "lineups": {

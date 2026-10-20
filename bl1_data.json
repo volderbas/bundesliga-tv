@@ -20,6 +20,68 @@
         }
       },
       {
+        "id": 83207,
+        "home": "SV Werder Bremen",
+        "away": "SC Paderborn 07",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
+        "time": "15:30",
+        "goals": [
+          "18' S. Marino",
+          "30' S. Tigges",
+          "59' N. Füllkrug",
+          "65' N. Füllkrug"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83209,
+        "home": "SV 07 Elversberg",
+        "away": "FC Augsburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
+        "time": "15:30",
+        "goals": [
+          "4' L. Petkov",
+          "7' Lasse Günther",
+          "28' Maximilian Rohr",
+          "54' F. Rieder",
+          "76' M. Gregoritsch",
+          "89' Frederik Schmahl",
+          "90' Mert Kömür"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83205,
+        "home": "Borussia Mönchengladbach",
+        "away": "TSG Hoffenheim",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-18",
+        "time": "17:30",
+        "goals": [
+          "11' B. Conté",
+          "49' W. Mohya",
+          "54' A. Prass"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83204,
         "home": "1. FC Union Berlin",
         "away": "Borussia Dortmund",
@@ -52,26 +114,6 @@
         }
       },
       {
-        "id": 83207,
-        "home": "SV Werder Bremen",
-        "away": "SC Paderborn 07",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-17",
-        "time": "15:30",
-        "goals": [
-          "18' S. Marino",
-          "30' S. Tigges",
-          "59' N. Füllkrug",
-          "65' N. Füllkrug"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83208,
         "home": "FC Schalke 04",
         "away": "1. FSV Mainz 05",
@@ -81,29 +123,6 @@
         "time": "15:30",
         "goals": [
           "24' P. Tietz"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83209,
-        "home": "SV 07 Elversberg",
-        "away": "FC Augsburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-17",
-        "time": "15:30",
-        "goals": [
-          "4' L. Petkov",
-          "7' Lasse Günther",
-          "28' Maximilian Rohr",
-          "54' F. Rieder",
-          "76' M. Gregoritsch",
-          "89' Frederik Schmahl",
-          "90' Mert Kömür"
         ],
         "cards": [],
         "lineups": {
@@ -146,25 +165,6 @@
           "14' D. Scherhant",
           "19' Ibrahim Maza",
           "76' P. Schick"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83205,
-        "home": "Borussia Mönchengladbach",
-        "away": "TSG Hoffenheim",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-18",
-        "time": "17:30",
-        "goals": [
-          "11' B. Conté",
-          "49' W. Mohya",
-          "54' A. Prass"
         ],
         "cards": [],
         "lineups": {
