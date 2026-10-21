@@ -3,6 +3,42 @@
   "spieltage": {
     "6": [
       {
+        "id": 83208,
+        "home": "FC Schalke 04",
+        "away": "1. FSV Mainz 05",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
+        "time": "15:30",
+        "goals": [
+          "24' P. Tietz"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83205,
+        "home": "Borussia Mönchengladbach",
+        "away": "TSG Hoffenheim",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-18",
+        "time": "17:30",
+        "goals": [
+          "11' B. Conté",
+          "49' W. Mohya",
+          "54' A. Prass"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83203,
         "home": "Eintracht Frankfurt",
         "away": "1. FC Köln",
@@ -12,6 +48,38 @@
         "time": "20:30",
         "goals": [
           "77' Younes Ebnoutalib"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83204,
+        "home": "1. FC Union Berlin",
+        "away": "Borussia Dortmund",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83206,
+        "home": "Hamburger SV",
+        "away": "VfB Stuttgart",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-17",
+        "time": "15:30",
+        "goals": [
+          "88' M. Muheim"
         ],
         "cards": [],
         "lineups": {
@@ -55,74 +123,6 @@
           "76' M. Gregoritsch",
           "89' Frederik Schmahl",
           "90' Mert Kömür"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83205,
-        "home": "Borussia Mönchengladbach",
-        "away": "TSG Hoffenheim",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-18",
-        "time": "17:30",
-        "goals": [
-          "11' B. Conté",
-          "49' W. Mohya",
-          "54' A. Prass"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83204,
-        "home": "1. FC Union Berlin",
-        "away": "Borussia Dortmund",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-17",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83206,
-        "home": "Hamburger SV",
-        "away": "VfB Stuttgart",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-17",
-        "time": "15:30",
-        "goals": [
-          "88' M. Muheim"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83208,
-        "home": "FC Schalke 04",
-        "away": "1. FSV Mainz 05",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-17",
-        "time": "15:30",
-        "goals": [
-          "24' P. Tietz"
         ],
         "cards": [],
         "lineups": {
