@@ -3,13 +3,13 @@
   "spieltage": {
     "7": [
       {
-        "id": 83213,
-        "home": "TSG Hoffenheim",
-        "away": "Bayer 04 Leverkusen",
+        "id": 83210,
+        "home": "Borussia Dortmund",
+        "away": "Eintracht Frankfurt",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-25",
-        "time": "15:30",
+        "date": "2026-10-24",
+        "time": "18:30",
         "goals": [],
         "cards": [],
         "lineups": {
@@ -108,13 +108,13 @@
         }
       },
       {
-        "id": 83210,
-        "home": "Borussia Dortmund",
-        "away": "Eintracht Frankfurt",
+        "id": 83213,
+        "home": "TSG Hoffenheim",
+        "away": "Bayer 04 Leverkusen",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "18:30",
+        "date": "2026-10-25",
+        "time": "15:30",
         "goals": [],
         "cards": [],
         "lineups": {
