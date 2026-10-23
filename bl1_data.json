@@ -3,21 +3,6 @@
   "spieltage": {
     "7": [
       {
-        "id": 83210,
-        "home": "Borussia Dortmund",
-        "away": "Eintracht Frankfurt",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "18:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83212,
         "home": "VfB Stuttgart",
         "away": "Borussia Mönchengladbach",
@@ -100,6 +85,21 @@
         "status": "SCHEDULED",
         "date": "2026-10-24",
         "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83210,
+        "home": "Borussia Dortmund",
+        "away": "Eintracht Frankfurt",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-24",
+        "time": "18:30",
         "goals": [],
         "cards": [],
         "lineups": {
