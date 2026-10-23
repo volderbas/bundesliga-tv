@@ -3,13 +3,13 @@
   "spieltage": {
     "9": [
       {
-        "id": 83652,
-        "home": "1. FC Nürnberg",
-        "away": "1. FC Kaiserslautern",
+        "id": 83659,
+        "home": "1. FC Magdeburg",
+        "away": "Karlsruher SC",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-24",
-        "time": "20:30",
+        "time": "13:00",
         "goals": [],
         "cards": [],
         "lineups": {
@@ -40,7 +40,10 @@
         "status": "SCHEDULED",
         "date": "2026-10-23",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "2' F. Reese",
+          "63' Sean Klaiber"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -78,13 +81,13 @@
         }
       },
       {
-        "id": 83659,
-        "home": "1. FC Magdeburg",
-        "away": "Karlsruher SC",
+        "id": 83652,
+        "home": "1. FC Nürnberg",
+        "away": "1. FC Kaiserslautern",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-24",
-        "time": "13:00",
+        "time": "20:30",
         "goals": [],
         "cards": [],
         "lineups": {
@@ -146,14 +149,14 @@
       "goalDiff": 11
     },
     {
-      "name": "VfL Wolfsburg",
+      "name": "1. FC Nürnberg",
       "points": 18,
       "goalDiff": 10
     },
     {
-      "name": "1. FC Nürnberg",
-      "points": 18,
-      "goalDiff": 10
+      "name": "VfL Wolfsburg",
+      "points": 16,
+      "goalDiff": 9
     },
     {
       "name": "1. FC Kaiserslautern",
@@ -206,6 +209,11 @@
       "goalDiff": -4
     },
     {
+      "name": "VfL Bochum",
+      "points": 8,
+      "goalDiff": -4
+    },
+    {
       "name": "Hannover 96",
       "points": 8,
       "goalDiff": -5
@@ -219,11 +227,6 @@
       "name": "Eintracht Braunschweig",
       "points": 7,
       "goalDiff": -2
-    },
-    {
-      "name": "VfL Bochum",
-      "points": 7,
-      "goalDiff": -5
     },
     {
       "name": "Holstein Kiel",

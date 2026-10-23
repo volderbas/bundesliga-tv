@@ -10,7 +10,13 @@
         "status": "SCHEDULED",
         "date": "2026-10-23",
         "time": "20:30",
-        "goals": [],
+        "goals": [
+          "5' E. Demirovic",
+          "38' J. Scally",
+          "51' S. Machino",
+          "66' W. Mohya",
+          "83' E. Demirovic"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -201,12 +207,12 @@
       "goalDiff": -3
     },
     {
-      "name": "VfB Stuttgart",
+      "name": "TSG Hoffenheim",
       "points": 6,
-      "goalDiff": -2
+      "goalDiff": -3
     },
     {
-      "name": "TSG Hoffenheim",
+      "name": "VfB Stuttgart",
       "points": 6,
       "goalDiff": -3
     },
@@ -227,8 +233,8 @@
     },
     {
       "name": "Borussia Mönchengladbach",
-      "points": 0,
-      "goalDiff": -12
+      "points": 3,
+      "goalDiff": -11
     }
   ]
 }
