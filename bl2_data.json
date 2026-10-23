@@ -3,6 +3,21 @@
   "spieltage": {
     "9": [
       {
+        "id": 83652,
+        "home": "1. FC Nürnberg",
+        "away": "1. FC Kaiserslautern",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-24",
+        "time": "20:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83648,
         "home": "SV Darmstadt 98",
         "away": "FC St. Pauli",
@@ -78,21 +93,6 @@
         }
       },
       {
-        "id": 83652,
-        "home": "1. FC Nürnberg",
-        "away": "1. FC Kaiserslautern",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "20:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83658,
         "home": "Holstein Kiel",
         "away": "Dynamo Dresden",
@@ -146,14 +146,14 @@
       "goalDiff": 11
     },
     {
-      "name": "1. FC Nürnberg",
+      "name": "VfL Wolfsburg",
       "points": 18,
       "goalDiff": 10
     },
     {
-      "name": "VfL Wolfsburg",
-      "points": 15,
-      "goalDiff": 9
+      "name": "1. FC Nürnberg",
+      "points": 18,
+      "goalDiff": 10
     },
     {
       "name": "1. FC Kaiserslautern",
@@ -172,7 +172,7 @@
     },
     {
       "name": "FC St. Pauli",
-      "points": 11,
+      "points": 12,
       "goalDiff": 2
     },
     {
@@ -211,6 +211,11 @@
       "goalDiff": -5
     },
     {
+      "name": "SV Darmstadt 98",
+      "points": 8,
+      "goalDiff": -10
+    },
+    {
       "name": "Eintracht Braunschweig",
       "points": 7,
       "goalDiff": -2
@@ -218,12 +223,7 @@
     {
       "name": "VfL Bochum",
       "points": 7,
-      "goalDiff": -4
-    },
-    {
-      "name": "SV Darmstadt 98",
-      "points": 7,
-      "goalDiff": -10
+      "goalDiff": -5
     },
     {
       "name": "Holstein Kiel",
