@@ -3,6 +3,21 @@
   "spieltage": {
     "9": [
       {
+        "id": 83658,
+        "home": "Holstein Kiel",
+        "away": "Dynamo Dresden",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-25",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83648,
         "home": "SV Darmstadt 98",
         "away": "FC St. Pauli",
@@ -43,7 +58,10 @@
         "status": "SCHEDULED",
         "date": "2026-10-24",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "40' Lucas Copado",
+          "49' O. Mhamdi"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -73,7 +91,13 @@
         "status": "SCHEDULED",
         "date": "2026-10-24",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "39' M. Zukowski",
+          "51' M. Zukowski",
+          "54' García MacNulty",
+          "59' E. Iyoha",
+          "66' R. Simic"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -88,21 +112,6 @@
         "status": "SCHEDULED",
         "date": "2026-10-24",
         "time": "20:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83658,
-        "home": "Holstein Kiel",
-        "away": "Dynamo Dresden",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-25",
-        "time": "13:30",
         "goals": [],
         "cards": [],
         "lineups": {
@@ -145,8 +154,8 @@
   "tabelle": [
     {
       "name": "Hertha BSC",
-      "points": 22,
-      "goalDiff": 11
+      "points": 25,
+      "goalDiff": 12
     },
     {
       "name": "1. FC Nürnberg",
@@ -159,19 +168,19 @@
       "goalDiff": 9
     },
     {
+      "name": "1. FC Magdeburg",
+      "points": 16,
+      "goalDiff": 8
+    },
+    {
       "name": "1. FC Kaiserslautern",
       "points": 15,
       "goalDiff": 4
     },
     {
       "name": "1. FC Heidenheim 1846",
-      "points": 14,
+      "points": 15,
       "goalDiff": 0
-    },
-    {
-      "name": "1. FC Magdeburg",
-      "points": 13,
-      "goalDiff": 3
     },
     {
       "name": "FC St. Pauli",
@@ -181,11 +190,11 @@
     {
       "name": "DSC Arminia Bielefeld",
       "points": 11,
-      "goalDiff": 0
+      "goalDiff": -1
     },
     {
       "name": "Energie Cottbus",
-      "points": 9,
+      "points": 10,
       "goalDiff": -1
     },
     {
@@ -204,11 +213,6 @@
       "goalDiff": -4
     },
     {
-      "name": "Karlsruher SC",
-      "points": 8,
-      "goalDiff": -4
-    },
-    {
       "name": "VfL Bochum",
       "points": 8,
       "goalDiff": -4
@@ -217,6 +221,11 @@
       "name": "Hannover 96",
       "points": 8,
       "goalDiff": -5
+    },
+    {
+      "name": "Karlsruher SC",
+      "points": 8,
+      "goalDiff": -9
     },
     {
       "name": "SV Darmstadt 98",

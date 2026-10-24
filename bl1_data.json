@@ -167,44 +167,49 @@
       "goalDiff": 7
     },
     {
+      "name": "RB Leipzig",
+      "points": 12,
+      "goalDiff": 9
+    },
+    {
+      "name": "SV Werder Bremen",
+      "points": 12,
+      "goalDiff": 1
+    },
+    {
       "name": "1. FSV Mainz 05",
       "points": 10,
-      "goalDiff": 4
+      "goalDiff": 3
     },
     {
       "name": "SV 07 Elversberg",
       "points": 10,
-      "goalDiff": 1
+      "goalDiff": -3
     },
     {
-      "name": "RB Leipzig",
+      "name": "FC Augsburg",
       "points": 9,
-      "goalDiff": 5
-    },
-    {
-      "name": "SV Werder Bremen",
-      "points": 9,
-      "goalDiff": 0
+      "goalDiff": 4
     },
     {
       "name": "Hamburger SV",
       "points": 9,
-      "goalDiff": -9
+      "goalDiff": -10
     },
     {
-      "name": "FC Augsburg",
+      "name": "1. FC Köln",
       "points": 8,
-      "goalDiff": 4
+      "goalDiff": -3
+    },
+    {
+      "name": "SC Paderborn 07",
+      "points": 8,
+      "goalDiff": -3
     },
     {
       "name": "Eintracht Frankfurt",
       "points": 8,
       "goalDiff": -6
-    },
-    {
-      "name": "1. FC Köln",
-      "points": 7,
-      "goalDiff": -3
     },
     {
       "name": "TSG Hoffenheim",
@@ -218,17 +223,12 @@
     },
     {
       "name": "FC Schalke 04",
-      "points": 5,
+      "points": 6,
       "goalDiff": -3
     },
     {
-      "name": "SC Paderborn 07",
-      "points": 5,
-      "goalDiff": -4
-    },
-    {
       "name": "1. FC Union Berlin",
-      "points": 5,
+      "points": 6,
       "goalDiff": -12
     },
     {
