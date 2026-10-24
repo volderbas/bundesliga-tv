@@ -31,7 +31,12 @@
         "status": "SCHEDULED",
         "date": "2026-10-24",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "48' T. Gomis",
+          "66' Romulo",
+          "84' C. Baumgartner",
+          "94' Romulo"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -46,7 +51,10 @@
         "status": "SCHEDULED",
         "date": "2026-10-24",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "71' Han-Noah Massengo",
+          "74' J. Haberer"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -61,7 +69,13 @@
         "status": "SCHEDULED",
         "date": "2026-10-24",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "6' N. Füllkrug",
+          "24' N. Füllkrug",
+          "33' A. Caci",
+          "61' L. Reis",
+          "64' Lee Jae-sung"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -91,7 +105,9 @@
         "status": "SCHEDULED",
         "date": "2026-10-24",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "88' R. Philippe"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -147,14 +163,14 @@
   },
   "tabelle": [
     {
+      "name": "Borussia Dortmund",
+      "points": 17,
+      "goalDiff": 8
+    },
+    {
       "name": "FC Bayern München",
       "points": 14,
       "goalDiff": 17
-    },
-    {
-      "name": "Borussia Dortmund",
-      "points": 14,
-      "goalDiff": 7
     },
     {
       "name": "SC Freiburg",
@@ -209,7 +225,7 @@
     {
       "name": "Eintracht Frankfurt",
       "points": 8,
-      "goalDiff": -6
+      "goalDiff": -7
     },
     {
       "name": "TSG Hoffenheim",

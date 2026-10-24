@@ -3,21 +3,6 @@
   "spieltage": {
     "9": [
       {
-        "id": 83658,
-        "home": "Holstein Kiel",
-        "away": "Dynamo Dresden",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-25",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83648,
         "home": "SV Darmstadt 98",
         "away": "FC St. Pauli",
@@ -76,7 +61,9 @@
         "status": "SCHEDULED",
         "date": "2026-10-24",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "93' J. Brekalo"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -96,7 +83,9 @@
           "51' M. Zukowski",
           "54' García MacNulty",
           "59' E. Iyoha",
-          "66' R. Simic"
+          "66' R. Simic",
+          "82' Deniz Ofli",
+          "93' Leon Mergner"
         ],
         "cards": [],
         "lineups": {
@@ -112,6 +101,21 @@
         "status": "SCHEDULED",
         "date": "2026-10-24",
         "time": "20:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83658,
+        "home": "Holstein Kiel",
+        "away": "Dynamo Dresden",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-25",
+        "time": "13:30",
         "goals": [],
         "cards": [],
         "lineups": {
@@ -160,7 +164,12 @@
     {
       "name": "1. FC Nürnberg",
       "points": 18,
-      "goalDiff": 10
+      "goalDiff": 9
+    },
+    {
+      "name": "1. FC Kaiserslautern",
+      "points": 18,
+      "goalDiff": 5
     },
     {
       "name": "VfL Wolfsburg",
@@ -171,11 +180,6 @@
       "name": "1. FC Magdeburg",
       "points": 16,
       "goalDiff": 8
-    },
-    {
-      "name": "1. FC Kaiserslautern",
-      "points": 15,
-      "goalDiff": 4
     },
     {
       "name": "1. FC Heidenheim 1846",
