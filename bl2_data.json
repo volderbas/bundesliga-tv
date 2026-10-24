@@ -3,21 +3,6 @@
   "spieltage": {
     "9": [
       {
-        "id": 83659,
-        "home": "1. FC Magdeburg",
-        "away": "Karlsruher SC",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "13:00",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83648,
         "home": "SV Darmstadt 98",
         "away": "FC St. Pauli",
@@ -69,6 +54,21 @@
         "id": 83650,
         "home": "Hertha BSC",
         "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-24",
+        "time": "13:00",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83659,
+        "home": "1. FC Magdeburg",
+        "away": "Karlsruher SC",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-24",
