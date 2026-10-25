@@ -101,7 +101,9 @@
         "status": "SCHEDULED",
         "date": "2026-10-24",
         "time": "20:30",
-        "goals": [],
+        "goals": [
+          "58' Erencan Yardimci"
+        ],
         "cards": [],
         "lineups": {
           "home": [],

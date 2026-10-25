@@ -122,7 +122,9 @@
         "status": "SCHEDULED",
         "date": "2026-10-24",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "80' M. Beier"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
