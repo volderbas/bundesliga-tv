@@ -118,7 +118,11 @@
         "status": "SCHEDULED",
         "date": "2026-10-25",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "9' Giorgi Kvilitaia",
+          "73' J. Therkelsen",
+          "85' Phil Harres"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -133,7 +137,10 @@
         "status": "SCHEDULED",
         "date": "2026-10-25",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "17' Max Marie",
+          "92' Y. Sturm"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -148,7 +155,11 @@
         "status": "SCHEDULED",
         "date": "2026-10-25",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "37' Daniel Kofi Kyereh",
+          "39' R. Meißner",
+          "75' I. Badjie"
+        ],
         "cards": [],
         "lineups": {
           "home": [],

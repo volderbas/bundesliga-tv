@@ -3,6 +3,26 @@
   "spieltage": {
     "7": [
       {
+        "id": 83214,
+        "home": "SC Freiburg",
+        "away": "FC Bayern München",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-25",
+        "time": "17:30",
+        "goals": [
+          "16' D. Upamecano",
+          "42' S. Gnabry",
+          "82' T. Bischof",
+          "95' M. Olise"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83212,
         "home": "VfB Stuttgart",
         "away": "Borussia Mönchengladbach",
@@ -139,22 +159,11 @@
         "status": "SCHEDULED",
         "date": "2026-10-25",
         "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83214,
-        "home": "SC Freiburg",
-        "away": "FC Bayern München",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-25",
-        "time": "17:30",
-        "goals": [],
+        "goals": [
+          "78' A. Kramaric",
+          "90' A. Prass",
+          "95' M. Moerstedt"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -165,24 +174,24 @@
   },
   "tabelle": [
     {
+      "name": "FC Bayern München",
+      "points": 17,
+      "goalDiff": 19
+    },
+    {
       "name": "Borussia Dortmund",
       "points": 17,
       "goalDiff": 8
     },
     {
-      "name": "FC Bayern München",
-      "points": 14,
-      "goalDiff": 17
-    },
-    {
-      "name": "Bayer 04 Leverkusen",
-      "points": 14,
+      "name": "SC Freiburg",
+      "points": 13,
       "goalDiff": 7
     },
     {
-      "name": "SC Freiburg",
+      "name": "Bayer 04 Leverkusen",
       "points": 13,
-      "goalDiff": 9
+      "goalDiff": 4
     },
     {
       "name": "RB Leipzig",
@@ -210,6 +219,11 @@
       "goalDiff": 4
     },
     {
+      "name": "TSG Hoffenheim",
+      "points": 9,
+      "goalDiff": 0
+    },
+    {
       "name": "Hamburger SV",
       "points": 9,
       "goalDiff": -10
@@ -228,11 +242,6 @@
       "name": "Eintracht Frankfurt",
       "points": 8,
       "goalDiff": -7
-    },
-    {
-      "name": "TSG Hoffenheim",
-      "points": 7,
-      "goalDiff": -3
     },
     {
       "name": "VfB Stuttgart",
