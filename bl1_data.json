@@ -175,14 +175,14 @@
       "goalDiff": 17
     },
     {
+      "name": "Bayer 04 Leverkusen",
+      "points": 14,
+      "goalDiff": 7
+    },
+    {
       "name": "SC Freiburg",
       "points": 13,
       "goalDiff": 9
-    },
-    {
-      "name": "Bayer 04 Leverkusen",
-      "points": 13,
-      "goalDiff": 7
     },
     {
       "name": "RB Leipzig",
@@ -231,7 +231,7 @@
     },
     {
       "name": "TSG Hoffenheim",
-      "points": 6,
+      "points": 7,
       "goalDiff": -3
     },
     {
