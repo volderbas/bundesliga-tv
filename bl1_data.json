@@ -3,18 +3,15 @@
   "spieltage": {
     "7": [
       {
-        "id": 83214,
-        "home": "SC Freiburg",
-        "away": "FC Bayern München",
+        "id": 83210,
+        "home": "Borussia Dortmund",
+        "away": "Eintracht Frankfurt",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-25",
-        "time": "17:30",
+        "date": "2026-10-24",
+        "time": "18:30",
         "goals": [
-          "16' D. Upamecano",
-          "42' S. Gnabry",
-          "82' T. Bischof",
-          "95' M. Olise"
+          "80' M. Beier"
         ],
         "cards": [],
         "lineups": {
@@ -135,23 +132,6 @@
         }
       },
       {
-        "id": 83210,
-        "home": "Borussia Dortmund",
-        "away": "Eintracht Frankfurt",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "18:30",
-        "goals": [
-          "80' M. Beier"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83213,
         "home": "TSG Hoffenheim",
         "away": "Bayer 04 Leverkusen",
@@ -163,6 +143,26 @@
           "78' A. Kramaric",
           "90' A. Prass",
           "95' M. Moerstedt"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83214,
+        "home": "SC Freiburg",
+        "away": "FC Bayern München",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-25",
+        "time": "17:30",
+        "goals": [
+          "16' D. Upamecano",
+          "42' S. Gnabry",
+          "82' T. Bischof",
+          "95' M. Olise"
         ],
         "cards": [],
         "lineups": {
