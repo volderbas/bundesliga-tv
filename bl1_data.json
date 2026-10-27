@@ -3,26 +3,6 @@
   "spieltage": {
     "7": [
       {
-        "id": 83214,
-        "home": "SC Freiburg",
-        "away": "FC Bayern München",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-25",
-        "time": "17:30",
-        "goals": [
-          "16' D. Upamecano",
-          "42' S. Gnabry",
-          "82' T. Bischof",
-          "95' M. Olise"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83212,
         "home": "VfB Stuttgart",
         "away": "Borussia Mönchengladbach",
@@ -163,6 +143,26 @@
           "78' A. Kramaric",
           "90' A. Prass",
           "95' M. Moerstedt"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83214,
+        "home": "SC Freiburg",
+        "away": "FC Bayern München",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-25",
+        "time": "17:30",
+        "goals": [
+          "16' D. Upamecano",
+          "42' S. Gnabry",
+          "82' T. Bischof",
+          "95' M. Olise"
         ],
         "cards": [],
         "lineups": {
