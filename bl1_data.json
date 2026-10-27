@@ -3,6 +3,25 @@
   "spieltage": {
     "7": [
       {
+        "id": 83213,
+        "home": "TSG Hoffenheim",
+        "away": "Bayer 04 Leverkusen",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-25",
+        "time": "15:30",
+        "goals": [
+          "78' A. Kramaric",
+          "90' A. Prass",
+          "95' M. Moerstedt"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83212,
         "home": "VfB Stuttgart",
         "away": "Borussia Mönchengladbach",
@@ -124,25 +143,6 @@
         "time": "18:30",
         "goals": [
           "80' M. Beier"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83213,
-        "home": "TSG Hoffenheim",
-        "away": "Bayer 04 Leverkusen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-25",
-        "time": "15:30",
-        "goals": [
-          "78' A. Kramaric",
-          "90' A. Prass",
-          "95' M. Moerstedt"
         ],
         "cards": [],
         "lineups": {
