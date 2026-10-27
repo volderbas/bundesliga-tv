@@ -3,23 +3,6 @@
   "spieltage": {
     "9": [
       {
-        "id": 83650,
-        "home": "Hertha BSC",
-        "away": "DSC Arminia Bielefeld",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "13:00",
-        "goals": [
-          "93' J. Brekalo"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83648,
         "home": "SV Darmstadt 98",
         "away": "FC St. Pauli",
@@ -63,6 +46,23 @@
         "goals": [
           "40' Lucas Copado",
           "49' O. Mhamdi"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83650,
+        "home": "Hertha BSC",
+        "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-24",
+        "time": "13:00",
+        "goals": [
+          "93' J. Brekalo"
         ],
         "cards": [],
         "lineups": {
