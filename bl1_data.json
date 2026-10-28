@@ -3,6 +3,64 @@
   "spieltage": {
     "7": [
       {
+        "id": 83211,
+        "home": "RB Leipzig",
+        "away": "SV 07 Elversberg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-24",
+        "time": "15:30",
+        "goals": [
+          "48' T. Gomis",
+          "66' Romulo",
+          "84' C. Baumgartner",
+          "94' Romulo"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83216,
+        "home": "1. FSV Mainz 05",
+        "away": "SV Werder Bremen",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-24",
+        "time": "15:30",
+        "goals": [
+          "6' N. Füllkrug",
+          "24' N. Füllkrug",
+          "33' A. Caci",
+          "61' L. Reis",
+          "64' Lee Jae-sung"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83210,
+        "home": "Borussia Dortmund",
+        "away": "Eintracht Frankfurt",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-24",
+        "time": "18:30",
+        "goals": [
+          "80' M. Beier"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83213,
         "home": "TSG Hoffenheim",
         "away": "Bayer 04 Leverkusen",
@@ -43,26 +101,6 @@
         }
       },
       {
-        "id": 83211,
-        "home": "RB Leipzig",
-        "away": "SV 07 Elversberg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "15:30",
-        "goals": [
-          "48' T. Gomis",
-          "66' Romulo",
-          "84' C. Baumgartner",
-          "94' Romulo"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83215,
         "home": "FC Augsburg",
         "away": "1. FC Union Berlin",
@@ -73,27 +111,6 @@
         "goals": [
           "71' Han-Noah Massengo",
           "74' J. Haberer"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83216,
-        "home": "1. FSV Mainz 05",
-        "away": "SV Werder Bremen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "15:30",
-        "goals": [
-          "6' N. Füllkrug",
-          "24' N. Füllkrug",
-          "33' A. Caci",
-          "61' L. Reis",
-          "64' Lee Jae-sung"
         ],
         "cards": [],
         "lineups": {
@@ -126,23 +143,6 @@
         "time": "15:30",
         "goals": [
           "88' R. Philippe"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83210,
-        "home": "Borussia Dortmund",
-        "away": "Eintracht Frankfurt",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "18:30",
-        "goals": [
-          "80' M. Beier"
         ],
         "cards": [],
         "lineups": {

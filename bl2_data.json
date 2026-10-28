@@ -1,14 +1,14 @@
 {
-  "current_spieltag": 9,
+  "current_spieltag": 10,
   "spieltage": {
-    "9": [
+    "10": [
       {
-        "id": 83648,
-        "home": "SV Darmstadt 98",
-        "away": "FC St. Pauli",
+        "id": 83671,
+        "home": "DSC Arminia Bielefeld",
+        "away": "Eintracht Braunschweig",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-23",
+        "date": "2026-10-30",
         "time": "18:30",
         "goals": [],
         "cards": [],
@@ -18,17 +18,14 @@
         }
       },
       {
-        "id": 83655,
-        "home": "VfL Bochum",
-        "away": "VfL Wolfsburg",
+        "id": 83674,
+        "home": "Energie Cottbus",
+        "away": "VfL Bochum",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-23",
+        "date": "2026-10-30",
         "time": "18:30",
-        "goals": [
-          "2' F. Reese",
-          "63' Sean Klaiber"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -36,17 +33,14 @@
         }
       },
       {
-        "id": 83645,
-        "home": "1. FC Heidenheim 1846",
-        "away": "Energie Cottbus",
+        "id": 83663,
+        "home": "VfL Wolfsburg",
+        "away": "VfL Osnabrück",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-24",
+        "date": "2026-10-31",
         "time": "13:00",
-        "goals": [
-          "40' Lucas Copado",
-          "49' O. Mhamdi"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -54,16 +48,14 @@
         }
       },
       {
-        "id": 83650,
-        "home": "Hertha BSC",
-        "away": "DSC Arminia Bielefeld",
+        "id": 83667,
+        "home": "SV Darmstadt 98",
+        "away": "1. FC Magdeburg",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-24",
+        "date": "2026-10-31",
         "time": "13:00",
-        "goals": [
-          "93' J. Brekalo"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -71,22 +63,14 @@
         }
       },
       {
-        "id": 83659,
-        "home": "1. FC Magdeburg",
-        "away": "Karlsruher SC",
+        "id": 83668,
+        "home": "1. FC Kaiserslautern",
+        "away": "Hertha BSC",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-24",
+        "date": "2026-10-31",
         "time": "13:00",
-        "goals": [
-          "39' M. Zukowski",
-          "51' M. Zukowski",
-          "54' García MacNulty",
-          "59' E. Iyoha",
-          "66' R. Simic",
-          "82' Deniz Ofli",
-          "93' Leon Mergner"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -94,16 +78,14 @@
         }
       },
       {
-        "id": 83652,
-        "home": "1. FC Nürnberg",
-        "away": "1. FC Kaiserslautern",
+        "id": 83669,
+        "home": "Karlsruher SC",
+        "away": "1. FC Heidenheim 1846",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-24",
+        "date": "2026-10-31",
         "time": "20:30",
-        "goals": [
-          "58' Erencan Yardimci"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -111,18 +93,29 @@
         }
       },
       {
-        "id": 83658,
-        "home": "Holstein Kiel",
+        "id": 83664,
+        "home": "FC St. Pauli",
+        "away": "1. FC Nürnberg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-01",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83665,
+        "home": "Hannover 96",
         "away": "Dynamo Dresden",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-25",
+        "date": "2026-11-01",
         "time": "13:30",
-        "goals": [
-          "9' Giorgi Kvilitaia",
-          "73' J. Therkelsen",
-          "85' Phil Harres"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -130,36 +123,14 @@
         }
       },
       {
-        "id": 83660,
-        "home": "Eintracht Braunschweig",
-        "away": "Hannover 96",
+        "id": 83673,
+        "home": "SpVgg Greuther Fürth",
+        "away": "Holstein Kiel",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-25",
+        "date": "2026-11-01",
         "time": "13:30",
-        "goals": [
-          "17' Max Marie",
-          "92' Y. Sturm"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83661,
-        "home": "VfL Osnabrück",
-        "away": "SpVgg Greuther Fürth",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-25",
-        "time": "13:30",
-        "goals": [
-          "37' Daniel Kofi Kyereh",
-          "39' R. Meißner",
-          "75' I. Badjie"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
