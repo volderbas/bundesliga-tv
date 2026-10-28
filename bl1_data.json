@@ -1,99 +1,16 @@
 {
-  "current_spieltag": 7,
+  "current_spieltag": 8,
   "spieltage": {
-    "7": [
+    "8": [
       {
-        "id": 83211,
-        "home": "RB Leipzig",
-        "away": "SV 07 Elversberg",
+        "id": 83227,
+        "home": "SV 07 Elversberg",
+        "away": "1. FSV Mainz 05",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "15:30",
-        "goals": [
-          "48' T. Gomis",
-          "66' Romulo",
-          "84' C. Baumgartner",
-          "94' Romulo"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83216,
-        "home": "1. FSV Mainz 05",
-        "away": "SV Werder Bremen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "15:30",
-        "goals": [
-          "6' N. Füllkrug",
-          "24' N. Füllkrug",
-          "33' A. Caci",
-          "61' L. Reis",
-          "64' Lee Jae-sung"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83210,
-        "home": "Borussia Dortmund",
-        "away": "Eintracht Frankfurt",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "18:30",
-        "goals": [
-          "80' M. Beier"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83213,
-        "home": "TSG Hoffenheim",
-        "away": "Bayer 04 Leverkusen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-25",
-        "time": "15:30",
-        "goals": [
-          "78' A. Kramaric",
-          "90' A. Prass",
-          "95' M. Moerstedt"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83212,
-        "home": "VfB Stuttgart",
-        "away": "Borussia Mönchengladbach",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-23",
+        "date": "2026-10-30",
         "time": "20:30",
-        "goals": [
-          "5' E. Demirovic",
-          "38' J. Scally",
-          "51' S. Machino",
-          "66' W. Mohya",
-          "83' E. Demirovic"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -101,30 +18,12 @@
         }
       },
       {
-        "id": 83215,
-        "home": "FC Augsburg",
-        "away": "1. FC Union Berlin",
+        "id": 83220,
+        "home": "Bayer 04 Leverkusen",
+        "away": "VfB Stuttgart",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-24",
-        "time": "15:30",
-        "goals": [
-          "71' Han-Noah Massengo",
-          "74' J. Haberer"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83217,
-        "home": "1. FC Köln",
-        "away": "FC Schalke 04",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-24",
+        "date": "2026-10-31",
         "time": "15:30",
         "goals": [],
         "cards": [],
@@ -134,16 +33,14 @@
         }
       },
       {
-        "id": 83218,
-        "home": "SC Paderborn 07",
-        "away": "Hamburger SV",
+        "id": 83222,
+        "home": "FC Augsburg",
+        "away": "SC Freiburg",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-24",
+        "date": "2026-10-31",
         "time": "15:30",
-        "goals": [
-          "88' R. Philippe"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -151,19 +48,89 @@
         }
       },
       {
-        "id": 83214,
-        "home": "SC Freiburg",
-        "away": "FC Bayern München",
+        "id": 83224,
+        "home": "Borussia Mönchengladbach",
+        "away": "SC Paderborn 07",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-25",
+        "date": "2026-10-31",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83225,
+        "home": "SV Werder Bremen",
+        "away": "TSG Hoffenheim",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-31",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83226,
+        "home": "FC Schalke 04",
+        "away": "RB Leipzig",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-31",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83219,
+        "home": "FC Bayern München",
+        "away": "Borussia Dortmund",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-31",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83223,
+        "home": "1. FC Union Berlin",
+        "away": "1. FC Köln",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-01",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83221,
+        "home": "Eintracht Frankfurt",
+        "away": "Hamburger SV",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-01",
         "time": "17:30",
-        "goals": [
-          "16' D. Upamecano",
-          "42' S. Gnabry",
-          "82' T. Bischof",
-          "95' M. Olise"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
