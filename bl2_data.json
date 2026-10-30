@@ -171,6 +171,11 @@
       "goalDiff": 0
     },
     {
+      "name": "DSC Arminia Bielefeld",
+      "points": 14,
+      "goalDiff": 1
+    },
+    {
       "name": "FC St. Pauli",
       "points": 12,
       "goalDiff": 2
@@ -181,19 +186,19 @@
       "goalDiff": -1
     },
     {
-      "name": "DSC Arminia Bielefeld",
+      "name": "VfL Bochum",
       "points": 11,
-      "goalDiff": -1
-    },
-    {
-      "name": "Eintracht Braunschweig",
-      "points": 10,
-      "goalDiff": 0
+      "goalDiff": -3
     },
     {
       "name": "Energie Cottbus",
       "points": 10,
-      "goalDiff": -1
+      "goalDiff": -2
+    },
+    {
+      "name": "Eintracht Braunschweig",
+      "points": 10,
+      "goalDiff": -2
     },
     {
       "name": "SpVgg Greuther Fürth",
@@ -204,11 +209,6 @@
       "name": "Holstein Kiel",
       "points": 8,
       "goalDiff": -1
-    },
-    {
-      "name": "VfL Bochum",
-      "points": 8,
-      "goalDiff": -4
     },
     {
       "name": "Dynamo Dresden",

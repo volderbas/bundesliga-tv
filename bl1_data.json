@@ -161,6 +161,11 @@
       "goalDiff": 4
     },
     {
+      "name": "SV 07 Elversberg",
+      "points": 13,
+      "goalDiff": 0
+    },
+    {
       "name": "RB Leipzig",
       "points": 12,
       "goalDiff": 9
@@ -173,12 +178,7 @@
     {
       "name": "1. FSV Mainz 05",
       "points": 10,
-      "goalDiff": 3
-    },
-    {
-      "name": "SV 07 Elversberg",
-      "points": 10,
-      "goalDiff": -3
+      "goalDiff": 0
     },
     {
       "name": "FC Augsburg",
