@@ -3,51 +3,6 @@
   "spieltage": {
     "8": [
       {
-        "id": 83222,
-        "home": "FC Augsburg",
-        "away": "SC Freiburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-31",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83223,
-        "home": "1. FC Union Berlin",
-        "away": "1. FC Köln",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-01",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83221,
-        "home": "Eintracht Frankfurt",
-        "away": "Hamburger SV",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-01",
-        "time": "17:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83227,
         "home": "SV 07 Elversberg",
         "away": "1. FSV Mainz 05",
@@ -66,6 +21,21 @@
         "id": 83220,
         "home": "Bayer 04 Leverkusen",
         "away": "VfB Stuttgart",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-31",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83222,
+        "home": "FC Augsburg",
+        "away": "SC Freiburg",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-31",
@@ -130,6 +100,36 @@
         "status": "SCHEDULED",
         "date": "2026-10-31",
         "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83223,
+        "home": "1. FC Union Berlin",
+        "away": "1. FC Köln",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-01",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83221,
+        "home": "Eintracht Frankfurt",
+        "away": "Hamburger SV",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-01",
+        "time": "17:30",
         "goals": [],
         "cards": [],
         "lineups": {
