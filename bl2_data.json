@@ -3,21 +3,6 @@
   "spieltage": {
     "10": [
       {
-        "id": 83673,
-        "home": "SpVgg Greuther Fürth",
-        "away": "Holstein Kiel",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-01",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83671,
         "home": "DSC Arminia Bielefeld",
         "away": "Eintracht Braunschweig",
@@ -126,6 +111,21 @@
         "id": 83665,
         "home": "Hannover 96",
         "away": "Dynamo Dresden",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-01",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83673,
+        "home": "SpVgg Greuther Fürth",
+        "away": "Holstein Kiel",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-01",
