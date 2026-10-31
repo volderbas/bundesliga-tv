@@ -3,6 +3,21 @@
   "spieltage": {
     "10": [
       {
+        "id": 83664,
+        "home": "FC St. Pauli",
+        "away": "1. FC Nürnberg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-01",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83671,
         "home": "DSC Arminia Bielefeld",
         "away": "Eintracht Braunschweig",
@@ -94,21 +109,6 @@
         "status": "SCHEDULED",
         "date": "2026-10-31",
         "time": "20:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83664,
-        "home": "FC St. Pauli",
-        "away": "1. FC Nürnberg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-01",
-        "time": "13:30",
         "goals": [],
         "cards": [],
         "lineups": {
