@@ -10,7 +10,12 @@
         "status": "SCHEDULED",
         "date": "2026-10-30",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "24' M. Großer",
+          "27' Joel Grodowski",
+          "55' Aaron Opoku",
+          "68' Joel Grodowski"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -25,7 +30,11 @@
         "status": "SCHEDULED",
         "date": "2026-10-30",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "21' Tolcay Cigerci",
+          "70' P. Hofmann",
+          "88' C. Rasmussen"
+        ],
         "cards": [],
         "lineups": {
           "home": [],

@@ -10,7 +10,13 @@
         "status": "SCHEDULED",
         "date": "2026-10-30",
         "time": "20:30",
-        "goals": [],
+        "goals": [
+          "7' F. Keidel",
+          "26' Francis Onyeka",
+          "46' M. Krattenmacher",
+          "91' Cole Campbell",
+          "92' B. Hollerbach"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
