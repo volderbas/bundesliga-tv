@@ -3,21 +3,6 @@
   "spieltage": {
     "10": [
       {
-        "id": 83664,
-        "home": "FC St. Pauli",
-        "away": "1. FC Nürnberg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-01",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83671,
         "home": "DSC Arminia Bielefeld",
         "away": "Eintracht Braunschweig",
@@ -64,7 +49,10 @@
         "status": "SCHEDULED",
         "date": "2026-10-31",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "30' F. Reese",
+          "50' M. Damar"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -79,7 +67,10 @@
         "status": "SCHEDULED",
         "date": "2026-10-31",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "14'  T. Müller",
+          "37' M. Smit"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -94,7 +85,11 @@
         "status": "SCHEDULED",
         "date": "2026-10-31",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "17' S. Grønning",
+          "52' S. Grønning",
+          "60' Oluwaseun Victor Adewumi"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -109,6 +104,21 @@
         "status": "SCHEDULED",
         "date": "2026-10-31",
         "time": "20:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83664,
+        "home": "FC St. Pauli",
+        "away": "1. FC Nürnberg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-01",
+        "time": "13:30",
         "goals": [],
         "cards": [],
         "lineups": {
@@ -151,8 +161,13 @@
   "tabelle": [
     {
       "name": "Hertha BSC",
-      "points": 25,
-      "goalDiff": 12
+      "points": 28,
+      "goalDiff": 15
+    },
+    {
+      "name": "VfL Wolfsburg",
+      "points": 19,
+      "goalDiff": 11
     },
     {
       "name": "1. FC Nürnberg",
@@ -162,16 +177,11 @@
     {
       "name": "1. FC Kaiserslautern",
       "points": 18,
-      "goalDiff": 5
-    },
-    {
-      "name": "VfL Wolfsburg",
-      "points": 16,
-      "goalDiff": 9
+      "goalDiff": 2
     },
     {
       "name": "1. FC Magdeburg",
-      "points": 16,
+      "points": 17,
       "goalDiff": 8
     },
     {
@@ -192,7 +202,7 @@
     {
       "name": "VfL Osnabrück",
       "points": 11,
-      "goalDiff": -1
+      "goalDiff": -3
     },
     {
       "name": "VfL Bochum",
@@ -215,6 +225,11 @@
       "goalDiff": -4
     },
     {
+      "name": "SV Darmstadt 98",
+      "points": 9,
+      "goalDiff": -10
+    },
+    {
       "name": "Holstein Kiel",
       "points": 8,
       "goalDiff": -1
@@ -233,11 +248,6 @@
       "name": "Karlsruher SC",
       "points": 8,
       "goalDiff": -9
-    },
-    {
-      "name": "SV Darmstadt 98",
-      "points": 8,
-      "goalDiff": -10
     }
   ]
 }
