@@ -187,7 +187,7 @@
     {
       "name": "1. FC Heidenheim 1846",
       "points": 15,
-      "goalDiff": 0
+      "goalDiff": -2
     },
     {
       "name": "DSC Arminia Bielefeld",
@@ -208,6 +208,11 @@
       "name": "VfL Bochum",
       "points": 11,
       "goalDiff": -3
+    },
+    {
+      "name": "Karlsruher SC",
+      "points": 11,
+      "goalDiff": -7
     },
     {
       "name": "Energie Cottbus",
@@ -243,11 +248,6 @@
       "name": "Hannover 96",
       "points": 8,
       "goalDiff": -7
-    },
-    {
-      "name": "Karlsruher SC",
-      "points": 8,
-      "goalDiff": -9
     }
   ]
 }
