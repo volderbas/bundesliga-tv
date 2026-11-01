@@ -171,7 +171,7 @@
     {
       "name": "1. FC Nürnberg",
       "points": 21,
-      "goalDiff": 10
+      "goalDiff": 11
     },
     {
       "name": "VfL Wolfsburg",
@@ -201,7 +201,12 @@
     {
       "name": "FC St. Pauli",
       "points": 12,
-      "goalDiff": 1
+      "goalDiff": 0
+    },
+    {
+      "name": "SpVgg Greuther Fürth",
+      "points": 12,
+      "goalDiff": -3
     },
     {
       "name": "VfL Osnabrück",
@@ -214,7 +219,7 @@
       "goalDiff": -3
     },
     {
-      "name": "Dynamo Dresden",
+      "name": "Hannover 96",
       "points": 11,
       "goalDiff": -6
     },
@@ -234,22 +239,17 @@
       "goalDiff": -2
     },
     {
-      "name": "SpVgg Greuther Fürth",
-      "points": 10,
-      "goalDiff": -4
-    },
-    {
-      "name": "Holstein Kiel",
-      "points": 9,
-      "goalDiff": -1
-    },
-    {
       "name": "SV Darmstadt 98",
       "points": 9,
       "goalDiff": -10
     },
     {
-      "name": "Hannover 96",
+      "name": "Holstein Kiel",
+      "points": 8,
+      "goalDiff": -2
+    },
+    {
+      "name": "Dynamo Dresden",
       "points": 8,
       "goalDiff": -8
     }

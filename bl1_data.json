@@ -204,6 +204,11 @@
       "goalDiff": 0
     },
     {
+      "name": "Eintracht Frankfurt",
+      "points": 11,
+      "goalDiff": -5
+    },
+    {
       "name": "1. FSV Mainz 05",
       "points": 10,
       "goalDiff": 0
@@ -224,6 +229,11 @@
       "goalDiff": -2
     },
     {
+      "name": "1. FC Köln",
+      "points": 9,
+      "goalDiff": -3
+    },
+    {
       "name": "SC Paderborn 07",
       "points": 9,
       "goalDiff": -3
@@ -231,27 +241,17 @@
     {
       "name": "Hamburger SV",
       "points": 9,
-      "goalDiff": -10
+      "goalDiff": -12
     },
     {
-      "name": "1. FC Köln",
-      "points": 8,
-      "goalDiff": -3
-    },
-    {
-      "name": "Eintracht Frankfurt",
-      "points": 8,
-      "goalDiff": -7
+      "name": "1. FC Union Berlin",
+      "points": 7,
+      "goalDiff": -12
     },
     {
       "name": "FC Schalke 04",
       "points": 6,
       "goalDiff": -5
-    },
-    {
-      "name": "1. FC Union Berlin",
-      "points": 6,
-      "goalDiff": -12
     },
     {
       "name": "Borussia Mönchengladbach",
