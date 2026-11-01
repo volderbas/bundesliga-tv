@@ -3,32 +3,19 @@
   "spieltage": {
     "10": [
       {
-        "id": 83663,
-        "home": "VfL Wolfsburg",
-        "away": "VfL Osnabrück",
+        "id": 83671,
+        "home": "DSC Arminia Bielefeld",
+        "away": "Eintracht Braunschweig",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-31",
-        "time": "13:00",
+        "date": "2026-10-30",
+        "time": "18:30",
         "goals": [
-          "30' F. Reese",
-          "50' M. Damar"
+          "24' M. Großer",
+          "27' Joel Grodowski",
+          "55' Aaron Opoku",
+          "68' Joel Grodowski"
         ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83664,
-        "home": "FC St. Pauli",
-        "away": "1. FC Nürnberg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-01",
-        "time": "13:30",
-        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -47,6 +34,42 @@
           "21' Tolcay Cigerci",
           "70' P. Hofmann",
           "88' C. Rasmussen"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83663,
+        "home": "VfL Wolfsburg",
+        "away": "VfL Osnabrück",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-31",
+        "time": "13:00",
+        "goals": [
+          "30' F. Reese",
+          "50' M. Damar"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83667,
+        "home": "SV Darmstadt 98",
+        "away": "1. FC Magdeburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-31",
+        "time": "13:00",
+        "goals": [
+          "14'  T. Müller",
+          "37' M. Smit"
         ],
         "cards": [],
         "lineups": {
@@ -74,17 +97,33 @@
         }
       },
       {
-        "id": 83667,
-        "home": "SV Darmstadt 98",
-        "away": "1. FC Magdeburg",
+        "id": 83669,
+        "home": "Karlsruher SC",
+        "away": "1. FC Heidenheim 1846",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-31",
-        "time": "13:00",
+        "time": "20:30",
         "goals": [
-          "14'  T. Müller",
-          "37' M. Smit"
+          "19' T. Civeja",
+          "80' M. Wanitzek",
+          "88' A. Vogt"
         ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83664,
+        "home": "FC St. Pauli",
+        "away": "1. FC Nürnberg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-01",
+        "time": "13:30",
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -120,45 +159,6 @@
           "home": [],
           "away": []
         }
-      },
-      {
-        "id": 83671,
-        "home": "DSC Arminia Bielefeld",
-        "away": "Eintracht Braunschweig",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-30",
-        "time": "18:30",
-        "goals": [
-          "24' M. Großer",
-          "27' Joel Grodowski",
-          "55' Aaron Opoku",
-          "68' Joel Grodowski"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83669,
-        "home": "Karlsruher SC",
-        "away": "1. FC Heidenheim 1846",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-31",
-        "time": "20:30",
-        "goals": [
-          "19' T. Civeja",
-          "80' M. Wanitzek",
-          "88' A. Vogt"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
       }
     ]
   },
@@ -169,14 +169,14 @@
       "goalDiff": 15
     },
     {
+      "name": "1. FC Nürnberg",
+      "points": 21,
+      "goalDiff": 10
+    },
+    {
       "name": "VfL Wolfsburg",
       "points": 19,
       "goalDiff": 11
-    },
-    {
-      "name": "1. FC Nürnberg",
-      "points": 18,
-      "goalDiff": 9
     },
     {
       "name": "1. FC Kaiserslautern",
@@ -201,7 +201,7 @@
     {
       "name": "FC St. Pauli",
       "points": 12,
-      "goalDiff": 2
+      "goalDiff": 1
     },
     {
       "name": "VfL Osnabrück",
@@ -212,6 +212,11 @@
       "name": "VfL Bochum",
       "points": 11,
       "goalDiff": -3
+    },
+    {
+      "name": "Dynamo Dresden",
+      "points": 11,
+      "goalDiff": -6
     },
     {
       "name": "Karlsruher SC",
@@ -230,8 +235,13 @@
     },
     {
       "name": "SpVgg Greuther Fürth",
-      "points": 9,
+      "points": 10,
       "goalDiff": -4
+    },
+    {
+      "name": "Holstein Kiel",
+      "points": 9,
+      "goalDiff": -1
     },
     {
       "name": "SV Darmstadt 98",
@@ -239,19 +249,9 @@
       "goalDiff": -10
     },
     {
-      "name": "Holstein Kiel",
-      "points": 8,
-      "goalDiff": -1
-    },
-    {
-      "name": "Dynamo Dresden",
-      "points": 8,
-      "goalDiff": -7
-    },
-    {
       "name": "Hannover 96",
       "points": 8,
-      "goalDiff": -7
+      "goalDiff": -8
     }
   ]
 }

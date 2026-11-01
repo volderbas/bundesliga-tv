@@ -3,6 +3,24 @@
   "spieltage": {
     "8": [
       {
+        "id": 83225,
+        "home": "SV Werder Bremen",
+        "away": "TSG Hoffenheim",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-31",
+        "time": "15:30",
+        "goals": [
+          "57' N. Füllkrug",
+          "82' E. Dinkçi"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83227,
         "home": "SV 07 Elversberg",
         "away": "1. FSV Mainz 05",
@@ -73,24 +91,6 @@
         "date": "2026-10-31",
         "time": "15:30",
         "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83225,
-        "home": "SV Werder Bremen",
-        "away": "TSG Hoffenheim",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-31",
-        "time": "15:30",
-        "goals": [
-          "57' N. Füllkrug",
-          "82' E. Dinkçi"
-        ],
         "cards": [],
         "lineups": {
           "home": [],
