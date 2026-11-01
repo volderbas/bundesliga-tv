@@ -3,45 +3,6 @@
   "spieltage": {
     "10": [
       {
-        "id": 83671,
-        "home": "DSC Arminia Bielefeld",
-        "away": "Eintracht Braunschweig",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-30",
-        "time": "18:30",
-        "goals": [
-          "24' M. Großer",
-          "27' Joel Grodowski",
-          "55' Aaron Opoku",
-          "68' Joel Grodowski"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83674,
-        "home": "Energie Cottbus",
-        "away": "VfL Bochum",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-30",
-        "time": "18:30",
-        "goals": [
-          "21' Tolcay Cigerci",
-          "70' P. Hofmann",
-          "88' C. Rasmussen"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83663,
         "home": "VfL Wolfsburg",
         "away": "VfL Osnabrück",
@@ -60,16 +21,32 @@
         }
       },
       {
-        "id": 83667,
-        "home": "SV Darmstadt 98",
-        "away": "1. FC Magdeburg",
+        "id": 83664,
+        "home": "FC St. Pauli",
+        "away": "1. FC Nürnberg",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-10-31",
-        "time": "13:00",
+        "date": "2026-11-01",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83674,
+        "home": "Energie Cottbus",
+        "away": "VfL Bochum",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-30",
+        "time": "18:30",
         "goals": [
-          "14'  T. Müller",
-          "37' M. Smit"
+          "21' Tolcay Cigerci",
+          "70' P. Hofmann",
+          "88' C. Rasmussen"
         ],
         "cards": [],
         "lineups": {
@@ -97,29 +74,17 @@
         }
       },
       {
-        "id": 83669,
-        "home": "Karlsruher SC",
-        "away": "1. FC Heidenheim 1846",
+        "id": 83667,
+        "home": "SV Darmstadt 98",
+        "away": "1. FC Magdeburg",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-10-31",
-        "time": "20:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83664,
-        "home": "FC St. Pauli",
-        "away": "1. FC Nürnberg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-01",
-        "time": "13:30",
-        "goals": [],
+        "time": "13:00",
+        "goals": [
+          "14'  T. Müller",
+          "37' M. Smit"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -150,6 +115,45 @@
         "date": "2026-11-01",
         "time": "13:30",
         "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83671,
+        "home": "DSC Arminia Bielefeld",
+        "away": "Eintracht Braunschweig",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-30",
+        "time": "18:30",
+        "goals": [
+          "24' M. Großer",
+          "27' Joel Grodowski",
+          "55' Aaron Opoku",
+          "68' Joel Grodowski"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83669,
+        "home": "Karlsruher SC",
+        "away": "1. FC Heidenheim 1846",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-31",
+        "time": "20:30",
+        "goals": [
+          "19' T. Civeja",
+          "80' M. Wanitzek",
+          "88' A. Vogt"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -187,7 +191,7 @@
     {
       "name": "1. FC Heidenheim 1846",
       "points": 15,
-      "goalDiff": -2
+      "goalDiff": -1
     },
     {
       "name": "DSC Arminia Bielefeld",
@@ -212,7 +216,7 @@
     {
       "name": "Karlsruher SC",
       "points": 11,
-      "goalDiff": -7
+      "goalDiff": -8
     },
     {
       "name": "Energie Cottbus",
