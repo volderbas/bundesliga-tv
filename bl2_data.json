@@ -3,25 +3,6 @@
   "spieltage": {
     "10": [
       {
-        "id": 83665,
-        "home": "Hannover 96",
-        "away": "Dynamo Dresden",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-01",
-        "time": "13:30",
-        "goals": [
-          "11' N. Rapp",
-          "54' Husseyn Chakroun",
-          "61' M. Hartel"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83671,
         "home": "DSC Arminia Bielefeld",
         "away": "Eintracht Braunschweig",
@@ -147,6 +128,25 @@
           "58' A. Ceesay",
           "71' S. Haugen",
           "90' Marc Kornwachs Barjuan"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83665,
+        "home": "Hannover 96",
+        "away": "Dynamo Dresden",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-01",
+        "time": "13:30",
+        "goals": [
+          "11' N. Rapp",
+          "54' Husseyn Chakroun",
+          "61' M. Hartel"
         ],
         "cards": [],
         "lineups": {
