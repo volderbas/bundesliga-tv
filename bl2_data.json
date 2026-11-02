@@ -123,7 +123,12 @@
         "status": "SCHEDULED",
         "date": "2026-11-01",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "8' E. Smith",
+          "58' A. Ceesay",
+          "71' S. Haugen",
+          "90' Marc Kornwachs Barjuan"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -138,7 +143,11 @@
         "status": "SCHEDULED",
         "date": "2026-11-01",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "11' N. Rapp",
+          "54' Husseyn Chakroun",
+          "61' M. Hartel"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -153,7 +162,9 @@
         "status": "SCHEDULED",
         "date": "2026-11-01",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "87' Aaron Keller"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
