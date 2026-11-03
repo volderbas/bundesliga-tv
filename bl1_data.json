@@ -3,6 +3,27 @@
   "spieltage": {
     "8": [
       {
+        "id": 83227,
+        "home": "SV 07 Elversberg",
+        "away": "1. FSV Mainz 05",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-30",
+        "time": "20:30",
+        "goals": [
+          "7' F. Keidel",
+          "26' Francis Onyeka",
+          "46' M. Krattenmacher",
+          "91' Cole Campbell",
+          "92' B. Hollerbach"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83220,
         "home": "Bayer 04 Leverkusen",
         "away": "VfB Stuttgart",
@@ -17,67 +38,6 @@
           "51' B. El Khannouss",
           "66' E. Demirovic",
           "79' Ibrahim Maza"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83219,
-        "home": "FC Bayern München",
-        "away": "Borussia Dortmund",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-31",
-        "time": "18:30",
-        "goals": [
-          "38' K. Laimer",
-          "60' S. Guirassy",
-          "66' D. Upamecano",
-          "89' Fabio Silva"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83221,
-        "home": "Eintracht Frankfurt",
-        "away": "Hamburger SV",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-01",
-        "time": "17:30",
-        "goals": [
-          "10' W. Omari",
-          "14' T. Moffi",
-          "47' R. Onyedika",
-          "69' Younes Ebnoutalib"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83227,
-        "home": "SV 07 Elversberg",
-        "away": "1. FSV Mainz 05",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-10-30",
-        "time": "20:30",
-        "goals": [
-          "7' F. Keidel",
-          "26' Francis Onyeka",
-          "46' M. Krattenmacher",
-          "91' Cole Campbell",
-          "92' B. Hollerbach"
         ],
         "cards": [],
         "lineups": {
@@ -156,6 +116,26 @@
         }
       },
       {
+        "id": 83219,
+        "home": "FC Bayern München",
+        "away": "Borussia Dortmund",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-10-31",
+        "time": "18:30",
+        "goals": [
+          "38' K. Laimer",
+          "60' S. Guirassy",
+          "66' D. Upamecano",
+          "89' Fabio Silva"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83223,
         "home": "1. FC Union Berlin",
         "away": "1. FC Köln",
@@ -166,6 +146,26 @@
         "goals": [
           "10' J. Haberer",
           "79' Malek El Mala"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83221,
+        "home": "Eintracht Frankfurt",
+        "away": "Hamburger SV",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-01",
+        "time": "17:30",
+        "goals": [
+          "10' W. Omari",
+          "14' T. Moffi",
+          "47' R. Onyedika",
+          "69' Younes Ebnoutalib"
         ],
         "cards": [],
         "lineups": {
