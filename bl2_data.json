@@ -3,36 +3,6 @@
   "spieltage": {
     "11": [
       {
-        "id": 83681,
-        "home": "Hertha BSC",
-        "away": "VfL Wolfsburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-07",
-        "time": "20:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83686,
-        "home": "1. FC Magdeburg",
-        "away": "FC St. Pauli",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-08",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83684,
         "home": "Dynamo Dresden",
         "away": "SpVgg Greuther Fürth",
@@ -108,6 +78,21 @@
         }
       },
       {
+        "id": 83681,
+        "home": "Hertha BSC",
+        "away": "VfL Wolfsburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-07",
+        "time": "20:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83678,
         "home": "1. FC Heidenheim 1846",
         "away": "Hannover 96",
@@ -126,6 +111,21 @@
         "id": 83683,
         "home": "VfL Bochum",
         "away": "Karlsruher SC",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-08",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83686,
+        "home": "1. FC Magdeburg",
+        "away": "FC St. Pauli",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-08",
@@ -183,7 +183,17 @@
     {
       "name": "SpVgg Greuther Fürth",
       "points": 12,
-      "goalDiff": -3
+      "goalDiff": -6
+    },
+    {
+      "name": "Energie Cottbus",
+      "points": 11,
+      "goalDiff": -2
+    },
+    {
+      "name": "Eintracht Braunschweig",
+      "points": 11,
+      "goalDiff": -2
     },
     {
       "name": "VfL Osnabrück",
@@ -196,6 +206,11 @@
       "goalDiff": -3
     },
     {
+      "name": "Dynamo Dresden",
+      "points": 11,
+      "goalDiff": -5
+    },
+    {
       "name": "Hannover 96",
       "points": 11,
       "goalDiff": -6
@@ -206,16 +221,6 @@
       "goalDiff": -8
     },
     {
-      "name": "Energie Cottbus",
-      "points": 10,
-      "goalDiff": -2
-    },
-    {
-      "name": "Eintracht Braunschweig",
-      "points": 10,
-      "goalDiff": -2
-    },
-    {
       "name": "SV Darmstadt 98",
       "points": 9,
       "goalDiff": -10
@@ -224,11 +229,6 @@
       "name": "Holstein Kiel",
       "points": 8,
       "goalDiff": -2
-    },
-    {
-      "name": "Dynamo Dresden",
-      "points": 8,
-      "goalDiff": -8
     }
   ]
 }
