@@ -185,7 +185,7 @@
     {
       "name": "SV Werder Bremen",
       "points": 15,
-      "goalDiff": 3
+      "goalDiff": 2
     },
     {
       "name": "Bayer 04 Leverkusen",
@@ -196,6 +196,11 @@
       "name": "SV 07 Elversberg",
       "points": 13,
       "goalDiff": -1
+    },
+    {
+      "name": "VfB Stuttgart",
+      "points": 12,
+      "goalDiff": 0
     },
     {
       "name": "Eintracht Frankfurt",
@@ -221,11 +226,6 @@
       "name": "FC Augsburg",
       "points": 9,
       "goalDiff": 0
-    },
-    {
-      "name": "VfB Stuttgart",
-      "points": 9,
-      "goalDiff": -1
     },
     {
       "name": "TSG Hoffenheim",
