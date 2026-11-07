@@ -10,7 +10,12 @@
         "status": "SCHEDULED",
         "date": "2026-11-06",
         "time": "20:30",
-        "goals": [],
+        "goals": [
+          "11' M. Muheim",
+          "44' J. Scally",
+          "60' Shafiq Nandja",
+          "70' A. Grønbæk"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -176,6 +181,11 @@
       "goalDiff": 0
     },
     {
+      "name": "Hamburger SV",
+      "points": 12,
+      "goalDiff": -10
+    },
+    {
       "name": "Eintracht Frankfurt",
       "points": 11,
       "goalDiff": -5
@@ -211,11 +221,6 @@
       "goalDiff": -3
     },
     {
-      "name": "Hamburger SV",
-      "points": 9,
-      "goalDiff": -12
-    },
-    {
       "name": "1. FC Union Berlin",
       "points": 7,
       "goalDiff": -12
@@ -228,7 +233,7 @@
     {
       "name": "Borussia Mönchengladbach",
       "points": 4,
-      "goalDiff": -11
+      "goalDiff": -13
     }
   ]
 }

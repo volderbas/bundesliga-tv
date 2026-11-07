@@ -10,7 +10,11 @@
         "status": "SCHEDULED",
         "date": "2026-11-06",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "31' R. Wagner",
+          "41' Ben Bobzien",
+          "55' V. Vermeij"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
