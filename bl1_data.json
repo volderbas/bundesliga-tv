@@ -3,6 +3,36 @@
   "spieltage": {
     "9": [
       {
+        "id": 83235,
+        "home": "1. FC Köln",
+        "away": "Bayer 04 Leverkusen",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-08",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83231,
+        "home": "TSG Hoffenheim",
+        "away": "FC Schalke 04",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-08",
+        "time": "19:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83234,
         "home": "Hamburger SV",
         "away": "Borussia Mönchengladbach",
@@ -30,7 +60,11 @@
         "status": "SCHEDULED",
         "date": "2026-11-07",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "55' F. Nmecha",
+          "71' F. Nmecha",
+          "81' N. Futkeu"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -45,7 +79,14 @@
         "status": "SCHEDULED",
         "date": "2026-11-07",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "1' A. Kade",
+          "34' E. Banzuzi",
+          "35' C. Nkunku",
+          "46' D. Raum",
+          "60' Romulo",
+          "66' C. Baumgartner"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -60,7 +101,9 @@
         "status": "SCHEDULED",
         "date": "2026-11-07",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "14' J. Kimmich"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -75,7 +118,11 @@
         "status": "SCHEDULED",
         "date": "2026-11-07",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "23' J. Burkardt",
+          "45' R. Obermair",
+          "73' M. Pieringer"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -98,21 +145,6 @@
         }
       },
       {
-        "id": 83235,
-        "home": "1. FC Köln",
-        "away": "Bayer 04 Leverkusen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-08",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83232,
         "home": "SC Freiburg",
         "away": "1. FC Union Berlin",
@@ -126,44 +158,29 @@
           "home": [],
           "away": []
         }
-      },
-      {
-        "id": 83231,
-        "home": "TSG Hoffenheim",
-        "away": "FC Schalke 04",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-08",
-        "time": "19:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
       }
     ]
   },
   "tabelle": [
     {
       "name": "FC Bayern München",
-      "points": 18,
-      "goalDiff": 19
+      "points": 21,
+      "goalDiff": 20
     },
     {
       "name": "Borussia Dortmund",
+      "points": 21,
+      "goalDiff": 9
+    },
+    {
+      "name": "RB Leipzig",
       "points": 18,
-      "goalDiff": 8
+      "goalDiff": 14
     },
     {
       "name": "SC Freiburg",
       "points": 16,
       "goalDiff": 8
-    },
-    {
-      "name": "RB Leipzig",
-      "points": 15,
-      "goalDiff": 11
     },
     {
       "name": "SV Werder Bremen",
@@ -178,7 +195,12 @@
     {
       "name": "SV 07 Elversberg",
       "points": 13,
-      "goalDiff": 0
+      "goalDiff": -1
+    },
+    {
+      "name": "Eintracht Frankfurt",
+      "points": 12,
+      "goalDiff": -5
     },
     {
       "name": "Hamburger SV",
@@ -186,19 +208,19 @@
       "goalDiff": -10
     },
     {
-      "name": "Eintracht Frankfurt",
-      "points": 11,
-      "goalDiff": -5
-    },
-    {
       "name": "1. FSV Mainz 05",
       "points": 10,
-      "goalDiff": 0
+      "goalDiff": -1
+    },
+    {
+      "name": "SC Paderborn 07",
+      "points": 10,
+      "goalDiff": -3
     },
     {
       "name": "FC Augsburg",
       "points": 9,
-      "goalDiff": 3
+      "goalDiff": 0
     },
     {
       "name": "VfB Stuttgart",
@@ -212,11 +234,6 @@
     },
     {
       "name": "1. FC Köln",
-      "points": 9,
-      "goalDiff": -3
-    },
-    {
-      "name": "SC Paderborn 07",
       "points": 9,
       "goalDiff": -3
     },

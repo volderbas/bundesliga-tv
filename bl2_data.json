@@ -44,7 +44,10 @@
         "status": "SCHEDULED",
         "date": "2026-11-07",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "50' P. Scobel",
+          "88' William Bøving"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -59,7 +62,10 @@
         "status": "SCHEDULED",
         "date": "2026-11-07",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "76' Hiroki Sekine",
+          "80' Isaiah Young"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -74,7 +80,9 @@
         "status": "SCHEDULED",
         "date": "2026-11-07",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "55' Thierry Tazemeta"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -151,8 +159,13 @@
     },
     {
       "name": "1. FC Nürnberg",
+      "points": 24,
+      "goalDiff": 13
+    },
+    {
+      "name": "1. FC Kaiserslautern",
       "points": 21,
-      "goalDiff": 11
+      "goalDiff": 3
     },
     {
       "name": "VfL Wolfsburg",
@@ -160,24 +173,19 @@
       "goalDiff": 11
     },
     {
-      "name": "1. FC Kaiserslautern",
-      "points": 18,
-      "goalDiff": 2
-    },
-    {
       "name": "1. FC Magdeburg",
       "points": 17,
       "goalDiff": 8
     },
     {
+      "name": "DSC Arminia Bielefeld",
+      "points": 17,
+      "goalDiff": 2
+    },
+    {
       "name": "1. FC Heidenheim 1846",
       "points": 15,
       "goalDiff": -1
-    },
-    {
-      "name": "DSC Arminia Bielefeld",
-      "points": 14,
-      "goalDiff": 1
     },
     {
       "name": "FC St. Pauli",
@@ -200,14 +208,14 @@
       "goalDiff": -2
     },
     {
-      "name": "VfL Osnabrück",
+      "name": "VfL Bochum",
       "points": 11,
       "goalDiff": -3
     },
     {
-      "name": "VfL Bochum",
+      "name": "VfL Osnabrück",
       "points": 11,
-      "goalDiff": -3
+      "goalDiff": -4
     },
     {
       "name": "Dynamo Dresden",
@@ -227,12 +235,12 @@
     {
       "name": "SV Darmstadt 98",
       "points": 9,
-      "goalDiff": -10
+      "goalDiff": -12
     },
     {
       "name": "Holstein Kiel",
       "points": 8,
-      "goalDiff": -2
+      "goalDiff": -3
     }
   ]
 }
