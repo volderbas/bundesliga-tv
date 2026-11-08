@@ -3,36 +3,6 @@
   "spieltage": {
     "9": [
       {
-        "id": 83235,
-        "home": "1. FC Köln",
-        "away": "Bayer 04 Leverkusen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-08",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83231,
-        "home": "TSG Hoffenheim",
-        "away": "FC Schalke 04",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-08",
-        "time": "19:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83234,
         "home": "Hamburger SV",
         "away": "Borussia Mönchengladbach",
@@ -85,7 +55,8 @@
           "35' C. Nkunku",
           "46' D. Raum",
           "60' Romulo",
-          "66' C. Baumgartner"
+          "66' C. Baumgartner",
+          "93' Uchenna Ogundu"
         ],
         "cards": [],
         "lineups": {
@@ -102,7 +73,9 @@
         "date": "2026-11-07",
         "time": "15:30",
         "goals": [
-          "14' J. Kimmich"
+          "14' J. Kimmich",
+          "57' Lennart Karl",
+          "93' P. Tietz"
         ],
         "cards": [],
         "lineups": {
@@ -121,7 +94,8 @@
         "goals": [
           "23' J. Burkardt",
           "45' R. Obermair",
-          "73' M. Pieringer"
+          "73' M. Pieringer",
+          "93' J. Burkardt"
         ],
         "cards": [],
         "lineups": {
@@ -137,6 +111,23 @@
         "status": "SCHEDULED",
         "date": "2026-11-07",
         "time": "18:30",
+        "goals": [
+          "7' M. Mittelstädt"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83235,
+        "home": "1. FC Köln",
+        "away": "Bayer 04 Leverkusen",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-08",
+        "time": "15:30",
         "goals": [],
         "cards": [],
         "lineups": {
@@ -152,6 +143,21 @@
         "status": "SCHEDULED",
         "date": "2026-11-08",
         "time": "17:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83231,
+        "home": "TSG Hoffenheim",
+        "away": "FC Schalke 04",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-08",
+        "time": "19:30",
         "goals": [],
         "cards": [],
         "lineups": {

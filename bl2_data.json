@@ -3,6 +3,21 @@
   "spieltage": {
     "11": [
       {
+        "id": 83678,
+        "home": "1. FC Heidenheim 1846",
+        "away": "Hannover 96",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-08",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83684,
         "home": "Dynamo Dresden",
         "away": "SpVgg Greuther Fürth",
@@ -97,22 +112,11 @@
         "status": "SCHEDULED",
         "date": "2026-11-07",
         "time": "20:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83678,
-        "home": "1. FC Heidenheim 1846",
-        "away": "Hannover 96",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-08",
-        "time": "13:30",
-        "goals": [],
+        "goals": [
+          "44' Oluwaseun Victor Adewumi",
+          "47' D. Zeefuik",
+          "47' K. Shiogai"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
