@@ -179,14 +179,19 @@
       "goalDiff": 9
     },
     {
+      "name": "SC Freiburg",
+      "points": 19,
+      "goalDiff": 10
+    },
+    {
       "name": "RB Leipzig",
       "points": 18,
       "goalDiff": 14
     },
     {
-      "name": "SC Freiburg",
+      "name": "Bayer 04 Leverkusen",
       "points": 16,
-      "goalDiff": 8
+      "goalDiff": 3
     },
     {
       "name": "SV Werder Bremen",
@@ -194,14 +199,14 @@
       "goalDiff": 2
     },
     {
-      "name": "Bayer 04 Leverkusen",
-      "points": 13,
-      "goalDiff": 2
-    },
-    {
       "name": "SV 07 Elversberg",
       "points": 13,
       "goalDiff": -1
+    },
+    {
+      "name": "TSG Hoffenheim",
+      "points": 12,
+      "goalDiff": 0
     },
     {
       "name": "VfB Stuttgart",
@@ -234,24 +239,19 @@
       "goalDiff": 0
     },
     {
-      "name": "TSG Hoffenheim",
-      "points": 9,
-      "goalDiff": -2
-    },
-    {
       "name": "1. FC Köln",
       "points": 9,
-      "goalDiff": -3
+      "goalDiff": -4
     },
     {
       "name": "1. FC Union Berlin",
       "points": 7,
-      "goalDiff": -12
+      "goalDiff": -14
     },
     {
       "name": "FC Schalke 04",
       "points": 6,
-      "goalDiff": -5
+      "goalDiff": -7
     },
     {
       "name": "Borussia Mönchengladbach",

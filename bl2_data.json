@@ -116,7 +116,9 @@
         "status": "SCHEDULED",
         "date": "2026-11-08",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "43' T. Siersleben"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -131,7 +133,10 @@
         "status": "SCHEDULED",
         "date": "2026-11-08",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "6' C. Rasmussen",
+          "8' Kevin Wiethaup"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -146,7 +151,9 @@
         "status": "SCHEDULED",
         "date": "2026-11-08",
         "time": "13:30",
-        "goals": [],
+        "goals": [
+          "27' M. Zukowski"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -172,14 +179,14 @@
       "goalDiff": 3
     },
     {
+      "name": "1. FC Magdeburg",
+      "points": 20,
+      "goalDiff": 11
+    },
+    {
       "name": "VfL Wolfsburg",
       "points": 19,
       "goalDiff": 10
-    },
-    {
-      "name": "1. FC Magdeburg",
-      "points": 18,
-      "goalDiff": 8
     },
     {
       "name": "DSC Arminia Bielefeld",
@@ -192,12 +199,12 @@
       "goalDiff": -1
     },
     {
-      "name": "FC St. Pauli",
-      "points": 13,
-      "goalDiff": 0
+      "name": "VfL Bochum",
+      "points": 14,
+      "goalDiff": -2
     },
     {
-      "name": "VfL Bochum",
+      "name": "FC St. Pauli",
       "points": 12,
       "goalDiff": -3
     },
@@ -210,11 +217,6 @@
       "name": "Hannover 96",
       "points": 12,
       "goalDiff": -6
-    },
-    {
-      "name": "Karlsruher SC",
-      "points": 12,
-      "goalDiff": -8
     },
     {
       "name": "Energie Cottbus",
@@ -235,6 +237,11 @@
       "name": "Dynamo Dresden",
       "points": 11,
       "goalDiff": -5
+    },
+    {
+      "name": "Karlsruher SC",
+      "points": 11,
+      "goalDiff": -9
     },
     {
       "name": "SV Darmstadt 98",
