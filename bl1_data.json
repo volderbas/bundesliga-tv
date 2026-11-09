@@ -128,7 +128,11 @@
         "status": "SCHEDULED",
         "date": "2026-11-08",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "7' A. Garcia",
+          "85' P. Schick",
+          "92' S. El Mala"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -143,7 +147,10 @@
         "status": "SCHEDULED",
         "date": "2026-11-08",
         "time": "17:30",
-        "goals": [],
+        "goals": [
+          "55' R. Khedira",
+          "67' Y. Suzuki"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -158,7 +165,11 @@
         "status": "SCHEDULED",
         "date": "2026-11-08",
         "time": "19:30",
-        "goals": [],
+        "goals": [
+          "10' F. Asllani",
+          "26' T. Lemperle",
+          "81' J. Adamu"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -204,14 +215,14 @@
       "goalDiff": -1
     },
     {
-      "name": "TSG Hoffenheim",
+      "name": "VfB Stuttgart",
       "points": 12,
       "goalDiff": 0
     },
     {
-      "name": "VfB Stuttgart",
+      "name": "TSG Hoffenheim",
       "points": 12,
-      "goalDiff": 0
+      "goalDiff": -1
     },
     {
       "name": "Eintracht Frankfurt",
@@ -251,7 +262,7 @@
     {
       "name": "FC Schalke 04",
       "points": 6,
-      "goalDiff": -7
+      "goalDiff": -6
     },
     {
       "name": "Borussia Mönchengladbach",
