@@ -3,6 +3,25 @@
   "spieltage": {
     "11": [
       {
+        "id": 83685,
+        "home": "Holstein Kiel",
+        "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-07",
+        "time": "13:00",
+        "goals": [
+          "14' Hiroki Sekine",
+          "76' Hiroki Sekine",
+          "80' Isaiah Young"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83684,
         "home": "Dynamo Dresden",
         "away": "SpVgg Greuther Fürth",
@@ -47,25 +66,6 @@
         "goals": [
           "50' P. Scobel",
           "88' William Bøving"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83685,
-        "home": "Holstein Kiel",
-        "away": "DSC Arminia Bielefeld",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-07",
-        "time": "13:00",
-        "goals": [
-          "14' Hiroki Sekine",
-          "76' Hiroki Sekine",
-          "80' Isaiah Young"
         ],
         "cards": [],
         "lineups": {
