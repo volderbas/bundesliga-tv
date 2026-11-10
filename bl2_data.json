@@ -3,41 +3,6 @@
   "spieltage": {
     "11": [
       {
-        "id": 83687,
-        "home": "Eintracht Braunschweig",
-        "away": "Energie Cottbus",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-06",
-        "time": "18:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83678,
-        "home": "1. FC Heidenheim 1846",
-        "away": "Hannover 96",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-08",
-        "time": "13:30",
-        "goals": [
-          "43' T. Siersleben",
-          "55' S. Teitur Thórdarson",
-          "63' J. Hugonet",
-          "66' B. Zivzivadze"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83684,
         "home": "Dynamo Dresden",
         "away": "SpVgg Greuther Fürth",
@@ -50,6 +15,21 @@
           "41' Ben Bobzien",
           "55' V. Vermeij"
         ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83687,
+        "home": "Eintracht Braunschweig",
+        "away": "Energie Cottbus",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-06",
+        "time": "18:30",
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -122,6 +102,26 @@
           "44' Oluwaseun Victor Adewumi",
           "47' D. Zeefuik",
           "47' K. Shiogai"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83678,
+        "home": "1. FC Heidenheim 1846",
+        "away": "Hannover 96",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-08",
+        "time": "13:30",
+        "goals": [
+          "43' T. Siersleben",
+          "55' S. Teitur Thórdarson",
+          "63' J. Hugonet",
+          "66' B. Zivzivadze"
         ],
         "cards": [],
         "lineups": {
