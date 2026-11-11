@@ -3,6 +3,25 @@
   "spieltage": {
     "9": [
       {
+        "id": 83235,
+        "home": "1. FC Köln",
+        "away": "Bayer 04 Leverkusen",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-08",
+        "time": "15:30",
+        "goals": [
+          "7' A. Garcia",
+          "85' P. Schick",
+          "92' S. El Mala"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83234,
         "home": "Hamburger SV",
         "away": "Borussia Mönchengladbach",
@@ -113,25 +132,6 @@
         "time": "18:30",
         "goals": [
           "7' M. Mittelstädt"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83235,
-        "home": "1. FC Köln",
-        "away": "Bayer 04 Leverkusen",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-08",
-        "time": "15:30",
-        "goals": [
-          "7' A. Garcia",
-          "85' P. Schick",
-          "92' S. El Mala"
         ],
         "cards": [],
         "lineups": {
