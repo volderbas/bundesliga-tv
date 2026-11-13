@@ -3,6 +3,114 @@
   "spieltage": {
     "11": [
       {
+        "id": 83687,
+        "home": "Eintracht Braunschweig",
+        "away": "Energie Cottbus",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-06",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83685,
+        "home": "Holstein Kiel",
+        "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-07",
+        "time": "13:00",
+        "goals": [
+          "14' Hiroki Sekine",
+          "76' Hiroki Sekine",
+          "80' Isaiah Young"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83678,
+        "home": "1. FC Heidenheim 1846",
+        "away": "Hannover 96",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-08",
+        "time": "13:30",
+        "goals": [
+          "43' T. Siersleben",
+          "55' S. Teitur Thórdarson",
+          "63' J. Hugonet",
+          "66' B. Zivzivadze"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83684,
+        "home": "Dynamo Dresden",
+        "away": "SpVgg Greuther Fürth",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-06",
+        "time": "18:30",
+        "goals": [
+          "31' R. Wagner",
+          "41' Ben Bobzien",
+          "55' V. Vermeij"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83682,
+        "home": "1. FC Nürnberg",
+        "away": "SV Darmstadt 98",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-07",
+        "time": "13:00",
+        "goals": [
+          "50' P. Scobel",
+          "88' William Bøving"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83688,
+        "home": "VfL Osnabrück",
+        "away": "1. FC Kaiserslautern",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-07",
+        "time": "13:00",
+        "goals": [
+          "55' Thierry Tazemeta"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83681,
         "home": "Hertha BSC",
         "away": "VfL Wolfsburg",
@@ -35,114 +143,6 @@
           "50' T. Civeja",
           "53' P. Hofmann",
           "92' P. Hofmann"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83684,
-        "home": "Dynamo Dresden",
-        "away": "SpVgg Greuther Fürth",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-06",
-        "time": "18:30",
-        "goals": [
-          "31' R. Wagner",
-          "41' Ben Bobzien",
-          "55' V. Vermeij"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83687,
-        "home": "Eintracht Braunschweig",
-        "away": "Energie Cottbus",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-06",
-        "time": "18:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83682,
-        "home": "1. FC Nürnberg",
-        "away": "SV Darmstadt 98",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-07",
-        "time": "13:00",
-        "goals": [
-          "50' P. Scobel",
-          "88' William Bøving"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83685,
-        "home": "Holstein Kiel",
-        "away": "DSC Arminia Bielefeld",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-07",
-        "time": "13:00",
-        "goals": [
-          "14' Hiroki Sekine",
-          "76' Hiroki Sekine",
-          "80' Isaiah Young"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83688,
-        "home": "VfL Osnabrück",
-        "away": "1. FC Kaiserslautern",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-07",
-        "time": "13:00",
-        "goals": [
-          "55' Thierry Tazemeta"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83678,
-        "home": "1. FC Heidenheim 1846",
-        "away": "Hannover 96",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-08",
-        "time": "13:30",
-        "goals": [
-          "43' T. Siersleben",
-          "55' S. Teitur Thórdarson",
-          "63' J. Hugonet",
-          "66' B. Zivzivadze"
         ],
         "cards": [],
         "lineups": {
