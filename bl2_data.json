@@ -3,6 +3,27 @@
   "spieltage": {
     "11": [
       {
+        "id": 83686,
+        "home": "1. FC Magdeburg",
+        "away": "FC St. Pauli",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-08",
+        "time": "13:30",
+        "goals": [
+          "27' M. Zukowski",
+          "48' Anselmo García MacNulty",
+          "58' E. Smith",
+          "89' H. Bockhorn",
+          "91' R. Simic"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83684,
         "home": "Dynamo Dresden",
         "away": "SpVgg Greuther Fürth",
@@ -143,27 +164,6 @@
           "50' T. Civeja",
           "53' P. Hofmann",
           "92' P. Hofmann"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83686,
-        "home": "1. FC Magdeburg",
-        "away": "FC St. Pauli",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-08",
-        "time": "13:30",
-        "goals": [
-          "27' M. Zukowski",
-          "48' Anselmo García MacNulty",
-          "58' E. Smith",
-          "89' H. Bockhorn",
-          "91' R. Simic"
         ],
         "cards": [],
         "lineups": {
