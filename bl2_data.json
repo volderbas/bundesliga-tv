@@ -3,6 +3,24 @@
   "spieltage": {
     "11": [
       {
+        "id": 83682,
+        "home": "1. FC Nürnberg",
+        "away": "SV Darmstadt 98",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-07",
+        "time": "13:00",
+        "goals": [
+          "50' P. Scobel",
+          "88' William Bøving"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83686,
         "home": "1. FC Magdeburg",
         "away": "FC St. Pauli",
@@ -51,24 +69,6 @@
         "date": "2026-11-06",
         "time": "18:30",
         "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83682,
-        "home": "1. FC Nürnberg",
-        "away": "SV Darmstadt 98",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-07",
-        "time": "13:00",
-        "goals": [
-          "50' P. Scobel",
-          "88' William Bøving"
-        ],
         "cards": [],
         "lineups": {
           "home": [],
