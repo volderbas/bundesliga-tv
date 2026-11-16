@@ -3,6 +3,21 @@
   "spieltage": {
     "12": [
       {
+        "id": 83706,
+        "home": "Energie Cottbus",
+        "away": "Hertha BSC",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-22",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83697,
         "home": "SV Darmstadt 98",
         "away": "1. FC Heidenheim 1846",
@@ -111,21 +126,6 @@
         "id": 83702,
         "home": "Karlsruher SC",
         "away": "VfL Osnabrück",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-22",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83706,
-        "home": "Energie Cottbus",
-        "away": "Hertha BSC",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-22",
