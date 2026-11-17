@@ -3,21 +3,6 @@
   "spieltage": {
     "10": [
       {
-        "id": 83245,
-        "home": "SV 07 Elversberg",
-        "away": "SC Freiburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-21",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83237,
         "home": "FC Bayern München",
         "away": "1. FC Köln",
@@ -81,6 +66,21 @@
         "id": 83242,
         "home": "Borussia Mönchengladbach",
         "away": "Borussia Dortmund",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-21",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83245,
+        "home": "SV 07 Elversberg",
+        "away": "SC Freiburg",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-21",
