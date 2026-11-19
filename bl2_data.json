@@ -3,6 +3,21 @@
   "spieltage": {
     "12": [
       {
+        "id": 83697,
+        "home": "SV Darmstadt 98",
+        "away": "1. FC Heidenheim 1846",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-20",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83705,
         "home": "DSC Arminia Bielefeld",
         "away": "1. FC Magdeburg",
@@ -115,21 +130,6 @@
         "status": "SCHEDULED",
         "date": "2026-11-22",
         "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83697,
-        "home": "SV Darmstadt 98",
-        "away": "1. FC Heidenheim 1846",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-20",
-        "time": "18:30",
         "goals": [],
         "cards": [],
         "lineups": {
