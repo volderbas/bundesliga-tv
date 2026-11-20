@@ -142,7 +142,7 @@
   "tabelle": [
     {
       "name": "FC Bayern München",
-      "points": 21,
+      "points": 22,
       "goalDiff": 20
     },
     {
@@ -206,14 +206,14 @@
       "goalDiff": -3
     },
     {
+      "name": "1. FC Köln",
+      "points": 10,
+      "goalDiff": -4
+    },
+    {
       "name": "FC Augsburg",
       "points": 9,
       "goalDiff": 0
-    },
-    {
-      "name": "1. FC Köln",
-      "points": 9,
-      "goalDiff": -4
     },
     {
       "name": "1. FC Union Berlin",
