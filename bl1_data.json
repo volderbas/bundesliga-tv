@@ -144,29 +144,29 @@
   },
   "tabelle": [
     {
+      "name": "Borussia Dortmund",
+      "points": 24,
+      "goalDiff": 10
+    },
+    {
       "name": "FC Bayern München",
       "points": 22,
       "goalDiff": 20
     },
     {
-      "name": "Borussia Dortmund",
-      "points": 21,
-      "goalDiff": 9
-    },
-    {
       "name": "SC Freiburg",
-      "points": 19,
-      "goalDiff": 10
+      "points": 22,
+      "goalDiff": 11
     },
     {
       "name": "RB Leipzig",
-      "points": 18,
-      "goalDiff": 14
+      "points": 21,
+      "goalDiff": 18
     },
     {
       "name": "Bayer 04 Leverkusen",
-      "points": 16,
-      "goalDiff": 3
+      "points": 19,
+      "goalDiff": 7
     },
     {
       "name": "SV Werder Bremen",
@@ -174,24 +174,24 @@
       "goalDiff": 2
     },
     {
-      "name": "SV 07 Elversberg",
-      "points": 13,
-      "goalDiff": -1
+      "name": "Eintracht Frankfurt",
+      "points": 15,
+      "goalDiff": -4
     },
     {
       "name": "VfB Stuttgart",
-      "points": 12,
+      "points": 13,
       "goalDiff": 0
+    },
+    {
+      "name": "SV 07 Elversberg",
+      "points": 13,
+      "goalDiff": -2
     },
     {
       "name": "TSG Hoffenheim",
       "points": 12,
-      "goalDiff": -1
-    },
-    {
-      "name": "Eintracht Frankfurt",
-      "points": 12,
-      "goalDiff": -5
+      "goalDiff": -2
     },
     {
       "name": "Hamburger SV",
@@ -204,14 +204,14 @@
       "goalDiff": -1
     },
     {
-      "name": "SC Paderborn 07",
-      "points": 10,
-      "goalDiff": -3
-    },
-    {
       "name": "1. FC Köln",
       "points": 10,
       "goalDiff": -4
+    },
+    {
+      "name": "SC Paderborn 07",
+      "points": 10,
+      "goalDiff": -7
     },
     {
       "name": "FC Augsburg",
@@ -219,19 +219,19 @@
       "goalDiff": 0
     },
     {
-      "name": "1. FC Union Berlin",
+      "name": "FC Schalke 04",
       "points": 7,
-      "goalDiff": -14
+      "goalDiff": -6
     },
     {
-      "name": "FC Schalke 04",
-      "points": 6,
-      "goalDiff": -6
+      "name": "1. FC Union Berlin",
+      "points": 7,
+      "goalDiff": -18
     },
     {
       "name": "Borussia Mönchengladbach",
       "points": 4,
-      "goalDiff": -13
+      "goalDiff": -14
     }
   ]
 }
