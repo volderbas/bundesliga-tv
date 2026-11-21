@@ -10,6 +10,39 @@
         "status": "SCHEDULED",
         "date": "2026-11-20",
         "time": "20:30",
+        "goals": [
+          "12' M. Moore",
+          "37' N. Brown"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83241,
+        "home": "1. FC Union Berlin",
+        "away": "RB Leipzig",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-21",
+        "time": "15:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83240,
+        "home": "FC Augsburg",
+        "away": "1. FSV Mainz 05",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-22",
+        "time": "15:30",
         "goals": [],
         "cards": [],
         "lineups": {
@@ -36,21 +69,6 @@
         "id": 83239,
         "home": "Eintracht Frankfurt",
         "away": "TSG Hoffenheim",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-21",
-        "time": "15:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83241,
-        "home": "1. FC Union Berlin",
-        "away": "RB Leipzig",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-21",
@@ -100,21 +118,6 @@
         "status": "SCHEDULED",
         "date": "2026-11-21",
         "time": "18:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83240,
-        "home": "FC Augsburg",
-        "away": "1. FSV Mainz 05",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-22",
-        "time": "15:30",
         "goals": [],
         "cards": [],
         "lineups": {

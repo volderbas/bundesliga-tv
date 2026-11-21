@@ -10,7 +10,12 @@
         "status": "SCHEDULED",
         "date": "2026-11-20",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "5' B. Zivzivadze",
+          "22' L.Kehl",
+          "27' A. Vukotic",
+          "62' L.Kehl"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -25,7 +30,11 @@
         "status": "SCHEDULED",
         "date": "2026-11-20",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "12' Felipe Chávez",
+          "46' E. Iyoha",
+          "62' Henri Koudossou"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
