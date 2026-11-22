@@ -3,6 +3,26 @@
   "spieltage": {
     "12": [
       {
+        "id": 83697,
+        "home": "SV Darmstadt 98",
+        "away": "1. FC Heidenheim 1846",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-20",
+        "time": "18:30",
+        "goals": [
+          "5' B. Zivzivadze",
+          "22' L.Kehl",
+          "27' A. Vukotic",
+          "62' L.Kehl"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83705,
         "home": "DSC Arminia Bielefeld",
         "away": "1. FC Magdeburg",
@@ -14,6 +34,25 @@
           "12' Felipe Chávez",
           "46' E. Iyoha",
           "62' Henri Koudossou"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83689,
+        "home": "VfL Wolfsburg",
+        "away": "Holstein Kiel",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-21",
+        "time": "13:00",
+        "goals": [
+          "50' Timon Weiner",
+          "67' Fraser Hornby",
+          "76' F. Reese"
         ],
         "cards": [],
         "lineups": {
@@ -60,75 +99,6 @@
         }
       },
       {
-        "id": 83698,
-        "home": "1. FC Kaiserslautern",
-        "away": "Dynamo Dresden",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-22",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83706,
-        "home": "Energie Cottbus",
-        "away": "Hertha BSC",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-22",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83697,
-        "home": "SV Darmstadt 98",
-        "away": "1. FC Heidenheim 1846",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-20",
-        "time": "18:30",
-        "goals": [
-          "5' B. Zivzivadze",
-          "22' L.Kehl",
-          "27' A. Vukotic",
-          "62' L.Kehl"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83689,
-        "home": "VfL Wolfsburg",
-        "away": "Holstein Kiel",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-21",
-        "time": "13:00",
-        "goals": [
-          "50' Timon Weiner",
-          "67' Fraser Hornby",
-          "76' F. Reese"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83691,
         "home": "FC St. Pauli",
         "away": "VfL Bochum",
@@ -139,6 +109,26 @@
         "goals": [
           "3' Niang",
           "47' T. Ando"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83698,
+        "home": "1. FC Kaiserslautern",
+        "away": "Dynamo Dresden",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-22",
+        "time": "13:30",
+        "goals": [
+          "6' Mário Sauer",
+          "14' Ben Bobzien",
+          "16' Patrice Covic",
+          "84' Paul Joly"
         ],
         "cards": [],
         "lineups": {
@@ -160,14 +150,34 @@
           "home": [],
           "away": []
         }
+      },
+      {
+        "id": 83706,
+        "home": "Energie Cottbus",
+        "away": "Hertha BSC",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-22",
+        "time": "13:30",
+        "goals": [
+          "6' Sebastian Grönning",
+          "48' P. Seguin",
+          "89' D. Zeefuik",
+          "90' G. Nilsson"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
       }
     ]
   },
   "tabelle": [
     {
       "name": "Hertha BSC",
-      "points": 31,
-      "goalDiff": 16
+      "points": 34,
+      "goalDiff": 20
     },
     {
       "name": "1. FC Nürnberg",
@@ -186,7 +196,7 @@
     },
     {
       "name": "1. FC Kaiserslautern",
-      "points": 21,
+      "points": 22,
       "goalDiff": 3
     },
     {
@@ -220,9 +230,24 @@
       "goalDiff": -4
     },
     {
+      "name": "VfL Osnabrück",
+      "points": 12,
+      "goalDiff": -4
+    },
+    {
+      "name": "Dynamo Dresden",
+      "points": 12,
+      "goalDiff": -5
+    },
+    {
       "name": "SpVgg Greuther Fürth",
       "points": 12,
       "goalDiff": -7
+    },
+    {
+      "name": "Karlsruher SC",
+      "points": 12,
+      "goalDiff": -9
     },
     {
       "name": "SV Darmstadt 98",
@@ -232,22 +257,7 @@
     {
       "name": "Energie Cottbus",
       "points": 11,
-      "goalDiff": -2
-    },
-    {
-      "name": "VfL Osnabrück",
-      "points": 11,
-      "goalDiff": -4
-    },
-    {
-      "name": "Dynamo Dresden",
-      "points": 11,
-      "goalDiff": -5
-    },
-    {
-      "name": "Karlsruher SC",
-      "points": 11,
-      "goalDiff": -9
+      "goalDiff": -6
     },
     {
       "name": "Holstein Kiel",

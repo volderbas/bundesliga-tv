@@ -136,7 +136,12 @@
         "status": "SCHEDULED",
         "date": "2026-11-22",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "19' M. Gregoritsch",
+          "35' J. Bah",
+          "48' M. Gregoritsch",
+          "51' R. Königsdörffer"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -188,8 +193,8 @@
     },
     {
       "name": "SV Werder Bremen",
-      "points": 15,
-      "goalDiff": 2
+      "points": 18,
+      "goalDiff": 6
     },
     {
       "name": "Eintracht Frankfurt",
@@ -207,6 +212,11 @@
       "goalDiff": -2
     },
     {
+      "name": "FC Augsburg",
+      "points": 12,
+      "goalDiff": 2
+    },
+    {
       "name": "TSG Hoffenheim",
       "points": 12,
       "goalDiff": -2
@@ -214,12 +224,12 @@
     {
       "name": "Hamburger SV",
       "points": 12,
-      "goalDiff": -10
+      "goalDiff": -14
     },
     {
       "name": "1. FSV Mainz 05",
       "points": 10,
-      "goalDiff": -1
+      "goalDiff": -3
     },
     {
       "name": "1. FC Köln",
@@ -230,11 +240,6 @@
       "name": "SC Paderborn 07",
       "points": 10,
       "goalDiff": -7
-    },
-    {
-      "name": "FC Augsburg",
-      "points": 9,
-      "goalDiff": 0
     },
     {
       "name": "FC Schalke 04",
