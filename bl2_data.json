@@ -41,15 +41,17 @@
         }
       },
       {
-        "id": 83691,
-        "home": "FC St. Pauli",
-        "away": "VfL Bochum",
+        "id": 83699,
+        "home": "1. FC Nürnberg",
+        "away": "Eintracht Braunschweig",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-21",
-        "time": "20:30",
+        "time": "13:00",
         "goals": [
-          "3' Niang"
+          "10' J. Justvan",
+          "61' Javier Fernández",
+          "83' Y. Sturm"
         ],
         "cards": [],
         "lineups": {
@@ -58,9 +60,24 @@
         }
       },
       {
-        "id": 83702,
-        "home": "Karlsruher SC",
-        "away": "VfL Osnabrück",
+        "id": 83698,
+        "home": "1. FC Kaiserslautern",
+        "away": "Dynamo Dresden",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-22",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83706,
+        "home": "Energie Cottbus",
+        "away": "Hertha BSC",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-22",
@@ -112,17 +129,16 @@
         }
       },
       {
-        "id": 83699,
-        "home": "1. FC Nürnberg",
-        "away": "Eintracht Braunschweig",
+        "id": 83691,
+        "home": "FC St. Pauli",
+        "away": "VfL Bochum",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-21",
-        "time": "13:00",
+        "time": "20:30",
         "goals": [
-          "10' J. Justvan",
-          "61' Javier Fernández",
-          "83' Y. Sturm"
+          "3' Niang",
+          "47' T. Ando"
         ],
         "cards": [],
         "lineups": {
@@ -131,24 +147,9 @@
         }
       },
       {
-        "id": 83698,
-        "home": "1. FC Kaiserslautern",
-        "away": "Dynamo Dresden",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-22",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83706,
-        "home": "Energie Cottbus",
-        "away": "Hertha BSC",
+        "id": 83702,
+        "home": "Karlsruher SC",
+        "away": "VfL Osnabrück",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-22",
