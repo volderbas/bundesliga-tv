@@ -28,7 +28,12 @@
         "status": "SCHEDULED",
         "date": "2026-11-21",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "14' A. Moreira",
+          "47' A. Moreira",
+          "51' P. Schick",
+          "59' E. Fernández"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -43,7 +48,9 @@
         "status": "SCHEDULED",
         "date": "2026-11-21",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "25' J. Burkardt"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -58,7 +65,14 @@
         "status": "SCHEDULED",
         "date": "2026-11-21",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "18' A. Nusa",
+          "41' M. Aebischer",
+          "50' Romulo",
+          "72' B. Gruda",
+          "76' R. Reitz",
+          "89' R. Baku"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -73,7 +87,9 @@
         "status": "SCHEDULED",
         "date": "2026-11-21",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "80' F. Nmecha"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -88,7 +104,9 @@
         "status": "SCHEDULED",
         "date": "2026-11-21",
         "time": "15:30",
-        "goals": [],
+        "goals": [
+          "68' I. Matanovic"
+        ],
         "cards": [],
         "lineups": {
           "home": [],

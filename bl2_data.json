@@ -3,13 +3,68 @@
   "spieltage": {
     "12": [
       {
-        "id": 83689,
-        "home": "VfL Wolfsburg",
-        "away": "Holstein Kiel",
+        "id": 83705,
+        "home": "DSC Arminia Bielefeld",
+        "away": "1. FC Magdeburg",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-20",
+        "time": "18:30",
+        "goals": [
+          "12' Felipe Chávez",
+          "46' E. Iyoha",
+          "62' Henri Koudossou"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83694,
+        "home": "Hannover 96",
+        "away": "SpVgg Greuther Fürth",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-21",
         "time": "13:00",
+        "goals": [
+          "34' O. Pohlmann",
+          "57' S. Teitur Thórdarson",
+          "91' W. Taibi"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83691,
+        "home": "FC St. Pauli",
+        "away": "VfL Bochum",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-21",
+        "time": "20:30",
+        "goals": [
+          "3' Niang"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83702,
+        "home": "Karlsruher SC",
+        "away": "VfL Osnabrück",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-22",
+        "time": "13:30",
         "goals": [],
         "cards": [],
         "lineups": {
@@ -38,33 +93,18 @@
         }
       },
       {
-        "id": 83705,
-        "home": "DSC Arminia Bielefeld",
-        "away": "1. FC Magdeburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-20",
-        "time": "18:30",
-        "goals": [
-          "12' Felipe Chávez",
-          "46' E. Iyoha",
-          "62' Henri Koudossou"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83694,
-        "home": "Hannover 96",
-        "away": "SpVgg Greuther Fürth",
+        "id": 83689,
+        "home": "VfL Wolfsburg",
+        "away": "Holstein Kiel",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-21",
         "time": "13:00",
-        "goals": [],
+        "goals": [
+          "50' Timon Weiner",
+          "67' Fraser Hornby",
+          "76' F. Reese"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -80,23 +120,10 @@
         "date": "2026-11-21",
         "time": "13:00",
         "goals": [
-          "10' J. Justvan"
+          "10' J. Justvan",
+          "61' Javier Fernández",
+          "83' Y. Sturm"
         ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83691,
-        "home": "FC St. Pauli",
-        "away": "VfL Bochum",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-21",
-        "time": "20:30",
-        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -107,21 +134,6 @@
         "id": 83698,
         "home": "1. FC Kaiserslautern",
         "away": "Dynamo Dresden",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-22",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83702,
-        "home": "Karlsruher SC",
-        "away": "VfL Osnabrück",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-22",
@@ -187,6 +199,11 @@
       "goalDiff": -3
     },
     {
+      "name": "FC St. Pauli",
+      "points": 15,
+      "goalDiff": -1
+    },
+    {
       "name": "Hannover 96",
       "points": 15,
       "goalDiff": -5
@@ -199,12 +216,7 @@
     {
       "name": "VfL Bochum",
       "points": 14,
-      "goalDiff": -2
-    },
-    {
-      "name": "FC St. Pauli",
-      "points": 12,
-      "goalDiff": -3
+      "goalDiff": -4
     },
     {
       "name": "SpVgg Greuther Fürth",
