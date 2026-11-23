@@ -21,6 +21,26 @@
         }
       },
       {
+        "id": 83238,
+        "home": "Bayer 04 Leverkusen",
+        "away": "SC Paderborn 07",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-21",
+        "time": "15:30",
+        "goals": [
+          "14' A. Moreira",
+          "47' A. Moreira",
+          "51' P. Schick",
+          "59' E. Fernández"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83239,
         "home": "Eintracht Frankfurt",
         "away": "TSG Hoffenheim",
@@ -30,6 +50,28 @@
         "time": "15:30",
         "goals": [
           "25' J. Burkardt"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83241,
+        "home": "1. FC Union Berlin",
+        "away": "RB Leipzig",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-21",
+        "time": "15:30",
+        "goals": [
+          "18' A. Nusa",
+          "41' M. Aebischer",
+          "50' Romulo",
+          "72' B. Gruda",
+          "76' R. Reitz",
+          "89' R. Baku"
         ],
         "cards": [],
         "lineups": {
@@ -72,6 +114,21 @@
         }
       },
       {
+        "id": 83244,
+        "home": "FC Schalke 04",
+        "away": "VfB Stuttgart",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-21",
+        "time": "18:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83240,
         "home": "FC Augsburg",
         "away": "1. FSV Mainz 05",
@@ -85,63 +142,6 @@
           "48' M. Gregoritsch",
           "51' R. Königsdörffer"
         ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83238,
-        "home": "Bayer 04 Leverkusen",
-        "away": "SC Paderborn 07",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-21",
-        "time": "15:30",
-        "goals": [
-          "14' A. Moreira",
-          "47' A. Moreira",
-          "51' P. Schick",
-          "59' E. Fernández"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83241,
-        "home": "1. FC Union Berlin",
-        "away": "RB Leipzig",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-21",
-        "time": "15:30",
-        "goals": [
-          "18' A. Nusa",
-          "41' M. Aebischer",
-          "50' Romulo",
-          "72' B. Gruda",
-          "76' R. Reitz",
-          "89' R. Baku"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83244,
-        "home": "FC Schalke 04",
-        "away": "VfB Stuttgart",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-21",
-        "time": "18:30",
-        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
