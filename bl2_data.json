@@ -3,24 +3,6 @@
   "spieltage": {
     "12": [
       {
-        "id": 83691,
-        "home": "FC St. Pauli",
-        "away": "VfL Bochum",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-21",
-        "time": "20:30",
-        "goals": [
-          "3' Niang",
-          "47' T. Ando"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83697,
         "home": "SV Darmstadt 98",
         "away": "1. FC Heidenheim 1846",
@@ -109,6 +91,24 @@
           "10' J. Justvan",
           "61' Javier Fernández",
           "83' Y. Sturm"
+        ],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83691,
+        "home": "FC St. Pauli",
+        "away": "VfL Bochum",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-21",
+        "time": "20:30",
+        "goals": [
+          "3' Niang",
+          "47' T. Ando"
         ],
         "cards": [],
         "lineups": {
