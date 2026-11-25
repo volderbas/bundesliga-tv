@@ -1,21 +1,16 @@
 {
-  "current_spieltag": 12,
+  "current_spieltag": 13,
   "spieltage": {
-    "12": [
+    "13": [
       {
-        "id": 83697,
-        "home": "SV Darmstadt 98",
-        "away": "1. FC Heidenheim 1846",
+        "id": 83707,
+        "home": "1. FC Heidenheim 1846",
+        "away": "1. FC Nürnberg",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-20",
+        "date": "2026-11-27",
         "time": "18:30",
-        "goals": [
-          "5' B. Zivzivadze",
-          "22' L.Kehl",
-          "27' A. Vukotic",
-          "62' L.Kehl"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -23,18 +18,14 @@
         }
       },
       {
-        "id": 83705,
-        "home": "DSC Arminia Bielefeld",
-        "away": "1. FC Magdeburg",
+        "id": 83709,
+        "home": "VfL Bochum",
+        "away": "SV Darmstadt 98",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-20",
+        "date": "2026-11-27",
         "time": "18:30",
-        "goals": [
-          "12' Felipe Chávez",
-          "46' E. Iyoha",
-          "62' Henri Koudossou"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -42,18 +33,14 @@
         }
       },
       {
-        "id": 83689,
-        "home": "VfL Wolfsburg",
-        "away": "Holstein Kiel",
+        "id": 83708,
+        "home": "Hertha BSC",
+        "away": "Karlsruher SC",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-21",
+        "date": "2026-11-28",
         "time": "13:00",
-        "goals": [
-          "50' Timon Weiner",
-          "67' Fraser Hornby",
-          "76' F. Reese"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -61,18 +48,14 @@
         }
       },
       {
-        "id": 83694,
-        "home": "Hannover 96",
-        "away": "SpVgg Greuther Fürth",
+        "id": 83710,
+        "home": "Dynamo Dresden",
+        "away": "FC St. Pauli",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-21",
+        "date": "2026-11-28",
         "time": "13:00",
-        "goals": [
-          "34' O. Pohlmann",
-          "57' S. Teitur Thórdarson",
-          "91' W. Taibi"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -80,18 +63,14 @@
         }
       },
       {
-        "id": 83699,
-        "home": "1. FC Nürnberg",
-        "away": "Eintracht Braunschweig",
+        "id": 83712,
+        "home": "Holstein Kiel",
+        "away": "1. FC Kaiserslautern",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-21",
+        "date": "2026-11-28",
         "time": "13:00",
-        "goals": [
-          "10' J. Justvan",
-          "61' Javier Fernández",
-          "83' Y. Sturm"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -99,17 +78,14 @@
         }
       },
       {
-        "id": 83691,
-        "home": "FC St. Pauli",
-        "away": "VfL Bochum",
+        "id": 83722,
+        "home": "VfL Osnabrück",
+        "away": "Hannover 96",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-21",
+        "date": "2026-11-28",
         "time": "20:30",
-        "goals": [
-          "3' Niang",
-          "47' T. Ando"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -117,32 +93,12 @@
         }
       },
       {
-        "id": 83698,
-        "home": "1. FC Kaiserslautern",
-        "away": "Dynamo Dresden",
+        "id": 83715,
+        "home": "1. FC Magdeburg",
+        "away": "Energie Cottbus",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-22",
-        "time": "13:30",
-        "goals": [
-          "6' Mário Sauer",
-          "14' Ben Bobzien",
-          "16' Patrice Covic",
-          "84' Paul Joly"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83702,
-        "home": "Karlsruher SC",
-        "away": "VfL Osnabrück",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-22",
+        "date": "2026-11-29",
         "time": "13:30",
         "goals": [],
         "cards": [],
@@ -152,19 +108,29 @@
         }
       },
       {
-        "id": 83706,
-        "home": "Energie Cottbus",
-        "away": "Hertha BSC",
+        "id": 83717,
+        "home": "Eintracht Braunschweig",
+        "away": "VfL Wolfsburg",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-22",
+        "date": "2026-11-29",
         "time": "13:30",
-        "goals": [
-          "6' Sebastian Grönning",
-          "48' P. Seguin",
-          "89' D. Zeefuik",
-          "90' G. Nilsson"
-        ],
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83719,
+        "home": "SpVgg Greuther Fürth",
+        "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-29",
+        "time": "13:30",
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
