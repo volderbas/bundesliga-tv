@@ -1,19 +1,16 @@
 {
-  "current_spieltag": 10,
+  "current_spieltag": 11,
   "spieltage": {
-    "10": [
+    "11": [
       {
-        "id": 83237,
-        "home": "FC Bayern München",
-        "away": "1. FC Köln",
+        "id": 83253,
+        "home": "SV Werder Bremen",
+        "away": "Borussia Mönchengladbach",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-20",
+        "date": "2026-11-27",
         "time": "20:30",
-        "goals": [
-          "12' M. Moore",
-          "37' N. Brown"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -21,19 +18,14 @@
         }
       },
       {
-        "id": 83238,
-        "home": "Bayer 04 Leverkusen",
-        "away": "SC Paderborn 07",
+        "id": 83250,
+        "home": "1. FSV Mainz 05",
+        "away": "1. FC Union Berlin",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-21",
+        "date": "2026-11-28",
         "time": "15:30",
-        "goals": [
-          "14' A. Moreira",
-          "47' A. Moreira",
-          "51' P. Schick",
-          "59' E. Fernández"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -41,16 +33,14 @@
         }
       },
       {
-        "id": 83239,
-        "home": "Eintracht Frankfurt",
-        "away": "TSG Hoffenheim",
+        "id": 83251,
+        "home": "Hamburger SV",
+        "away": "FC Bayern München",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-21",
+        "date": "2026-11-28",
         "time": "15:30",
-        "goals": [
-          "25' J. Burkardt"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -58,21 +48,14 @@
         }
       },
       {
-        "id": 83241,
-        "home": "1. FC Union Berlin",
-        "away": "RB Leipzig",
+        "id": 83252,
+        "home": "1. FC Köln",
+        "away": "SV 07 Elversberg",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-21",
+        "date": "2026-11-28",
         "time": "15:30",
-        "goals": [
-          "18' A. Nusa",
-          "41' M. Aebischer",
-          "50' Romulo",
-          "72' B. Gruda",
-          "76' R. Reitz",
-          "89' R. Baku"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -80,16 +63,14 @@
         }
       },
       {
-        "id": 83242,
-        "home": "Borussia Mönchengladbach",
-        "away": "Borussia Dortmund",
+        "id": 83254,
+        "home": "SC Paderborn 07",
+        "away": "FC Schalke 04",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-21",
+        "date": "2026-11-28",
         "time": "15:30",
-        "goals": [
-          "80' F. Nmecha"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -97,29 +78,12 @@
         }
       },
       {
-        "id": 83245,
-        "home": "SV 07 Elversberg",
-        "away": "SC Freiburg",
+        "id": 83247,
+        "home": "VfB Stuttgart",
+        "away": "Eintracht Frankfurt",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-21",
-        "time": "15:30",
-        "goals": [
-          "68' I. Matanovic"
-        ],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83244,
-        "home": "FC Schalke 04",
-        "away": "VfB Stuttgart",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-21",
+        "date": "2026-11-28",
         "time": "18:30",
         "goals": [],
         "cards": [],
@@ -129,19 +93,14 @@
         }
       },
       {
-        "id": 83240,
-        "home": "FC Augsburg",
-        "away": "1. FSV Mainz 05",
+        "id": 83249,
+        "home": "SC Freiburg",
+        "away": "RB Leipzig",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-22",
+        "date": "2026-11-29",
         "time": "15:30",
-        "goals": [
-          "19' M. Gregoritsch",
-          "35' J. Bah",
-          "48' M. Gregoritsch",
-          "51' R. Königsdörffer"
-        ],
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
@@ -149,19 +108,29 @@
         }
       },
       {
-        "id": 83243,
-        "home": "SV Werder Bremen",
-        "away": "Hamburger SV",
+        "id": 83248,
+        "home": "TSG Hoffenheim",
+        "away": "FC Augsburg",
         "score": "",
         "status": "SCHEDULED",
-        "date": "2026-11-22",
+        "date": "2026-11-29",
         "time": "17:30",
-        "goals": [
-          "55' M. Friedl",
-          "66' J. Njinmah",
-          "70' J. Njinmah",
-          "92' N. Füllkrug"
-        ],
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83246,
+        "home": "Borussia Dortmund",
+        "away": "Bayer 04 Leverkusen",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-29",
+        "time": "19:30",
+        "goals": [],
         "cards": [],
         "lineups": {
           "home": [],
