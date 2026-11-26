@@ -3,9 +3,9 @@
   "spieltage": {
     "13": [
       {
-        "id": 83709,
-        "home": "VfL Bochum",
-        "away": "SV Darmstadt 98",
+        "id": 83707,
+        "home": "1. FC Heidenheim 1846",
+        "away": "1. FC Nürnberg",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-27",
@@ -18,24 +18,9 @@
         }
       },
       {
-        "id": 83717,
-        "home": "Eintracht Braunschweig",
-        "away": "VfL Wolfsburg",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-29",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
-        "id": 83707,
-        "home": "1. FC Heidenheim 1846",
-        "away": "1. FC Nürnberg",
+        "id": 83709,
+        "home": "VfL Bochum",
+        "away": "SV Darmstadt 98",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-27",
@@ -111,6 +96,21 @@
         "id": 83715,
         "home": "1. FC Magdeburg",
         "away": "Energie Cottbus",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-29",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
+        "id": 83717,
+        "home": "Eintracht Braunschweig",
+        "away": "VfL Wolfsburg",
         "score": "",
         "status": "SCHEDULED",
         "date": "2026-11-29",
