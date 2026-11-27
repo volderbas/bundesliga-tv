@@ -3,6 +3,21 @@
   "spieltage": {
     "13": [
       {
+        "id": 83719,
+        "home": "SpVgg Greuther Fürth",
+        "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-29",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
+      },
+      {
         "id": 83707,
         "home": "1. FC Heidenheim 1846",
         "away": "1. FC Nürnberg",
@@ -121,21 +136,6 @@
           "home": [],
           "away": []
         }
-      },
-      {
-        "id": 83719,
-        "home": "SpVgg Greuther Fürth",
-        "away": "DSC Arminia Bielefeld",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-29",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
       }
     ]
   },
@@ -147,7 +147,7 @@
     },
     {
       "name": "1. FC Nürnberg",
-      "points": 24,
+      "points": 25,
       "goalDiff": 12
     },
     {
@@ -172,13 +172,18 @@
     },
     {
       "name": "1. FC Heidenheim 1846",
-      "points": 16,
+      "points": 17,
       "goalDiff": -3
     },
     {
       "name": "FC St. Pauli",
       "points": 15,
       "goalDiff": -1
+    },
+    {
+      "name": "VfL Bochum",
+      "points": 15,
+      "goalDiff": -4
     },
     {
       "name": "Hannover 96",
@@ -191,9 +196,9 @@
       "goalDiff": -1
     },
     {
-      "name": "VfL Bochum",
-      "points": 14,
-      "goalDiff": -4
+      "name": "SV Darmstadt 98",
+      "points": 13,
+      "goalDiff": -10
     },
     {
       "name": "VfL Osnabrück",
@@ -214,11 +219,6 @@
       "name": "Karlsruher SC",
       "points": 12,
       "goalDiff": -9
-    },
-    {
-      "name": "SV Darmstadt 98",
-      "points": 12,
-      "goalDiff": -10
     },
     {
       "name": "Energie Cottbus",
