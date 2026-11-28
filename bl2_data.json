@@ -3,21 +3,6 @@
   "spieltage": {
     "13": [
       {
-        "id": 83719,
-        "home": "SpVgg Greuther Fürth",
-        "away": "DSC Arminia Bielefeld",
-        "score": "",
-        "status": "SCHEDULED",
-        "date": "2026-11-29",
-        "time": "13:30",
-        "goals": [],
-        "cards": [],
-        "lineups": {
-          "home": [],
-          "away": []
-        }
-      },
-      {
         "id": 83707,
         "home": "1. FC Heidenheim 1846",
         "away": "1. FC Nürnberg",
@@ -25,7 +10,12 @@
         "status": "SCHEDULED",
         "date": "2026-11-27",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "13' P. Mainka",
+          "39' M. Costly",
+          "61' B. Zivzivadze",
+          "65' J. Schöppner"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -40,7 +30,10 @@
         "status": "SCHEDULED",
         "date": "2026-11-27",
         "time": "18:30",
-        "goals": [],
+        "goals": [
+          "81' P. Hofmann",
+          "94' B. Taz"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -136,6 +129,21 @@
           "home": [],
           "away": []
         }
+      },
+      {
+        "id": 83719,
+        "home": "SpVgg Greuther Fürth",
+        "away": "DSC Arminia Bielefeld",
+        "score": "",
+        "status": "SCHEDULED",
+        "date": "2026-11-29",
+        "time": "13:30",
+        "goals": [],
+        "cards": [],
+        "lineups": {
+          "home": [],
+          "away": []
+        }
       }
     ]
   },
@@ -147,8 +155,8 @@
     },
     {
       "name": "1. FC Nürnberg",
-      "points": 25,
-      "goalDiff": 12
+      "points": 24,
+      "goalDiff": 10
     },
     {
       "name": "1. FC Magdeburg",
@@ -166,24 +174,24 @@
       "goalDiff": 3
     },
     {
+      "name": "1. FC Heidenheim 1846",
+      "points": 19,
+      "goalDiff": -1
+    },
+    {
       "name": "DSC Arminia Bielefeld",
       "points": 17,
       "goalDiff": 1
     },
     {
-      "name": "1. FC Heidenheim 1846",
+      "name": "VfL Bochum",
       "points": 17,
-      "goalDiff": -3
+      "goalDiff": -2
     },
     {
       "name": "FC St. Pauli",
       "points": 15,
       "goalDiff": -1
-    },
-    {
-      "name": "VfL Bochum",
-      "points": 15,
-      "goalDiff": -4
     },
     {
       "name": "Hannover 96",
@@ -194,11 +202,6 @@
       "name": "Eintracht Braunschweig",
       "points": 14,
       "goalDiff": -1
-    },
-    {
-      "name": "SV Darmstadt 98",
-      "points": 13,
-      "goalDiff": -10
     },
     {
       "name": "VfL Osnabrück",
@@ -219,6 +222,11 @@
       "name": "Karlsruher SC",
       "points": 12,
       "goalDiff": -9
+    },
+    {
+      "name": "SV Darmstadt 98",
+      "points": 12,
+      "goalDiff": -12
     },
     {
       "name": "Energie Cottbus",

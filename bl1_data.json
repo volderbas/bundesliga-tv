@@ -10,7 +10,12 @@
         "status": "SCHEDULED",
         "date": "2026-11-27",
         "time": "20:30",
-        "goals": [],
+        "goals": [
+          "27' K. Diks",
+          "38' E. Dinkçi",
+          "46' F. Honorat",
+          "78' F. Honorat"
+        ],
         "cards": [],
         "lineups": {
           "home": [],
@@ -167,7 +172,7 @@
     },
     {
       "name": "SV Werder Bremen",
-      "points": 18,
+      "points": 19,
       "goalDiff": 6
     },
     {
@@ -227,7 +232,7 @@
     },
     {
       "name": "Borussia Mönchengladbach",
-      "points": 4,
+      "points": 5,
       "goalDiff": -14
     }
   ]
